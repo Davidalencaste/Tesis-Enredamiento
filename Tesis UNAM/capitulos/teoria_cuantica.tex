@@ -1,0 +1,236 @@
+\documentclass[../Main.tex]{subfiles}
+
+\begin{document}
+
+La descripción de cualquier sistema físico requiere, al menos, la identificación de los siguientes cinco elementos:
+\begin{enumerate}
+    \item Estados
+    \item Observables
+    \item Función de probabilidad
+    \item Ecuación de evolución
+    \item Regla de composición entre sistemas
+\end{enumerate}
+
+Por ejemplo, en la \textit{mecánica clásica}, el estado de un sistema está determinado por un punto en el espacio fase, mientras que las observables se definen como funciones sobre dicho espacio. Por otra parte, si el sistema está formado por un número grande de partículas, el estado se describe mediante una densidad de probabilidad, esto es, una función normalizada en el espacio fase.
+
+La evolución de los estados se realiza mediante la dinámica Hamiltoniana, la cual preserva no solo la energía, sino también los volúmenes en el espacio fase (Teorema de Liouville). Esto último garantiza la conservación de la normalización de las funciones de probabilidad. Por último, el sistema compuesto de dos subsistemas tiene como espacio fase el producto cartesiano ($\times$) de los espacios fase de los sistemas individuales.\\
+
+
+
+El objetivo de esta sección es mostrar que estos elementos también están presentes en la teoría cuántica, de hecho, muchos de estos se encuentran definidos en los llamados axiomas de la mecánica cuántica.
+
+
+
+
+
+
+\section{Espacio de Estados}
+Tradicionalmente, el primer postulado de la mecánica cuántica define a los estados de la siguiente manera:\\
+\textit{El estado de un sistema físico esta definido por un vector de estado, que es un elemento de un espacio de Hilbert} $\mathcal{H}$ \cite{Cohen}.
+Donde cada un vector de estado (el vector asociado al estado '$\psi$') se asocia a un ket "$\ket{\;}$"
+\begin{equation}
+    \textbf{Estado cuántico} \equiv \ket{\psi}
+\end{equation}
+
+Además, los kets forman un espacio vectorial lineal, donde cualquier combinación lineal de kets es, de igual manera, un ket. 
+Mediante esta definición, se dice que los kets de un ensamble son linealmente independientes si ninguno de ellos puede ser expresado como una combinación lineal de otros \cite{Messiah}.\\
+La dimensión del espacio de estados es igual al número de kets linealmente independientes por definición. Si el número de kets linealmente independientes es infinito, decimos que el espacio de estados tiene una dimensión infinita.\\
+
+
+
+\begin{comment}
+    La condición fundamental para que un ket sea elemento del espacio de estados, es tener norma igual a $1$.
+\begin{equation}
+    \norm{\ket{\psi}}=1
+\end{equation}
+Esta condición recae del hecho de tener una una extensión espacial  y no poder atribuirle a posición precisa, uno solo pide definir la probabilidad de encontrar un estado en cierto rango en sus variables dinámicas. De esta forma, en el espacio completo, esta probabilidad deber ser igual a uno.\cite{Cohen}.\\ 
+
+Note que esta condición obliga que el espacio $\mathcal{H}$ no tenga un neutro aditivo, rompiendo la posibilidad de ser un sub-espacio vectorial. Sin embargo, $\mathcal{H}$ sí tendrá la posibilidad de ser un sub-espacio del \textbf{Espacio de Hilbert.}
+
+Otro concepto importante que se utilizará mas adelante en este trabajo es el de \textbf{Estados puros}. Un estado puro no es mas que una función lineal que no puede ser descompuesta en otras funciones lineales \cite{Manko2002}.\\
+
+Los estados en su forma mas general se asocian a un \textit{vector de estado}, el cual es un elemento de un espacio abstracto $\mathcal{H}$, llamado \textit{espacio de estado} \cite{Cohen}. Los espacios abstractos $\mathcal{H}$ son subespcios del \textbf{Espacio de Hilbert}.
+\end{comment}
+
+Consideremos un función lineal $\chi(\ket{\psi})$ que asocia un número complejo con cada ket $\ket{\psi}$, es decir, la función $\chi(\ket{\psi})$ define el bra $\bra{\chi}$ \cite{Cohen} tal que
+\[
+\chi: \mathcal{H} \to \mathbb{C}: | \psi \rangle \mapsto \langle \chi | \psi \rangle.
+\]
+
+
+El conjunto de funciones lineales definido sobre los kets constituye también a un espacio vectorial (en espacios   con dimensión finita), el cual es llamado \textit{espacio dual} de $\mathcal{H}$ y es denotado por $\mathcal{H}^*$ \cite{Cohen}.
+  
+
+Con la idea de introducir el producto escalar en $\mathcal{H}$, se puede observar que es posible asociar a cada ket un bra.\\ 
+De esta manera, la acción lineal $\chi:\mathcal{H}\to \mathbb{C}$ se puede expresar como.
+\begin{equation}
+\chi(\ket{\psi})\equiv\left(\ket{\chi},\ket{\psi}\right).
+\end{equation}
+donde $\left(\cdot,\cdot\right)$ representa el producto interno en $\mathcal{H}$ \cite{Cohen}. Por lo tanto, se puede definir el producto interno en términos de kets y bras \cite{Messiah} como
+\begin{equation}
+    \ip{\psi}{\varphi}\equiv\left(\ket{\psi},\ket{\varphi}\right).
+\end{equation}
+\begin{comment}
+    Se tiene que la correspondencia  $ket-bra$ es antilineal. Sea un estado cualquiera $\ket{\varphi}=\sum_i\lambda_i\ket{\varphi_i}$, entonces obteniendo su producto interno.
+\begin{align}
+\ip{\varphi}{\psi}
+    &= \left(\sum_i\lambda_i\ket{\varphi_i},\ket{\psi}\right)=\sum_i\bar{\lambda_i}(\ket{\varphi_i},\ket{\psi}) \\[4pt]
+    &=
+    \sum_i\bar{\lambda_i}\ip{\varphi_i}{\psi}  =
+    \left(\sum_i \bar{\lambda_i} \bra{\varphi_i}\right)\ket{\psi}
+\end{align}
+
+Note que el bra correspondiente a  $\ket{\varphi}=\sum_i\lambda_i\ket{\varphi_i}$ es $\sum_i \bar{\lambda_i} \bra{\varphi_i}$ \cite{Cohen}.
+\end{comment}
+
+
+El espacio de estados entonces debe cumplir con todas las propiedades del producto interno, además,  toda sucesión de Cauchy debe converger a un elemento del espacio, es decir, debe ser un \textit{espacio completo}. Además, la base del espacio debe ser orto-normal numerable, a estos espacios se les conoce como \textit{espacios separables}. Estas restricciones son las que definen a un \textit{espacio de Hilbert} \cite{Messiah}.
+
+
+
+
+
+
+
+\subsection{Espacios de Hilbert}
+Un espacio de Hilbert ($H$), es un espacio lineal con producto interno definido, completo y separable \cite{Messiah}.
+
+Su producto interno, definido como: $\left(\cdot,\cdot \right):  H\times H\to \mathbb{C}$ satisface las siguientes condiciones:
+\begin{itemize}
+    \item $\left(x,y \right)=\overline{\left(y,x \right)}$
+    \item $\left(\alpha x + \beta y,z \right)=\alpha\left(x,y \right)+\beta\left(y,z \right)$
+    \item $\left(x,x \right)\geq 0$
+    \item Si $\left(x,x \right)=0$, entonces $x=0$
+\end{itemize}
+
+A continuación se muestran dos ejemplos fundamentales en la mecánica cuántica de espacios de Hilbert.
+\begin{enumerate}
+    \item \textbf{Funciones cuadrático integrables}\\
+    Funciones $\psi(q_1,q_2,\dots,q_n$) tales que:
+    \[\int \abs{\psi(q_1\dots q_n)}^2d\tau < \infty\]
+    Son funciones cuadrático integrables con producto interno definido como \[\left(\psi,\phi\right)=\int \bar{\psi}(q_1,\dots,q_n)\phi(q_1,\dots,q_n)d\tau\]
+    Este espacio posee, la propiedad de ser completo, cumpliendo así las propiedades de espacio de Hilbert\cite{Messiah}.
+    \item \textbf{Espacio del Qubit}\\
+    Un qubit se describe mediante sistemas compuestos formados por estados individuales de dos niveles\cite{Kaye}. Se tiene un espacio discreto 2-dimensional. Generalmente se le asocia a este espacio la \textit{base computacional}:
+    \begin{equation}
+        \{\ket{0},\ket{1}\}.
+    \end{equation}
+\end{enumerate}
+\begin{comment}
+    Nótese la analogía con la computación clásica, donde tenemos dos posibles valores para los bits $0$ ó $1$. Los qubits diferenciándose, como se verá mas adelante, en la superposición de ambos estados. 
+    Algunos sistemas que se usan para modelar qubits, y por tanto, siendo sistemas con dos niveles de energía se muestran a continuación.
+    \begin{itemize}
+        \item Estado de espín de partículas con espín $1/2$. Siendo la base computacional: $\{\textit{Spin-down}$, $\textit{Spin-up}\}$
+        \item Electrón orbitando núcleos con una separación energética grande entre el segundo nivel energético y el tercero para confinar al electrón unicamente a los dos primero niveles energéticos del átomo \cite{Kaye}. Con base computacional: $\{E_0, E_1\}$, los niveles energéticos donde se encuentra la partícula.
+        \item Polarización de un fotón, con base computacional: $\{\Bar{V}, \Bar{H}\}$ la polarización vertical y horizontal.
+    \end{itemize}
+\end{comment}
+
+
+\subsection{Espacio de Rayo}
+\begin{comment}
+    Usando el formalismo de elementos de Hilbert, siendo $\ket{\psi}$ un elemento de este y $\hat{A}$ una variable dinámica, se puede obtener el valor esperado de $\hat{A}$ como sigue:
+\begin{equation}
+    \expval{A} = \expval{A}{\psi}
+\end{equation}
+Hay que notar que las fases globales en los estados no afectan el valor esperado de una variable dinámica, como se muestra a continuación:\\
+Sea $\ket{\Psi}=e^{i\theta}\ket{\psi}$ 
+\begin{equation}
+    \expval{A}{\Psi}=e^{-i\theta}e^{i\theta}\expval{A}{\psi}=\expval{A}{\psi}
+\end{equation}
+Es decir, la física del sistema no cambia por una fase global. Esto nos permitiría trabajar con un conjunto de estados distintos que son físicamente equivalentes. Este conjunto es definido como \textit{espacio de rayo} \cite{Sakurai2011}.\\ 
+\end{comment}
+Sea $\ket{\psi}\in \mathcal{H}$, se define su espacio de rayo como:
+\begin{equation}
+    \textit{Ray Space}\equiv\{\lambda\ket{\psi} \; |\; \lambda\in \mathbb{C} \}.
+\end{equation}
+La motivación de la definición de este conjunto es que, en realidad, toda la información del estado físico se encuentra contenida de un elemento del espacio de estados, sin importar su fase global. En otras palabras, $\lambda\ket{\psi}$ contiene la misma información física que $\ket{\psi}$ para todo $\lambda\in\mathbb{C}$ \cite{Sakurai2011}.\\
+
+Esto nos permitiría trabajar con un conjunto de estados distintos que son físicamente equivalentes.
+
+\subsection{Espacio de Operadores de Densidad}
+En el caso de sistemas con múltiples estados cuánticos (no superposición), es decir, estos dividen su ensamble en diferentes secciones donde cada sección es representada por un estado $\ket{\psi_i}$ distinto.
+Un ejemplo clásico es el de un solido con diferentes dominios magnéticos, cada dominio posee una dirección particular de espín. ¿Como se puede describir su función de estado? Usando el formalismo de vector de Hilbert la descripción de este estado no es posible pues no existe una manera de dividir en sub-estados en este sentido.\\
+
+Este tipo de ensambles motivo el formalismo de operador de Densidad, en donde es posible hacer esta subdivisión de estados.\\
+
+Sea un ensamble con N $\ket{\psi_i}$ sub-estados, se define el \textit{operador de densidad} como:
+\begin{equation}
+    \rho \equiv \sum_{i=1}^N\omega_i\dyad{\psi_i}.
+\end{equation}
+Con $\omega_i = P(\ket{\psi_i})$ el peso de cada estado. Por lo que se debe cumplir que $\sum_i \omega_i=1$.
+
+Usando la definición del operador de densidad se definen tres tipos de ensambles que pueden ser modelados mediante este formalismo.
+\begin{enumerate}
+    \item \textbf{Ensamble Puro}: Sea el $j$-esimo sistema $\ket{\psi_j}$, entonces un ensamble es puro si $\omega_i = \delta_{ij}$. Es decir, el ensamble consta de un único estado.
+    \item \textbf{Ensamble No polarizado}: Un ensamble es no polarizado cuando cada sub-estado tiene el mismo peso. Es decir, es equiprobable $\omega_i=\frac{1}{N}$. Con $N$ el número de sub-estados.
+    \item \textbf{Ensamble Mixto / Parcialmente polarizado}: Cuando el ensamble no es puro ni no polarizado, se dice que es mixto.
+\end{enumerate}
+\begin{comment}
+    La pregunta natural para cualquier formalismo es ¿Como hacer mediciones?. En este caso, al ser posibles los ensambles mixtos, se debe reflejar la medición de cada sub-estado en la medición del observable. Buscando este proposito se define el valor esperado de un observable $\Oper{\sigma}$ como:
+\begin{equation}
+    \expval{\Oper{\sigma}}=\sum_i\omega_i\expval{\Oper{\sigma}}{\psi_i}
+    \label{eq:def_expval}
+\end{equation}
+De la Ecuación \ref{eq:def_expval}:
+
+\begin{align}
+\sum_i \omega_i \expval{\Oper{\sigma}}{\psi_i}
+    &= \sum_i \sum_a \sum_b 
+       \omega_i \ip{\psi_i}{a}\mel{a}{\Oper{\sigma}}{b}\ip{b}{\psi_i} \\[4pt]
+    &= \sum_{i,a,b} \omega_i \mel{a}{\Oper{\sigma}}{b}\ip{b}{\psi_i} \\[4pt]
+    &= \Tr{\sum_{i,b}\omega_i \Oper{\sigma}\dyad{b}\dyad{\psi_i}} \\[4pt]
+    &= \Tr{\sum_b\dyad{b}\rho} \\[4pt]
+    &= \Tr{\Oper{\sigma}\rho}.
+\end{align}
+Obteniendo al final:
+\begin{equation}
+    \expval{\Oper{\Oper{\sigma}}}=\Tr{\Oper{\sigma}\rho}
+\end{equation}
+\end{comment}
+
+
+Algunas propiedades importantes del operador de densidad \cite{Sakurai2011}.:
+\begin{itemize}
+    \item $\rho$ es hermítico.
+    \item Normalización: $\Tr{\rho}=1$
+    \item $0\leq\Tr{\rho^2}\leq1$. Si $\Tr{\rho^2}=1,$ entonces el ensamble es puro.
+\end{itemize}
+
+
+\begin{comment}
+    Lo único faltante para que ese formalismo describa cualquier sistema cuántico es una parte crucial de la mecánica cuántica, la superposición. ¿Cómo se describe la superposición de estados usando el operador de densidad.?
+
+Es facil notar que el siguiente operador:
+\begin{equation}
+    \rho = \cos^2(\theta)\rho_1+\sin^2(\theta)\rho_2
+\end{equation}
+es de un estado mixto pues
+\[\Tr{\rho^2}=1+2\cos^2(\theta)sin^2(\theta)\Tr{\rho_1\rho_2}
+\]
+donde el segundo termino no necesariamente es $0$. Así que se requiere otra forma de formular la superposición de estados mediante operadores de densidad de tal forma que se obtenga un estado puro.
+
+\end{comment}
+
+
+\section{Observables}
+Para introducir los observables y el concepto de medición, es necesario definir el concepto de \textit{operador lineales} \cite{Messiah}.\\ Un operador lineal $\bm{A}$ es una correspondencia lineal entre dos estados, usando notación de Dirac esto se escribe como:
+\begin{equation}
+    \ket{\psi}=\mathbf{A}\ket{\varphi}.
+\end{equation}
+
+
+Se dice que dos operadores $\bm{A}$ y $\bm{B}$ son iguales si:
+\begin{equation}
+    \expval{\bf{A}}{\psi}=\expval{\bf{B}}{\psi}.
+\end{equation}
+Ya se menciono lo que se conoce como el primer postulado de la mecánica cuántica y se profundizo en su formalismo matemático.\\ Esto permite continuar con el segundo postulado de la mecánica cuántica que menciona
+\section{Evolución Temporal}
+Es una prueba de como veo $gsdnf$
+\begin{equation}
+    \ket{\psi}=\ket{\phi}
+\end{equation}
+\section{Distribución de Probabilidad}
+\section{Composición de Sistemas}
+
+\end{document}
