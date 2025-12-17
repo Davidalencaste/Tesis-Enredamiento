@@ -36,6 +36,8 @@ Además, los kets forman un espacio vectorial lineal, donde cualquier combinaci�
 Mediante esta definición, se dice que los kets de un ensamble son linealmente independientes si ninguno de ellos puede ser expresado como una combinación lineal de otros \cite{Messiah}.\\
 La dimensión del espacio de estados es igual al número de kets linealmente independientes por definición. Si el número de kets linealmente independientes es infinito, decimos que el espacio de estados tiene una dimensión infinita.\\
 
+Es bien sabido, que cada espacio vectorial puede ser asociado a un espacio vectorial dual, por tanto, existe la asociación a un \textit{espacio vectorial dual del espacio de kets}.
+
 
 
 \begin{comment}
@@ -68,8 +70,15 @@ De esta manera, la acción lineal $\chi:\mathcal{H}\to \mathbb{C}$ se puede expr
 \end{equation}
 donde $\left(\cdot,\cdot\right)$ representa el producto interno en $\mathcal{H}$ \cite{Cohen}. Por lo tanto, se puede definir el producto interno en términos de kets y bras \cite{Messiah} como
 \begin{equation}
-    \ip{\psi}{\varphi}\equiv\left(\ket{\psi},\ket{\varphi}\right).
+    \ip{\psi}{\varphi}\equiv\left(\ket{\psi},\ket{\varphi}\right),
 \end{equation}
+que satisface las siguientes condiciones:
+\begin{itemize}
+    \item $\ip{\psi}{\varphi}=\overline{\ip{\varphi}{\psi}}$
+    \item $\ip{(\alpha\psi+\beta\varphi)}{\phi}=\alpha\ip{\psi}{\phi}+\beta\ip{\varphi}{\phi}$
+    \item $\ip{\psi}\geq 0$
+    \item Si $\ip{\psi}=0$, entonces $\ket{\psi}=\bf{0}$
+\end{itemize}
 \begin{comment}
     Se tiene que la correspondencia  $ket-bra$ es antilineal. Sea un estado cualquiera $\ket{\varphi}=\sum_i\lambda_i\ket{\varphi_i}$, entonces obteniendo su producto interno.
 \begin{align}
@@ -84,7 +93,7 @@ Note que el bra correspondiente a  $\ket{\varphi}=\sum_i\lambda_i\ket{\varphi_i}
 \end{comment}
 
 
-El espacio de estados entonces debe cumplir con todas las propiedades del producto interno, además,  toda sucesión de Cauchy debe converger a un elemento del espacio, es decir, debe ser un \textit{espacio completo}. Además, la base del espacio debe ser orto-normal numerable, a estos espacios se les conoce como \textit{espacios separables}. Estas restricciones son las que definen a un \textit{espacio de Hilbert} \cite{Messiah}.
+El espacio de estados entonces debe cumplir con todas las propiedades del producto interno, además,  toda sucesión de Cauchy debe converger a un elemento del espacio, es decir, debe ser un \textit{espacio completo}. Además, la base del espacio debe ser ortonormal numerable, a estos espacios se les conoce como \textit{espacios separables} \cite{Messiah}.
 
 
 
@@ -93,15 +102,8 @@ El espacio de estados entonces debe cumplir con todas las propiedades del produc
 
 
 \subsection{Espacios de Hilbert}
-Un espacio de Hilbert ($H$), es un espacio lineal con producto interno definido, completo y separable \cite{Messiah}.
 
-Su producto interno, definido como: $\left(\cdot,\cdot \right):  H\times H\to \mathbb{C}$ satisface las siguientes condiciones:
-\begin{itemize}
-    \item $\left(x,y \right)=\overline{\left(y,x \right)}$
-    \item $\left(\alpha x + \beta y,z \right)=\alpha\left(x,y \right)+\beta\left(y,z \right)$
-    \item $\left(x,x \right)\geq 0$
-    \item Si $\left(x,x \right)=0$, entonces $x=0$
-\end{itemize}
+
 
 A continuación se muestran dos ejemplos fundamentales en la mecánica cuántica de espacios de Hilbert.
 \begin{enumerate}
@@ -128,31 +130,72 @@ A continuación se muestran dos ejemplos fundamentales en la mecánica cuántica
 
 
 \subsection{Espacio de Rayo}
-\begin{comment}
-    Usando el formalismo de elementos de Hilbert, siendo $\ket{\psi}$ un elemento de este y $\hat{A}$ una variable dinámica, se puede obtener el valor esperado de $\hat{A}$ como sigue:
-\begin{equation}
-    \expval{A} = \expval{A}{\psi}
-\end{equation}
-Hay que notar que las fases globales en los estados no afectan el valor esperado de una variable dinámica, como se muestra a continuación:\\
-Sea $\ket{\Psi}=e^{i\theta}\ket{\psi}$ 
-\begin{equation}
-    \expval{A}{\Psi}=e^{-i\theta}e^{i\theta}\expval{A}{\psi}=\expval{A}{\psi}
-\end{equation}
-Es decir, la física del sistema no cambia por una fase global. Esto nos permitiría trabajar con un conjunto de estados distintos que son físicamente equivalentes. Este conjunto es definido como \textit{espacio de rayo} \cite{Sakurai2011}.\\ 
-\end{comment}
-Sea $\ket{\psi}\in \mathcal{H}$, se define su espacio de rayo como:
-\begin{equation}
-    \textit{Ray Space}\equiv\{\lambda\ket{\psi} \; |\; \lambda\in \mathbb{C} \}.
-\end{equation}
-La motivación de la definición de este conjunto es que, en realidad, toda la información del estado físico se encuentra contenida de un elemento del espacio de estados, sin importar su fase global. En otras palabras, $\lambda\ket{\psi}$ contiene la misma información física que $\ket{\psi}$ para todo $\lambda\in\mathbb{C}$ \cite{Sakurai2011}.\\
 
-Esto nos permitiría trabajar con un conjunto de estados distintos que son físicamente equivalentes.
+Para definir el espacio de rayos es necesario notar que una medición completa
+en mecánica cuántica no da como resultado un vector específico del espacio de
+Hilbert, sino una clase de equivalencia de vectores relacionada mediante la
+multiplicación por un número complejo no nulo. En otras palabras, sobre el
+espacio de Hilbert existe una acción natural del grupo abeliano
+$\C_0 := \C \setminus \{0\}$ dada por
+\begin{equation}
+    \ket{\psi} \mapsto \lambda \ket{\psi}
+    = \varrho \e^{\i \theta} \ket{\psi},
+    \qquad
+    \varrho \in \R^{+}, \ \theta \in [0,2\pi).
+\end{equation}
+Esto permite definir las clases de equivalencia de la siguiente forma:
+\begin{equation}
+    [\psi] := \{\lambda \ket{\psi} \mid \lambda \in \C_0\}.
+\end{equation}
+
+Al fijar el módulo del factor complejo igual a uno, $\varrho = 1$, se elimina la
+libertad asociada a la reescalación real y se obtiene la llamada esfera de
+estados normalizados,
+\begin{equation}
+    S^{2n-1}
+    :=
+    \left\{
+        \ket{\psi} \in \H_0
+        \,\middle|\,
+        \ip{\psi} = 1
+    \right\}.
+\end{equation}
+
+Por otra parte, al identificar estados que difieren únicamente por una fase
+global, $\ket{\psi} \sim \e^{i\theta}\ket{\psi}$, se obtiene el espacio
+proyectivo de Hilbert, definido como el conjunto de todos los rayos del espacio
+de Hilbert,
+\begin{equation}
+    \Proj(\H_0)
+    :=
+    \{(\ket{\psi}\in \H_0\,|\, \norm{\psi}=1)/(\ket{\psi}\sim \e^{i\theta}\ket{\psi})\}.
+\end{equation}
+
+El espacio $\Proj(\H_0)$ es conocido en física como el \emph{espacio de rayos},
+mientras que en matemáticas corresponde a un espacio proyectivo de Hilbert.
+En el caso de sistemas de dimensión finita, este espacio se denomina
+\emph{espacio proyectivo complejo} y se denota por $\C \textbf{P}(\H_0)$.
+
+Por lo tanto, el espacio proyectivo complejo proporciona una descripción del
+espacio de estados físicos en la cual se han eliminado las redundancias
+asociadas a la norma y a la fase global.
+
+De esta manera, los estados físicos corresponden a órbitas de la acción de $U(1)$
+sobre la esfera de estados normalizados $S^{2n-1}$, es decir,
+a círculos $S^1$ contenidos en $S^{2n-1}$.
+
+
+\textit{Ejemplo Qubit:}
+El espacio de estados en este caso es $\C\textbf{P} \simeq S^2$, que es comúnmente llamada la \textbf{esfera de Bloch}.
+
+Es importante mencionar que no es usual trabajar directamente con sistemas cuánticos en el espacio proyectivo $\Proj(\H_0)$, ya que este no admite coordenadas globales. No obstante, dicho espacio posee propiedades geométricas de gran relevancia, entre las que destaca la existencia de la métrica de Fubini-Study. Además, como se mostrará en la siguiente sección, existe una correspondencia uno a uno entre los elementos del espacio proyectivo y las matrices densidad de rango uno.
+
 
 \subsection{Espacio de Operadores de Densidad}
-En el caso de sistemas con múltiples estados cuánticos (no superposición), es decir, estos dividen su ensamble en diferentes secciones donde cada sección es representada por un estado $\ket{\psi_i}$ distinto.
-Un ejemplo clásico es el de un solido con diferentes dominios magnéticos, cada dominio posee una dirección particular de espín. ¿Como se puede describir su función de estado? Usando el formalismo de vector de Hilbert la descripción de este estado no es posible pues no existe una manera de dividir en sub-estados en este sentido.\\
+En el caso de sistemas con múltiples estados cuánticos, es decir, ensambles divididos en en diferentes secciones, donde cada sección representa un estado $\ket{\psi_i}$ distinto.
+Un ejemplo clásico es el de un solido con diferentes dominios magnéticos donde cada dominio posee una dirección particular de espín. Entonces, ¿como se puede describir la función de estado de un ensamble de esta naturaleza? El el formalismo de vector de Hilbert la descripción de este estado no es posible pues no existe una manera de dividir en sub-estados en este sentido.\\
 
-Este tipo de ensambles motivo el formalismo de operador de Densidad, en donde es posible hacer esta subdivisión de estados.\\
+Este tipo de ensambles motivo el formalismo de operador de Densidad, en donde es posible hacer esta división de estados.\\
 
 Sea un ensamble con N $\ket{\psi_i}$ sub-estados, se define el \textit{operador de densidad} como:
 \begin{equation}
