@@ -171,7 +171,7 @@ la esfera de estados normalizados y el espacio proyectivo.
 
 \[
 \begin{tikzcd}[column sep=large, row sep=large]
-\H_0 \setminus \{0\}
+\H_0
 \arrow[dd, "\lambda"]
 \arrow[rd, "\rho"] 
 &  \\
@@ -197,18 +197,159 @@ Es importante mencionar que no es usual trabajar directamente con sistemas cuán
 
 
 \subsection{Espacio de Operadores de Densidad}
-En el caso de sistemas con múltiples estados cuánticos, es decir, ensambles divididos en en diferentes secciones, donde cada sección representa un estado $\ket{\psi_i}$ distinto.
-Un ejemplo clásico es el de un solido con diferentes dominios magnéticos donde cada dominio posee una dirección particular de espín. Entonces, ¿como se puede describir la función de estado de un ensamble de esta naturaleza? El el formalismo de vector de Hilbert la descripción de este estado no es posible pues no existe una manera de dividir en sub-estados en este sentido.\\
+Es común que se estudie la mecánica cuántica en el espacio de Hilbert, donde describimos al estado con un ket $\ket{\psi}$, pero como se mostrará a continuación, esta manera de representar los estados, limita en gran medida el tipo de sistemas con los que podemos trabajar.\\
+Cuando se considera un sistema representado por un ket, se esta diciendo indirectamente que todo el sistema físico es caracterizado por un mismo tipo de estado $\ket{\psi}$. Un ejemplo de ello, es cualquier experimento tipo \textit{filtro}, en el cual el filtro arroja un resultado completamente predecible con probabilidad $100\%$ y que colapse siempre al sistema a un único estado (un haz de luz filtrado a través de un de un prisma de Nicol es un ejemplo de ello) \cite{Fano}. Con este tipo de sistemas, realizar una medición  $\expval{A}$ es esencialmente sencillo, pues el resultado obtenido es seguro que proviene de un mismo tipo de estado, de la misma naturaleza. 
 
-Este tipo de ensambles motivo el formalismo de operador de Densidad, en donde es posible hacer esta división de estados.\\
-
-Sea un ensamble con $N$ $\ket{\psi_i}$ subestados, se define el \textit{operador de densidad} como:
+\\Por tanto, tenemos una manera matemática de describir este tipo de sistemas, pero que ocurre con el haz de luz antes de pasar por el polarizador, es decir, ¿como describir la luz no polarizada?. En este caso, la luz puede describirse como una mezcla de polariazadores, es decir, una mezcla estadística de estados puros donde el haz de luz esta completamente caracterizado por los i-esimo filtros. A este tipo de sistemas, se les conoce como \textit{estados mixtos}, donde realizar una medición al sistema implica una mezcla ponderada de las mediciones individuales en cada filtro como se muestra a continuación.
 \begin{equation}
-    \rho \equiv \sum_{i=1}^N\omega_i\dyad{\psi_i}.
+    \expval{A}=\sum_i w_i\expval{A}_i.
 \end{equation}
-Con $\omega_i = P(\ket{\psi_i})$ el peso de cada estado. Por lo que se debe cumplir que $\sum_i \omega_i=1$.
+donde $\omega_i$ representa el peso estadistico del i-esimo filtro.\\ Realizando ciertas manipulaciones:
 
-Usando la definición del operador de densidad se definen tres tipos de ensambles que pueden ser modelados mediante este formalismo.
+\begin{equation}
+\expval{A}=\sum_i w_i\expval{A}_i = \sum_{n,n'}  Q_{nn'}\sum_i w_i c^{i\,*}_{n'}c^i_n
+\label{eq:observable_estadistico}
+\end{equation}
+
+Definiendo la \textit{matriz de densidad}:
+\begin{equation}
+    \rho_{nn'}=\sum_i w_i\, c^{i\,*}_{n'}\,c^i_n
+\end{equation}
+De esta manera, ~\eqref{eq:observable_estadistico} pasa a ser:
+\begin{equation}
+    \expval{A}= \sum_{nn'}A_{nn'}\rho_{nn'}=\sum_{n'}(A\rho)_{nn'}=\Tr{A\rho}
+    \label{eq:Operador_densidad}
+\end{equation}
+La ecuación [~\eqref{eq:Operador_densidad}] nos define el \textbf{Operador de densidad}. Es importante notar que este operador no depende de la base con la que se trabaje, y esto resulta obvio usando el ejemplo de luz no polarizada, mencionamos que puede ser vista como mezcla de polarizadores, pero bien pueden ser polarizadores lineales, como circulares \cite{Fano}. Es por ello que aparece de forma natural la traza, la cual es una operación que es independiente de la base en la que se trabaje. \\ Algunos textos definen el operador densidad de la siguiente forma:
+\begin{equation}
+    \rho\equiv \sum_i w_i\op{\phi_i}.
+\end{equation}
+Esta expresión cumple con la misma definición dada en ~\eqref{eq:Operador_densidad}, en realidad son equivalentes, sin embargo esta definición podría interpretar que los estados mixtos son una mezcla de estados puros $\ket{\phi}$, pero como ya vimos, esto simplemente es por como escojamos la base de operadores $\{\op{\alpha}\}$, donde la definición es completamente valida para cada una de las bases que podrían existir.\\ Una propiedad importante del operador densidad es conocida como \textit{propiedad de normalización}, que viene del hehco que la suma de los pesos $w_i$ por construcción estadistica.
+\begin{equation}
+    \Tr{\rho}= \sum_n \rho_{nn}=\sum_i w_i = 1.
+\end{equation}
+
+Nos gustaría tener una clase de medida que cuantifique que tan puro o mixto es un estado por medio del operador de densidad, de tal manera que resulte claro conocer con que tipo de sistema se esta trabajando con solo ver el tipo de operador de densidad. Para ello, usaremos de motivación el concepto de entropía.\\
+
+Consideremos un ensamble de partículas con espín $\frac{1}{2}$ y momento angular promedio definido, es decir vamos a considerar un ensamble con posibilidad de dos tipos de estados (dos niveles del espín)
+\begin{equation}
+    \expval{\bm{S}}=\Tr{\rho \bm{\sigma}}.
+\end{equation}
+Donde $\bm{\sigma}=(\sigma_x,\sigma_y,\sigma_z)$ son las matrices de Pauli.\\ Ahora consideremos la acción $F$:
+\begin{align}
+    F
+    &=\Tr{-\rho\ln{\rho}+\alpha_x S_x+\alpha_y S_y+\alpha_z S_z+\lambda \rho}\\
+    &=\Tr{-\rho\ln{\rho}+\bm{\alpha}\cdot\Bar{S}+\lambda\rho}.
+\end{align}
+Donde $S_i$ es el valor promedio de la i-esima componente del espín, es decir, $S_i=\Tr{\rho \sigma_i}$.
+Sabemos que la entropía debe maximizarse en un estado de equilibrio y dado que la entropía es cóncava en $\rho$ basta con obtener el punto donde $\delta F = 0$ para encontrar el estado $\rho$ que maximiza la entropía.
+\begin{align}
+0=\delta F
+&= \Tr{\ln{\rho}+\Id+\bm{\alpha}\cdot \bm{\sigma}+\lambda\Id}\delta\rho.
+\label{eq:multiplicadores}
+\end{align}
+entonces al ser para cualquier variación, necesariamente se requiere que:
+\begin{equation}
+    \rho = \frac{\e^{-\bm{\alpha}\cdot \bm{\sigma}}}{\e^{(1+\lambda)\Id}}.
+    \label{eq:rho_wo_norm}
+\end{equation}
+Usando la restricción $\Tr{\rho}=1$, se obtiene
+\begin{equation}
+    \e^{(1+\lambda)\Id}=\Tr{\e^{-\bm{\alpha}\cdot\bm{\sigma}}}.
+    \label{eq:rho's_normaliz}
+\end{equation}
+Sustituyendo ~\eqref{eq:rho's_normaliz} en ~\eqref{eq:rho_wo_norm} se obtiene:
+\begin{equation}
+    \rho = \frac{\e^{-\bm{\alpha}\cdot\bm{\sigma}}}{\Tr{\e^{-\bm{\alpha}\cdot\bm{\sigma}}}}.
+    \label{eq:rho_semifinal}
+\end{equation}
+Solo es necesario ahora incluir la restricción de espín para despejar los valores $\alpha_i$. Primero, recordando que:
+\begin{equation}
+(\bm{\sigma}\cdot\bm{\alpha})^{m}
+=
+\begin{cases}
+|\bm{\alpha}|^{m} \;\Id,
+& m \ \text{par}, \\[4pt]
+|\bm{\alpha}|^{m}\,
+\bm{\sigma}\cdot\hat{\bm{n}},
+& m \ \text{impar},
+\end{cases}
+\end{equation}
+Con ello, expandimos en serie de Taylor la exponencial:
+\begin{align}
+\e^{-\bm{\alpha}\cdot\bm{\sigma}}
+&=
+\sum_{m=0}^{\infty}
+\frac{(-1)^m}{m!}
+(\bm{\alpha}\cdot\bm{\sigma})^{m}
+\notag \\
+&=
+\sum_{k=0}^{\infty}
+\frac{|\bm{\alpha}|^{2k}}{(2k)!}\,\Id
+-
+\sum_{k=0}^{\infty}
+\frac{|\bm{\alpha}|^{2k+1}}{(2k+1)!}
+(\bm{\sigma}\cdot\hat{\bm{n}})
+\notag \\
+&=
+\cosh|\bm{\alpha}|\,\Id
+-
+\frac{\sinh|\bm{\alpha}|}{|\bm{\alpha}|}
+(\bm{\alpha}\cdot\bm{\sigma}).
+\label{eq:expansion_exponencial}
+\end{align}
+Con este reultado, aplicamos la traza a la exponencial:
+\begin{align}
+\Tr\!\left(\e^{-\bm{\alpha}\cdot\bm{\sigma}}\right)
+&=
+\Tr\!\left(
+\cosh|\bm{\alpha}|\,\Id
+-
+\frac{\sinh|\bm{\alpha}|}{|\bm{\alpha}|}
+(\bm{\alpha}\cdot\bm{\sigma})
+\right)
+\notag \\
+&=
+\cosh|\bm{\alpha}|\,\Tr(\Id)
+-
+\frac{\sinh|\bm{\alpha}|}{|\bm{\alpha}|}
+\Tr(\bm{\alpha}\cdot\bm{\sigma})
+\notag \\
+&=
+2\cosh|\bm{\alpha}|
+-
+\frac{\sinh|\bm{\alpha}|}{|\bm{\alpha}|}
+\sum_i \alpha_i\; \cancelto{0}{\Tr(\sigma_i)}
+\notag \\
+&=
+2\cosh|\bm{\alpha}|.
+\label{eq:normalizacion_traza}
+\end{align}
+Sustituyendo ~\eqref{eq:normalizacion_traza} en ~\eqref{eq:rho_semifinal} y reacomodando:
+\begin{equation}
+    \rho = \frac{1}{2}\left(\Id - \frac{\tanh{|\bm{\alpha}|}}{|\bm{\alpha}|}\right)\bm{\alpha}\cdot\bm{\sigma}
+    \label{eq:rho_semi_semifinal}
+\end{equation}
+Ahora, observando que
+\begin{align}
+    S_k 
+    &= \Tr(\rho\,\sigma_k)
+    = \Tr\!\left[\frac{1}{2}\left(\Id - \frac{\tanh |\bm{\alpha}|}{|\bm{\alpha}|}\sum_i \alpha_i\,\sigma_i \right)\sigma_k\right] \\
+    &= \frac{1}{2}\left(\cancelto{0}{\Tr(\sigma_k)}
+    - \frac{\tanh |\bm{\alpha}|}{|\bm{\alpha}|}
+    \sum_i \alpha_i \cancelto{2\delta_{ik}}{\Tr(\sigma_i\sigma_k)}\right) \\
+    &= -\frac{\tanh |\bm{\alpha}|}{|\bm{\alpha}|}\,\alpha_k ,
+\end{align}
+y sustituyendo este resultado en la ecuación ~\eqref{eq:rho_semi_semifinal}, se obtiene finalmente
+\begin{equation}
+\rho = \frac{1}{2}\left(\Id + \bm{S}\cdot \bm{\sigma}\right).
+\end{equation}
+
+
+
+
+
+
 \begin{enumerate}
     \item \textbf{Ensamble Puro}: Sea el $j$-esimo sistema $\ket{\psi_j}$, entonces un ensamble es puro si $\omega_i = \delta_{ij}$. Es decir, el ensamble consta de un único estado.
     \item \textbf{Ensamble No polarizado}: Un ensamble es no polarizado cuando cada sub-estado tiene el mismo peso. Es decir, es equiprobable $\omega_i=\frac{1}{N}$. Con $N$ el número de sub-estados.
@@ -220,7 +361,7 @@ Usando la definición del operador de densidad se definen tres tipos de ensamble
     \expval{\Oper{\sigma}}=\sum_i\omega_i\expval{\Oper{\sigma}}{\psi_i}
     \label{eq:def_expval}
 \end{equation}
-De la Ecuación \ref{eq:def_expval}:
+De la Ecuación ~\eqref{eq:def_expval}:
 
 \begin{align}
 \sum_i \omega_i \expval{\Oper{\sigma}}{\psi_i}
