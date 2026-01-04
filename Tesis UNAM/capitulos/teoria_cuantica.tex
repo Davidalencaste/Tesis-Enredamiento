@@ -200,7 +200,7 @@ Es importante mencionar que no es usual trabajar directamente con sistemas cuán
 Es común que se estudie la mecánica cuántica en el espacio de Hilbert, donde describimos al estado con un ket $\ket{\psi}$, pero como se mostrará a continuación, esta manera de representar los estados, limita en gran medida el tipo de sistemas con los que podemos trabajar.\\
 Cuando se considera un sistema representado por un ket, se esta diciendo indirectamente que todo el sistema físico es caracterizado por un mismo tipo de estado $\ket{\psi}$. Un ejemplo de ello, es cualquier experimento tipo \textit{filtro}, en el cual el filtro arroja un resultado completamente predecible con probabilidad $100\%$ y que colapse siempre al sistema a un único estado (un haz de luz filtrado a través de un de un prisma de Nicol es un ejemplo de ello) \cite{Fano}. Con este tipo de sistemas, realizar una medición  $\expval{A}$ es esencialmente sencillo, pues el resultado obtenido es seguro que proviene de un mismo tipo de estado, de la misma naturaleza. 
 
-\\Por tanto, tenemos una manera matemática de describir este tipo de sistemas, pero que ocurre con el haz de luz antes de pasar por el polarizador, es decir, ¿como describir la luz no polarizada?. En este caso, la luz puede describirse como una mezcla de polariazadores, es decir, una mezcla estadística de estados puros donde el haz de luz esta completamente caracterizado por los i-esimo filtros. A este tipo de sistemas, se les conoce como \textit{estados mixtos}, donde realizar una medición al sistema implica una mezcla ponderada de las mediciones individuales en cada filtro como se muestra a continuación.
+Por tanto, tenemos una manera matemática de describir este tipo de sistemas, pero que ocurre con el haz de luz antes de pasar por el polarizador, es decir, ¿como describir la luz no polarizada?. En este caso, la luz puede describirse como una mezcla de polariazadores, es decir, una mezcla estadística de estados puros donde el haz de luz esta completamente caracterizado por los i-esimo filtros. A este tipo de sistemas, se les conoce como \textit{estados mixtos}, donde realizar una medición al sistema implica una mezcla ponderada de las mediciones individuales en cada filtro como se muestra a continuación.
 \begin{equation}
     \expval{A}=\sum_i w_i\expval{A}_i.
 \end{equation}
@@ -217,35 +217,59 @@ Definiendo la \textit{matriz de densidad}:
 \end{equation}
 De esta manera, ~\eqref{eq:observable_estadistico} pasa a ser:
 \begin{equation}
-    \expval{A}= \sum_{nn'}A_{nn'}\rho_{nn'}=\sum_{n'}(A\rho)_{nn'}=\Tr{A\rho}
+    \expval{A}= \sum_{nn'}A_{nn'}\rho_{nn'}=\sum_{n'}(A\rho)_{nn'}=\Tr(A\rho)
     \label{eq:Operador_densidad}
 \end{equation}
-La ecuación [~\eqref{eq:Operador_densidad}] nos define el \textbf{Operador de densidad}. Es importante notar que este operador no depende de la base con la que se trabaje, y esto resulta obvio usando el ejemplo de luz no polarizada, mencionamos que puede ser vista como mezcla de polarizadores, pero bien pueden ser polarizadores lineales, como circulares \cite{Fano}. Es por ello que aparece de forma natural la traza, la cual es una operación que es independiente de la base en la que se trabaje. \\ Algunos textos definen el operador densidad de la siguiente forma:
+La ecuación ~\eqref{eq:Operador_densidad} nos define el \textbf{Operador de densidad}. Es importante notar que este operador no depende de la base con la que se trabaje, y esto resulta obvio usando el ejemplo de luz no polarizada, mencionamos que puede ser vista como mezcla de polarizadores, pero bien pueden ser polarizadores lineales, como circulares \cite{Fano}. Es por ello que aparece de forma natural la traza, la cual es una operación que es independiente de la base en la que se trabaje. \\ Algunos textos definen el operador densidad de la siguiente forma \cite{Sakurai2011}:
 \begin{equation}
     \rho\equiv \sum_i w_i\op{\phi_i}.
 \end{equation}
-Esta expresión cumple con la misma definición dada en ~\eqref{eq:Operador_densidad}, en realidad son equivalentes, sin embargo esta definición podría interpretar que los estados mixtos son una mezcla de estados puros $\ket{\phi}$, pero como ya vimos, esto simplemente es por como escojamos la base de operadores $\{\op{\alpha}\}$, donde la definición es completamente valida para cada una de las bases que podrían existir.\\ Una propiedad importante del operador densidad es conocida como \textit{propiedad de normalización}, que viene del hehco que la suma de los pesos $w_i$ por construcción estadistica.
+Esta expresión cumple con la misma definición dada en ~\eqref{eq:Operador_densidad}, en realidad son equivalentes, sin embargo esta definición podría interpretar que los estados mixtos son una mezcla de estados puros $\ket{\phi}$, pero como ya vimos, esto simplemente es por como escojamos la base de operadores $\{\op{\alpha}\}$, donde la definición es completamente valida para cada una de las bases que podrían existir.\\ Una propiedad importante del operador densidad es conocida como \textit{propiedad de normalización}, que viene del hecho que la suma de los pesos $w_i$ por construcción estadística.
 \begin{equation}
-    \Tr{\rho}= \sum_n \rho_{nn}=\sum_i w_i = 1.
+    \Tr(\rho)= \sum_n \rho_{nn}=\sum_i w_i = 1.
 \end{equation}
 
-Nos gustaría tener una clase de medida que cuantifique que tan puro o mixto es un estado por medio del operador de densidad, de tal manera que resulte claro conocer con que tipo de sistema se esta trabajando con solo ver el tipo de operador de densidad. Para ello, usaremos de motivación el concepto de entropía.\\
-
-Consideremos un ensamble de partículas con espín $\frac{1}{2}$ y momento angular promedio definido, es decir vamos a considerar un ensamble con posibilidad de dos tipos de estados (dos niveles del espín)
+Nos gustaría tener una clase de medida que cuantifique que tan puro o mixto es un estado por medio del operador de densidad, de tal manera que resulte claro conocer con que tipo de sistema se esta trabajando con solo ver el tipo de operador de densidad. \\Una medida de lo anterior es la traza de $\rho^2$. Note en un estado consta por un $w_i=1$ para algún $\ket{\alpha_i}$ y $w_i=0$ para cualquier otro estado. De esta manera, la rho de un estado puro es de la siguiente forma:
 \begin{equation}
-    \expval{\bm{S}}=\Tr{\rho \bm{\sigma}}.
+    \rho = \op{\alpha}.
 \end{equation}
-Donde $\bm{\sigma}=(\sigma_x,\sigma_y,\sigma_z)$ son las matrices de Pauli.\\ Ahora consideremos la acción $F$:
+Es directo notar que para este estado:
+\begin{equation}
+    \rho^2=\rho,
+\end{equation}
+concluyendo, para un ensamble puro se tiene
+\begin{equation}
+    \Tr(\rho^2)=1.
+\end{equation}
+Además se tiene que para cualquier ensamble mixto, $0\le\Tr(\rho^2)\le1$. De esta manera, la traza de $\rho^2$ nos cuantifica que tan mixto o puro es un ensamble.\\ Esta medida es sencilla de calcular, sin embargo nos gustaría una medida que dependa de alguna cantidad física medible. Con esta motivación en mente, vamos a considerar un ensamble de partículas con espín $\frac{1}{2}$ y espín promedio definido (cantidad física medible), es decir, vamos a considerar un ensamble con dos niveles de energía.\\ Hacemos esta consideración, pues el desarrollo de esta tesis se basa en qubits que es un sistema de dos niveles de energía.\\
+
+Dado a \eqref{eq:Operador_densidad} definimos el espín promedio del ensamble como sigue:
+\begin{equation}
+    \bm{S}=\Tr(\rho \bm{\sigma}).
+\end{equation}
+Donde $\bm{\sigma}=(\sigma_x,\sigma_y,\sigma_z)$ son las matrices de Pauli.\\ 
+
+Definimos una cantidad que mida de manera cuantitativa el desorden del sistema, la cual dependa del tipo de ensamble. Exigimos que dicha cantidad sea mínima (cero) para un ensamble puro y máxima para un ensamble completamente aleatorio.  
+
+En termodinámica, la magnitud que cumple con estas propiedades es la \textit{entropía}. Motivados por esto, definimos la \textit{entropía en mecánica cuántica estadística} como \cite{Sakurai2011}
+\begin{equation}
+    S_{entropia} = -k_B \Tr(\rho \ln \rho),
+    \label{def:entropia}
+\end{equation}
+donde $k_B$ es la constante de Boltzmann y $\rho$ es el operador densidad del sistema.\\
+A continuación, buscaremos el operador densidad $\rho$ que describe el equilibrio térmico de un sistema con espín definido.
+
+Consideremos la acción $F$:
 \begin{align}
     F
-    &=\Tr{-\rho\ln{\rho}+\alpha_x S_x+\alpha_y S_y+\alpha_z S_z+\lambda \rho}\\
-    &=\Tr{-\rho\ln{\rho}+\bm{\alpha}\cdot\Bar{S}+\lambda\rho}.
+    &=\Tr(S_{entropia}+\alpha_x S_x+\alpha_y S_y+\alpha_z S_z+\lambda \rho)\\
+    &=\Tr(-\rho\ln{\rho}+\bm{\alpha}\cdot\Bar{S}+\lambda\rho).
 \end{align}
-Donde $S_i$ es el valor promedio de la i-esima componente del espín, es decir, $S_i=\Tr{\rho \sigma_i}$.
-Sabemos que la entropía debe maximizarse en un estado de equilibrio y dado que la entropía es cóncava en $\rho$ basta con obtener el punto donde $\delta F = 0$ para encontrar el estado $\rho$ que maximiza la entropía.
+Donde $S_i$ es el valor promedio de la i-esima componente del espín, es decir, $S_i=\Tr(\rho \sigma_i)$.\\
+Sabemos que la entropía debe maximizarse en un estado de equilibrio, y dado que la entropía es cóncava en $\rho$ basta con obtener el punto donde $\delta F = 0$ para encontrar el estado $\rho$ que maximiza la entropía.
 \begin{align}
 0=\delta F
-&= \Tr{\ln{\rho}+\Id+\bm{\alpha}\cdot \bm{\sigma}+\lambda\Id}\delta\rho.
+&= \Tr(\ln{\rho}+\Id+\bm{\alpha}\cdot \bm{\sigma}+\lambda\Id)\delta\rho.
 \label{eq:multiplicadores}
 \end{align}
 entonces al ser para cualquier variación, necesariamente se requiere que:
@@ -253,14 +277,14 @@ entonces al ser para cualquier variación, necesariamente se requiere que:
     \rho = \frac{\e^{-\bm{\alpha}\cdot \bm{\sigma}}}{\e^{(1+\lambda)\Id}}.
     \label{eq:rho_wo_norm}
 \end{equation}
-Usando la restricción $\Tr{\rho}=1$, se obtiene
+Usando la restricción $\Tr(\rho)=1$, se obtiene
 \begin{equation}
-    \e^{(1+\lambda)\Id}=\Tr{\e^{-\bm{\alpha}\cdot\bm{\sigma}}}.
+    \e^{(1+\lambda)\Id}=\Tr(\e^{-\bm{\alpha}\cdot\bm{\sigma}}).
     \label{eq:rho's_normaliz}
 \end{equation}
-Sustituyendo ~\eqref{eq:rho's_normaliz} en ~\eqref{eq:rho_wo_norm} se obtiene:
+Sustituyendo ~\eqref{eq:rho's_normaliz} en ~\eqref{eq:rho_wo_norm} se obtiene el operador densidad de un sistema con espín $\bm{S}$ y en equilibrio térmico.
 \begin{equation}
-    \rho = \frac{\e^{-\bm{\alpha}\cdot\bm{\sigma}}}{\Tr{\e^{-\bm{\alpha}\cdot\bm{\sigma}}}}.
+    \rho = \frac{\e^{-\bm{\alpha}\cdot\bm{\sigma}}}{\Tr(\e^{-\bm{\alpha}\cdot\bm{\sigma}})}.
     \label{eq:rho_semifinal}
 \end{equation}
 Solo es necesario ahora incluir la restricción de espín para despejar los valores $\alpha_i$. Primero, recordando que:
@@ -298,7 +322,7 @@ Con ello, expandimos en serie de Taylor la exponencial:
 (\bm{\alpha}\cdot\bm{\sigma}).
 \label{eq:expansion_exponencial}
 \end{align}
-Con este reultado, aplicamos la traza a la exponencial:
+Con este resultado, aplicamos la traza a la exponencial:
 \begin{align}
 \Tr\!\left(\e^{-\bm{\alpha}\cdot\bm{\sigma}}\right)
 &=
@@ -334,27 +358,45 @@ Ahora, observando que
 \begin{align}
     S_k 
     &= \Tr(\rho\,\sigma_k)
-    = \Tr\!\left[\frac{1}{2}\left(\Id - \frac{\tanh |\bm{\alpha}|}{|\bm{\alpha}|}\sum_i \alpha_i\,\sigma_i \right)\sigma_k\right] \\
+    = \Tr\!\left[\frac{1}{2}\left(\Id - \frac{\tanh |\bm{\alpha}|}{|\bm{\alpha}|}\sum_i \alpha_i\,\sigma_i \right)\sigma_k\right]
+    \notag \\
     &= \frac{1}{2}\left(\cancelto{0}{\Tr(\sigma_k)}
     - \frac{\tanh |\bm{\alpha}|}{|\bm{\alpha}|}
-    \sum_i \alpha_i \cancelto{2\delta_{ik}}{\Tr(\sigma_i\sigma_k)}\right) \\
+    \sum_i \alpha_i \Tr(\cancelto{2\delta_{ik}}{\sigma_i\sigma_k}\hspace{.9cm})\right)
     &= -\frac{\tanh |\bm{\alpha}|}{|\bm{\alpha}|}\,\alpha_k ,
 \end{align}
 y sustituyendo este resultado en la ecuación ~\eqref{eq:rho_semi_semifinal}, se obtiene finalmente
 \begin{equation}
 \rho = \frac{1}{2}\left(\Id + \bm{S}\cdot \bm{\sigma}\right).
+\label{eq:rho_final}
 \end{equation}
+Ahora, calculemos $\rho^2$ para hayar una relación con $\bm{S}$.
+\begin{align*}
+    \rho^2&=
+    \frac{1}{4}\left(\Id + \bm{S}\cdot \bm{\sigma}\right)^2
+    \notag \\
+    &=\frac{1}{4}\left(\Id+2\bm{S}\cdot\bm{\sigma}+\bm{S}^2\,\Id\right).
+\end{align*}
+Calculando la traza de $\rho^2$:
+\begin{align}
+    \Tr(\rho^2)&=
+    \Tr[\frac{1}{4}\left(\Id+2\,\bm{S}\cdot\bm{\sigma}+\bm{|S|}^2\,\Id\right)]
+    \notag \\
+    &= \frac{1}{4}\left[\cancelto{2}{\Tr(\Id)}+2\sum_iS_i\;\cancelto{0}{\Tr(\sigma_i)}\;+2|\bm{S}|^2\right]
+    \notag \\
+    &=\frac{1}{2}\left(1+|\bm{S}|^2\right).
+\end{align}
 
-
-
-
-
+De la última expresión se concluye que:
 
 \begin{enumerate}
-    \item \textbf{Ensamble Puro}: Sea el $j$-esimo sistema $\ket{\psi_j}$, entonces un ensamble es puro si $\omega_i = \delta_{ij}$. Es decir, el ensamble consta de un único estado.
-    \item \textbf{Ensamble No polarizado}: Un ensamble es no polarizado cuando cada sub-estado tiene el mismo peso. Es decir, es equiprobable $\omega_i=\frac{1}{N}$. Con $N$ el número de sub-estados.
-    \item \textbf{Ensamble Mixto / Parcialmente polarizado}: Cuando el ensamble no es puro ni no polarizado, se dice que es mixto.
+    \item Un estado puro corresponde a un vector de Bloch localizado en la superficie de la esfera de Bloch, es decir, $|\bm{S}|=1$.
+    \item Un estado mixto corresponde a un vector de Bloch ubicado en el interior de la esfera, con $|\bm{S}|<1$.
+    \item El estado completamente mezclado corresponde al caso $|\bm{S}|=0$, es decir, al origen de la esfera de Bloch.
 \end{enumerate}
+
+
+
 \begin{comment}
     La pregunta natural para cualquier formalismo es ¿Como hacer mediciones?. En este caso, al ser posibles los ensambles mixtos, se debe reflejar la medición de cada sub-estado en la medición del observable. Buscando este proposito se define el valor esperado de un observable $\Oper{\sigma}$ como:
 \begin{equation}
@@ -379,12 +421,7 @@ Obteniendo al final:
 \end{comment}
 
 
-Algunas propiedades importantes del operador de densidad \cite{Sakurai2011}.:
-\begin{itemize}
-    \item $\rho$ es hermítico.
-    \item Normalización: $\Tr{\rho}=1$
-    \item $0\leq\Tr{\rho^2}\leq1$. Si $\Tr{\rho^2}=1,$ entonces el ensamble es puro.
-\end{itemize}
+
 
 
 \begin{comment}
