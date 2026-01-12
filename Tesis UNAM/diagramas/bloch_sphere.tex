@@ -6,71 +6,84 @@
 \centering
 
 % Parámetros
-	\def\r{2.5}
-	\def\vtheta{45}
-	\def\vphi{60}
-	\def\polar{75}
-	\def\azimuth{130}
-	
-% Perspectiva de la esfera
-	\tdplotsetmaincoords{\polar}{\azimuth}
-	
+\def\r{2.5}
+\def\vtheta{45}
+\def\vphi{60}
+\def\polar{75}
+\def\azimuth{130}
+
+% Perspectiva
+\tdplotsetmaincoords{\polar}{\azimuth}
+
 \begin{tikzpicture}[scale=1,tdplot_main_coords]
 
-    \coordinate (O) at (0,0,0);
+% Origen
+\coordinate (O) at (0,0,0);
 
-	\draw[tdplot_screen_coords,black!30] (O) circle (\r);
-	
-% Paralelos y meridianos	
-	\tdplotsetthetaplanecoords{0}
-	
-	\foreach \a in {-75,-60,...,75}
-		{\tdplotCsDrawLatCircle[thin,black!30]{\r}{\a}}
-	\foreach \a in {0,15,...,165}
-		{\tdplotCsDrawLonCircle[thin,black!30]{\r}{\a}}
-	\tdplotCsDrawLonCircle% XY
-	{\r}{90}
-	\tdplotCsDrawLatCircle% Ecuador
-	[tdplotCsFill/.style={opacity=0.05}]{\r}{0}
-	\tdplotdrawarc% Pulso π/2
-	[thick,->,cyan,tdplot_rotated_coords]{(O)}{\r}{0}{90}{anchor=south east, inner sep = 20pt }{pulso π/2}
-		 
-% Ejes	
-	\tdplotsetthetaplanecoords{\vphi}
-	
-	\draw[thick,->] (O) -- (1.25*\r,0,0) node[anchor=north east,inner sep=0pt]{$x$};
-	\draw[thick,->] (O) -- (0,1.25*\r,0) node[anchor=north east, inner sep=1pt]{$z$};
-	\draw[thick,->] (O) -- (0,0,1.25*\r) node[anchor=south]{$y$};
-	
-	\draw[fill] (\r,0,0) circle (1.5pt);
-	\node at (\r,0,0) [anchor= north east, inner sep = 20pt]{ $\frac{1}{\sqrt{2}}\qty(\ket{\downarrow}+\ket{\uparrow})$};
-	
-	\draw[fill] (0,\r,0) circle (1.5pt);
-	\node at (0,\r,0) [anchor= west, inner sep = 20pt]{$\frac{1}{\sqrt{2}}\qty(\ket{\downarrow}+i\ket{\uparrow})$};
-	
-	\draw[fill,cyan] (0,0,\r) circle (1.5pt);
-	\node at (0,0,\r) [cyan,anchor=south east]{$\ket{\downarrow}$};
-	
-	\draw[fill,orange] (0,0,-\r) circle (1.5pt);
-	\node at (0,0,-\r) [orange,anchor=north]{$\ket{\uparrow}$};
-		
-    \tdplotsetcoord{P}{\r}{\vtheta}{\vphi}
+% Proyección exterior
+\draw[tdplot_screen_coords,black!20] (O) circle (\r);
 
-	\draw[densely dotted] (O) -- (Pxy);
-	\draw[densely dotted] (P) -- (Pxy);
-	\draw[fill,violet] (P) circle (1.5pt);
-	\draw[thick,->,color=violet] (O) -- (P) node[violet, anchor=west, inner sep=1pt]{$\ket{\psi}$};
-    
-	\tdplotdrawarc[->]{(O)}{.7*\r}{0}{\vphi}{anchor=north, inner sep=8}{$\varphi$}
-	\tdplotdrawarc[->,tdplot_rotated_coords]{(O)}{.7*\r}{0}{\vtheta}{anchor=north east,inner sep=8}{$\theta$}
-% Ecuador	
-   
-    \tdplotdrawarc{(O)}{\r}{\azimuth-180}{\azimuth}{}{}
-	\tdplotdrawarc[dashed]{(O)}{-\r}{\azimuth-180}{\azimuth}{}{}
+% Paralelos y meridianos
+\tdplotsetthetaplanecoords{0}
+\foreach \a in {-75,-60,...,75}
+  {\tdplotCsDrawLatCircle[thin,black!20]{\r}{\a}}
+\foreach \a in {0,30,...,150}
+  {\tdplotCsDrawLonCircle[thin,black!20]{\r}{\a}}
+
+% Ecuador
+\tdplotCsDrawLatCircle[tdplotCsFill/.style={opacity=0.04}]{\r}{0}
+
+% Ejes
+\tdplotsetthetaplanecoords{\vphi}
+\draw[thick,->] (O) -- (1.3*\r,0,0) node[anchor=north east] {$x$};
+\draw[thick,->] (O) -- (0,1.3*\r,0) node[anchor=north west] {$z$};
+\draw[thick,->] (O) -- (0,0,1.3*\r) node[anchor=south] {$y$};
+
+% Estados base
+\fill[cyan] (0,0,\r) circle (2pt);
+\node[cyan,above right] at (0,0,\r) {$\ket{\downarrow}$};
+
+\fill[orange] (0,0,-\r) circle (2pt);
+\node[orange,below] at (0,0,-\r) {$\ket{\uparrow}$};
+
+% Estados en el ecuador
+\fill (\r,0,0) circle (1.5pt);
+\node[anchor=north east] at (\r,0,0)
+{$\tfrac{1}{\sqrt{2}}(\ket{\downarrow}+\ket{\uparrow})$};
+
+\fill (0,\r,0) circle (1.5pt);
+\node[anchor=west] at (0,\r,0)
+{$\tfrac{1}{\sqrt{2}}(\ket{\downarrow}+i\ket{\uparrow})$};
+
+% Estado completamente mezclado
+\fill[black] (O) circle (2pt);
+\node[below left] at (O) {$|\bm S|=0$};
+
+% Estado mixto
+\tdplotsetcoord{P}{0.75*\r}{\vtheta}{\vphi}
+\draw[thick,->,violet] (O) -- (P);
+\fill[violet] (P) circle (2pt);
+\node[violet,anchor=west] at (P) {$|\bm S|<1$};
+
+% Ángulos
+\tdplotdrawarc[->]{(O)}{0.7*\r}{0}{\vphi}
+{anchor=north}{$\varphi$}
+\tdplotdrawarc[->,tdplot_rotated_coords]{(O)}{0.7*\r}{0}{\vtheta}
+{anchor=south east}{$\theta$}
+
+% Texto explicativo
+\node[black!60] at (0,-1.6*\r,0)
+{Estados puros: $|\bm S|=1$};
+
 \end{tikzpicture}
 
-\caption{Diagrama de la esfera de Bloch. En azul se muestra un pulso π/2 a partir del estado $\ket{\downarrow}$ y en morado un pulso en general donde $\textcolor{violet}{\ket{\psi}}=\cos\frac{θ}{2}\textcolor{cyan}{\ket{\downarrow}}+ e^{iφ}\sin\frac{θ}{2}\textcolor{orange}{\ket{\uparrow}}$.}
-\label{fig:bloch_sphere}	
+\caption{Esfera de Bloch para un sistema de espín $1/2$.
+Los estados puros corresponden a la superficie ($|\bm S|=1$),
+los estados mixtos al interior ($|\bm S|<1$)
+y el estado completamente mezclado al origen ($|\bm S|=0$).}
+\label{fig:bloch_sphere}
+
 \end{figure}
+
 
 \end{document}

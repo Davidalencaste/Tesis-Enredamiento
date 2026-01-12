@@ -13,7 +13,7 @@ La descripción de cualquier sistema físico requiere, al menos, la identificaci
 
 Por ejemplo, en la \textit{mecánica clásica}, el estado de un sistema está determinado por un punto en el espacio fase, mientras que las observables se definen como funciones sobre dicho espacio. Por otra parte, si el sistema está formado por un número grande de partículas, el estado se describe mediante una densidad de probabilidad, esto es, una función normalizada en el espacio fase.
 
-La evolución de los estados se realiza mediante la dinámica Hamiltoniana, la cual preserva no solo la energía, sino también los volúmenes en el espacio fase (Teorema de Liouville). Esto último garantiza la conservación de la normalización de las funciones de probabilidad. Por último, el sistema compuesto de dos subsistemas tiene como espacio fase el producto cartesiano ($\times$) de los espacios fase de los sistemas individuales.\\
+La evolución de los estados se realiza mediante la dinámica Hamiltoniana, la cual preserva no solo la energía, sino también los volúmenes en el espacio fase (Teorema de Liouville), esto garantiza la conservación de la normalización de las funciones de probabilidad. Por último, el sistema compuesto de dos subsistemas tiene como espacio fase el producto cartesiano de los espacios fase de los sistemas individuales.\\
 
 
 
@@ -25,81 +25,48 @@ El objetivo de esta sección es mostrar que estos elementos también están pres
 
 
 \section{Espacio de Estados}
-Tradicionalmente, el primer postulado de la mecánica cuántica define a los estados de la siguiente manera:\\
+Tradicionalmente, el primer postulado de la mecánica cuántica define a los estados de la siguiente manera.\\
 \textit{El estado de un sistema físico esta definido por un vector de estado, que es un elemento de un espacio de Hilbert} $\mathcal{H}$ \cite{Cohen}.
-Donde cada un vector de estado (el vector asociado al estado '$\psi$') se asocia a un ket "$\ket{\;}$"
+Donde cada un vector de estado (el vector asociado al estado $\psi$) se asocia a un ket $\ket{\;}$
 \begin{equation}
-    \textbf{Estado cuántico} \equiv \ket{\psi}
+    \textbf{Estado cuántico} \equiv \ket{\psi}.
 \end{equation}
-
-Además, los kets forman un espacio vectorial lineal, donde cualquier combinación lineal de kets es, de igual manera, un ket. 
-Mediante esta definición, se dice que los kets de un ensamble son linealmente independientes si ninguno de ellos puede ser expresado como una combinación lineal de otros \cite{Messiah}.\\
 La dimensión del espacio de estados es igual al número de kets linealmente independientes por definición. Si el número de kets linealmente independientes es infinito, decimos que el espacio de estados tiene una dimensión infinita.\\
 
-Es bien sabido, que cada espacio vectorial puede ser asociado a un espacio vectorial dual, por tanto, existe la asociación a un \textit{espacio vectorial dual del espacio de kets}.
+De aquí en adelante nos enfocaremos en el caso de sistemas cuánticos con dimensión finita. Entonces, para este caso los kets forman un espacio vectorial lineal, donde cualquier combinación lineal de kets es, de igual manera, un ket. 
+Mediante esta definición, se dice que los kets de un ensamble son linealmente independientes si ninguno de ellos puede ser expresado como una combinación lineal de otros \cite{Messiah}.\\
 
 
+Es bien sabido, que cada espacio vectorial puede ser asociado con un espacio vectorial dual, por tanto, existe la asociación a un \textit{espacio vectorial dual del espacio de kets}.
 
-\begin{comment}
-    La condición fundamental para que un ket sea elemento del espacio de estados, es tener norma igual a $1$.
-\begin{equation}
-    \norm{\ket{\psi}}=1
-\end{equation}
-Esta condición recae del hecho de tener una una extensión espacial  y no poder atribuirle a posición precisa, uno solo pide definir la probabilidad de encontrar un estado en cierto rango en sus variables dinámicas. De esta forma, en el espacio completo, esta probabilidad deber ser igual a uno.\cite{Cohen}.\\ 
 
-Note que esta condición obliga que el espacio $\mathcal{H}$ no tenga un neutro aditivo, rompiendo la posibilidad de ser un sub-espacio vectorial. Sin embargo, $\mathcal{H}$ sí tendrá la posibilidad de ser un sub-espacio del \textbf{Espacio de Hilbert.}
-
-Otro concepto importante que se utilizará mas adelante en este trabajo es el de \textbf{Estados puros}. Un estado puro no es mas que una función lineal que no puede ser descompuesta en otras funciones lineales \cite{Manko2002}.\\
-
-Los estados en su forma mas general se asocian a un \textit{vector de estado}, el cual es un elemento de un espacio abstracto $\mathcal{H}$, llamado \textit{espacio de estado} \cite{Cohen}. Los espacios abstractos $\mathcal{H}$ son subespcios del \textbf{Espacio de Hilbert}.
-\end{comment}
-
-Consideremos un función lineal $\chi(\ket{\psi})$ que asocia un número complejo con cada ket $\ket{\psi}$, es decir, la función $\chi(\ket{\psi})$ define el bra $\bra{\chi}$ \cite{Cohen} tal que
+Consideremos un función lineal $\chi(\ket{\psi})$ que asocia un número complejo con cada ket $\ket{\psi}$, es decir, la función $\chi(\ket{\psi})$ define el bra $\bra{\chi}$ \cite{Cohen}, tal que
 \[
 \chi: \mathcal{H} \to \mathbb{C}: | \psi \rangle \mapsto \langle \chi | \psi \rangle.
 \]
 
 
-El conjunto de funciones lineales definido sobre los kets constituye también a un espacio vectorial (en espacios   con dimensión finita), el cual es llamado \textit{espacio dual} de $\mathcal{H}$ y es denotado por $\mathcal{H}^*$ \cite{Cohen}.
+El conjunto de funciones lineales definido sobre los kets constituye también a un espacio vectorial, el cual es llamado \textit{espacio dual} de $\mathcal{H}$ y es denotado por $\mathcal{H}^*$ \cite{Cohen}.
   
 
-Con la idea de introducir el producto escalar en $\mathcal{H}$, se puede observar que es posible asociar a cada ket un bra.\\ 
-De esta manera, la acción lineal $\chi:\mathcal{H}\to \mathbb{C}$ se puede expresar como.
+Con la idea de introducir el producto escalar en $\mathcal{H}$, se puede observar que es posible asociar a cada ket un bra. De esta manera, la acción lineal $\chi:\mathcal{H}\to \mathbb{C}$ se puede expresar como
 \begin{equation}
-\chi(\ket{\psi})\equiv\left(\ket{\chi},\ket{\psi}\right).
+\chi(\ket{\psi})\equiv\left(\ket{\chi},\ket{\psi}\right),
 \end{equation}
-donde $\left(\cdot,\cdot\right)$ representa el producto interno en $\mathcal{H}$ \cite{Cohen}. Por lo tanto, se define el producto interno en términos de kets y bras \cite{Messiah}:
+donde $\left(\cdot,\cdot\right)$ representa el producto interno en $\mathcal{H}$ \cite{Cohen}. Así, el producto interno en términos de kets y bras \cite{Messiah}:
 \begin{equation}
     \ip{\psi}{\varphi}\equiv\left(\ket{\psi},\ket{\varphi}\right),
 \end{equation}
 el cual, satisface las siguientes condiciones:
 \begin{itemize}
-    \item $\ip{\psi}{\varphi}=\overline{\ip{\varphi}{\psi}}$
-    \item $\ip{(\alpha\psi+\beta\varphi)}{\phi}=\alpha\ip{\psi}{\phi}+\beta\ip{\varphi}{\phi}$
-    \item $\ip{\psi}\geq 0$
-    \item Si $\ip{\psi}=0$, entonces $\ket{\psi}=0$
+    \item $\ip{\psi}{\varphi}=\overline{\ip{\varphi}{\psi}}$,
+    \item $\ip{(\alpha\psi+\beta\varphi)}{\phi}=\alpha\ip{\psi}{\phi}+\beta\ip{\varphi}{\phi}$,
+    \item $\ip{\psi}\geq 0$,
+    \item Si $\ip{\psi}=0$, entonces $\ket{\psi}=0$.
 \end{itemize}
-\begin{comment}
-    Se tiene que la correspondencia  $ket-bra$ es antilineal. Sea un estado cualquiera $\ket{\varphi}=\sum_i\lambda_i\ket{\varphi_i}$, entonces obteniendo su producto interno.
-\begin{align}
-\ip{\varphi}{\psi}
-    &= \left(\sum_i\lambda_i\ket{\varphi_i},\ket{\psi}\right)=\sum_i\bar{\lambda_i}(\ket{\varphi_i},\ket{\psi}) \\[4pt]
-    &=
-    \sum_i\bar{\lambda_i}\ip{\varphi_i}{\psi}  =
-    \left(\sum_i \bar{\lambda_i} \bra{\varphi_i}\right)\ket{\psi}
-\end{align}
-
-Note que el bra correspondiente a  $\ket{\varphi}=\sum_i\lambda_i\ket{\varphi_i}$ es $\sum_i \bar{\lambda_i} \bra{\varphi_i}$ \cite{Cohen}.
-\end{comment}
 
 
-El espacio de estados entonces debe cumplir con todas las propiedades del producto interno, además,  toda sucesión de Cauchy debe converger a un elemento del espacio, es decir, debe ser un \textit{espacio completo}. Además, la base del espacio debe ser ortonormal numerable, a estos espacios se les conoce como \textit{espacios separables} \cite{Messiah}.
-
-
-
-
-
-
+En el caso de espacios de dimensión infinita, además de cumplir las propiedades del producto interno, es necesario que toda sucesión de Cauchy converja a un elemento del propio espacio; es decir, el espacio debe ser \textit{completo}. Asimismo, se requiere que el espacio admita una base ortonormal numerable. A los espacios que satisfacen estas propiedades se les denomina \textit{espacios separables} \cite{Messiah}.
 
 %\subsection{Espacios de Hilbert}
 
@@ -136,7 +103,7 @@ en mecánica cuántica no da como resultado un vector específico del espacio de
 Hilbert, sino una clase de equivalencia de vectores relacionada mediante la
 multiplicación por un número complejo no nulo. En otras palabras, sobre el
 espacio de Hilbert existe una acción natural del grupo abeliano
-$\C_0 := \C \setminus \{0\}$ dada por
+$\C_0 := \C - \{0\}$ dada por
 \begin{equation}
     \ket{\psi} \mapsto \lambda \ket{\psi}
     = \varrho \e^{i \theta} \ket{\psi},
@@ -146,7 +113,7 @@ $\C_0 := \C \setminus \{0\}$ dada por
 
 Al fijar el módulo del factor complejo $\varrho$ (factor de escalamiento) se elimina la
 libertad asociada a la reescalación real y se obtiene la llamada esfera de
-estados normalizados,
+estados normalizados
 \begin{equation}
     S^{2n-1}
     :=
@@ -154,8 +121,10 @@ estados normalizados,
         \ket{\psi} \in \H_0
         \,\middle|\,
         \ip{\psi} = 1
-    \right\}.
+    \right\},
 \end{equation}
+donde $\mathcal{H}_0=\mathcal{H}-\{0\}$. De esta forma, los estados físicos se identifican con las órbitas de la acción del grupo $U(1)$ sobre la esfera de estados normalizados $S^{2n-1}$; es decir, con circunferencias $S^1$ embebidas en $S^{2n-1}$.\\
+
 
 Por otra parte, al identificar estados que difieren únicamente por una fase
 global, $\ket{\psi} \sim \e^{i\theta}\ket{\psi}$, siendo estas, orbitas de acción de $U(1)$, se obtiene el espacio
@@ -172,23 +141,20 @@ la esfera de estados normalizados y el espacio proyectivo.
 \[
 \begin{tikzcd}[column sep=large, row sep=large]
 \H_0
-\arrow[dd, "\lambda"]
-\arrow[rd, "\rho"] 
+\arrow[dd]
+\arrow[rd] 
 &  \\
 & S^{2n-1}
-\arrow[ld, "\theta"] \\
+\arrow[ld] \\
 \Proj(\H_0)
 \end{tikzcd}
 \]
 
 
-De esta manera, los estados físicos corresponden a órbitas de la acción de $U(1)$
-sobre la esfera de estados normalizados $S^{2n-1}$, es decir,
-a círculos $S^1$ contenidos en $S^{2n-1}$.
 
-El espacio $\Proj(\H_0)$ es conocido como el \emph{espacio de rayos}.
+El espacio $\Proj(\H_0)$ es conocido como el \emph{espacio proyectivo de Hilbert}.
 En el caso de sistemas de dimensión finita, este espacio se denomina
-\emph{espacio proyectivo complejo} y se denota por $\C \textbf{P}(\H_0)$. Por lo tanto, el espacio proyectivo complejo proporciona una descripción del
+\emph{espacio complejo proyectivo } y se denota por $\C \Proj(\H_0)$. Por lo tanto, el espacio proyectivo complejo proporciona una descripción del
 espacio de estados físicos en la cual se han eliminado las redundancias
 asociadas a la norma y a la fase global.
 
@@ -197,12 +163,12 @@ Es importante mencionar que no es usual trabajar directamente con sistemas cuán
 
 
 \subsection{Espacio de Operadores de Densidad}
-Es común que se estudie la mecánica cuántica en el espacio de Hilbert, donde describimos al estado con un ket $\ket{\psi}$, pero como se mostrará a continuación, esta manera de representar los estados, limita en gran medida el tipo de sistemas con los que podemos trabajar.\\
-Cuando se considera un sistema representado por un ket, se esta diciendo indirectamente que todo el sistema físico es caracterizado por un mismo tipo de estado $\ket{\psi}$. Un ejemplo de ello, es cualquier experimento tipo \textit{filtro}, en el cual el filtro arroja un resultado completamente predecible con probabilidad $100\%$ y que colapse siempre al sistema a un único estado (un haz de luz filtrado a través de un de un prisma de Nicol es un ejemplo de ello) \cite{Fano}. Con este tipo de sistemas, realizar una medición  $\expval{A}$ es esencialmente sencillo, pues el resultado obtenido es seguro que proviene de un mismo tipo de estado, de la misma naturaleza. 
+Es común que se estudie la mecánica cuántica en el espacio de Hilbert, donde describimos al estado con un ket $\ket{\psi}$, pero como se mostrará a continuación, esta manera de representar los estados limita en gran medida el tipo de sistemas con los que podemos trabajar.\\
+Cuando se considera un sistema representado por un ket, se dice indirectamente que el sistema físico esta caracterizado por un mismo tipo de estado $\ket{\psi}$. Un ejemplo de ello es cualquier experimento tipo \textit{filtro}, en los cuales el filtro arroja un resultado completamente predecible con probabilidad $100\%$ de ocurrir y colapsando siempre a un único estado; un haz de luz filtrado a través de un de un prisma de Nicol es un ejemplo de ello \cite{Fano}. Con este tipo de sistemas, realizar una medición  $\expval{A}$ es esencialmente sencillo, pues el resultado obtenido es seguro que proviene de un mismo tipo de estado, de la misma naturaleza. 
 
-Por tanto, tenemos una manera matemática de describir este tipo de sistemas, pero que ocurre con el haz de luz antes de pasar por el polarizador, es decir, ¿como describir la luz no polarizada?. En este caso, la luz puede describirse como una mezcla de polariazadores, es decir, una mezcla estadística de estados puros donde el haz de luz esta completamente caracterizado por los i-esimo filtros. A este tipo de sistemas, se les conoce como \textit{estados mixtos}, donde realizar una medición al sistema implica una mezcla ponderada de las mediciones individuales en cada filtro como se muestra a continuación.
+Por lo tanto, tenemos una manera matemática de describir este tipo de sistemas, pero ¿Qué ocurre con el haz de luz antes de pasar por el polarizador?; en otras palabras, ¿Cómo describir la luz no polarizada?. En este caso, la luz puede describirse como una mezcla de polariazadores; es decir, una mezcla ponderada de estados puros donde el haz de luz esta completamente caracterizado por los i-esimos filtros. A este tipo de sistemas se les conoce como \textit{estados mixtos}. En ellos, realizar una medición al sistema implica una mezcla ponderada de las mediciones individuales en cada filtro, como se muestra a continuación.
 \begin{equation}
-    \expval{A}=\sum_i w_i\expval{A}_i.
+    \expval{A}=\sum_i w_i\expval{A}_i,
 \end{equation}
 donde $\omega_i$ representa el peso estadistico del i-esimo filtro.\\ Realizando ciertas manipulaciones:
 
@@ -218,18 +184,18 @@ Definiendo la \textit{matriz de densidad}:
 De esta manera, ~\eqref{eq:observable_estadistico} pasa a ser:
 \begin{equation}
     \expval{A}= \sum_{nn'}A_{nn'}\rho_{nn'}=\sum_{n'}(A\rho)_{nn'}=\Tr(A\rho)
-    \label{eq:Operador_densidad}
+    \label{def:Operador_densidad}
 \end{equation}
-La ecuación ~\eqref{eq:Operador_densidad} nos define el \textbf{Operador de densidad}. Es importante notar que este operador no depende de la base con la que se trabaje, y esto resulta obvio usando el ejemplo de luz no polarizada, mencionamos que puede ser vista como mezcla de polarizadores, pero bien pueden ser polarizadores lineales, como circulares \cite{Fano}. Es por ello que aparece de forma natural la traza, la cual es una operación que es independiente de la base en la que se trabaje. \\ Algunos textos definen el operador densidad de la siguiente forma \cite{Sakurai2011}:
+La ecuación ~\eqref{eq:Operador_densidad} nos define el \textbf{Operador de densidad}. Es importante notar que este operador no depende de la base con la que se trabaje, y esto resulta obvio usando el ejemplo de luz no polarizada, mencionamos que puede ser vista como mezcla de polarizadores, pero bien pueden ser polarizadores lineales, como circulares \cite{Fano}. Es por ello que aparece de forma natural la traza, la cual es una operación independiente de la base en la que se trabaje. \\ Algunos textos definen el operador densidad de la siguiente forma \cite{Sakurai2011}:
 \begin{equation}
     \rho\equiv \sum_i w_i\op{\phi_i}.
 \end{equation}
-Esta expresión cumple con la misma definición dada en ~\eqref{eq:Operador_densidad}, en realidad son equivalentes, sin embargo esta definición podría interpretar que los estados mixtos son una mezcla de estados puros $\ket{\phi}$, pero como ya vimos, esto simplemente es por como escojamos la base de operadores $\{\op{\alpha}\}$, donde la definición es completamente valida para cada una de las bases que podrían existir.\\ Una propiedad importante del operador densidad es conocida como \textit{propiedad de normalización}, que viene del hecho que la suma de los pesos $w_i$ por construcción estadística.
+Esta expresión cumple con la misma definición ~\eqref{eq:Operador_densidad}, en realidad son equivalentes, sin embargo esta definición podría dar la interpretación en los estados mixtos como mezcla de estados puros $\ket{\phi}$, pero como ya se comento anteriormente, esto simplemente es por la base de operadores $\{\op{\alpha}\}$ escogida, donde la definición es completamente valida para cualquier base.\\ Una propiedad importante del operador densidad es la \textit{propiedad de normalización}, que viene del hecho que la suma de los pesos $w_i$ es $1$ por construcción estadística.
 \begin{equation}
     \Tr(\rho)= \sum_n \rho_{nn}=\sum_i w_i = 1.
 \end{equation}
 
-Nos gustaría tener una clase de medida que cuantifique que tan puro o mixto es un estado por medio del operador de densidad, de tal manera que resulte claro conocer con que tipo de sistema se esta trabajando con solo ver el tipo de operador de densidad. \\Una medida de lo anterior es la traza de $\rho^2$. Note en un estado consta por un $w_i=1$ para algún $\ket{\alpha_i}$ y $w_i=0$ para cualquier otro estado. De esta manera, la rho de un estado puro es de la siguiente forma:
+Ahora, nos gustaría tener una clase de medida que cuantifique que tan puro o mixto es un estado por medio del operador de densidad, de tal manera que resulte evidente conocer con que tipo de ensamble se esta trabajando por medio del operador de densidad. \\Una medida de lo anterior es la traza de $\rho^2$. Note en un estado consta por un $w_i=1$ para algún $\ket{\alpha_i}$ y $w_i=0$ para cualquier otro estado. De esta manera, el operador densidad de un estado puro es de la siguiente forma:
 \begin{equation}
     \rho = \op{\alpha}.
 \end{equation}
@@ -375,7 +341,7 @@ Ahora, calculemos $\rho^2$ para hayar una relación con $\bm{S}$.
     \rho^2&=
     \frac{1}{4}\left(\Id + \bm{S}\cdot \bm{\sigma}\right)^2
     \notag \\
-    &=\frac{1}{4}\left(\Id+2\bm{S}\cdot\bm{\sigma}+\bm{S}^2\,\Id\right).
+    &=\frac{1}{4}\left(\Id+2\bm{S}\cdot\bm{\sigma}+|\bm{S}|^2\,\Id\right).
 \end{align*}
 Calculando la traza de $\rho^2$:
 \begin{align}
@@ -395,6 +361,10 @@ De la última expresión se concluye que:
     \item El estado completamente mezclado corresponde al caso $|\bm{S}|=0$, es decir, al origen de la esfera de Bloch.
 \end{enumerate}
 
+De esta manera, el espacio de operadores densidad es el conjunto de todas las $\rho$ de la forma de \eqref{eq:rho_final} y cada estado es identificado por su espín promedio $\bm{S}$ del sistema.
+\begin{equation}
+    \rho_{space}\equiv\left\{\rho=\frac{1}{2}\left(\Id + \bm{S}\cdot \bm{\sigma}\right)\;|\;\bm{S}\in \R^3 \right\}
+\end{equation}
 
 
 \begin{comment}
@@ -440,17 +410,94 @@ donde el segundo termino no necesariamente es $0$. Así que se requiere otra for
 
 
 \section{Observables}
-Para introducir los observables y el concepto de medición, es necesario definir el concepto de \textit{operador lineales} \cite{Messiah}.\\ Un operador lineal $\bm{A}$ es una correspondencia lineal entre dos estados, usando notación de Dirac esto se escribe como:
+El concepto de medición es una parte fundamental de la física, es la herramienta que tenemos para obtener información un sistema mediante la manipulación del mismo por medio de una operación, llamemos $\bm{A}$.
+De esta manera, al aplicar la operación $\bm{A}$ al sistema, obtendremos un valor de medición $a$. Esta es la idea general de medir en física.\\ Sin embargo, en mecanica cuántica la medición conlleva una característica adicional. \textit{Realizar una medición altera el estado del sistema} \cite{Sakurai2011}. Es decir, sea el estado inicial $\psi$, al realizar una medición $\bm{A}$ el estado colapsa a otro estado $\psi'$.
 \begin{equation}
-    \ket{\psi}=\mathbf{A}\ket{\varphi}.
+   \ket{\psi} \xrightarrow{\text{medición de } \bm{A}}\ket{\psi'}
+   \label{diag: medicion}
 \end{equation}
 
-
-Se dice que dos operadores $\bm{A}$ y $\bm{B}$ son iguales si:
+Esta operación $\bm{A}$es en mecanica cuantica un operador lineal que es una correspondencia lineal entre dos estados:
+\begin{equation}
+    \ket{\psi'}=\mathbf{A}\ket{\psi}.
+\end{equation}
+Donde dice que dos operadores $\bm{A}$ y $\bm{B}$ son iguales si:
 \begin{equation}
     \expval{\bf{A}}{\psi}=\expval{\bf{B}}{\psi}.
 \end{equation}
-Ya se menciono lo que se conoce como el primer postulado de la mecánica cuántica y se profundizo en su formalismo matemático.\\ Esto permite continuar con el segundo postulado de la mecánica cuántica que menciona
+
+
+De igual forma como en la corresponecia uno a uno entre kets y bras, existe una relación antilineal en los operdadores.\\
+Sea $\ket{v}$ el ket conjugado del bra $\bra{u}\bm{A}$. De esta manera, $\ket{v}$ depende antilinealmente del bra $\ket{u}$. Es por tanto una función lineal de $\ket{u}$. Esta correspondencia lineal define un operdador lineal por el nombre de \textit{conjugado de} $\bm{A}$, denotado por $\bm{A}^\dagger$.
+\begin{equation}
+    \ket{v}=\bm{A}^\dagger\ket{u}.
+    \label{def: operador_conjugado}
+\end{equation}
+
+
+
+Sin embargo, no todos los operadores lineales tienen una interpretación física con la cual asociar una medición. Al tipo de operadores que tienen una interpretación física se les conoce como \textit{observables} que son operadores Hermitianos. A esto se le conoce habitualmente como el segundo postulado de la mecanica cuántica.\\
+
+\textit{Toda cantidad medible se describe por un operador} $\bm{A}:\H \to \H$ que es \textbf{Hermitiano}; \textit{a esto se le llama un observable} \cite{Cohen}.\\
+
+Un operador hermitiano $\bm{A}$ es aquel operador que es su mismo auto adjunto, denotado por "$\dagger$".
+
+\begin{equation}
+    \bm{A}^\dagger = \bm{A}.
+\end{equation}
+
+Esta definición conduce inmediatamente al postulado central de la medición, usualmente nombrado como el tercero, que afirma lo siguiente:\\
+
+\textit{El único posible resultado de la medición de un observable $\bm{A}$ es uno de los eigenvalores de $\bm{A}$} \cite{Cohen}.\\
+
+
+Consideremos un estado cuántico discreto general $\ket{\psi}$, expresado en la base formada por los autovectores de un operador observable $\bm A$ con espectro discreto, tal que
+\[
+\bm A \ket{e_i} = a_i \ket{e_i}.
+\]
+En esta base, el estado puede escribirse como
+\begin{equation}
+    \ket{\psi}=\sum_i c_i \ket{e_i},
+    \label{eq: estado_general}
+\end{equation}
+donde los coeficientes $c_i$ representan las amplitudes de probabilidad asociadas a cada autovector.
+
+La probabilidad de obtener el resultado $a_i$ al realizar una medición del observable $\bm A$ sobre el estado $\ket{\psi}$ está dada por \cite{Cohen}
+\begin{equation}
+    P(a_i)=\abs{\ip{e_i}{\psi}}^2=\abs{c_i}^2.
+    \label{def: probabilidad_estado}
+\end{equation}
+
+Finalmente, para describir la naturaleza del proceso de medición, el estado posterior a la medición —suponiendo que se obtiene el resultado $a_i$— es
+\begin{equation}
+    \ket{\psi'}=
+    \frac{\bm A \ket{\psi}}
+    {\norm{\bm A \ket{\psi}}},
+    \label{eq: colapso_estado}
+\end{equation}
+el cual corresponde, tras la normalización, al autovector de $\bm A$ asociado al autovalor obtenido en la medición.\\
+
+Puede haber notado que este desarrollo se realizo usando el esquema de vectores del espacio de Hilbert, y no en el espacio de operadores de densidad. Sin embargo note, que en la definición \eqref{def:Operador_densidad}
+del operador densidad yace en el concepto de medición. Lo unico nuevo es como ya vimos, la restricción de operadores que son medibles, los \textit{observables}.\\
+Falta por conocer la forma del colapso de estado mencionada en la ecuación \ref{eq: colapso_estado} para operadores de densidad.\\
+
+\begin{equation}
+   \rho' \xrightarrow{\text{medición de } \bm{A}}\rho
+   \label{diag: medicion}
+\end{equation}
+
+Tenemos de la ecuación \eqref{eq: colapso_estado} la forma general del colpaso de un estado dada una medición $\bm{A}$. De esta, se puede obtener su conjugado, dado \eqref{def: operador_conjugado}:
+\begin{equation}
+    \bra{\psi'}=\frac{\bra{\psi}\bm{A}^\dagger}{\norm{\bm{A}\ket{\psi}}}
+\end{equation}
+De esta manera, cada $\rho'$ de un estado puro puede escribirse como:
+\begin{equation}
+    \rho'=\frac{1}{\norm{\bm{A}\ket{\psi}}^2}\bm{A}\rho\bm{A}^\dagger
+\end{equation}
+
+
+
+
 \section{Evolución Temporal}
 Es una prueba de como veo $gsdnf$
 \begin{equation}
