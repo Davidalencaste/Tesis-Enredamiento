@@ -164,50 +164,76 @@ Es importante mencionar que no es usual trabajar directamente con sistemas cuán
 
 \subsection{Espacio de Operadores de Densidad}
 Es común que se estudie la mecánica cuántica en el espacio de Hilbert, donde describimos al estado con un ket $\ket{\psi}$, pero como se mostrará a continuación, esta manera de representar los estados limita en gran medida el tipo de sistemas con los que podemos trabajar.\\
-Cuando se considera un sistema representado por un ket, se dice indirectamente que el sistema físico esta caracterizado por un mismo tipo de estado $\ket{\psi}$. Un ejemplo de ello es cualquier experimento tipo \textit{filtro}, en los cuales el filtro arroja un resultado completamente predecible con probabilidad $100\%$ de ocurrir y colapsando siempre a un único estado; un haz de luz filtrado a través de un de un prisma de Nicol es un ejemplo de ello \cite{Fano}. Con este tipo de sistemas, realizar una medición  $\expval{A}$ es esencialmente sencillo, pues el resultado obtenido es seguro que proviene de un mismo tipo de estado, de la misma naturaleza. 
 
-Por lo tanto, tenemos una manera matemática de describir este tipo de sistemas, pero ¿Qué ocurre con el haz de luz antes de pasar por el polarizador?; en otras palabras, ¿Cómo describir la luz no polarizada?. En este caso, la luz puede describirse como una mezcla de polariazadores; es decir, una mezcla ponderada de estados puros donde el haz de luz esta completamente caracterizado por los i-esimos filtros. A este tipo de sistemas se les conoce como \textit{estados mixtos}. En ellos, realizar una medición al sistema implica una mezcla ponderada de las mediciones individuales en cada filtro, como se muestra a continuación.
-\begin{equation}
-    \expval{A}=\sum_i w_i\expval{A}_i,
-\end{equation}
-donde $\omega_i$ representa el peso estadistico del i-esimo filtro.\\ Realizando ciertas manipulaciones:
 
-\begin{equation}
-\expval{A}=\sum_i w_i\expval{A}_i = \sum_{n,n'}  Q_{nn'}\sum_i w_i c^{i\,*}_{n'}c^i_n
-\label{eq:observable_estadistico}
-\end{equation}
+Al representar un sistema mediante un ket, se esta diciendo indirectamente que el sistema esta completamente descrito por algún único estado $\ket{\psi}$; a estos estados se les conoce como \textit{estados puros}. Un ejemplo de ello es cualquier experimento tipo \textit{filtro}, en los cuales algún filtro arroja un resultado completamente predecible con $100\%$ de probabilidad de ocurrir y colapsando siempre a un único estado; un haz de luz filtrado a través de un de un prisma de Nicol es un ejemplo de ello \cite{Fano}. Con este tipo de sistemas, realizar una medición $\bm{A}$ es esencialmente sencillo, pues el resultado obtenido es seguro que proviene de un mismo tipo de estado con la misma naturaleza. 
 
-Definiendo la \textit{matriz de densidad}:
+Como vimos en secciones anteriores, tenemos una manera matemática de describir este tipo de sistemas, pero, retomando el ejemplo anterior, ¿qué ocurre con el haz de luz antes de pasar por el polarizador? en otras palabras, ¿cómo describir luz no polarizada?.\\
+La luz no polarizada puede describirse como una mezcla de polarizadores; es decir, una mezcla ponderada de estados puros, donde el haz de luz está completamente caracterizado por los i-ésimos filtros. A este tipo de sistemas se les conoce como \textit{estados mixtos}. En ellos, realizar una medición al sistema implica una mezcla ponderada de las mediciones individuales en cada filtro. De este modo, se define el \textbf{ensamble promedio de} $\bm{A}$ como:
 \begin{equation}
-    \rho_{nn'}=\sum_i w_i\, c^{i\,*}_{n'}\,c^i_n
+    \left[\bm{A}\right]=\sum_i P_i \expval{\bm{A}}=\sum_iP_i\expval{\bm{A}}{\psi_i},
+    \label{def:ensamble_promedio}
 \end{equation}
-De esta manera, ~\eqref{eq:observable_estadistico} pasa a ser:
+donde $P_i$ representa el peso estadístico del i-esimo filtro, con $\sum_iP_i=1$.\\ 
+
+Es importante hacer notar que \textit{no es lo mismo ensamble promedio y valor esperado}; sin embargo, ambos conceptos están relacionados, ya que la ecuación \eqref{def:ensamble_promedio} notamos que $\left[\bm{A}\right]$ depende del valor esperado $\expval{A}$.\\
+
+Ahora de la expresión del ensamble promedio \eqref{def:ensamble_promedio} podemos considerar las bases ortonormales $\{\ket{\phi_{k}}\}$ y $\{\ket{\phi_{k'}}\}$ tal que:
+\begin{align}
+    \left[\bm{A}\right] &=
+    \sum_i P_i \sum_{\phi_{k}\, \phi_{k'}}\ip{\psi_i}{\phi_{k}}\mel{\phi_{k}}{\bm{A}}{\phi_{k'}}\ip{\phi_{k'}}{\psi_i}; \notag \\
+    &= \sum_{k\,k'}\left(\sum_iP_i\ip{\phi_{k'}}{\psi_i}\ip{\psi_i}{\phi_{k}}\right)\mel{\phi_{k}}{\bm{A}}{\phi_{k'}}.
+\end{align}
+Podemos reescribir el término en paréntesis como
 \begin{equation}
-    \expval{A}= \sum_{nn'}A_{nn'}\rho_{nn'}=\sum_{n'}(A\rho)_{nn'}=\Tr(A\rho)
+    \rho_{k'k''}=\sum_iP_i\ip{\phi_{k'}}{\psi_i}\ip{\psi_i}{\phi_{k''}},
+\end{equation}
+tal que está expresión es la representación matricial del \textbf{operador densidad} (u \textit{operador de estado})
+\begin{equation}
+    \rhon\equiv\sum_iP_i\op{\psi_i}.
+    \label{def:operador_estado_pesos}
+\end{equation}
+Tomando en cuenta esta definición, podemos expresar el ensamble promedio de la siguiente manera,
+\begin{align}
+    \left[\bm{A}\right]&=
+    \sum_{k\,k'}\mel{\phi_k}{\rhon}{\phi_{k'}}\mel{\phi_{k'}}{\bm{A}}{\phi_{k}}, \notag \\
+    &=\sum_k \ev{\bm{\rho A}}{\phi_k}, \notag \\
+    &= \Tr(\bm{\rho A}).
     \label{def:Operador_densidad}
-\end{equation}
-La ecuación ~\eqref{eq:Operador_densidad} nos define el \textbf{Operador de densidad}. Es importante notar que este operador no depende de la base con la que se trabaje, y esto resulta obvio usando el ejemplo de luz no polarizada, mencionamos que puede ser vista como mezcla de polarizadores, pero bien pueden ser polarizadores lineales, como circulares \cite{Fano}. Es por ello que aparece de forma natural la traza, la cual es una operación independiente de la base en la que se trabaje. \\ Algunos textos definen el operador densidad de la siguiente forma \cite{Sakurai2011}:
+\end{align}
+
+
+La ecuación \eqref{def:Operador_densidad} nos define el \textbf{Operador de densidad}. Es importante notar que el operador de estado no depende de la base con la que se trabaje, y esto resulta evidente en el ejemplo de luz no polarizada donde el haz de luz puede ser visto como mezcla de polarizadores, pero bien pueden ser tanto polarizadores lineales, como circulares \cite{Fano}. Es por ello que aparece de forma natural la traza, la cual es una operación independiente de la base en la que se trabaje.\\
+
+Los operadores de estado satisfacen las siguientes propiedades:
+\begin{enumerate}
+    \item $\rhon$ es un operador Hermitico (vea la sección de observables).
+    \item Condición de normalización $\Tr(\rhon)=1$.
+    \item Es un operador positivo definido.
+    \item La superposición de operadores de estado es también un operador de estado; es decir, sean $\rhon_1,\rhon_2$ operadores de estado y $c_1,c_2\in\R^+$ con $c_1+c_2=1$. Entonces,
+    \begin{equation}
+        \rhon = c_1\rhon_1 + c_2\rhon_2,
+        \label{eq:superposicion_operadores}
+    \end{equation}
+    es también es un operador de estado.
+\end{enumerate}
+
+A continuación nos gustaría tener una de medida que cuantifique que tan puro o mixto es un estado por medio del operador de densidad, de tal manera que resulte evidente conocer con que tipo de ensamble con el que se esta trabajando por medio del operador de estado. Una medida de lo anterior es la traza de $\rho^2$.\\De la definición \eqref{def:operador_estado_pesos} se deriva la forma de un estado puro, que es en la cual para algún estado $\ket{\psi_i}$ su peso es $P_i=1$ y para cualquier otro j-esimo estado, $P_j=0$; es decir, la $\rhon$ para un estado puro es de la forma
 \begin{equation}
-    \rho\equiv \sum_i w_i\op{\phi_i}.
+    \rhon = \op{\psi_i},
 \end{equation}
-Esta expresión cumple con la misma definición ~\eqref{eq:Operador_densidad}, en realidad son equivalentes, sin embargo esta definición podría dar la interpretación en los estados mixtos como mezcla de estados puros $\ket{\phi}$, pero como ya se comento anteriormente, esto simplemente es por la base de operadores $\{\op{\alpha}\}$ escogida, donde la definición es completamente valida para cualquier base.\\ Una propiedad importante del operador densidad es la \textit{propiedad de normalización}, que viene del hecho que la suma de los pesos $w_i$ es $1$ por construcción estadística.
+donde es directo notar que para este estado $\rhon^2=\rhon$. Por lo tanto, para un ensamble puro se cumple que
 \begin{equation}
-    \Tr(\rho)= \sum_n \rho_{nn}=\sum_i w_i = 1.
+    \Tr(\rhon^2)=1.
+\end{equation}
+Concluyendo, cualquier \textit{ensamble no puro} cumple lo siguiente:
+
+\begin{equation}
+    0\le\Tr(\rho^2)<1.
+    \label{eq:traza_no_puro}
 \end{equation}
 
-Ahora, nos gustaría tener una clase de medida que cuantifique que tan puro o mixto es un estado por medio del operador de densidad, de tal manera que resulte evidente conocer con que tipo de ensamble se esta trabajando por medio del operador de densidad. \\Una medida de lo anterior es la traza de $\rho^2$. Note en un estado consta por un $w_i=1$ para algún $\ket{\alpha_i}$ y $w_i=0$ para cualquier otro estado. De esta manera, el operador densidad de un estado puro es de la siguiente forma:
-\begin{equation}
-    \rho = \op{\alpha}.
-\end{equation}
-Es directo notar que para este estado:
-\begin{equation}
-    \rho^2=\rho,
-\end{equation}
-concluyendo, para un ensamble puro se tiene
-\begin{equation}
-    \Tr(\rho^2)=1.
-\end{equation}
-Además se tiene que para cualquier ensamble mixto, $0\le\Tr(\rho^2)\le1$. De esta manera, la traza de $\rho^2$ nos cuantifica que tan mixto o puro es un ensamble.\\ Esta medida es sencilla de calcular, sin embargo nos gustaría una medida que dependa de alguna cantidad física medible. Con esta motivación en mente, vamos a considerar un ensamble de partículas con espín $\frac{1}{2}$ y espín promedio definido (cantidad física medible), es decir, vamos a considerar un ensamble con dos niveles de energía.\\ Hacemos esta consideración, pues el desarrollo de esta tesis se basa en qubits que es un sistema de dos niveles de energía.\\
+De esta manera, la traza de $\rhon^2$ cuantifica que tan puro es un ensamble.\\ Esta medida es sencilla de calcular; sin embargo, nos gustaría una medida que dependa de alguna cantidad física medible. Con esta motivación en mente, consideremos un ensamble de partículas de espín $\frac{1}{2}$ y espín promedio definido (cantidad física medible); es decir, vamos a considerar un ensamble con dos niveles de energía.\\ Hacemos esta consideración, pues el desarrollo de esta tesis se basa en qubits que es un sistema de dos niveles de energía.\\
 
 Dado a \eqref{eq:Operador_densidad} definimos el espín promedio del ensamble como sigue:
 \begin{equation}
@@ -336,7 +362,7 @@ y sustituyendo este resultado en la ecuación ~\eqref{eq:rho_semi_semifinal}, se
 \rho = \frac{1}{2}\left(\Id + \bm{S}\cdot \bm{\sigma}\right).
 \label{eq:rho_final}
 \end{equation}
-Ahora, calculemos $\rho^2$ para hayar una relación con $\bm{S}$.
+Ahora, calculemos $\rho^2$ para hallar una relación con $\bm{S}$.
 \begin{align*}
     \rho^2&=
     \frac{1}{4}\left(\Id + \bm{S}\cdot \bm{\sigma}\right)^2
@@ -367,46 +393,100 @@ De esta manera, el espacio de operadores densidad es el conjunto de todas las $\
 \end{equation}
 
 
-\begin{comment}
-    La pregunta natural para cualquier formalismo es ¿Como hacer mediciones?. En este caso, al ser posibles los ensambles mixtos, se debe reflejar la medición de cada sub-estado en la medición del observable. Buscando este proposito se define el valor esperado de un observable $\Oper{\sigma}$ como:
+
+Ahora enfocándonos en una de las propiedades fundamentales de la mecanica cuántica, la superposición. Sabemos que un estado en superposición en el espacio de Hilbert se representa mediante la combinación lineal de estados
 \begin{equation}
-    \expval{\Oper{\sigma}}=\sum_i\omega_i\expval{\Oper{\sigma}}{\psi_i}
-    \label{eq:def_expval}
+    \ket{\psi}=c_1\ket{\phi_1}+c_2\ket{\phi_2},
+    \label{eq:superposicion Hilbert}
 \end{equation}
-De la Ecuación ~\eqref{eq:def_expval}:
-
-\begin{align}
-\sum_i \omega_i \expval{\Oper{\sigma}}{\psi_i}
-    &= \sum_i \sum_a \sum_b 
-       \omega_i \ip{\psi_i}{a}\mel{a}{\Oper{\sigma}}{b}\ip{b}{\psi_i} \\[4pt]
-    &= \sum_{i,a,b} \omega_i \mel{a}{\Oper{\sigma}}{b}\ip{b}{\psi_i} \\[4pt]
-    &= \Tr{\sum_{i,b}\omega_i \Oper{\sigma}\dyad{b}\dyad{\psi_i}} \\[4pt]
-    &= \Tr{\sum_b\dyad{b}\rho} \\[4pt]
-    &= \Tr{\Oper{\sigma}\rho}.
-\end{align}
-Obteniendo al final:
+y como vimos en la ecuación \eqref{eq:superposicion_operadores}, la superposición en operadores se representa mediante:
 \begin{equation}
-    \expval{\Oper{\Oper{\sigma}}}=\Tr{\Oper{\sigma}\rho}
+    \rhon = a_1\rhon_1+a_2\rhon_2 = a_1\op{\phi_1}+a_2\op{\phi_2},
+    \label{eq:superposicion_operadores2}
 \end{equation}
-\end{comment}
-
-
-
-
-
-\begin{comment}
-    Lo único faltante para que ese formalismo describa cualquier sistema cuántico es una parte crucial de la mecánica cuántica, la superposición. ¿Cómo se describe la superposición de estados usando el operador de densidad.?
-
-Es facil notar que el siguiente operador:
-\begin{equation}
-    \rho = \cos^2(\theta)\rho_1+\sin^2(\theta)\rho_2
-\end{equation}
-es de un estado mixto pues
-\[\Tr{\rho^2}=1+2\cos^2(\theta)sin^2(\theta)\Tr{\rho_1\rho_2}
+¿pero las expresiones \eqref{eq:superposicion Hilbert} y \eqref{eq:superposicion_operadores2} representan el mismo estado de superposición de $\ket{\phi_1}$ y $\ket{\phi_2}$? La respuesta es no, y la primera señal de que estas dos expresiones es que \eqref{eq:superposicion Hilbert} representa un estado puro y la traza del operador de estado es
+\[\Tr(\rhon^2)=1+2a_1a_2\Tr(\rhon_1\rhon_2)\neq 1,
 \]
-donde el segundo termino no necesariamente es $0$. Así que se requiere otra forma de formular la superposición de estados mediante operadores de densidad de tal forma que se obtenga un estado puro.
+donde el segundo termino no necesariamente es $0$. Por lo que, aunque la suma de operadores de estado si representa una superposición, no esta representando el estado de superposición que conocemos en el espacio de Hilbert. \\ A continuación deduciremos una ley de composición de operadores de estado para estados superpuestos.\\
 
-\end{comment}
+
+Sean los estados:
+\begin{equation}
+    \ket{\psi'_1}=\frac{\ip{\psi_1}{\psi_0}}{\abs{\ip{\psi_1}{\psi_0}}}\ket{\psi_1},
+\end{equation}
+\begin{equation}
+    \ket{\psi'_2}=\frac{\ip{\psi_2}{\psi_0}}{\abs{\ip{\psi_2}{\psi_0}}}\ket{\psi_2},
+\end{equation}
+donde el factor de la izquierda es una fase global que se podría escribir de la forma $\e^{i\theta}$.\\
+Sea el estado superpuesto de $\ket{\psi'_1}$ y $\ket{\psi'_2}$
+\begin{equation}
+    \ket{\psi}=c_1\ket{\psi'_1}+c_2\ket{\psi'_2},
+    \label{eq:estado_puro_superposicion}
+\end{equation}
+con $|c_1|^2+|c_2|^2=1$. De esta forma definiendo, los operadores estados correspondientes $\rhon_1=\op{\psi'_1}$ y $\rhon_2=\op{\psi'_2}$.\\ 
+De el estado \eqref{eq:estado_puro_superposicion} calculamos su operador de densidad:
+\begin{align}
+    \rhon &= \op{\psi} \notag\\
+    &= \bigl(c_1\ket{\psi'_1}+c_2\ket{\psi'_2}\bigr)
+       \bigl(c^*_1\bra{\psi'_1}+c^*_2\bra{\psi'_2}\bigr)\notag\\
+    &= |c_1|^2\op{\psi'_1}
+    + c_1c_2^*\op{\psi'_1}{\psi'_2}
+    + c_2c_1^*\op{\psi'_2}{\psi'_1}
+    + |c_2|^2\op{\psi'_2} \notag\\
+    &= |c_1|^2\rhon_1
+    + |c_2|^2\rhon_2
+    + c_1c_2^*\frac{\ip{\psi_1}{\psi_0}\ip{\psi_0}{\psi_2}}{\abs{\ip{\psi_1}{\psi_0}\ip{\psi_2}{\psi_0}}}\op{\psi_1}{\psi_2}
+    + c_2c_1^*\frac{\ip{\psi_2}{\psi_0}\ip{\psi_0}{\psi_1}}{\abs{\ip{\psi_2}{\psi_0}\ip{\psi_1}{\psi_0}}}\op{\psi_2}{\psi_1}
+    \label{eq:rho_super_sin_despejar}
+\end{align}
+Ahora definamos un estado fiducial $\ket{\psi_0}$ con operador de estado $\rhon_0=\op{\psi_0}$. Note que podemos con este estado, podemos escribir los estados $\ket{\psi'_1},\ket{\psi'_2}$ bajo las siguientes transformaciones 
+\begin{equation}
+    \ket{\psi'_j}= \frac{\rhon_j\ket{\psi_0}}{\sqrt{\ev{\rhon_j}{\psi_0}}} ;\hspace{0.5cm} j\in\{1,2\}.    
+\end{equation}
+Con la definición de $\rhon_0$ podemos calcular los siguientes terminos:
+\begin{align}
+    \Tr(\rhon_j\rhon_0) &=
+    \expval{\rhon_1\rhon_0}{\psi'_j} \notag\\
+    &= \ip{\psi'_j}\ip{\psi'_j}{\psi_0}\ip{\psi_0}{\psi'_j}\notag\\
+    &=\ip{\psi'_j}{\psi_0}\ip{\psi_0}{\psi'_j}\notag\\
+    &= \frac{\ip{\psi_0}{\psi_j}\ip{\psi_j}{\psi_0}}{\abs{\ip{\psi_j}{\psi_0}}^2}\ip{\psi_j}{\psi_0}\ip{\psi_0}{\psi_j}\notag\\
+    &=\abs{\ip{\psi_o}{\psi_j}}^2,
+\end{align}
+por tanto, obtenemos la siguiente igualdad:
+\begin{equation}
+    \left[\Tr(\rhon_1\rhon_o)\Tr(\rhon_2\rhon_0)\right]^{1/2}=\abs{\ip{\psi_1}{\psi_0}\ip{\psi_2}{\psi_0}}.
+    \label{eq:Traza_multiplicacion}
+\end{equation}
+Además note lo siguiente,
+\begin{align}
+    \rhon_i\rhon_0\rhon_j &=
+    \ket{\psi'_i}\ip{\psi'_i}{\psi_0}\ip{\psi_0}{\psi'_j}\bra{\psi'_j}\notag\\
+    &= \ip{\psi'_i}{\psi_0}\ip{\psi_0}{\psi'_j}\op{\psi'_i}{\psi'_j}\notag\\
+    &=(\ip{\psi_i}{\psi_0}\ip{\psi_0}{\psi_j})\op{\psi_i}{\psi_j},
+\end{align}
+de esta ultima expresión despejamos $\op{\psi_i}{\psi_j}$,
+\begin{equation}
+    \op{\psi_i}{\psi_j}=\frac{\rhon_i\rhon_0\rhon_j}{\ip{\psi_0}{\psi_j}\ip{\psi_i}{\psi_0}},
+\end{equation}
+y sustituyendo en \eqref{eq:rho_super_sin_despejar}
+\begin{align}
+  \rhon &=
+    |c_1|^2 \rhon_1
+    + |c_2|^2 \rhon_2
+    + c_1 c_2^*
+      \frac{\rhon_1 \rhon_0 \rhon_2}
+           {\abs{\ip{\psi_2}{\psi_0}\ip{\psi_1}{\psi_0}}}
+    + c_2 c_1^*
+      \frac{\rhon_2 \rhon_0 \rhon_1}
+           {\abs{\ip{\psi_2}{\psi_0}\ip{\psi_1}{\psi_0}}}.    
+\end{align}
+Finalmente sustituyendo la ecuación \eqref{eq:Traza_multiplicacion}, obtenemos la ley de composición para estados de superposición como sigue \cite{MankoComposition}:
+\begin{equation}
+    \rhon = |c_1|^2\rhon_1+|c_2|^2\rhon_2
+    +\qty(c_1c_2^*\;\rhon_1\rhon_0\rhon_2+c_1^*c_2\;\rhon_2\rhon_0\rhon_1)\left[\Tr(\rhon_1\rhon_o)\Tr(\rhon_2\rhon_0)\right]^{-1/2}.
+    \label{def:Ley_de_composicion}
+\end{equation}
+
 
 
 \section{Observables}
