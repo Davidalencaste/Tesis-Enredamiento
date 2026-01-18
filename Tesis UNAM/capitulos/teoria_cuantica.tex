@@ -51,11 +51,11 @@ El conjunto de funciones lineales definido sobre los kets constituye también a 
 
 Con la idea de introducir el producto escalar en $\mathcal{H}$, se puede observar que es posible asociar a cada ket un bra. De esta manera, la acción lineal $\chi:\mathcal{H}\to \mathbb{C}$ se puede expresar como
 \begin{equation}
-\chi(\ket{\psi})\equiv\left(\ket{\chi},\ket{\psi}\right),
+\chi(\ket{\psi})\equiv\qty(\ket{\chi},\ket{\psi}),
 \end{equation}
-donde $\left(\cdot,\cdot\right)$ representa el producto interno en $\mathcal{H}$ \cite{Cohen}. Así, el producto interno en términos de kets y bras \cite{Messiah}:
+donde $\qty(\cdot,\cdot)$ representa el producto interno en $\mathcal{H}$ \cite{Cohen}. Así, el producto interno en términos de kets y bras \cite{Messiah}:
 \begin{equation}
-    \ip{\psi}{\varphi}\equiv\left(\ket{\psi},\ket{\varphi}\right),
+    \ip{\psi}{\varphi}\equiv\qty(\ket{\psi},\ket{\varphi}),
 \end{equation}
 el cual, satisface las siguientes condiciones:
 \begin{itemize}
@@ -77,7 +77,7 @@ A continuación se muestran dos ejemplos fundamentales en la mecánica cuántica
     \item \textbf{Funciones cuadrático integrables}\\
     Funciones $\psi(q_1,q_2,\dots,q_n$) tales que:
     \[\int \abs{\psi(q_1\dots q_n)}^2d\tau < \infty\]
-    Son funciones cuadrático integrables con producto interno definido como \[\left(\psi,\phi\right)=\int \bar{\psi}(q_1,\dots,q_n)\phi(q_1,\dots,q_n)d\tau\]
+    Son funciones cuadrático integrables con producto interno definido como \[\qty(\psi,\phi)=\int \bar{\psi}(q_1,\dots,q_n)\phi(q_1,\dots,q_n)d\tau\]
     Este espacio posee, la propiedad de ser completo, cumpliendo así las propiedades de espacio de Hilbert\cite{Messiah}.
     \item \textbf{Espacio del Qubit}\\
     Un qubit se describe mediante sistemas compuestos formados por estados individuales de dos niveles\cite{Kaye}. Se tiene un espacio discreto 2-dimensional. Generalmente se le asocia a este espacio la \textit{base computacional}:
@@ -117,11 +117,11 @@ estados normalizados
 \begin{equation}
     S^{2n-1}
     :=
-    \left\{
+    \qty{
         \ket{\psi} \in \H_0
         \,\middle|\,
         \ip{\psi} = 1
-    \right\},
+    },
 \end{equation}
 donde $\mathcal{H}_0=\mathcal{H}-\{0\}$. De esta forma, los estados físicos se identifican con las órbitas de la acción del grupo $U(1)$ sobre la esfera de estados normalizados $S^{2n-1}$; es decir, con circunferencias $S^1$ embebidas en $S^{2n-1}$.\\
 
@@ -171,18 +171,18 @@ Al representar un sistema mediante un ket, se esta diciendo indirectamente que e
 Como vimos en secciones anteriores, tenemos una manera matemática de describir este tipo de sistemas, pero, retomando el ejemplo anterior, ¿qué ocurre con el haz de luz antes de pasar por el polarizador? en otras palabras, ¿cómo describir luz no polarizada?.\\
 La luz no polarizada puede describirse como una mezcla de polarizadores; es decir, una mezcla ponderada de estados puros, donde el haz de luz está completamente caracterizado por los i-ésimos filtros. A este tipo de sistemas se les conoce como \textit{estados mixtos}. En ellos, realizar una medición al sistema implica una mezcla ponderada de las mediciones individuales en cada filtro. De este modo, se define el \textbf{ensamble promedio de} $\bm{A}$ como:
 \begin{equation}
-    \left[\bm{A}\right]=\sum_i P_i \expval{\bm{A}}=\sum_iP_i\expval{\bm{A}}{\psi_i},
+    \qty[\bm{A}]=\sum_i P_i \expval{\bm{A}}=\sum_iP_i\expval{\bm{A}}{\psi_i},
     \label{def:ensamble_promedio}
 \end{equation}
 donde $P_i$ representa el peso estadístico del i-esimo filtro, con $\sum_iP_i=1$.\\ 
 
-Es importante hacer notar que \textit{no es lo mismo ensamble promedio y valor esperado}; sin embargo, ambos conceptos están relacionados, ya que la ecuación \eqref{def:ensamble_promedio} notamos que $\left[\bm{A}\right]$ depende del valor esperado $\expval{A}$.\\
+Es importante hacer notar que \textit{no es lo mismo ensamble promedio y valor esperado}; sin embargo, ambos conceptos están relacionados, ya que la ecuación \eqref{def:ensamble_promedio} notamos que $\qty[\bm{A}]$ depende del valor esperado $\expval{A}$.\\
 
 Ahora de la expresión del ensamble promedio \eqref{def:ensamble_promedio} podemos considerar las bases ortonormales $\{\ket{\phi_{k}}\}$ y $\{\ket{\phi_{k'}}\}$ tal que:
 \begin{align}
-    \left[\bm{A}\right] &=
+    \qty[\bm{A}] &=
     \sum_i P_i \sum_{\phi_{k}\, \phi_{k'}}\ip{\psi_i}{\phi_{k}}\mel{\phi_{k}}{\bm{A}}{\phi_{k'}}\ip{\phi_{k'}}{\psi_i}; \notag \\
-    &= \sum_{k\,k'}\left(\sum_iP_i\ip{\phi_{k'}}{\psi_i}\ip{\psi_i}{\phi_{k}}\right)\mel{\phi_{k}}{\bm{A}}{\phi_{k'}}.
+    &= \sum_{k\,k'}\qty(\sum_iP_i\ip{\phi_{k'}}{\psi_i}\ip{\psi_i}{\phi_{k}})\mel{\phi_{k}}{\bm{A}}{\phi_{k'}}.
 \end{align}
 Podemos reescribir el término en paréntesis como
 \begin{equation}
@@ -195,7 +195,7 @@ tal que está expresión es la representación matricial del \textbf{operador de
 \end{equation}
 Tomando en cuenta esta definición, podemos expresar el ensamble promedio de la siguiente manera,
 \begin{align}
-    \left[\bm{A}\right]&=
+    \qty[\bm{A}]&=
     \sum_{k\,k'}\mel{\phi_k}{\rhon}{\phi_{k'}}\mel{\phi_{k'}}{\bm{A}}{\phi_{k}}, \notag \\
     &=\sum_k \ev{\bm{\rho A}}{\phi_k}, \notag \\
     &= \Tr(\bm{\rho A}).
@@ -210,9 +210,9 @@ Los operadores de estado satisfacen las siguientes propiedades:
     \item $\rhon$ es un operador Hermitico (vea la sección de observables).
     \item Condición de normalización $\Tr(\rhon)=1$.
     \item Es un operador positivo definido.
-    \item La superposición de operadores de estado es también un operador de estado; es decir, sean $\rhon_1,\rhon_2$ operadores de estado y $c_1,c_2\in\R^+$ con $c_1+c_2=1$. Entonces,
+    \item La superposición de operadores de estado es también un operador de estado; es decir, sean $\rhon_1,\rhon_2$ operadores de estado y $c_1,c_2\in\C$ con $\abs{c_1}^2+\abs{c_2}^2=1$. Entonces,
     \begin{equation}
-        \rhon = c_1\rhon_1 + c_2\rhon_2,
+        \rhon = \abs{c_1}^2\rhon_1 + \abs{c_2}^2\rhon_2,
         \label{eq:superposicion_operadores}
     \end{equation}
     es también es un operador de estado.
@@ -226,12 +226,28 @@ donde es directo notar que para este estado $\rhon^2=\rhon$. Por lo tanto, para 
 \begin{equation}
     \Tr(\rhon^2)=1.
 \end{equation}
-Concluyendo, cualquier \textit{ensamble no puro} cumple lo siguiente:
+
+Ahora, consideremos un ensamble general $\rhon=\sum_i P_i \op{\psi_i}$; de esta manera,
+\begin{equation}
+    \rhon^2=\sum_{i,j}P_iP_j\ket{\psi_i}\ip{\psi_i}{\psi_j}\bra{\psi_j},
+    \label{eq:rho2_general}
+\end{equation}
+calculando la traza de \eqref{eq:rho2_general}:
+\begin{align}
+    \Tr(\rhon^2)&=
+    \sum_{i,j}P_iP_j\ip{\psi_i}{\psi_j}\Tr(\op{\psi_i}{\psi_j})\notag\\
+    &=\sum_{i,j}P_iP_j\ip{\psi_i}{\psi_j}\ip{\psi_j}{\psi_i}\notag\\
+    &=\sum_{i,j}P_iP_j\abs{\ip{\psi_i}{\psi_j}}^2\notag\\
+    &<\sum_{i,j}P_iP_j=\sum_iP_i\sum_jP_j=1,
+    \label{eq:calculo_traza}
+\end{align}
+además en el caso con sub-estados todos ortogonales; es decir $\ip{\psi_i}{\psi_j}=0$, se concluye que $0\leq\Tr(\rhon^2)$, y por \eqref{eq:calculo_traza} se obtiene la siguiente propiedad para \textit{ensambles no puros}:
 
 \begin{equation}
     0\le\Tr(\rho^2)<1.
     \label{eq:traza_no_puro}
 \end{equation}
+
 
 De esta manera, la traza de $\rhon^2$ cuantifica que tan puro es un ensamble.\\ Esta medida es sencilla de calcular; sin embargo, nos gustaría una medida que dependa de alguna cantidad física medible. Con esta motivación en mente, consideremos un ensamble de partículas de espín $\frac{1}{2}$ y espín promedio definido (cantidad física medible); es decir, vamos a considerar un ensamble con dos niveles de energía.\\ Hacemos esta consideración, pues el desarrollo de esta tesis se basa en qubits que es un sistema de dos niveles de energía.\\
 
@@ -316,14 +332,14 @@ Con ello, expandimos en serie de Taylor la exponencial:
 \end{align}
 Con este resultado, aplicamos la traza a la exponencial:
 \begin{align}
-\Tr\!\left(\e^{-\bm{\alpha}\cdot\bm{\sigma}}\right)
+\Tr\!\qty(\e^{-\bm{\alpha}\cdot\bm{\sigma}})
 &=
-\Tr\!\left(
+\Tr\!\qty(
 \cosh|\bm{\alpha}|\,\Id
 -
 \frac{\sinh|\bm{\alpha}|}{|\bm{\alpha}|}
 (\bm{\alpha}\cdot\bm{\sigma})
-\right)
+)
 \notag \\
 &=
 \cosh|\bm{\alpha}|\,\Tr(\Id)
@@ -343,40 +359,40 @@ Con este resultado, aplicamos la traza a la exponencial:
 \end{align}
 Sustituyendo ~\eqref{eq:normalizacion_traza} en ~\eqref{eq:rho_semifinal} y reacomodando:
 \begin{equation}
-    \rho = \frac{1}{2}\left(\Id - \frac{\tanh{|\bm{\alpha}|}}{|\bm{\alpha}|}\right)\bm{\alpha}\cdot\bm{\sigma}
+    \rho = \frac{1}{2}\qty(\Id - \frac{\tanh{|\bm{\alpha}|}}{|\bm{\alpha}|})\bm{\alpha}\cdot\bm{\sigma}
     \label{eq:rho_semi_semifinal}
 \end{equation}
 Ahora, observando que
 \begin{align}
     S_k 
     &= \Tr(\rho\,\sigma_k)
-    = \Tr\!\left[\frac{1}{2}\left(\Id - \frac{\tanh |\bm{\alpha}|}{|\bm{\alpha}|}\sum_i \alpha_i\,\sigma_i \right)\sigma_k\right]
+    = \Tr\!\qty[\frac{1}{2}\qty(\Id - \frac{\tanh |\bm{\alpha}|}{|\bm{\alpha}|}\sum_i \alpha_i\,\sigma_i )\sigma_k]
     \notag \\
-    &= \frac{1}{2}\left(\cancelto{0}{\Tr(\sigma_k)}
+    &= \frac{1}{2}\qty(\cancelto{0}{\Tr(\sigma_k)}
     - \frac{\tanh |\bm{\alpha}|}{|\bm{\alpha}|}
-    \sum_i \alpha_i \Tr(\cancelto{2\delta_{ik}}{\sigma_i\sigma_k}\hspace{.9cm})\right)
+    \sum_i \alpha_i \Tr(\cancelto{2\delta_{ik}}{\sigma_i\sigma_k}\hspace{.9cm}))
     &= -\frac{\tanh |\bm{\alpha}|}{|\bm{\alpha}|}\,\alpha_k ,
 \end{align}
 y sustituyendo este resultado en la ecuación ~\eqref{eq:rho_semi_semifinal}, se obtiene finalmente
 \begin{equation}
-\rho = \frac{1}{2}\left(\Id + \bm{S}\cdot \bm{\sigma}\right).
+\rho = \frac{1}{2}\qty(\Id + \bm{S}\cdot \bm{\sigma}).
 \label{eq:rho_final}
 \end{equation}
 Ahora, calculemos $\rho^2$ para hallar una relación con $\bm{S}$.
 \begin{align*}
     \rho^2&=
-    \frac{1}{4}\left(\Id + \bm{S}\cdot \bm{\sigma}\right)^2
+    \frac{1}{4}\qty(\Id + \bm{S}\cdot \bm{\sigma})^2
     \notag \\
-    &=\frac{1}{4}\left(\Id+2\bm{S}\cdot\bm{\sigma}+|\bm{S}|^2\,\Id\right).
+    &=\frac{1}{4}\qty(\Id+2\bm{S}\cdot\bm{\sigma}+|\bm{S}|^2\,\Id).
 \end{align*}
 Calculando la traza de $\rho^2$:
 \begin{align}
     \Tr(\rho^2)&=
-    \Tr[\frac{1}{4}\left(\Id+2\,\bm{S}\cdot\bm{\sigma}+\bm{|S|}^2\,\Id\right)]
+    \Tr[\frac{1}{4}\qty(\Id+2\,\bm{S}\cdot\bm{\sigma}+\bm{|S|}^2\,\Id)]
     \notag \\
-    &= \frac{1}{4}\left[\cancelto{2}{\Tr(\Id)}+2\sum_iS_i\;\cancelto{0}{\Tr(\sigma_i)}\;+2|\bm{S}|^2\right]
+    &= \frac{1}{4}\qty[\cancelto{2}{\Tr(\Id)}+2\sum_iS_i\;\cancelto{0}{\Tr(\sigma_i)}\;+2|\bm{S}|^2]
     \notag \\
-    &=\frac{1}{2}\left(1+|\bm{S}|^2\right).
+    &=\frac{1}{2}\qty(1+|\bm{S}|^2).
 \end{align}
 
 De la última expresión se concluye que:
@@ -389,7 +405,7 @@ De la última expresión se concluye que:
 
 De esta manera, el espacio de operadores densidad es el conjunto de todas las $\rho$ de la forma de \eqref{eq:rho_final} y cada estado es identificado por su espín promedio $\bm{S}$ del sistema.
 \begin{equation}
-    \rho_{space}\equiv\left\{\rho=\frac{1}{2}\left(\Id + \bm{S}\cdot \bm{\sigma}\right)\;|\;\bm{S}\in \R^3 \right\}
+    \rho_{space}\equiv\qty{\rho=\frac{1}{2}\qty(\Id + \bm{S}\cdot \bm{\sigma})\;|\;\bm{S}\in \R^3 }
 \end{equation}
 
 
@@ -401,13 +417,16 @@ Ahora enfocándonos en una de las propiedades fundamentales de la mecanica cuán
 \end{equation}
 y como vimos en la ecuación \eqref{eq:superposicion_operadores}, la superposición en operadores se representa mediante:
 \begin{equation}
-    \rhon = a_1\rhon_1+a_2\rhon_2 = a_1\op{\phi_1}+a_2\op{\phi_2},
+    \rhon = \abs{c_1}^2\rhon_1+\abs{c_2}^2\rhon_2 = \abs{c_1}^2\op{\phi_1}+\abs{c_2}^2\op{\phi_2},
     \label{eq:superposicion_operadores2}
 \end{equation}
-¿pero las expresiones \eqref{eq:superposicion Hilbert} y \eqref{eq:superposicion_operadores2} representan el mismo estado de superposición de $\ket{\phi_1}$ y $\ket{\phi_2}$? La respuesta es no, y la primera señal de que estas dos expresiones es que \eqref{eq:superposicion Hilbert} representa un estado puro y la traza del operador de estado es
-\[\Tr(\rhon^2)=1+2a_1a_2\Tr(\rhon_1\rhon_2)\neq 1,
-\]
-donde el segundo termino no necesariamente es $0$. Por lo que, aunque la suma de operadores de estado si representa una superposición, no esta representando el estado de superposición que conocemos en el espacio de Hilbert. \\ A continuación deduciremos una ley de composición de operadores de estado para estados superpuestos.\\
+pero ¿las expresiones \eqref{eq:superposicion Hilbert} y \eqref{eq:superposicion_operadores2} representan el mismo estado de superposición de $\ket{\phi_1}$ y $\ket{\phi_2}$? La respuesta es no, y la primera señal de que estas dos expresiones es que \eqref{eq:superposicion Hilbert} representa un estado puro y la traza del operador de estado es
+\begin{align}
+    \Tr(\rhon^2)&=\abs{c_1}^4+\abs{c_2}^4+2\abs{c_1c_2}^2\Tr(\rhon_1\rhon_2)\notag\\
+    &= 1+2\abs{c_1c_2}^2\qty[\Tr(\rhon_1\rhon_2)-1]\notag\\
+    &=1+2\abs{c_1c_2}^2\,\qty(\abs{\ip{\psi_1}{\psi_2}}^2-1),
+\end{align}
+donde $\abs{\ip{\psi_1}{\psi_2}}\neq1$ pues necesariamente son estados distintos; por lo tanto, aunque la suma de operadores de estado si representa una superposición, no esta representando el estado de superposición que conocemos en el espacio de Hilbert. \\ A continuación deduciremos una ley de composición de operadores de estado para estados superpuestos.\\
 
 
 Sean los estados:
@@ -443,20 +462,24 @@ Ahora definamos un estado fiducial $\ket{\psi_0}$ con operador de estado $\rhon_
 \begin{equation}
     \ket{\psi'_j}= \frac{\rhon_j\ket{\psi_0}}{\sqrt{\ev{\rhon_j}{\psi_0}}} ;\hspace{0.5cm} j\in\{1,2\}.    
 \end{equation}
-Con la definición de $\rhon_0$ podemos calcular los siguientes terminos:
 \begin{align}
     \Tr(\rhon_j\rhon_0) &=
     \expval{\rhon_1\rhon_0}{\psi'_j} \notag\\
     &= \ip{\psi'_j}\ip{\psi'_j}{\psi_0}\ip{\psi_0}{\psi'_j}\notag\\
     &=\ip{\psi'_j}{\psi_0}\ip{\psi_0}{\psi'_j}\notag\\
     &= \frac{\ip{\psi_0}{\psi_j}\ip{\psi_j}{\psi_0}}{\abs{\ip{\psi_j}{\psi_0}}^2}\ip{\psi_j}{\psi_0}\ip{\psi_0}{\psi_j}\notag\\
-    &=\abs{\ip{\psi_o}{\psi_j}}^2,
+    &=\abs{\ip{\psi_0}{\psi_j}}^2,
 \end{align}
-por tanto, obtenemos la siguiente igualdad:
-\begin{equation}
-    \left[\Tr(\rhon_1\rhon_o)\Tr(\rhon_2\rhon_0)\right]^{1/2}=\abs{\ip{\psi_1}{\psi_0}\ip{\psi_2}{\psi_0}}.
+con esta igualdad, obtenemos el siguiente resultado:
+\begin{align}
+   \qty[\Tr(\rhon_i\rhon_0\rhon_j\rhon_0)]^{1/2}&=
+   \qty[\ip{\psi_i}{\psi_0}\ip{\psi_0}{\psi_j}\ip{\psi_0}{\psi_j}\Tr(\op{\psi_i}{\psi_0})]^{1/2}\notag\\
+   &=\qty[\ip{\psi_i}{\psi_0}\ip{\psi_0}{\psi_j}\ip{\psi_0}{\psi_j}\ip{\psi_0}{\psi_i}]^{1/2}\notag\\
+   &=
+   \qty[\abs{\ip{\psi_i}{\psi_0}}^2\abs{\ip{\psi_j}{\psi_0}}^2]^{1/2}\notag\\
+   &=\abs{\ip{\psi_i}{\psi_0}\ip{\psi_j}{\psi_0}}.
     \label{eq:Traza_multiplicacion}
-\end{equation}
+\end{align}
 Además note lo siguiente,
 \begin{align}
     \rhon_i\rhon_0\rhon_j &=
@@ -464,11 +487,11 @@ Además note lo siguiente,
     &= \ip{\psi'_i}{\psi_0}\ip{\psi_0}{\psi'_j}\op{\psi'_i}{\psi'_j}\notag\\
     &=(\ip{\psi_i}{\psi_0}\ip{\psi_0}{\psi_j})\op{\psi_i}{\psi_j},
 \end{align}
-de esta ultima expresión despejamos $\op{\psi_i}{\psi_j}$,
+de esta ultima expresión despejamos $\op{\psi_i}{\psi_j}$ y obtenemos,
 \begin{equation}
     \op{\psi_i}{\psi_j}=\frac{\rhon_i\rhon_0\rhon_j}{\ip{\psi_0}{\psi_j}\ip{\psi_i}{\psi_0}},
 \end{equation}
-y sustituyendo en \eqref{eq:rho_super_sin_despejar}
+sustituyéndolo en \eqref{eq:rho_super_sin_despejar}:
 \begin{align}
   \rhon &=
     |c_1|^2 \rhon_1
@@ -480,35 +503,39 @@ y sustituyendo en \eqref{eq:rho_super_sin_despejar}
       \frac{\rhon_2 \rhon_0 \rhon_1}
            {\abs{\ip{\psi_2}{\psi_0}\ip{\psi_1}{\psi_0}}}.    
 \end{align}
-Finalmente sustituyendo la ecuación \eqref{eq:Traza_multiplicacion}, obtenemos la ley de composición para estados de superposición como sigue \cite{MankoComposition}:
+Finalmente aplicando \eqref{eq:Traza_multiplicacion}, obtenemos la ley de composición para estados de superposición como sigue:
 \begin{equation}
     \rhon = |c_1|^2\rhon_1+|c_2|^2\rhon_2
-    +\qty(c_1c_2^*\;\rhon_1\rhon_0\rhon_2+c_1^*c_2\;\rhon_2\rhon_0\rhon_1)\left[\Tr(\rhon_1\rhon_o)\Tr(\rhon_2\rhon_0)\right]^{-1/2}.
+    +\qty(c_1c_2^*\;\rhon_1\rhon_0\rhon_2+c_1^*c_2\;\rhon_2\rhon_0\rhon_1)\qty[\Tr(\rhon_1\rhon_o\rhon_2\rhon_0)]^{-1/2},
     \label{def:Ley_de_composicion}
 \end{equation}
+note de esta última expresión; el rol del estado fiducial $\ket{\psi_0}$, es el describir la ley de composición en unicamente términos de $\rhon_1$ y $\rhon_2$.\\ Por tanto, notamos la diferencia de la suma convencional de operadores $\eqref{eq:superposicion_operadores2}$ es el termino de la derecha, que es conocido como \textit{termino de purificación}, debido a que $\eqref{def:Ley_de_composicion}$ termina siendo un estado puro de la superposición de dos estados  \cite{MankoComposition}.
 
-
+La expresión \eqref{def:Ley_de_composicion} se puede reescribir de la siguiente manera,
+\begin{equation}
+    \rhon=\sum_{i,j=1}^2c_ic_j^*\frac{\rhon_i\rhon_0\rhon_j}{\qty[\Tr(\rhon_i\rhon_0\rhon_j\rhon_0)]^{1/2}},
+\end{equation}
+que puede ser generalizada inmediatamente para $n$ estados de la siguiente manera \cite{MankoComposition} :
+\begin{equation}
+    \rhon = \sum_{i,j=1}^nc_ic_j^*\frac{\rhon_i\rhon_0\rhon_j}{\qty[\Tr(\rhon_i\rhon_0\rhon_j\rhon_0)]^{1/2}}.
+\end{equation}
 
 \section{Observables}
-El concepto de medición es una parte fundamental de la física, es la herramienta que tenemos para obtener información un sistema mediante la manipulación del mismo por medio de una operación, llamemos $\bm{A}$.
-De esta manera, al aplicar la operación $\bm{A}$ al sistema, obtendremos un valor de medición $a$. Esta es la idea general de medir en física.\\ Sin embargo, en mecanica cuántica la medición conlleva una característica adicional. \textit{Realizar una medición altera el estado del sistema} \cite{Sakurai2011}. Es decir, sea el estado inicial $\psi$, al realizar una medición $\bm{A}$ el estado colapsa a otro estado $\psi'$.
+El concepto de medición es una parte fundamental de la física, es la herramienta necesaria para obtener información de un sistema, mediante la manipulación del mismo por medio de una operación, llamemos $\bm{A}$.
+De esta manera, al aplicar la operación $\bm{A}$ al sistema, obtendremos un valor de medición $a$. Esta es la idea general de medir en física.\\ Sin embargo, en mecanica cuántica la medición conlleva una característica adicional. \textit{Realizar una medición altera el estado del sistema} \cite{Sakurai2011}. Es decir, si $\psi$ es  el estado inicial, al realizar una medición $\bm{A}$ el estado colapsa a otro estado $\psi'$.
 \begin{equation}
    \ket{\psi} \xrightarrow{\text{medición de } \bm{A}}\ket{\psi'}
    \label{diag: medicion}
 \end{equation}
 
-Esta operación $\bm{A}$es en mecanica cuantica un operador lineal que es una correspondencia lineal entre dos estados:
+La operación $\bm{A}$ es en mecanica cuántica un operador lineal, que es una correspondencia lineal entre dos estados:
 \begin{equation}
     \ket{\psi'}=\mathbf{A}\ket{\psi}.
 \end{equation}
-Donde dice que dos operadores $\bm{A}$ y $\bm{B}$ son iguales si:
-\begin{equation}
-    \expval{\bf{A}}{\psi}=\expval{\bf{B}}{\psi}.
-\end{equation}
 
 
-De igual forma como en la corresponecia uno a uno entre kets y bras, existe una relación antilineal en los operdadores.\\
-Sea $\ket{v}$ el ket conjugado del bra $\bra{u}\bm{A}$. De esta manera, $\ket{v}$ depende antilinealmente del bra $\ket{u}$. Es por tanto una función lineal de $\ket{u}$. Esta correspondencia lineal define un operdador lineal por el nombre de \textit{conjugado de} $\bm{A}$, denotado por $\bm{A}^\dagger$.
+De igual forma como en la correspondencia uno a uno entre kets y bras, existe una relación anti-lineal entre operadores.\\
+Sea $\ket{v}$ el ket conjugado del bra "$\bra{u}\bm{A}$", es decir, $\ket{v}$ depende anti linealmente del bra $\ket{u}$; por lo tanto, existe una función lineal de $\ket{u}$. Esta correspondencia lineal define un operador lineal por el nombre de \textit{conjugado de} $\bm{A}$, denotado por $\bm{A}^\dagger$.
 \begin{equation}
     \ket{v}=\bm{A}^\dagger\ket{u}.
     \label{def: operador_conjugado}
@@ -552,7 +579,7 @@ Finalmente, para describir la naturaleza del proceso de medición, el estado pos
 \begin{equation}
     \ket{\psi'}=
     \frac{\bm A \ket{\psi}}
-    {\norm{\bm A \ket{\psi}}},
+     {\sqrt{P(a_i)}}=\frac{\bm{A}\ket{\psi}}{\abs{\expval{\bm{A}}{\psi}}},
     \label{eq: colapso_estado}
 \end{equation}
 el cual corresponde, tras la normalización, al autovector de $\bm A$ asociado al autovalor obtenido en la medición.\\
@@ -563,26 +590,31 @@ Falta por conocer la forma del colapso de estado mencionada en la ecuación \ref
 
 \begin{equation}
    \rho' \xrightarrow{\text{medición de } \bm{A}}\rho
-   \label{diag: medicion}
 \end{equation}
 
-Tenemos de la ecuación \eqref{eq: colapso_estado} la forma general del colpaso de un estado dada una medición $\bm{A}$. De esta, se puede obtener su conjugado, dado \eqref{def: operador_conjugado}:
+Tenemos de la ecuación \eqref{eq: colapso_estado} la forma general del colpaso de un estado dada una medición $\bm{A}$. De esta, se puede obtener su conjugado, dado \eqref{def: operador_conjugado} como sigue,
 \begin{equation}
-    \bra{\psi'}=\frac{\bra{\psi}\bm{A}^\dagger}{\norm{\bm{A}\ket{\psi}}}
+    \bra{\psi'}=\frac{\bra{\psi}\bm{A}^\dagger}{\abs{\expval{\bm{A}}{\psi}}}.
 \end{equation}
-De esta manera, cada $\rho'$ de un estado puro puede escribirse como:
+De esta manera, cada operador de algún estado puro $\rhon_i$ colapsa a un operador $\rhon'_i$ de la forma 
 \begin{equation}
-    \rho'=\frac{1}{\norm{\bm{A}\ket{\psi}}^2}\bm{A}\rho\bm{A}^\dagger
+    \rhon'_i=\frac{\bm{A}\rhon_i\bm{A}^\dagger}{\abs{\expval{\bm{A}}{\psi_i}}^2},
+    \label{eq:colapso_operador_estado}
 \end{equation}
+al realizar una medición $\bm{A}$.
+Generalizando para una operador de estado mixto:
+\begin{align}
+    \rhon &= 
+    \sum_i P_i \rhon_i \notag\\
+    &= \sum_iP_i\frac{\bm{A}\rhon_i\bm{A}^\dagger}{\abs{\expval{\bm{A}}{\psi_i}}^2}\notag\\
+    &= \sum_i P_i \frac{\bm{A}\rhon_i\bm{A}^\dagger}{\expval{\bm{A}\rhon_i\bm{A}^\dagger}}
+\end{align}
 
 
 
 
 \section{Evolución Temporal}
-Es una prueba de como veo $gsdnf$
-\begin{equation}
-    \ket{\psi}=\ket{\phi}
-\end{equation}
+En general no esperamos que los estados se mantengan estáticos en el tiempo, esperamos que ha
 \section{Distribución de Probabilidad}
 \section{Composición de Sistemas}
 
