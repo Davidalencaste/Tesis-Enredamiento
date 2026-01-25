@@ -103,6 +103,7 @@ per-mode = symbol
 
 
 \usepackage{physics}
+\usepackage{amsfonts}
 \usepackage{comment}
 \usepackage{amssymb}
 \usepackage{bm}
@@ -110,6 +111,10 @@ per-mode = symbol
 \usepackage{tikz-cd}%
 \usepackage{tikz-3dplot}
 \usepackage{cancel} %para poner lineas de cancelar en ecuaciones%
+
+%Coffe package%
+\usepackage{coffee4}
+
 
 %------------------------------------------
 % DEFINICION DE COMANDOS
@@ -144,6 +149,8 @@ per-mode = symbol
 %------------------------------------------
 \author{David Antonio Alencaste Desachy}
 \title{Caracterización Geométrica de Enredamiento Cuántico}
+
+
 \faculty{Facultad de Ciencias}
 \degree{Físico}
 \supervisor{Hans Cruz Prado}
@@ -156,6 +163,7 @@ per-mode = symbol
 
 \begin{document} % Inicia el documento
 \frontmatter
+
 \maketitle % Crea portada
 
 %------------------------------------------
@@ -165,6 +173,8 @@ per-mode = symbol
 %\vspace{2cm}
 \begin{flushright}
 	{\fontfamily{ppl}%Palatino
+    \cofeAm{1}{1.0}{0}{3.5cm}{3cm}
+
 	\selectfont\emph{<<It's the questions we can't answer that teach us the most. They teach us how to think. If you give a man an answer, all he gains is a little fact. But give him a question and he'll look for his own answers.>>}\\
 \vspace{5mm}
 	Patrick Rothfuss}

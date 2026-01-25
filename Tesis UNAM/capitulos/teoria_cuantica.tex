@@ -3,6 +3,7 @@
 \begin{document}
 
 La descripción de cualquier sistema físico requiere, al menos, la identificación de los siguientes cinco elementos:
+\cofeAm{1}{1.0}{0}{3.5cm}{3cm}
 \begin{enumerate}
     \item Estados
     \item Observables
@@ -25,6 +26,7 @@ El objetivo de esta sección es mostrar que estos elementos también están pres
 
 
 \section{Espacio de Estados}
+
 Tradicionalmente, el primer postulado de la mecánica cuántica define a los estados de la siguiente manera.\\
 \textit{El estado de un sistema físico esta definido por un vector de estado, que es un elemento de un espacio de Hilbert} $\mathcal{H}$ \cite{Cohen}.
 Donde cada un vector de estado (el vector asociado al estado $\psi$) se asocia a un ket $\ket{\;}$
@@ -607,14 +609,100 @@ Generalizando para una operador de estado mixto:
     \rhon &= 
     \sum_i P_i \rhon_i \notag\\
     &= \sum_iP_i\frac{\bm{A}\rhon_i\bm{A}^\dagger}{\abs{\expval{\bm{A}}{\psi_i}}^2}\notag\\
-    &= \sum_i P_i \frac{\bm{A}\rhon_i\bm{A}^\dagger}{\expval{\bm{A}\rhon_i\bm{A}^\dagger}}
+    &= \sum_i P_i \frac{\bm{A}\rhon_i\bm{A}^\dagger}{\expval{\bm{A}\rhon_i\bm{A}^\dagger}}\notag\\
+    &=\sum_i P_i \,\frac{\bm{A}\rhon_i\bm{A}^\dagger}{\Tr(\rhon_i\bm{A^\dagger}\rhon_i\bm{A})}
 \end{align}
 
 
 
 
 \section{Evolución Temporal}
-En general no esperamos que los estados se mantengan estáticos en el tiempo, esperamos que ha
+Ya sabemos que en sistemas cuánticos el acto de medir tiene una consecuencia directa en el estado del sistema; el estado siempre se ve afectado al realizar una medición. La pregunta natural es, si tenemos un ensamble libre de mediciones, ¿el estado cambia o se mantiene estático con el paso del tiempo? En general los estados no se mantienen estáticos. Un ejemplo sencillo es una partícula de espín 1/2 con estado inicial conocido $S_x$ expuesto a un campo magnético $z$; una vez expuesto al campo magnético, este hace oscilar al estado en $S_x$ y $S_y$ provocando que al volver a medir, exista una probabilidad de estar en $S_x+$ ó $S_x-$ \cite{Sakurai2011}. Esto nos muestra que los estados no necesariamente permanecen estáticos en el tiempo.\\ Otra característica de los sistemas cuánticos es que \textit{la superposición lineal de estados es preservada en ausencia de mediciones} \cite{Messiah}.\\
+La manera en la cuál se maneja la evolución temporal de sistemas cuánticos entre dos tiempos $t_o$ y $t$, es mediante el \textbf{operador de evolución} $\bm{U}(t,t_0)$, que conecta ambos operadores de la siguiente forma
+\begin{equation}
+    \ket{\psi(t)}=\bm{U}(t,t_0)\ket{\psi_0}.
+    \label{def:ket_temporal}
+\end{equation}
+Debido a la conservación de superposiciones lineales este operador debe ser \textit{lineal}, además la conservación de probabilidad necesariamente requiere que
+\begin{equation}
+    \ip{\psi_0}=1,
+\end{equation}
+entonces aplicando evolución temporal, esta probabilidad no debería ser diferente a la unidad,
+\begin{align}
+    \expval{\bm{U}^\dagger(t,t_0)\bm{U}(t,t_0)}{\psi_0}=1,
+\end{align}
+implicando necesariamente que
+\begin{equation}
+    \bm{U}^\dagger(t,t_0)\bm{U}(t,t_0) = \Id;
+\end{equation}
+es decir, que el \textit{operador de evolución temporal es unitario}. Además, este operador requiere que la evolución temporal sea la misma sin importar como se dividan los intervalos de tiempos,
+\begin{equation}
+    \bm{U}(t,t_n)=\bm{U}(t_n,t_{n-1})\cdots\bm{U}(t_1,t_o).
+    \label{eq:composicion_evolcuion_temporal}
+\end{equation}
+Considerando el tiempo como una variable continua en \eqref{eq:composicion_evolcuion_temporal}; podemos escribir la misma propiedad como sigue,
+\begin{equation}
+    \ket{\psi(t+\dd{t})}= \bm{U}(t_0+\dd{t},t_0)\ket{\psi_0}.
+\end{equation}
+Proponemos como operador $\bm{U}$:
+\begin{equation}
+    \bm{U}(t_0+\dd{t},t_0)=\Id-\frac{i\bm{H}\dd{t}}{\hbar},
+\end{equation}
+con $\bm{H}$ el operador HamiltonianO, guiándonos del hecho de ser este operador el generador de evolución en mecanica clásica.  Note que este operador cumple la propiedad de composición temporal \eqref{eq:composicion_evolcuion_temporal} y el ser unitario,
+\begin{align}
+    \bm{U}^\dagger(t_0+\dd{t},t_0)\bm{U}(t_0+\dd{t},t_0)&=
+    \qty(\Id+\frac{i\bm{H}\dd{t}}{\hbar})\qty(\Id-\frac{i\bm{H}\dd{t}}{\hbar});\notag\\
+    &=\Id +\frac{\bm{H}^2}{\hbar^2} \dd{t}^2;\notag\\
+    &\approx \Id,
+\end{align}
+donde de igual forma asumimos que $\bm{H}$ es hermitico.\\ Ahora usando la propiedad de composición temporal \eqref{eq:composicion_evolcuion_temporal} podemos expresar el operador $\bm{U}$ como sigue:
+\begin{align}
+    \bm{U}(t_0+\dd{t},t_0)&=
+    \bm{U}(t+\dd{t},t)\bm{U}(t,t_0)\\
+    &=\qty(\Id-i\frac{\bm{H}\dd{t}}{\hbar})\bm{U}(t,t_0),
+\end{align}
+despejando la diferencia infinitesimal del operdador como sigue:
+\begin{align}
+    \bm{U}(t_0+\dd{t},t_0)-\bm{U}(t,t_0) =\qty(-i\frac{\bm{H}\dd{t}}{\hbar})\bm{U}(t,t_0),
+\end{align}
+reescribiendo en su forma diferencial obtenemos \textit{la ecuación de Schrödinger para el operador de evolución temporal} \cite{Sakurai2011},
+\begin{equation}
+    i\hbar\pdv{t}\bm{U}(t,t_0)=\bm{H}\bm{U}(t,t_0),
+    \label{eq:Schrondiger_operador_temporal}
+\end{equation}
+multiplicando esta ecuación por el estado $\ket{\psi_0}$, se obtiene la \textbf{ecuación de evolución temporal} de cualquier estado.
+\begin{equation}
+i\hbar\pdv{t}\ket{\psi(t)}=\bm{H}\ket{\psi(t)},
+\label{eq:Schrondiger_estado}
+\end{equation}
+esto debido a como definimos $\ket{\psi(t)}$ en la ecuación \eqref{def:ket_temporal}.\\ La ecuación \eqref{eq:Schrondiger_estado} indica como evoluciona un estado en el tiempo, que depende unicamente en el Hamiltoniano del sistema; es decir, a las fuerzas a las que está expuesto el ensamble. Note, sin embargo que para conocer la evolución temporal de un sistema para cualquier tiempo no es necesario resolver la ecuación \eqref{eq:Schrondiger_estado}, basta con conocer la forma del estado inicial $\ket{\psi_0}$ y resolver la ecuación de Schrödinger unicamente para el operador de evolución temporal, dado por la ecuación \eqref{eq:Schrondiger_operador_temporal} y aplicar \eqref{def:ket_temporal}.\\ 
+
+Ya obtuvimos la ecuación de evolución temporal para sistemas descritos en el espacio de Hilbert; a continuación deduciremos la ecuación correspondiente para el espacio de operadores de densidad.\\ De la ecuación \eqref{eq:Schrondiger_estado} podemos obtener la ecuación auto-adjunta simplemente aplicando el auto-adjunto en cada lado, 
+\begin{equation}
+    -i\hbar\pdv{t}\bra{\psi(t)}=\bra{\psi(t)}\bm{H};
+    \label{eq:evolucion_temporal_auto-adjunta}
+\end{equation}
+además, de la definición de operador de estado \eqref{def:operador_estado_pesos} y la evolución temporal de un ket \eqref{def:ket_temporal} obtenemos:
+\begin{align}
+    \rhon(t)&=\sum_i P_i \bm{U}(t,t_0)\op{\psi_i(t_0)}\bm{U}^\dagger(t,t_0)\notag\\
+    &= \sum_i P_i \op{\psi_i(t)},
+\end{align}
+derivando parcialmente sobre el tiempo y aplicando \eqref{eq:Schrondiger_estado} y \eqref{eq:evolucion_temporal_auto-adjunta}
+\begin{align}
+    \pdv{t}\rhon(t)&= \sum_i P_i\qty[\pdv{t}\ket{\psi_i(t)}\bra{\psi_i(t)}+\ket{\psi_i(t)}\pdv{t}\bra{\psi_i(t)}]\notag\\
+    &=\sum_i P_i \qty[-i\hbar^{-1}\bm{H}\op{\psi_i(t)}+i\hbar^{-1}\ket{\psi_i(t)}\bra{\psi_i(t)}\bm{H}].
+\end{align}
+Por lo tanto, re acomodando obtenemos la siguiente ecuación:
+\begin{align}
+    i\hbar \pdv{t}\rhon(t)&=\sum_i P_i \qty[\bm{H}\op{\psi_i(t)}-\op{\psi_i(t)}\bm{H}]\notag\\
+    &= -\qty[\rhon,\bm{H}].
+\end{align}
+Lo que se acaba de derivar es la ecuación de evolución temporal para un operador de estado, que reescribimos en la ecuación \eqref{eq:evolucion_temporal_operador},
+\begin{equation}
+    i\hbar \pdv{\rhon}{t}=-\qty[\rhon,\bm{H}].
+    \label{eq:evolucion_temporal_operador}
+\end{equation}
+
 \section{Distribución de Probabilidad}
 \section{Composición de Sistemas}
 
