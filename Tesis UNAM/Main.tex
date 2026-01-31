@@ -25,11 +25,13 @@
 \usepackage[titletoc]{appendix} % Añade palabra «Apéndice» en Índice y define el ambiente appendices
 \usepackage{cite} % Define varios tipos de entrada en archivos *.bib
 \usepackage[T1]{fontenc} % Elimina advertencia Package spanish Warning: Replacing `OT1/cmr/bx/sc'
-\usepackage[mathletters]{ucs} % Unicode char; escribir directo caracteres griegos en Mathmode.
+%\usepackage[mathletters]{ucs} % Unicode char; escribir directo caracteres griegos en Mathmode.
 % Es muy útil para aquellos que necesitan escribir varios caracteres griegos y se quieren evitar escribir cada vez \alpha \beta \gamma etc. Particularmente si tienen mapeado el teclado griego que en general se acomoda fonéticamente a QWERTY i.e. a=α b=β p=π m=μ r=ρ D=∆ d=δ 
 \usepackage{textgreek} % para usar caracteres griegos en mmacells (Entrada de código de Mathematica)
-\usepackage[utf8x]{inputenc} % Escribir con tildes
+%\usepackage[utf8x]{inputenc} % Escribir con tildes
 \usepackage[es-tabla,es-nodecimaldot]{babel} % es-nodecimaldot es para usar punto como separador decimal en lugar de coma
+\usepackage[utf8]{inputenc}
+
 
 \usepackage{amsmath}
 %\DeclareMathOperator{\sinc}{sinc}
@@ -155,8 +157,8 @@ per-mode = symbol
 \degree{Físico}
 \supervisor{Hans Cruz Prado}
 \cityandyear{Ciudad Universitaria, CDMX, 2025}
-\logouni{Escudo-UNAM} % nombre del archivo del escudo de la universidad
-\logofac{Escudo-FCIENCIAS} % nombre del archivo del escudo de la facultad
+\logouni{Escudo-UNAM-v15} % nombre del archivo del escudo de la universidad
+\logofac{Escudo-FCIENCIAS-v15} % nombre del archivo del escudo de la facultad
 
 
 \graphicspath{{diagramas/}{fotos/}{graficas/}}% Usar gráficos de esas carpetas sin necesidad de poner el directorio completo (salvo que tengan terminación *.tex) 
@@ -170,16 +172,18 @@ per-mode = symbol
 % DEDICATORIA
 %------------------------------------------
 \chapter*{}
-%\vspace{2cm}
+
+\vspace*{3cm}
+
 \begin{flushright}
-	{\fontfamily{ppl}%Palatino
-    \cofeAm{1}{1.0}{0}{3.5cm}{3cm}
+{\fontfamily{ppl}\selectfont
+\emph{``It's the questions we can't answer that teach us the most...''}
 
-	\selectfont\emph{<<It's the questions we can't answer that teach us the most. They teach us how to think. If you give a man an answer, all he gains is a little fact. But give him a question and he'll look for his own answers.>>}\\
 \vspace{5mm}
-	Patrick Rothfuss}
-
+Patrick Rothfuss
+}
 \end{flushright}
+
 \vfill
 %------------------------------------------
 % AGRADECIMIENTOS
@@ -187,6 +191,9 @@ per-mode = symbol
 \chapter{Agradecimientos}
 \lipsum[6-9]
 
+\begin{center}
+\cofeAm{1}{1.0}{0}{3.5cm}{3cm}
+\end{center}
 
 \tableofcontents % Index 
 \mainmatter 
