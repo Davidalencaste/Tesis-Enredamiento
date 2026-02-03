@@ -104,6 +104,8 @@ per-mode = symbol
 % Otro paquete que sirve el mismo propósito es standalone pero requiere mayor cuidado con la sintaxis.
 
 
+
+
 \usepackage{physics}
 \usepackage{amsfonts}
 \usepackage{comment}
@@ -162,6 +164,10 @@ per-mode = symbol
 
 
 \graphicspath{{diagramas/}{fotos/}{graficas/}}% Usar gráficos de esas carpetas sin necesidad de poner el directorio completo (salvo que tengan terminación *.tex) 
+
+% Numerar hasta subsubsection
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
 
 \begin{document} % Inicia el documento
 \frontmatter

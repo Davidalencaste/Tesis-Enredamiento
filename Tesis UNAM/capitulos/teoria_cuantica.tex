@@ -3,7 +3,7 @@
 \begin{document}
 
 La descripción de cualquier sistema físico requiere, al menos, la identificación de los siguientes cinco elementos:
-%\cofeAm{1}{1.0}{0}{3.5cm}{3cm}
+\cofeAm{1}{1.0}{0}{3.5cm}{3cm}
 \begin{enumerate}
     \item Estados
     \item Observables
@@ -17,24 +17,28 @@ Por ejemplo, en la \textit{mecánica clásica}, el estado de un sistema está de
 La evolución de los estados se realiza mediante la dinámica Hamiltoniana, la cual preserva no solo la energía, sino también los volúmenes en el espacio fase (Teorema de Liouville), esto garantiza la conservación de la normalización de las funciones de probabilidad. Por último, el sistema compuesto de dos subsistemas tiene como espacio fase el producto cartesiano de los espacios fase de los sistemas individuales.
 
 
-
 El objetivo de esta sección es mostrar que estos elementos también están presentes en la teoría cuántica, de hecho, muchos de estos se encuentran definidos en los llamados axiomas de la mecánica cuántica.
 
-\section{Espacio de estados}
+
+
+
+
+\section{Espacio de Estados}
 
 Tradicionalmente, el primer postulado de la mecánica cuántica define a los estados de la siguiente manera.\\
 \textit{El estado de un sistema físico esta definido por un vector de estado, que es un elemento de un espacio de Hilbert} $\mathcal{H}$ \cite{Cohen}.
-Donde cada un vector de estado (el vector asociado al estado $\psi$) se asocia a un ket $\ket{\;}$.
+Donde cada un vector de estado (el vector asociado al estado $\psi$) se asocia a un ket $\ket{\;}$
 \begin{equation}
-    \text{\textbf{Estado cuántico}} \equiv \ket{\psi}.
+    \textbf{Estado cuántico} \equiv \ket{\psi}.
 \end{equation}
-La dimensión del espacio de estados es igual al número de kets linealmente independientes por definición. Si el número de kets linealmente independientes es infinito, decimos que el espacio de estados tiene una dimensión infinita.\\
 
+
+La dimensión del espacio de estados es igual al número de kets linealmente independientes por definición. Si el número de kets linealmente independientes es infinito, decimos que el espacio de estados tiene una dimensión infinita.\\
 De aquí en adelante nos enfocaremos en el caso de sistemas cuánticos con dimensión finita. Entonces, para este caso los kets forman un espacio vectorial lineal, donde cualquier combinación lineal de kets es, de igual manera, un ket. 
 Mediante esta definición, se dice que los kets de un ensamble son linealmente independientes si ninguno de ellos puede ser expresado como una combinación lineal de otros \cite{Messiah}.\\
 
 
-Es bien sabido, que cada espacio vectorial puede ser asociado con un espacio vectorial dual, por tanto, existe la asociación a un \textit{espacio vectorial dual del espacio de kets}.
+Es bien sabido, que cada espacio vectorial tiene asociado un espacio vectorial dual, por tanto es posible definir un \textit{espacio vectorial dual al espacio de kets}.
 
 
 Consideremos un función lineal $\chi(\ket{\psi})$ que asocia un número complejo con cada ket $\ket{\psi}$, es decir, la función $\chi(\ket{\psi})$ define el bra $\bra{\chi}$ \cite{Cohen}, tal que
@@ -50,7 +54,7 @@ Con la idea de introducir el producto escalar en $\mathcal{H}$, se puede observa
 \begin{equation}
 \chi(\ket{\psi})\equiv\qty(\ket{\chi},\ket{\psi}),
 \end{equation}
-donde $\qty(\cdot,\cdot)$ representa el producto interno en $\mathcal{H}$ \cite{Cohen}. Así, el producto interno en términos de kets y bras \cite{Messiah}:
+donde $\qty(\cdot,\cdot)$ representa el producto interno en $\mathcal{H}$ \cite{Cohen}. Así, el producto interno en términos de kets y bras \cite{Messiah} corresponde a
 \begin{equation}
     \ip{\psi}{\varphi}\equiv\qty(\ket{\psi},\ket{\varphi}),
 \end{equation}
@@ -151,7 +155,7 @@ la esfera de estados normalizados y el espacio proyectivo.
 
 El espacio $\Proj(\H_0)$ es conocido como el \emph{espacio proyectivo de Hilbert}.
 En el caso de sistemas de dimensión finita, este espacio se denomina
-\emph{espacio complejo proyectivo } y se denota por $\C \Proj(\H_0)$. Por lo tanto, el espacio proyectivo complejo proporciona una descripción del
+\emph{espacio complejo proyectivo } y se denota por $\C \Proj(\H_0)$. Por lo tanto, el espacio complejo proyectivo proporciona una descripción del
 espacio de estados físicos en la cual se han eliminado las redundancias
 asociadas a la norma y a la fase global.
 
@@ -161,36 +165,38 @@ Es importante mencionar que no es usual trabajar directamente con sistemas cuán
 
 \subsection{Espacio de Operadores de Densidad}
 Es común que se estudie la mecánica cuántica en el espacio de Hilbert, donde describimos al estado con un ket $\ket{\psi}$, pero como se mostrará a continuación, esta manera de representar los estados limita en gran medida el tipo de sistemas con los que podemos trabajar.\\
-
-
 Al representar un sistema mediante un ket, se esta diciendo indirectamente que el sistema esta completamente descrito por algún único estado $\ket{\psi}$; a estos estados se les conoce como \textit{estados puros}. Un ejemplo de ello es cualquier experimento tipo \textit{filtro}, en los cuales algún filtro arroja un resultado completamente predecible con $100\%$ de probabilidad de ocurrir y colapsando siempre a un único estado; un haz de luz filtrado a través de un de un prisma de Nicol es un ejemplo de ello \cite{Fano}. Con este tipo de sistemas, realizar una medición $\bm{A}$ es esencialmente sencillo, pues el resultado obtenido es seguro que proviene de un mismo tipo de estado con la misma naturaleza. 
 
-Como vimos en secciones anteriores, tenemos una manera matemática de describir este tipo de sistemas, pero, retomando el ejemplo anterior, ¿qué ocurre con el haz de luz antes de pasar por el polarizador? en otras palabras, ¿cómo describir luz no polarizada?.\\
-La luz no polarizada puede describirse como una mezcla de polarizadores; es decir, una mezcla ponderada de estados puros, donde el haz de luz está completamente caracterizado por los i-ésimos filtros. A este tipo de sistemas se les conoce como \textit{estados mixtos}. En ellos, realizar una medición al sistema implica una mezcla ponderada de las mediciones individuales en cada filtro. De este modo, se define el \textbf{ensamble promedio de} $\bm{A}$ como:
+Como vimos en secciones anteriores, tenemos una manera matemática de describir este tipo de sistemas, pero, retomando el ejemplo anterior, ¿Qué ocurre con el haz de luz antes de pasar por el polarizador? en otras palabras, ¿Cómo describir luz no polarizada?. La luz no polarizada puede describirse como una mezcla de polarizadores; es decir, una mezcla ponderada de estados puros, donde el haz de luz está completamente caracterizado por los i-ésimos filtros. A este tipo de sistemas se les conoce como \textit{estados mixtos}. En ellos, realizar una medición al sistema implica una mezcla ponderada de las mediciones individuales en cada filtro. De este modo, se define el \textit{ensamble promedio de} $\bm{A}$ como:
 \begin{equation}
     \qty[\bm{A}]=\sum_i P_i \expval{\bm{A}}=\sum_iP_i\expval{\bm{A}}{\psi_i},
     \label{def:ensamble_promedio}
 \end{equation}
-donde $P_i$ representa el peso estadístico del i-esimo filtro, con $\sum_iP_i=1$.\\ 
+donde $P_i$ representa el peso estadístico del i-esimo filtro, y son tales que
 
-Es importante hacer notar que \textit{no es lo mismo ensamble promedio y valor esperado}; sin embargo, ambos conceptos están relacionados, ya que la ecuación \eqref{def:ensamble_promedio} notamos que $\qty[\bm{A}]$ depende del valor esperado $\expval{A}$.\\
+\begin{equation}
+    \sum_i P_i = 1.
+    \label{def:propiedad_normalizacion}
+\end{equation}
 
-Ahora de la expresión del ensamble promedio \eqref{def:ensamble_promedio} podemos considerar las bases ortonormales $\{\ket{\phi_{k}}\}$ y $\{\ket{\phi_{k'}}\}$ tal que:
+Es importante hacer notar que \textit{no es lo mismo ensamble promedio y valor esperado}; sin embargo, ambos conceptos están relacionados, ya que en la ecuación \eqref{def:ensamble_promedio} notamos que $\qty[\bm{A}]$ depende del valor esperado $\expval{\bm{A}}$.
+
+Ahora de la expresión del ensamble promedio \eqref{def:ensamble_promedio} podemos considerar las bases ortonormales $\{\ket{\phi_{k}}\}$ y $\{\ket{\phi_{k'}}\}$, puede ser escrita como
 \begin{align}
     \qty[\bm{A}] &=
-    \sum_i P_i \sum_{\phi_{k}\, \phi_{k'}}\ip{\psi_i}{\phi_{k}}\mel{\phi_{k}}{\bm{A}}{\phi_{k'}}\ip{\phi_{k'}}{\psi_i}; \notag \\
-    &= \sum_{k\,k'}\qty(\sum_iP_i\ip{\phi_{k'}}{\psi_i}\ip{\psi_i}{\phi_{k}})\mel{\phi_{k}}{\bm{A}}{\phi_{k'}}.
+    \sum_i P_i \sum_{\phi_{k}\, \phi_{k'}}\ip{\psi_i}{\phi_{k}}\mel{\phi_{k}}{\bm{A}}{\phi_{k'}}\ip{\phi_{k'}}{\psi_i} \notag \\
+    &= \sum_{k\,k'}\qty(\sum_iP_i\ip{\phi_{k'}}{\psi_i}\ip{\psi_i}{\phi_{k}})\mel{\phi_{k}}{\bm{A}}{\phi_{k'}},
 \end{align}
-Podemos reescribir el término en paréntesis como
+donde el término en paréntesis
 \begin{equation}
-    \rho_{k'k''}=\sum_iP_i\ip{\phi_{k'}}{\psi_i}\ip{\psi_i}{\phi_{k''}},
+    \rho_{k'k}=\sum_iP_i\ip{\phi_{k}}{\psi_i}\ip{\psi_i}{\phi_{k'}},
 \end{equation}
-tal que está expresión es la representación matricial del \textbf{operador densidad} (u \textit{operador de estado})
-\begin{equation}
+es la representación matricial del \textbf{operador densidad} (u \textit{operador de estado})
+ definido por \begin{equation} 
     \rhon\equiv\sum_iP_i\op{\psi_i}.
     \label{def:operador_estado_pesos}
 \end{equation}
-Tomando en cuenta esta definición, podemos expresar el ensamble promedio de la siguiente manera,
+Finalmente, tomando en cuenta esta definición, podemos expresar el ensamble promedio de la siguiente manera,
 \begin{align}
     \qty[\bm{A}]&=
     \sum_{k\,k'}\mel{\phi_k}{\rhon}{\phi_{k'}}\mel{\phi_{k'}}{\bm{A}}{\phi_{k}}, \notag \\
@@ -200,58 +206,69 @@ Tomando en cuenta esta definición, podemos expresar el ensamble promedio de la 
 \end{align}
 
 
-La ecuación \eqref{def:Operador_densidad} nos define el \textbf{Operador de densidad}. Es importante notar que el operador de estado no depende de la base con la que se trabaje, y esto resulta evidente en el ejemplo de luz no polarizada donde el haz de luz puede ser visto como mezcla de polarizadores, pero bien pueden ser tanto polarizadores lineales, como circulares \cite{Fano}. Es por ello que aparece de forma natural la traza, la cual es una operación independiente de la base en la que se trabaje.\\
+Es importante notar que el operador de estado no depende de la base con la que se trabaje, y esto resulta evidente en el ejemplo de luz no polarizada donde el haz de luz puede ser visto como mezcla de polarizadores, pero bien pueden ser tanto polarizadores lineales, como circulares \cite{Fano}. Es por ello que aparece de forma natural la traza, la cual es una operación independiente de la base en la que se trabaje.
 
-Los operadores de estado satisfacen las siguientes propiedades:
+
+A partir de la definción \eqref{def:operador_estado_pesos} es directo mostrar que los operadores de estado satisfacen las siguientes propiedades:
 \begin{enumerate}
-    \item $\rhon$ es un operador Hermitico (vea la sección de observables).
-    \item Condición de normalización $\Tr(\rhon)=1$.
-    \item Es un operador positivo definido.
-    \item La superposición de operadores de estado es también un operador de estado; es decir, sean $\rhon_1,\rhon_2$ operadores de estado y $c_1,c_2\in\C$ con $\abs{c_1}^2+\abs{c_2}^2=1$. Entonces,
-    \begin{equation}
-        \rhon = \abs{c_1}^2\rhon_1 + \abs{c_2}^2\rhon_2,
-        \label{eq:superposicion_operadores}
-    \end{equation}
-    es también es un operador de estado.
+    \item $\rhon$ es un operador Hermítico,
+            \begin{equation}
+                \rhon = \rhon^\dagger.
+            \end{equation}
+    \item $\rhon$ satisface la condición de normalización,
+            \begin{equation}
+                \Tr(\rhon)=1
+                \label{def:condicion_normalizacion}
+            \end{equation}
+    \item $\rhon$ es un operador positivo definido.
 \end{enumerate}
 
-A continuación nos gustaría tener una de medida que cuantifique que tan puro o mixto es un estado por medio del operador de densidad, de tal manera que resulte evidente conocer con que tipo de ensamble con el que se esta trabajando por medio del operador de estado. Una medida de lo anterior es la traza de $\rho^2$.\\De la definición \eqref{def:operador_estado_pesos} se deriva la forma de un estado puro, que es en la cual para algún estado $\ket{\psi_i}$ su peso es $P_i=1$ y para cualquier otro j-esimo estado, $P_j=0$; es decir, la $\rhon$ para un estado puro es de la forma
+Es importante tener una de medida que cuantifique que tan puro o mixto es un estado. Entonces, de la definición \eqref{def:operador_estado_pesos} es directo ver que un estado puro esta específico por $P_i=1$ para algún $\ket{\psi_i}$ y $P_j=0$ para todo $i\neq j$, es decir, $\rhon$ de un estado puro tiene la forma
+
 \begin{equation}
     \rhon = \op{\psi_i},
 \end{equation}
-donde es directo notar que para este estado $\rhon^2=\rhon$. Por lo tanto, para un ensamble puro se cumple que
+donde es directo notar que para este estado $\rhon^2=\rhon$; implicando la siguiente propiedad para estados puros,
 \begin{equation}
     \Tr(\rhon^2)=1.
 \end{equation}
 
-Ahora, consideremos un ensamble general $\rhon=\sum_i P_i \op{\psi_i}$; de esta manera,
+Veamos como se comporta esta medida para estados no puros; consideremos un ensamble general de la forma $\rhon=\sum_i P_i \op{\psi_i}$ , por lo que
 \begin{equation}
-    \rhon^2=\sum_{i,j}P_iP_j\ket{\psi_i}\ip{\psi_i}{\psi_j}\bra{\psi_j},
+    \rhon^2=\sum_{i,j}P_iP_j\op{\psi_i}\op{\psi_j},
     \label{eq:rho2_general}
 \end{equation}
-calculando la traza de \eqref{eq:rho2_general}:
+calculando la traza de la expresión anterior
 \begin{align}
     \Tr(\rhon^2)&=
     \sum_{i,j}P_iP_j\ip{\psi_i}{\psi_j}\Tr(\op{\psi_i}{\psi_j})\notag\\
     &=\sum_{i,j}P_iP_j\ip{\psi_i}{\psi_j}\ip{\psi_j}{\psi_i}\notag\\
-    &=\sum_{i,j}P_iP_j\abs{\ip{\psi_i}{\psi_j}}^2\notag\\
-    &<\sum_{i,j}P_iP_j=\sum_iP_i\sum_jP_j=1,
+    &=\sum_{i,j}P_iP_j\abs{\ip{\psi_i}{\psi_j}}^2 \label{eq:Traza_cuadrada_general}\\
+    &<\sum_{i,j}P_iP_j=\sum_iP_i\sum_jP_j=1.
     \label{eq:calculo_traza}
 \end{align}
-además en el caso con sub-estados todos ortogonales; es decir $\ip{\psi_i}{\psi_j}=0$, se concluye que $0\leq\Tr(\rhon^2)$, y por \eqref{eq:calculo_traza} se obtiene la siguiente propiedad para \textit{ensambles no puros}:
-
+Por lo que llegamos a la siguiente propiedad para \textit{estados no puros}:
 \begin{equation}
     0\le\Tr(\rho^2)<1.
     \label{eq:traza_no_puro}
 \end{equation}
 
 
-De esta manera, la traza de $\rhon^2$ cuantifica que tan puro es un ensamble.\\ Esta medida es sencilla de calcular; sin embargo, nos gustaría una medida que dependa de alguna cantidad física medible. Con esta motivación en mente, consideremos un ensamble de partículas de espín $\frac{1}{2}$ y espín promedio definido (cantidad física medible); es decir, vamos a considerar un ensamble con dos niveles de energía.\\ Hacemos esta consideración, pues el desarrollo de esta tesis se basa en qubits que es un sistema de dos niveles de energía.\\
+De esta manera, la traza de $\rhon^2$ es una medida que cuantifica que tan puro es un ensamble, lo que motiva a definirla con el nombre 
+\begin{equation}
+    \mu = \Tr(\rhon^2).
+\end{equation}
 
-Dado a \eqref{eq:Operador_densidad} definimos el espín promedio del ensamble como sigue:
+Esta medida es sencilla de calcular; sin embargo, nos gustaría una medida que dependa de alguna cantidad física medible. Con esta motivación en mente, consideremos un ensamble de partículas de espín $\frac{1}{2}$ y espín promedio definido (cantidad física medible); es decir, vamos a considerar un ensamble con dos niveles de energía.\\ Hacemos esta consideración, pues el desarrollo de esta tesis se basa en qubits que es un sistema de dos niveles de energía.
+
+Dado a \eqref{def:Operador_densidad} definimos el espín promedio del ensamble como sigue:
+
+
 \begin{equation}
     \bm{S}=\Tr(\rho \bm{\sigma}).
 \end{equation}
+
+
 Donde $\bm{\sigma}=(\sigma_x,\sigma_y,\sigma_z)$ son las matrices de Pauli.\\ 
 
 Definimos una cantidad que mida de manera cuantitativa el desorden del sistema, la cual dependa del tipo de ensamble. Exigimos que dicha cantidad sea mínima (cero) para un ensamble puro y máxima para un ensamble completamente aleatorio.  
@@ -405,16 +422,19 @@ De esta manera, el espacio de operadores densidad es el conjunto de todas las $\
     \rho_{space}\equiv\qty{\rho=\frac{1}{2}\qty(\Id + \bm{S}\cdot \bm{\sigma})\;|\;\bm{S}\in \R^3 }
 \end{equation}
 
+\subsubsection{Principio de superposición no-lineal de operadores de estado}
 
+Un resultado que hemos usado sin mencionar, es el hecho que el conjunto de operadores densidad es un subconjunto convexo del espacio de operadores. Es decir, cualquier combinación convexa de operadores de estado da como resultado un nuevo operador de estado. De hecho, la superposición convexa de dos estados puros es ejemplificada en la definición \eqref{def:operador_estado_pesos}, tal que la densidad de probabilidad definida en \eqref{def:operador_estado_pesos} se dice que es la mezcla estadística de estados puros.\\ En general, la combinación convexa de dos o mas estados puros no es un estado puro, como se mostró en la ecuación \eqref{eq:traza_no_puro}; por lo tanto, es natural preguntarse ¿Cómo el principio de superposición de vectores de estados se describe en el formalismo de operadores de estado?
 
-Ahora enfocándonos en una de las propiedades fundamentales de la mecanica cuántica, la superposición. Sabemos que un estado en superposición en el espacio de Hilbert se representa mediante la combinación lineal de estados
+Para resolver esta pregunta podríamos considerar el estado superpuesto:
+
 \begin{equation}
-    \ket{\psi}=c_1\ket{\phi_1}+c_2\ket{\phi_2},
+    \ket{\psi}=c_1\ket{\psi_1}+c_2\ket{\psi_2},
     \label{eq:superposicion Hilbert}
 \end{equation}
-y como vimos en la ecuación \eqref{eq:superposicion_operadores}, la superposición en operadores se representa mediante:
+con $c_1$ y $c_2\in\C$ arbitrarios, tales que $\abs{c_1}^2+\abs{c_2}^2=1$. Entonces el operador de estado correspondiente es:
 \begin{equation}
-    \rhon = \abs{c_1}^2\rhon_1+\abs{c_2}^2\rhon_2 = \abs{c_1}^2\op{\phi_1}+\abs{c_2}^2\op{\phi_2},
+    \rhon = \abs{c_1}^2\rhon_1+\abs{c_2}^2\rhon_2 = \abs{c_1}^2\op{\psi_1}+\abs{c_2}^2\op{\psi_2},
     \label{eq:superposicion_operadores2}
 \end{equation}
 pero ¿las expresiones \eqref{eq:superposicion Hilbert} y \eqref{eq:superposicion_operadores2} representan el mismo estado de superposición de $\ket{\phi_1}$ y $\ket{\phi_2}$? La respuesta es no, y la primera señal de que estas dos expresiones es que \eqref{eq:superposicion Hilbert} representa un estado puro y la traza del operador de estado es
@@ -423,9 +443,9 @@ pero ¿las expresiones \eqref{eq:superposicion Hilbert} y \eqref{eq:superposicio
     &= 1+2\abs{c_1c_2}^2\qty[\Tr(\rhon_1\rhon_2)-1]\notag\\
     &=1+2\abs{c_1c_2}^2\,\qty(\abs{\ip{\psi_1}{\psi_2}}^2-1),
 \end{align}
-donde $\abs{\ip{\psi_1}{\psi_2}}\neq1$ pues necesariamente son estados distintos; por lo tanto, aunque la suma de operadores de estado si representa una superposición, no esta representando el estado de superposición que conocemos en el espacio de Hilbert. \\ A continuación deduciremos una ley de composición de operadores de estado para estados superpuestos.\\
+donde $\abs{\ip{\psi_1}{\psi_2}}\neq1$, pues necesariamente son estados distintos; por lo tanto, aunque la suma de operadores de estado si representa una superposición, no es necesariamente el estado de superposición que conocemos en el espacio de Hilbert. \\ 
 
-
+A continuación deduciremos una ley de composición de operadores de estado para estados superpuestos.
 Sean los estados:
 \begin{equation}
     \ket{\psi'_1}=\frac{\ip{\psi_1}{\psi_0}}{\abs{\ip{\psi_1}{\psi_0}}}\ket{\psi_1},
@@ -459,32 +479,27 @@ Ahora definamos un estado fiducial $\ket{\psi_0}$ con operador de estado $\rhon_
 \begin{equation}
     \ket{\psi'_j}= \frac{\rhon_j\ket{\psi_0}}{\sqrt{\ev{\rhon_j}{\psi_0}}} ;\hspace{0.5cm} j\in\{1,2\}.    
 \end{equation}
-\begin{align}
-    \Tr(\rhon_j\rhon_0) &=
-    \expval{\rhon_1\rhon_0}{\psi'_j} \notag\\
-    &= \ip{\psi'_j}\ip{\psi'_j}{\psi_0}\ip{\psi_0}{\psi'_j}\notag\\
-    &=\ip{\psi'_j}{\psi_0}\ip{\psi_0}{\psi'_j}\notag\\
-    &= \frac{\ip{\psi_0}{\psi_j}\ip{\psi_j}{\psi_0}}{\abs{\ip{\psi_j}{\psi_0}}^2}\ip{\psi_j}{\psi_0}\ip{\psi_0}{\psi_j}\notag\\
-    &=\abs{\ip{\psi_0}{\psi_j}}^2,
-\end{align}
-con esta igualdad, obtenemos el siguiente resultado:
+
+Con estas transformaciones obtenemos el siguiente resultado que utilizaremos más adelante,
 \begin{align}
    \qty[\Tr(\rhon_i\rhon_0\rhon_j\rhon_0)]^{1/2}&=
-   \qty[\ip{\psi_i}{\psi_0}\ip{\psi_0}{\psi_j}\ip{\psi_0}{\psi_j}\Tr(\op{\psi_i}{\psi_0})]^{1/2}\notag\\
-   &=\qty[\ip{\psi_i}{\psi_0}\ip{\psi_0}{\psi_j}\ip{\psi_0}{\psi_j}\ip{\psi_0}{\psi_i}]^{1/2}\notag\\
+   \qty[\ip{\psi_i'}{\psi_0}\ip{\psi_0}{\psi_j'}\ip{\psi_0}{\psi_j'}\Tr(\op{\psi_i'}{\psi_0})]^{1/2}\notag\\
+   &=\qty[\ip{\psi_i'}{\psi_0}\ip{\psi_0}{\psi_j'}\ip{\psi_0}{\psi_j'}\ip{\psi_0}{\psi_i'}]^{1/2}\notag\\
    &=
-   \qty[\abs{\ip{\psi_i}{\psi_0}}^2\abs{\ip{\psi_j}{\psi_0}}^2]^{1/2}\notag\\
-   &=\abs{\ip{\psi_i}{\psi_0}\ip{\psi_j}{\psi_0}}.
+   \qty[\abs{\ip{\psi_i'}{\psi_0}}^2\abs{\ip{\psi_j'}{\psi_0}}^2]^{1/2}\notag\\
+   &=\abs{\ip{\psi_i'}{\psi_0}\ip{\psi_j'}{\psi_0}}\notag\\
+   &=\frac{\abs{\ip{\psi_0}{\psi_i}}}{\abs{\ip{\psi_i}{\psi_0}}}\cdot\frac{\abs{\ip{\psi_0}{\psi_j}}}{\abs{\ip{\psi_j}{\psi_0}}}\abs{\ip{\psi_i}{\psi_0}\ip{\psi_j}{\psi_0}}\notag\\
+   &= \abs{\ip{\psi_i}{\psi_0}\ip{\psi_j}{\psi_0}}.
     \label{eq:Traza_multiplicacion}
 \end{align}
-Además note lo siguiente,
+donde tenemos que
 \begin{align}
     \rhon_i\rhon_0\rhon_j &=
     \ket{\psi'_i}\ip{\psi'_i}{\psi_0}\ip{\psi_0}{\psi'_j}\bra{\psi'_j}\notag\\
     &= \ip{\psi'_i}{\psi_0}\ip{\psi_0}{\psi'_j}\op{\psi'_i}{\psi'_j}\notag\\
     &=(\ip{\psi_i}{\psi_0}\ip{\psi_0}{\psi_j})\op{\psi_i}{\psi_j},
 \end{align}
-de esta ultima expresión despejamos $\op{\psi_i}{\psi_j}$ y obtenemos,
+y al despejar $\op{\psi_i}{\psi_j}$ de esta ultima ecuación, obtenemos
 \begin{equation}
     \op{\psi_i}{\psi_j}=\frac{\rhon_i\rhon_0\rhon_j}{\ip{\psi_0}{\psi_j}\ip{\psi_i}{\psi_0}},
 \end{equation}
@@ -540,11 +555,11 @@ Sea $\ket{v}$ el ket conjugado del bra "$\bra{u}\bm{A}$", es decir, $\ket{v}$ de
 
 
 
-Sin embargo, no todos los operadores lineales tienen una interpretación física con la cual asociar una medición. Al tipo de operadores que tienen una interpretación física se les conoce como \textit{observables} que son operadores Hermitianos. A esto se le conoce habitualmente como el segundo postulado de la mecanica cuántica.\\
+Sin embargo, no todos los operadores lineales tienen una interpretación física con la cual asociar una medición. Al tipo de operadores que tienen una interpretación física se les conoce como \textit{observables} que son operadores Hermíticos. A esto se le conoce habitualmente como el segundo postulado de la mecanica cuántica.\\
 
-\textit{Toda cantidad medible se describe por un operador} $\bm{A}:\H \to \H$ que es \textbf{Hermitiano}; \textit{a esto se le llama un observable} \cite{Cohen}.\\
+\textit{Toda cantidad medible se describe por un operador} $\bm{A}:\H \to \H$ que es \textbf{Hermítico}; \textit{a esto se le llama un observable} \cite{Cohen}.\\
 
-Un operador hermitiano $\bm{A}$ es aquel operador que es su mismo auto adjunto, denotado por "$\dagger$".
+Un operador Hermítico $\bm{A}$ es aquel operador que es su mismo auto adjunto, denotado por "$\dagger$".
 
 \begin{equation}
     \bm{A}^\dagger = \bm{A}.
@@ -650,7 +665,7 @@ con $\bm{H}$ el operador HamiltonianO, guiándonos del hecho de ser este operado
     &=\Id +\frac{\bm{H}^2}{\hbar^2} \dd{t}^2;\notag\\
     &\approx \Id,
 \end{align}
-donde de igual forma asumimos que $\bm{H}$ es hermitico.\\ Ahora usando la propiedad de composición temporal \eqref{eq:composicion_evolcuion_temporal} podemos expresar el operador $\bm{U}$ como sigue:
+donde de igual forma asumimos que $\bm{H}$ es Hermítico.\\ Ahora usando la propiedad de composición temporal \eqref{eq:composicion_evolcuion_temporal} podemos expresar el operador $\bm{U}$ como sigue:
 \begin{align}
     \bm{U}(t_0+\dd{t},t_0)&=
     \bm{U}(t+\dd{t},t)\bm{U}(t,t_0)\\

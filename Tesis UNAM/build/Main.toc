@@ -2,9 +2,10 @@
 \contentsline {chapter}{Agradecimientos}{\es@scroman {v}}{chapter*.2}%
 \contentsline {chapter}{\numberline {1}Motivación}{1}{chapter.1}%
 \contentsline {chapter}{\numberline {2}Elementos de la Teoría Cuántica}{3}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Espacio de estados}{3}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Espacio de Rayo}{5}{subsection.2.1.1}%
+\contentsline {section}{\numberline {2.1}Espacio de Estados}{3}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Espacio de Rayo}{4}{subsection.2.1.1}%
 \contentsline {subsection}{\numberline {2.1.2}Espacio de Operadores de Densidad}{6}{subsection.2.1.2}%
+\contentsline {subsubsection}{\numberline {2.1.2.1}Principio de superposición no-lineal de operadores de estado}{11}{subsubsection.2.1.2.1}%
 \contentsline {section}{\numberline {2.2}Observables}{13}{section.2.2}%
 \contentsline {section}{\numberline {2.3}Evolución Temporal}{15}{section.2.3}%
 \contentsline {section}{\numberline {2.4}Distribución de Probabilidad}{18}{section.2.4}%

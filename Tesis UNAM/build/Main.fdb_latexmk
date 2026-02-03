@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex build/Main"] 1769900689.68148 "build/Main.aux" "build/Main.bbl" "build/Main" 1769900729.83097 0
+["bibtex build/Main"] 1769959383.1228 "build/Main.aux" "build/Main.bbl" "build/Main" 1769959413.84937 0
   "./biblio.bib" 1769827264 3213 b65d12da622319c8531aef44068d05ec ""
   "C:/Users/david/AppData/Local/Programs/MiKTeX/bibtex/bst/bibtex/ieeetr.bst" 1291864344 18361 1a00e58565e7f19bf2b3e1bfb82254ae ""
-  "build/Main.aux" 1769900726 16724 f7d723a83bcb981299026fd0df33d40f "pdflatex"
+  "build/Main.aux" 1769959410 18280 146e462348dcebe3b84d9c2ccb0481d4 "pdflatex"
   (generated)
   "build/Main.bbl"
   "build/Main.blg"
   (rewritten before read)
-["pdflatex"] 1769900691.17358 "c:/Users/david/OneDrive/Escritorio/Tesis/Tesis-Enredamiento/Tesis UNAM/Main.tex" "build/Main.pdf" "Main" 1769900729.83411 0
+["pdflatex"] 1769959384.04963 "c:/Users/david/OneDrive/Escritorio/Tesis/Tesis-Enredamiento/Tesis UNAM/Main.tex" "build/Main.pdf" "Main" 1769959413.85372 0
   "C:/Users/david/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1769876709 126384 1219689aac68cdfb6a59c2ebebb9ee5a ""
   "C:/Users/david/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1200.pk" 1769874904 31952 c667df04014e3d587a2cb4b2cf0c31cc ""
   "C:/Users/david/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1440.pk" 1769874902 40136 1f250ac2a3def888e75dba81bd9e4c17 ""
@@ -295,20 +295,20 @@
   "C:/Users/david/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "Escudo-FCIENCIAS-v15.pdf" 1769874044 55717 2326ad440529b4f3e9f3f288da5858d3 ""
   "Escudo-UNAM-v15.pdf" 1769873972 81998 37f37e0c06efa650a3a5453ff26a848c ""
-  "Main.tex" 1769900635 8946 1053d151c5f0b4538a1bbb09e9d1fd04 ""
+  "Main.tex" 1769959316 9038 f387101e885008fa9edd51e0768da042 ""
   "apendices/../diagramas/bloch_sphere.tex" 1769827264 2327 911ed0d29e5255eb3a8d29e4f76f5de9 ""
   "apendices/example_tikz.tex" 1769827264 2332 a9299d0da13fde3aa416c2f24e03c928 ""
   "apendices/mathematica_code.tex" 1769827264 163 2c8a71a75cdf28f0bfd4f1241c415548 ""
   "bachelorstitlepageUNAM.sty" 1769876491 2693 0eda4ddf12ab9e95acb591b9ed465b8a ""
-  "build/Main.aux" 1769900726 16724 f7d723a83bcb981299026fd0df33d40f "pdflatex"
-  "build/Main.bbl" 1769900690 1360 238e6ae3a9bc244af03fc32e6ad04974 "bibtex build/Main"
-  "build/Main.toc" 1769900726 1334 a87086b51328bb8bd18a94536495a681 "pdflatex"
-  "c:/Users/david/OneDrive/Escritorio/Tesis/Tesis-Enredamiento/Tesis UNAM/Main.tex" 1769900635 8946 1053d151c5f0b4538a1bbb09e9d1fd04 ""
+  "build/Main.aux" 1769959410 18280 146e462348dcebe3b84d9c2ccb0481d4 "pdflatex"
+  "build/Main.bbl" 1769959383 1360 238e6ae3a9bc244af03fc32e6ad04974 "bibtex build/Main"
+  "build/Main.toc" 1769959410 1476 6f4cc235f411f0e708c593107ce610bb "pdflatex"
+  "c:/Users/david/OneDrive/Escritorio/Tesis/Tesis-Enredamiento/Tesis UNAM/Main.tex" 1769959316 9038 f387101e885008fa9edd51e0768da042 ""
   "capitulos/conclusiones.tex" 1769827264 92 c1a8f5f060f45d0019613646e4a00940 ""
   "capitulos/desarrollo_experimental.tex" 1769827264 1668 12e35b33a0c069163adb0a3faf0ab0bc ""
   "capitulos/motivacion.tex" 1769827264 90 c1e47e20541e81a940da81b4dc99f6cd ""
   "capitulos/resultados.tex" 1769827264 272 cb0343316adf1f3ad750e3e77a54ba6e ""
-  "capitulos/teoria_cuantica.tex" 1769900626 41175 2f8d56882368498b6ed61112af713a66 ""
+  "capitulos/teoria_cuantica.tex" 1769959199 41379 f5f558fe57f500b9b2a0a4d185436fce ""
   "coffee4.sty" 1769827264 480149 6183938852e516249305bc7047e3fa30 ""
   "fotos/figExample.png" 1769827264 3163258 36255d616958d8076284de0eee14ce52 ""
   "graficas/spectralLines_plot.pdf" 1769827264 10357 78468f8421e9570736da0fa7db547266 ""
