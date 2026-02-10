@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1769960980.47416 "c:/Users/david/OneDrive/Escritorio/Tesis/Tesis-Enredamiento/Tesis UNAM/capitulos/teoria_cuantica.tex" "capitulos/build/teoria_cuantica.pdf" "teoria_cuantica" 1769960990.60995 0
+["pdflatex"] 1770693063.7927 "c:/Users/david/OneDrive/Escritorio/Tesis/Tesis-Enredamiento/Tesis UNAM/capitulos/teoria_cuantica.tex" "capitulos/build/teoria_cuantica.pdf" "teoria_cuantica" 1770693082.72685 0
   "C:/Users/david/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1769876709 126384 1219689aac68cdfb6a59c2ebebb9ee5a ""
   "C:/Users/david/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1200.pk" 1769874904 31952 c667df04014e3d587a2cb4b2cf0c31cc ""
   "C:/Users/david/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1440.pk" 1769874902 40136 1f250ac2a3def888e75dba81bd9e4c17 ""
@@ -54,6 +54,7 @@
   "C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1247596666 35469 dcf3a5f2fc1862f5952e3ee5eb1d98c4 ""
   "C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb" 1247596666 36912 b448ef9ad9d7228ec3c6e71005136d55 ""
   "C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1247596667 32722 d7379af29a190c3f453aba36302ff5a9 ""
+  "C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb" 1247596667 32734 69e00a6b65cedb993666e42eedb3d48f ""
   "C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1247596667 32726 39f0f9e62e84beb801509898a605dbd5 ""
   "C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1247596667 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb" 1247596667 32587 65067f817f408bc71a7312f3d9828a9b ""
@@ -257,10 +258,10 @@
   "C:/Users/david/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "Main.tex" 1769959316 9038 f387101e885008fa9edd51e0768da042 ""
   "bachelorstitlepageUNAM.sty" 1769876491 2693 0eda4ddf12ab9e95acb591b9ed465b8a ""
-  "c:/Users/david/OneDrive/Escritorio/Tesis/Tesis-Enredamiento/Tesis UNAM/capitulos/teoria_cuantica.tex" 1769960978 41513 60915003d529e1974902be919ba91b26 ""
+  "c:/Users/david/OneDrive/Escritorio/Tesis/Tesis-Enredamiento/Tesis UNAM/capitulos/teoria_cuantica.tex" 1770693039 44720 f81a36cbc0260abab8729e402c4e32c5 ""
   "capitulos/build/../../Main.tex" 1769959316 9038 f387101e885008fa9edd51e0768da042 ""
-  "capitulos/build/teoria_cuantica.aux" 1769960989 11035 630c8bee92677610dd146106c684faba "pdflatex"
-  "capitulos/teoria_cuantica.tex" 1769960978 41513 60915003d529e1974902be919ba91b26 ""
+  "capitulos/build/teoria_cuantica.aux" 1770693080 11137 edb30c02cd6a7a406bc16e4a95e1a951 "pdflatex"
+  "capitulos/teoria_cuantica.tex" 1770693039 44720 f81a36cbc0260abab8729e402c4e32c5 ""
   "coffee4.sty" 1769827264 480149 6183938852e516249305bc7047e3fa30 ""
   "mmacells.sty" 1769827264 29321 94182cbe3671bc038d9d16eeb52bbce2 ""
   "tikz-3dplot-circleofsphere.sty" 1769827264 17123 12e91436ad62c15f5dafdc3be3fbc7f6 ""
