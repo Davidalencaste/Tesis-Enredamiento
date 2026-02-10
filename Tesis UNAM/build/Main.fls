@@ -469,12 +469,6 @@ INPUT c:\Users\david\OneDrive\Escritorio\Tesis\Tesis-Enredamiento\Tesis UNAM\bui
 INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecbx1200.tfm
 INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecxc1200.tfm
 OUTPUT c:\Users\david\OneDrive\Escritorio\Tesis\Tesis-Enredamiento\Tesis UNAM\build\Main.toc
-INPUT .\capitulos\motivacion.tex
-INPUT .\capitulos\motivacion.tex
-INPUT capitulos\motivacion.tex
-INPUT .\capitulos\motivacion.tex
-INPUT .\capitulos\motivacion.tex
-INPUT capitulos\motivacion.tex
 INPUT .\capitulos\teoria_cuantica.tex
 INPUT .\capitulos\teoria_cuantica.tex
 INPUT capitulos\teoria_cuantica.tex
@@ -487,83 +481,13 @@ INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecbx080
 INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm0600.tfm
 INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecbx0600.tfm
 INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecbx1440.tfm
-INPUT .\capitulos\desarrollo_experimental.tex
-INPUT .\capitulos\desarrollo_experimental.tex
-INPUT capitulos\desarrollo_experimental.tex
-INPUT .\capitulos\desarrollo_experimental.tex
-INPUT .\capitulos\desarrollo_experimental.tex
-INPUT capitulos\desarrollo_experimental.tex
-INPUT .\fotos\figExample.png
-INPUT fotos\figExample.png
-INPUT .\fotos\figExample.png
-INPUT .\fotos\figExample.png
-INPUT .\fotos\figExample.png
-INPUT .\fotos\figExample.png
-INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm1095.tfm
-INPUT .\tablas\data.csv
-INPUT tablas\data.csv
+INPUT c:\Users\david\OneDrive\Escritorio\Tesis\Tesis-Enredamiento\Tesis UNAM\build\Main.bbl
+INPUT c:\Users\david\OneDrive\Escritorio\Tesis\Tesis-Enredamiento\Tesis UNAM\build\Main.bbl
+INPUT c:\Users\david\OneDrive\Escritorio\Tesis\Tesis-Enredamiento\Tesis UNAM\build\Main.bbl
 INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1200.tfm
-INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm0800.tfm
-INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm0600.tfm
-INPUT .\capitulos\resultados.tex
-INPUT .\capitulos\resultados.tex
-INPUT capitulos\resultados.tex
-INPUT .\capitulos\resultados.tex
-INPUT .\capitulos\resultados.tex
-INPUT capitulos\resultados.tex
-INPUT .\graficas\spectralLines_plot.tex
-INPUT .\graficas\spectralLines_plot.tex
-INPUT graficas\spectralLines_plot.tex
-INPUT .\graficas\spectralLines_plot.tex
-INPUT .\graficas\spectralLines_plot.tex
-INPUT graficas\spectralLines_plot.tex
-INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cbgreek\grmn1200.tfm
-INPUT .\graficas\spectralLines_plot.pdf
-INPUT graficas\spectralLines_plot.pdf
-INPUT .\graficas\spectralLines_plot.pdf
-INPUT .\graficas\spectralLines_plot.pdf
-INPUT .\graficas\spectralLines_plot.pdf
-INPUT .\capitulos\conclusiones.tex
-INPUT .\capitulos\conclusiones.tex
-INPUT capitulos\conclusiones.tex
-INPUT .\capitulos\conclusiones.tex
-INPUT .\capitulos\conclusiones.tex
-INPUT capitulos\conclusiones.tex
-INPUT .\apendices\example_tikz.tex
-INPUT .\apendices\example_tikz.tex
-INPUT apendices\example_tikz.tex
-INPUT .\apendices\example_tikz.tex
-INPUT .\apendices\example_tikz.tex
-INPUT apendices\example_tikz.tex
-INPUT .\apendices\..\diagramas\bloch_sphere.tex
-INPUT .\apendices\..\diagramas\bloch_sphere.tex
-INPUT apendices\..\diagramas\bloch_sphere.tex
-INPUT .\apendices\..\diagramas\bloch_sphere.tex
-INPUT .\apendices\..\diagramas\bloch_sphere.tex
-INPUT apendices\..\diagramas\bloch_sphere.tex
-INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr10.tfm
-INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi10.tfm
-INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
-INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
-INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
-INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
-INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx10.tfm
-INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmib10.tfm
-INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbsy10.tfm
-INPUT .\apendices\mathematica_code.tex
-INPUT .\apendices\mathematica_code.tex
-INPUT apendices\mathematica_code.tex
-INPUT .\apendices\mathematica_code.tex
-INPUT .\apendices\mathematica_code.tex
-INPUT apendices\mathematica_code.tex
-INPUT c:\Users\david\OneDrive\Escritorio\Tesis\Tesis-Enredamiento\Tesis UNAM\build\Main.bbl
-INPUT c:\Users\david\OneDrive\Escritorio\Tesis\Tesis-Enredamiento\Tesis UNAM\build\Main.bbl
-INPUT c:\Users\david\OneDrive\Escritorio\Tesis\Tesis-Enredamiento\Tesis UNAM\build\Main.bbl
 INPUT c:\Users\david\OneDrive\Escritorio\Tesis\Tesis-Enredamiento\Tesis UNAM\build\Main.aux
 INPUT C:\Users\david\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk
 INPUT C:\Users\david\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk
-INPUT C:\Users\david\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1095.pk
-INPUT C:\Users\david\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1095.pk
 INPUT C:\Users\david\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk
 INPUT C:\Users\david\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk
 INPUT C:\Users\david\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk
@@ -594,8 +518,6 @@ INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\c
 INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
 INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
-INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
-INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
 INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi12.pfb
 INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi12.pfb
 INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi6.pfb
@@ -606,10 +528,10 @@ INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\c
 INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmib10.pfb
 INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cmextra\cmmib8.pfb
 INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cmextra\cmmib8.pfb
-INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
-INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
 INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb
 INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb
+INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr6.pfb
+INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr6.pfb
 INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr8.pfb
 INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr8.pfb
 INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
@@ -618,8 +540,6 @@ INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\c
 INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy6.pfb
 INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy8.pfb
 INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy8.pfb
-INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\fonts\type1\public\cbgreek\grmn1200.pfb
-INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\fonts\type1\public\cbgreek\grmn1200.pfb
 INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\latxfont\line10.pfb
 INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\latxfont\line10.pfb
 INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\symbols\msbm10.pfb
