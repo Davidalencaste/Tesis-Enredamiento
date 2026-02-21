@@ -1,0 +1,43 @@
+# LaTeX generated files
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.dvi
+*.ps
+# Generated PDFs (but keep source PDFs like logos)
+*.pdf
+!Main.pdf
+!**/Main.pdf
+!Escudo*.pdf
+!**/Escudo*.pdf
+!**/fotos/*.pdf
+!**/diagramas/*.pdf
+!**/graficas/*.pdf
+
+# Synctex
+*.synctex.gz
+*.synctex(busy)
+*.synctex
+
+# Build tools
+*.fdb_latexmk
+*.fls
+build/
+
+# Ghostscript executable
+gswin64c.exe
+
+# Editor and OS files
+.vscode
+.DS_Store
+Thumbs.db
+
+# Backup files
+*~
+*.bak
+* copy.*
