@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.30)  21 FEB 2026 13:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.30)  21 FEB 2026 17:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -12,7 +12,7 @@ Document Class: subfiles 2020/11/14 v2.2 Multi-file projects (class)
 Preamble taken from file `../Main.tex'
 (C:\Users\david\AppData\Local\Programs\MiKTeX\tex/latex/import\import.sty
 Package: import 2020/04/01  v 6.2
-) (../Main.tex (C:\Users\david\AppData\Local\Programs\MiKTeX\tex/latex/base\book.cls
+) (c:\Users\david\OneDrive\Escritorio\Tesis\Tesis-Enredamiento\Tesis UNAM\Main.tex (C:\Users\david\AppData\Local\Programs\MiKTeX\tex/latex/base\book.cls
 Document Class: book 2025/01/22 v1.4n Standard LaTeX document class
 (C:\Users\david\AppData\Local\Programs\MiKTeX\tex/latex/base\bk12.clo
 File: bk12.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
@@ -76,13 +76,9 @@ Package: iftex 2024/12/12 v1.0g TeX engine tests
 \Gm@layouthoffset=\dimen155
 \Gm@layoutvoffset=\dimen156
 \Gm@dimlist=\toks19
- (C:\Users\david\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg)) (../bachelorstitlepageUNAM.sty
-
-LaTeX Warning: You have requested package `../bachelorstitlepageUNAM',
-               but the package provides `bachelorstitlepageUNAM'.
-
+ (C:\Users\david\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg)) (bachelorstitlepageUNAM.sty
 Package: bachelorstitlepageUNAM 20191117
-(C:\Users\david\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+ (C:\Users\david\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
 Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
  (C:\Users\david\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
 Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
@@ -642,15 +638,11 @@ Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
 \everycr=\toks30
 \minrowclearance=\skip60
 \rownum=\count314
-) (../mmacells.sty (C:\Users\david\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xparse.sty
+) (mmacells.sty (C:\Users\david\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xparse.sty
 Package: xparse 2025-10-09 L3 Experimental document command parser
 )
-
-LaTeX Warning: You have requested package `../mmacells',
-               but the package provides `mmacells'.
-
 Package: mmacells 2017/01/03 v0.3.2 Mathematica front end cells
-(C:\Users\david\AppData\Local\Programs\MiKTeX\tex/latex/bbm\bbm.sty
+ (C:\Users\david\AppData\Local\Programs\MiKTeX\tex/latex/bbm\bbm.sty
 Package: bbm 1999/03/15 V 1.2 provides fonts for set symbols - TH
 LaTeX Font Info:    Overwriting math alphabet `\mathbbm' in version `bold'
 (Font)                  U/bbm/m/n --> U/bbm/bx/n on input line 33.
@@ -994,7 +986,7 @@ Package siunitx Info: Option "table-number-alignment = center-decimal-marker"
 (siunitx)             
 (siunitx)             Use "table-alignment-mode = marker" as a replacement.
 
-(../tikz-3dplot-circleofsphere.sty (C:\Users\david\AppData\Local\Programs\MiKTeX\tex/latex/xifthen\xifthen.sty
+(tikz-3dplot-circleofsphere.sty (C:\Users\david\AppData\Local\Programs\MiKTeX\tex/latex/xifthen\xifthen.sty
 Package: xifthen 2015/11/05 v1.4.0 Extended ifthen features
  (C:\Users\david\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
 Package: calc 2025/03/01 v4.3b Infix arithmetic (KKT,FJ)
@@ -1255,7 +1247,7 @@ File: pgflibraryarrows.meta.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgfarrowlinewidth=\dimen330
 ))) (C:\Users\david\AppData\Local\Programs\MiKTeX\tex/latex/cancel\cancel.sty
 Package: cancel 2013/04/12 v2.2 Cancel math terms
-) (../coffee4.sty))) (c:\Users\david\OneDrive\Escritorio\Tesis\Tesis-Enredamiento\Tesis UNAM\capitulos\build\teoria_cuantica.aux
+) (coffee4.sty))) (c:\Users\david\OneDrive\Escritorio\Tesis\Tesis-Enredamiento\Tesis UNAM\capitulos\build\teoria_cuantica.aux
 LaTeX Info: Redefining \. on input line 16.
 LaTeX Info: Redefining \% on input line 16.
 Package babel Info: 'spanish' activates 'spanish' shorthands.
@@ -1409,64 +1401,60 @@ LaTeX Warning: Citation `Messiah' on page 2 undefined on input line 57.
 
 LaTeX Warning: Citation `Messiah' on page 2 undefined on input line 70.
 
-Excluding 'comment' comment.
-Underfull \hbox (badness 10000) in paragraph at lines 125--127
+Excluding 'comment' comment. [2]
 
- []
-
-[2]
-
-LaTeX Warning: Citation `Fano' on page 3 undefined on input line 167.
+LaTeX Warning: Citation `Fano' on page 3 undefined on input line 165.
 
 LaTeX Info: Redefining \. on input line 168.
 LaTeX Info: Redefining \% on input line 168.
 Package cleveref Info: loaded `spanish' language definitions on input line 168.
-[3] [4]
+[3]
 
-LaTeX Warning: Citation `Fano' on page 5 undefined on input line 208.
+LaTeX Warning: Citation `Fano' on page 4 undefined on input line 206.
 
-LaTeX Info: Redefining \. on input line 255.
-LaTeX Info: Redefining \% on input line 255.
-Package cleveref Info: loaded `spanish' language definitions on input line 255.
-[5]
+[4]
+LaTeX Info: Redefining \. on input line 262.
+LaTeX Info: Redefining \% on input line 262.
+Package cleveref Info: loaded `spanish' language definitions on input line 262.
+ [5]
 
-LaTeX Warning: Citation `MankoComposition' on page 6 undefined on input line 278.
+LaTeX Warning: Citation `MankoComposition' on page 6 undefined on input line 276.
 
-[6] Excluding 'comment' comment.
-LaTeX Info: Redefining \. on input line 361.
-LaTeX Info: Redefining \% on input line 361.
-Package cleveref Info: loaded `spanish' language definitions on input line 361.
+Excluding 'comment' comment. [6]
+LaTeX Info: Redefining \. on input line 369.
+LaTeX Info: Redefining \% on input line 369.
+Package cleveref Info: loaded `spanish' language definitions on input line 369.
  [7] Excluding 'comment' comment.
-Underfull \hbox (badness 10000) in paragraph at lines 445--446
+Underfull \hbox (badness 10000) in paragraph at lines 443--444
 
  []
+
+
+LaTeX Warning: Citation `Cohen' on page 8 undefined on input line 454.
 
 [8]
 
-LaTeX Warning: Citation `Cohen' on page 9 undefined on input line 456.
+LaTeX Warning: Citation `Cohen' on page 9 undefined on input line 476.
 
 
-LaTeX Warning: Citation `Cohen' on page 9 undefined on input line 478.
+LaTeX Warning: Citation `Cohen' on page 9 undefined on input line 490.
 
 
-LaTeX Warning: Citation `Cohen' on page 9 undefined on input line 492.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 504--506
+Underfull \hbox (badness 10000) in paragraph at lines 502--504
 
  []
 
-LaTeX Info: Redefining \. on input line 506.
-LaTeX Info: Redefining \% on input line 506.
-Package cleveref Info: loaded `spanish' language definitions on input line 506.
+LaTeX Info: Redefining \. on input line 513.
+LaTeX Info: Redefining \% on input line 513.
+Package cleveref Info: loaded `spanish' language definitions on input line 513.
 [9]
 
-LaTeX Warning: Reference `def:ket_temporal' on page 10 undefined on input line 536.
+LaTeX Warning: Reference `def:ket_temporal' on page 10 undefined on input line 534.
 
 [10] Excluding 'comment' comment. Excluding 'comment' comment.
-LaTeX Info: Redefining \. on input line 658.
-LaTeX Info: Redefining \% on input line 658.
-Package cleveref Info: loaded `spanish' language definitions on input line 658.
+LaTeX Info: Redefining \. on input line 656.
+LaTeX Info: Redefining \% on input line 656.
+Package cleveref Info: loaded `spanish' language definitions on input line 656.
  [11] (c:\Users\david\OneDrive\Escritorio\Tesis\Tesis-Enredamiento\Tesis UNAM\capitulos\build\teoria_cuantica.aux
 LaTeX Info: Redefining \. on input line 16.
 LaTeX Info: Redefining \% on input line 16.
@@ -1482,15 +1470,15 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 43916 strings out of 467871
- 924366 string characters out of 5418376
- 2252587 words of memory out of 5000000
- 72092 multiletter control sequences out of 15000+600000
+ 43913 strings out of 467871
+ 924294 string characters out of 5418376
+ 2249577 words of memory out of 5000000
+ 72089 multiletter control sequences out of 15000+600000
  644355 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  119i,16n,185p,18355b,1068s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\david\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\david\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\david\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\david\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\david\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\david\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\david\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsl1200.pk><C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb><C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "c:\Users\david\OneDrive\Escritorio\Tesis\Tesis-Enredamiento\Tesis UNAM\capitulos\build\teoria_cuantica.pdf" (11 pages, 267180 bytes).
+Output written on "c:\Users\david\OneDrive\Escritorio\Tesis\Tesis-Enredamiento\Tesis UNAM\capitulos\build\teoria_cuantica.pdf" (11 pages, 266701 bytes).
 PDF statistics:
  480 PDF objects out of 1000 (max. 8388607)
  78 named destinations out of 1000 (max. 500000)
