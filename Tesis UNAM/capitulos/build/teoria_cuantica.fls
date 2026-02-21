@@ -1,4 +1,4 @@
-PWD c:\Users\david\OneDrive\Escritorio\Tesis\Tesis-Enredamiento\Tesis UNAM
+PWD c:\Users\david\OneDrive\Escritorio\Tesis\Tesis-Enredamiento\Tesis UNAM\capitulos
 INPUT C:\Users\david\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
 INPUT c:\Users\david\OneDrive\Escritorio\Tesis\Tesis-Enredamiento\Tesis UNAM\capitulos\teoria_cuantica.tex
 OUTPUT c:\Users\david\OneDrive\Escritorio\Tesis\Tesis-Enredamiento\Tesis UNAM\capitulos\build\teoria_cuantica.log
@@ -6,9 +6,9 @@ INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\tex\latex\subfiles\subfiles.c
 INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\tex\latex\subfiles\subfiles.cls
 INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\tex\latex\import\import.sty
 INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\tex\latex\import\import.sty
-INPUT c:\Users\david\OneDrive\Escritorio\Tesis\Tesis-Enredamiento\Tesis UNAM\capitulos\build\..\..\Main.tex
-INPUT c:\Users\david\OneDrive\Escritorio\Tesis\Tesis-Enredamiento\Tesis UNAM\capitulos\build\..\..\Main.tex
-INPUT c:\Users\david\OneDrive\Escritorio\Tesis\Tesis-Enredamiento\Tesis UNAM\Main.tex
+INPUT ..\Main.tex
+INPUT ..\Main.tex
+INPUT ..\Main.tex
 INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\tex\latex\base\book.cls
 INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\tex\latex\base\book.cls
 INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\tex\latex\base\bk12.clo
@@ -46,8 +46,8 @@ INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\tex\generic\iftex\iftex.sty
 INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\tex\latex\geometry\geometry.cfg
 INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\tex\latex\geometry\geometry.cfg
 INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\tex\latex\geometry\geometry.cfg
-INPUT .\bachelorstitlepageUNAM.sty
-INPUT bachelorstitlepageUNAM.sty
+INPUT ..\bachelorstitlepageUNAM.sty
+INPUT ..\bachelorstitlepageUNAM.sty
 INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\tex\latex\graphics\graphicx.sty
 INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\tex\latex\graphics\graphicx.sty
 INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\tex\latex\graphics\graphics.sty
@@ -124,8 +124,8 @@ INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\tex\latex\colortbl\colortbl.s
 INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\tex\latex\tools\array.sty
 INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\tex\latex\tools\array.sty
 INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\tex\latex\graphics\color.sty
-INPUT .\mmacells.sty
-INPUT mmacells.sty
+INPUT ..\mmacells.sty
+INPUT ..\mmacells.sty
 INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\tex\latex\l3packages\xparse\xparse.sty
 INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\tex\latex\l3packages\xparse\xparse.sty
 INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\tex\latex\bbm\bbm.sty
@@ -242,8 +242,8 @@ INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\tex\latex\siunitx\siunitx.sty
 INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\tex\latex\siunitx\siunitx.sty
 INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\tex\latex\translations\translations.sty
 INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\tex\latex\translations\translations.sty
-INPUT .\tikz-3dplot-circleofsphere.sty
-INPUT tikz-3dplot-circleofsphere.sty
+INPUT ..\tikz-3dplot-circleofsphere.sty
+INPUT ..\tikz-3dplot-circleofsphere.sty
 INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\tex\latex\xifthen\xifthen.sty
 INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\tex\latex\xifthen\xifthen.sty
 INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\tex\latex\tools\calc.sty
@@ -385,8 +385,8 @@ INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\tex\generic\pgf\libraries\pgf
 INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\tex\generic\pgf\libraries\pgflibraryarrows.meta.code.tex
 INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\tex\latex\cancel\cancel.sty
 INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\tex\latex\cancel\cancel.sty
-INPUT .\coffee4.sty
-INPUT coffee4.sty
+INPUT ..\coffee4.sty
+INPUT ..\coffee4.sty
 INPUT c:\Users\david\OneDrive\Escritorio\Tesis\Tesis-Enredamiento\Tesis UNAM\capitulos\build\teoria_cuantica.aux
 INPUT c:\Users\david\OneDrive\Escritorio\Tesis\Tesis-Enredamiento\Tesis UNAM\capitulos\build\teoria_cuantica.aux
 INPUT c:\Users\david\OneDrive\Escritorio\Tesis\Tesis-Enredamiento\Tesis UNAM\capitulos\build\teoria_cuantica.aux

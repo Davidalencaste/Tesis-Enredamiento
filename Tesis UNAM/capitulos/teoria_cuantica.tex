@@ -69,7 +69,6 @@ el cual, satisface las siguientes condiciones:
 
 En el caso de espacios de dimensión infinita, además de cumplir las propiedades del producto interno, es necesario que toda sucesión de Cauchy converja a un elemento del propio espacio; es decir, el espacio debe ser \textit{completo}. Asimismo, se requiere que el espacio admita una base ortonormal numerable. A los espacios que satisfacen estas propiedades se les denomina \textit{espacios separables} \cite{Messiah}.
 
-%\subsection{Espacios de Hilbert}
 
 
 \begin{comment}
@@ -267,6 +266,10 @@ De esta manera, la traza de $\rhon^2$ es una medida que cuantifica que tan puro 
     \label{def:pureza}
 \end{equation}
 
+Ahora estamos en circunstancias de mencionar el postulado de los estados en mecánica cuántica:\\ Los estados puros como ya mencionamos anteriormente, son elementos del espacio proyectivo de Hilbert; sin embargo, también podemos definirlos por medio de operadores de estado. Y usando el espacio de operadores de densidad podemos notar que un estado puro es representado por un operador de proyección uno dimensional.
+\begin{equation}
+    \ket{\psi}\longleftrightarrow \rhon = \bm{P}_{\psi}=\op{\psi}
+\end{equation}
 
 \subsubsection{Principio de superposición no-lineal de operadores de estado}
 
@@ -554,11 +557,12 @@ Lo que se acaba de derivar es la ecuación de evolución temporal para un operad
 
 
 \subsection{Formalismo de Heisenberg}
-En este formalismo, los elementos primitivos ya no son los estados puros, sino, los \textit{observables}, representados por matrices hermíticas infinitas; donde los estados viven en el dual de $\B(\H)$; es decir, están caracterizados por el valor esperado que resulta de los observables de en ecuación \eqref{def:dualidad_operador-estado} y son justamente los \textit{operadores de estados} $\rhon$ ó matrices de densidad.
+En este formalismo, los elementos primitivos ya no son los estados puros, sino, los \textit{observables}, representados por matrices hermíticas infinitas; donde los estados viven en el dual de $\B(\H)$; es decir, están caracterizados por el valor esperado que resulta de los observables de en ecuación \eqref{def:dualidad_operador-estado} y son justamente los \textit{operadores de estados} $\bm{\sigma}$ ó matrices de densidad.
 \begin{equation}
-    \rhon, \bm{A} \to \Tr(\rhon\bm{A})
+    \bm{\sigma}, \bm{A} \to \Tr(\bm{\sigma}\bm{A})
     \label{def:dualidad_operador-estado}
 \end{equation}
+En esta dualidad, los \textit{estados puros} son una correspondencia uno a uno con los operadores de proyección sobre las matrices de densidad de rango uno.
 
 \begin{comment}
     Falta por conocer la forma del colapso de estado mencionada en la ecuación \ref{eq: colapso_estado} para operadores de densidad.\\
