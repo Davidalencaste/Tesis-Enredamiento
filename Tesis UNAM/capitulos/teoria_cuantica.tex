@@ -60,7 +60,7 @@ donde $\qty(\cdot,\cdot)$ representa el producto interno en $\mathcal{H}$ \cite{
 \end{equation}
 el cual, satisface las siguientes condiciones:
 \begin{itemize}
-    \item $\ip{\psi}{\varphi}=\overline{\ip{\varphi}{\psi}}$,
+    \item $\ip{\psi}{\varphi}=\bar{\ip{\varphi}{\psi}}$,
     \item $\ip{(\alpha\psi+\beta\varphi)}{\phi}=\alpha\ip{\psi}{\phi}+\beta\ip{\varphi}{\phi}$,
     \item $\ip{\psi}\geq 0$,
     \item Si $\ip{\psi}=0$, entonces $\ket{\psi}=0$.
@@ -165,14 +165,14 @@ Es importante mencionar que no es usual trabajar directamente con sistemas cuán
 
 \subsection{Espacio de Operadores de Densidad}
 Es común que se estudie la mecánica cuántica en el espacio de Hilbert, donde describimos al estado con un ket $\ket{\psi}$, pero como se mostrará a continuación, esta manera de representar los estados limita en gran medida el tipo de sistemas con los que podemos trabajar.\\
-Al representar un sistema mediante un ket, se esta diciendo indirectamente que el sistema esta completamente descrito por algún único estado $\ket{\psi}$; a estos estados se les conoce como \textit{estados puros}. Un ejemplo de ello es cualquier experimento tipo \textit{filtro}, en los cuales algún filtro arroja un resultado completamente predecible con $100\%$ de probabilidad de ocurrir y colapsando siempre a un único estado; un haz de luz filtrado a través de un de un prisma de Nicol es un ejemplo de ello \cite{Fano}. Con este tipo de sistemas, realizar una medición $\bm{A}$ es esencialmente sencillo, pues el resultado obtenido es seguro que proviene de un mismo tipo de estado con la misma naturaleza. 
+Al representar un sistema mediante un ket, se esta diciendo indirectamente que el sistema esta completamente descrito por único estado $\ket{\psi}$ a estos estados se les conoce como \textit{estados puros}. Un ejemplo de ello es cualquier experimento tipo \textit{filtro}, en los cuales algún filtro arroja un resultado completamente predecible con $100\%$ de probabilidad de ocurrir y colapsando siempre a un único estado; un haz de luz filtrado a través de un de un prisma de Nicol es un ejemplo de ello \cite{Fano}. Con este tipo de sistemas, realizar una medición $\bm{A}$ es esencialmente sencillo, pues el resultado obtenido es seguro que proviene de un mismo tipo de estado con la misma naturaleza. En otras palabras, un estado puro de un sistema es el resultado de un proceso de purificación.
 
 Como vimos en secciones anteriores, tenemos una manera matemática de describir este tipo de sistemas, pero, retomando el ejemplo anterior, ¿Qué ocurre con el haz de luz antes de pasar por el polarizador? en otras palabras, ¿Cómo describir luz no polarizada?. La luz no polarizada puede describirse como una mezcla de polarizadores; es decir, una mezcla ponderada de estados puros, donde el haz de luz está completamente caracterizado por los i-ésimos filtros. A este tipo de sistemas se les conoce como \textit{estados mixtos}. En ellos, realizar una medición al sistema implica una mezcla ponderada de las mediciones individuales en cada filtro. De este modo, se define el \textit{ensamble promedio de} $\bm{A}$ como:
 \begin{equation}
     \qty[\bm{A}]=\sum_i P_i \expval{\bm{A}}=\sum_iP_i\expval{\bm{A}}{\psi_i},
     \label{def:ensamble_promedio}
 \end{equation}
-donde $P_i$ representa el peso estadístico del i-esimo filtro, y son tales que
+donde $P_i$ representa el peso estadístico del i-ésimo filtro, y son tales que
 
 \begin{equation}
     \sum_i P_i = 1.
@@ -181,7 +181,7 @@ donde $P_i$ representa el peso estadístico del i-esimo filtro, y son tales que
 
 Es importante hacer notar que \textit{no es lo mismo ensamble promedio y valor esperado}; sin embargo, ambos conceptos están relacionados, ya que en la ecuación \eqref{def:ensamble_promedio} notamos que $\qty[\bm{A}]$ depende del valor esperado $\expval{\bm{A}}$.
 
-Ahora de la expresión del ensamble promedio \eqref{def:ensamble_promedio} podemos considerar las bases ortonormales $\{\ket{\phi_{k}}\}$ y $\{\ket{\phi_{k'}}\}$, puede ser escrita como
+Ahora de la expresión del ensamble promedio \eqref{def:ensamble_promedio} podemos considerar las bases ortonormales $\{\ket{\phi_{k}}\}$ y $\{\ket{\phi_{k'}}\}$. Y reescribir esta expresión como
 \begin{align}
     \qty[\bm{A}] &=
     \sum_i P_i \sum_{\phi_{k}\, \phi_{k'}}\ip{\psi_i}{\phi_{k}}\mel{\phi_{k}}{\bm{A}}{\phi_{k'}}\ip{\phi_{k'}}{\psi_i} \notag \\
@@ -212,15 +212,18 @@ Es importante notar que el operador de estado no depende de la base con la que s
 A partir de la definción \eqref{def:operador_estado_pesos} es directo mostrar que los operadores de estado satisfacen las siguientes propiedades:
 \begin{enumerate}
     \item $\rhon$ es un operador Hermítico,
-            \begin{equation}
-                \rhon = \rhon^\dagger.
-            \end{equation}
+        \begin{equation}
+            \rhon = \rhon^\dagger.
+        \end{equation}
     \item $\rhon$ satisface la condición de normalización,
-            \begin{equation}
-                \Tr(\rhon)=1
-                \label{def:condicion_normalizacion}
+        \begin{equation}
+            \Tr(\rhon)=1
+            \label{def:condicion_normalizacion}
             \end{equation}
     \item $\rhon$ es un operador positivo definido.
+        \begin{equation}
+            \Tr(\rhon^\dagger\rhon)\geq0
+        \end{equation}
 \end{enumerate}
 
 Es importante tener una de medida que cuantifique que tan puro o mixto es un estado. Entonces, de la definición \eqref{def:operador_estado_pesos} es directo ver que un estado puro esta específico por $P_i=1$ para algún $\ket{\psi_i}$ y $P_j=0$ para todo $i\neq j$, es decir, $\rhon$ de un estado puro tiene la forma
@@ -238,7 +241,7 @@ Veamos como se comporta esta medida para estados no-puros; consideremos un ensam
     \rhon=\sum_i P_i \op{\psi_i},
     \label{def:estado_no-puro}
 \end{equation}
-por lo que
+se puede encontrar que:
 \begin{equation}
     \rhon^2=\sum_{i,j}P_iP_j\op{\psi_i}\op{\psi_j},
     \label{eq:rho2_general}
@@ -246,8 +249,7 @@ por lo que
 calculando la traza de la expresión anterior
 \begin{align}
     \Tr(\rhon^2)&=
-    \sum_{i,j}P_iP_j\ip{\psi_i}{\psi_j}\Tr(\op{\psi_i}{\psi_j})\notag\\
-    &=\sum_{i,j}P_iP_j\ip{\psi_i}{\psi_j}\ip{\psi_j}{\psi_i}\notag\\
+    \sum_{i,j}P_iP_j\ip{\psi_i}{\psi_j}\ip{\psi_j}{\psi_i}\notag\\
     &=\sum_{i,j}P_iP_j\abs{\ip{\psi_i}{\psi_j}}^2 \label{eq:Traza_cuadrada_general}\\
     &<\sum_{i,j}P_iP_j=\sum_iP_i\sum_jP_j=1.
     \label{eq:calculo_traza}
@@ -259,179 +261,18 @@ Por lo que llegamos a la siguiente propiedad para \textit{estados no-puros}:
 \end{equation}
 
 
-De esta manera, la traza de $\rhon^2$ es una medida que cuantifica que tan puro es un ensamble, lo que motiva a definirla con el nombre "--"
+De esta manera, la traza de $\rhon^2$ es una medida que cuantifica que tan puro es un ensamble, lo que motiva a definirla con el nombre de \textit{pureza}
 \begin{equation}
     \mu = \Tr(\rhon^2).
+    \label{def:pureza}
 \end{equation}
 
-Esta medida es sencilla de calcular conociendo la forma exacta del operador de estado; sin embargo, nos gustaría una medida que dependa de alguna cantidad física medible. Con esta motivación en mente, consideremos un ensamble de partículas de espín $\frac{1}{2}$ y espín promedio definido (cantidad física medible); es decir, vamos a considerar un ensamble con dos niveles de energía.\\ Hacemos esta consideración, pues el desarrollo de esta tesis se basa en qubits que es un sistema de dos niveles de energía.
-
-Dado a \eqref{def:Operador_densidad} definimos el espín promedio del ensamble como sigue:
-
-
-\begin{equation}
-    \bm{S}=\Tr(\rho \bm{\sigma}).
-\end{equation}
-
-
-Donde $\bm{\sigma}=(\sigma_x,\sigma_y,\sigma_z)$ son las matrices de Pauli.\\ 
-
-Definimos una cantidad que mida de manera cuantitativa el desorden del sistema, la cual dependa del tipo de ensamble. Exigimos que dicha cantidad sea mínima (cero) para un ensamble puro y máxima para un ensamble completamente aleatorio.  
-
-En termodinámica, la magnitud que cumple con estas propiedades es la \textit{entropía}. Motivados por esto, definimos la \textit{entropía en mecánica cuántica estadística} como \cite{Sakurai2011}
-\begin{equation}
-    S_{entropia} = -k_B \Tr(\rho \ln \rho),
-    \label{def:entropia}
-\end{equation}
-donde $k_B$ es la constante de Boltzmann y $\rho$ es el operador densidad del sistema.\\
-A continuación, buscaremos el operador densidad $\rho$ que describe el equilibrio térmico de un sistema con espín definido.
-
-Consideremos la acción $F$:
-\begin{align}
-    F
-    &=\Tr(S_{entropia}+\alpha_x S_x+\alpha_y S_y+\alpha_z S_z+\lambda \rho)\\
-    &=\Tr(-\rho\ln{\rho}+\bm{\alpha}\cdot\Bar{S}+\lambda\rho).
-\end{align}
-Donde $S_i$ es el valor promedio de la i-esima componente del espín, es decir, $S_i=\Tr(\rho \sigma_i)$.\\
-Sabemos que la entropía debe maximizarse en un estado de equilibrio, y dado que la entropía es cóncava en $\rho$ basta con obtener el punto donde $\delta F = 0$ para encontrar el estado $\rho$ que maximiza la entropía.
-\begin{align}
-0=\delta F
-&= \Tr(\ln{\rho}+\Id+\bm{\alpha}\cdot \bm{\sigma}+\lambda\Id)\delta\rho.
-\label{eq:multiplicadores}
-\end{align}
-entonces al ser para cualquier variación, necesariamente se requiere que:
-\begin{equation}
-    \rho = \frac{\e^{-\bm{\alpha}\cdot \bm{\sigma}}}{\e^{(1+\lambda)\Id}}.
-    \label{eq:rho_wo_norm}
-\end{equation}
-Usando la restricción $\Tr(\rho)=1$, se obtiene
-\begin{equation}
-    \e^{(1+\lambda)\Id}=\Tr(\e^{-\bm{\alpha}\cdot\bm{\sigma}}).
-    \label{eq:rho's_normaliz}
-\end{equation}
-Sustituyendo ~\eqref{eq:rho's_normaliz} en ~\eqref{eq:rho_wo_norm} se obtiene el operador densidad de un sistema con espín $\bm{S}$ y en equilibrio térmico.
-\begin{equation}
-    \rho = \frac{\e^{-\bm{\alpha}\cdot\bm{\sigma}}}{\Tr(\e^{-\bm{\alpha}\cdot\bm{\sigma}})}.
-    \label{eq:rho_semifinal}
-\end{equation}
-Solo es necesario ahora incluir la restricción de espín para despejar los valores $\alpha_i$. Primero, recordando que:
-\begin{equation}
-(\bm{\sigma}\cdot\bm{\alpha})^{m}
-=
-\begin{cases}
-|\bm{\alpha}|^{m} \;\Id,
-& m \ \text{par}, \\[4pt]
-|\bm{\alpha}|^{m}\,
-\bm{\sigma}\cdot\hat{\bm{n}},
-& m \ \text{impar},
-\end{cases}
-\end{equation}
-Con ello, expandimos en serie de Taylor la exponencial:
-\begin{align}
-\e^{-\bm{\alpha}\cdot\bm{\sigma}}
-&=
-\sum_{m=0}^{\infty}
-\frac{(-1)^m}{m!}
-(\bm{\alpha}\cdot\bm{\sigma})^{m}
-\notag \\
-&=
-\sum_{k=0}^{\infty}
-\frac{|\bm{\alpha}|^{2k}}{(2k)!}\,\Id
--
-\sum_{k=0}^{\infty}
-\frac{|\bm{\alpha}|^{2k+1}}{(2k+1)!}
-(\bm{\sigma}\cdot\hat{\bm{n}})
-\notag \\
-&=
-\cosh|\bm{\alpha}|\,\Id
--
-\frac{\sinh|\bm{\alpha}|}{|\bm{\alpha}|}
-(\bm{\alpha}\cdot\bm{\sigma}).
-\label{eq:expansion_exponencial}
-\end{align}
-Con este resultado, aplicamos la traza a la exponencial:
-\begin{align}
-\Tr\!\qty(\e^{-\bm{\alpha}\cdot\bm{\sigma}})
-&=
-\Tr\!\qty(
-\cosh|\bm{\alpha}|\,\Id
--
-\frac{\sinh|\bm{\alpha}|}{|\bm{\alpha}|}
-(\bm{\alpha}\cdot\bm{\sigma})
-)
-\notag \\
-&=
-\cosh|\bm{\alpha}|\,\Tr(\Id)
--
-\frac{\sinh|\bm{\alpha}|}{|\bm{\alpha}|}
-\Tr(\bm{\alpha}\cdot\bm{\sigma})
-\notag \\
-&=
-2\cosh|\bm{\alpha}|
--
-\frac{\sinh|\bm{\alpha}|}{|\bm{\alpha}|}
-\sum_i \alpha_i\; \cancelto{0}{\Tr(\sigma_i)}
-\notag \\
-&=
-2\cosh|\bm{\alpha}|.
-\label{eq:normalizacion_traza}
-\end{align}
-Sustituyendo ~\eqref{eq:normalizacion_traza} en ~\eqref{eq:rho_semifinal} y reacomodando:
-\begin{equation}
-    \rho = \frac{1}{2}\qty(\Id - \frac{\tanh{|\bm{\alpha}|}}{|\bm{\alpha}|})\bm{\alpha}\cdot\bm{\sigma}
-    \label{eq:rho_semi_semifinal}
-\end{equation}
-Ahora, observando que
-\begin{align}
-    S_k 
-    &= \Tr(\rho\,\sigma_k)
-    = \Tr\!\qty[\frac{1}{2}\qty(\Id - \frac{\tanh |\bm{\alpha}|}{|\bm{\alpha}|}\sum_i \alpha_i\,\sigma_i )\sigma_k]
-    \notag \\
-    &= \frac{1}{2}\qty(\cancelto{0}{\Tr(\sigma_k)}
-    - \frac{\tanh |\bm{\alpha}|}{|\bm{\alpha}|}
-    \sum_i \alpha_i \Tr(\cancelto{2\delta_{ik}}{\sigma_i\sigma_k}\hspace{.9cm}))
-    &= -\frac{\tanh |\bm{\alpha}|}{|\bm{\alpha}|}\,\alpha_k ,
-\end{align}
-y sustituyendo este resultado en la ecuación ~\eqref{eq:rho_semi_semifinal}, se obtiene finalmente
-\begin{equation}
-\rho = \frac{1}{2}\qty(\Id + \bm{S}\cdot \bm{\sigma}).
-\label{eq:rho_final}
-\end{equation}
-Ahora, calculemos $\rho^2$ para hallar una relación con $\bm{S}$.
-\begin{align*}
-    \rho^2&=
-    \frac{1}{4}\qty(\Id + \bm{S}\cdot \bm{\sigma})^2
-    \notag \\
-    &=\frac{1}{4}\qty(\Id+2\bm{S}\cdot\bm{\sigma}+|\bm{S}|^2\,\Id).
-\end{align*}
-Calculando la traza de $\rho^2$:
-\begin{align}
-    \Tr(\rho^2)&=
-    \Tr[\frac{1}{4}\qty(\Id+2\,\bm{S}\cdot\bm{\sigma}+\bm{|S|}^2\,\Id)]
-    \notag \\
-    &= \frac{1}{4}\qty[\cancelto{2}{\Tr(\Id)}+2\sum_iS_i\;\cancelto{0}{\Tr(\sigma_i)}\;+2|\bm{S}|^2]
-    \notag \\
-    &=\frac{1}{2}\qty(1+|\bm{S}|^2).
-\end{align}
-
-De la última expresión se concluye que:
-
-\begin{enumerate}
-    \item Un estado puro corresponde a un vector de Bloch localizado en la superficie de la esfera de Bloch, es decir, $|\bm{S}|=1$.
-    \item Un estado mixto corresponde a un vector de Bloch ubicado en el interior de la esfera, con $|\bm{S}|<1$.
-    \item El estado completamente mezclado corresponde al caso $|\bm{S}|=0$, es decir, al origen de la esfera de Bloch.
-\end{enumerate}
-
-De esta manera, el espacio de operadores densidad es el conjunto de todas las $\rho$ de la forma de \eqref{eq:rho_final} y cada estado es identificado por su espín promedio $\bm{S}$ del sistema.
-\begin{equation}
-    \rho_{space}\equiv\qty{\rho=\frac{1}{2}\qty(\Id + \bm{S}\cdot \bm{\sigma})\;|\;\bm{S}\in \R^3 }
-\end{equation}
 
 \subsubsection{Principio de superposición no-lineal de operadores de estado}
 
 Un resultado que hemos usado sin mencionar, es el hecho que el conjunto de operadores densidad es un subconjunto convexo del espacio de operadores. Es decir, cualquier combinación convexa de operadores de estado da como resultado un nuevo operador de estado. De hecho, la superposición convexa de dos estados puros es ejemplificada en la definición \eqref{def:operador_estado_pesos}, tal que la densidad de probabilidad definida en \eqref{def:operador_estado_pesos} se dice que es la mezcla estadística de estados puros.\\ En general, la combinación convexa de dos o mas estados puros no es un estado puro, como se mostró en la ecuación \eqref{eq:traza_no_puro}; por lo tanto, es natural preguntarse ¿Cómo el principio de superposición de vectores de estados se describe en el formalismo de operadores de estado?
 
-Para resolver esta pregunta, nos guiaremos del desarrollo descrito por Manko \cite{MankoComposition}. 
+Para resolver esta pregunta, nos guiaremos del desarrollo descrito por V.I.Man'ko et al. \cite{MankoComposition}. 
 
 Consideremos el estado superpuesto:
 
@@ -442,12 +283,12 @@ Consideremos el estado superpuesto:
 con $c_1$ y $c_2\in\C$ arbitrarios, tales que $\abs{c_1}^2+\abs{c_2}^2=1$. Entonces el operador de estado correspondiente es:
 \begin{align}
     \rhon &= \op{\psi} \notag\\
-    &= \qty(c_1\ket{\psi'_1}+c_2\ket{\psi'_2})
-       \qty(\overline{c}_1\bra{\psi'_1}+\overline{c}_2\bra{\psi'_2})\notag\\
-    &= |c_1|^2\op{\psi'_1}
-    + c_1\overline{c_2}\op{\psi'_1}{\psi'_2}
-    + c_2\overline{c_1}\op{\psi'_2}{\psi'_1}
-    + |c_2|^2\op{\psi'_2},
+    &= \qty(c_1\ket{\psi_1}+c_2\ket{\psi_2})
+       \qty(\bar{c}_1\bra{\psi_1}+\bar{c}_2\bra{\psi_2})\notag\\
+    &= |c_1|^2\op{\psi_1}
+    + c_1\bar{c}_2\op{\psi_1}{\psi_2}
+    + c_2\bar{c}_1\op{\psi_2}{\psi_1}
+    + |c_2|^2\op{\psi_2},
     \label{eq:superposicion_operadores2}
 \end{align}
 donde $\rhon_1=\op{\psi_1}$ y $\rhon_2=\op{\psi_2}$. Sin embargo, esta expresión no esta dada solamente en términos de operadores de estado. Para lograr la expresión deseada, recordamos que el estado de un sistema esta dado por una clase de equivalencia, es decir,
@@ -468,12 +309,12 @@ donde $\abs{\ip{\psi_1}{\psi_2}}\neq1$, pues necesariamente son estados distinto
 
 y por tanto 
 \begin{equation}
-    \rhon = \abs{c_1}^2\rhon_1+\abs{c_2}^2\rhon_2+c_1\overline{c_2}\e^{i(\theta_1-\theta_2)}\op{\psi_1}{\psi_2}+\overline{c_1}c_2\e^{-i(\theta_1-\theta_2)}\op{\psi_2}{\psi_1}.
+    \rhon = \abs{c_1}^2\rhon_1+\abs{c_2}^2\rhon_2+c_1\bar{c}_2\e^{i(\theta_1-\theta_2)}\op{\psi_1}{\psi_2}+\bar{c}_1c_2\e^{-i(\theta_1-\theta_2)}\op{\psi_2}{\psi_1}.
 \end{equation}
 
-Esta expresión podemos notar que la fase relativa se vuelve relevante en el principio de superposición de estados. Estas fases relativas nos permiten expresar a $\rhon$ solo con términos de operadores de estados usando que
+Esta expresión podemos notar que la fase relativa se vuelve relevante en el principio de superposición de estados. Estas fases relativas nos permiten expresar a $\rhon$ solo en términos de operadores de estados usando que
 \begin{equation}
-    \ket{\psi_1}\thicksim \e^{i\theta_2}\ket{\psi_1}=\frac{\ip{\psi_1}{\psi_0}}{\sqrt{\expval{\rhon_2}{\psi_0}}}\ket{\psi_1}=\frac{\rhon_1}{\sqrt{\expval{\rhon_1}{\psi_0}}}\ket{\psi_0},
+    \ket{\psi_1}\thicksim \e^{i\theta_1}\ket{\psi_1}=\frac{\ip{\psi_1}{\psi_0}}{\sqrt{\expval{\rhon_1}{\psi_0}}}\ket{\psi_1}=\frac{\rhon_1}{\sqrt{\expval{\rhon_1}{\psi_0}}}\ket{\psi_0},
     \label{rel_equiv:psi_1}
 \end{equation}
 \begin{equation}
@@ -486,42 +327,43 @@ donde $\ket{\psi_0}$ es un estado fiducial no ortogonal a $\ket{\psi_1} \qq{y} \
   \rhon &=
     |c_1|^2 \rhon_1
     + |c_2|^2 \rhon_2
-    + c_1 \overline{c_2}
-      \frac{\rhon_1 \rhon_0 \rhon_2}
-           {\sqrt{\expval{\rhon_1\rhon_0\rhon_2}{\psi_0}}}
-    + c_2 \overline{c_1}
-      \frac{\rhon_2 \rhon_0 \rhon_1}
-           {\sqrt{\expval{\rhon_2\rhon_0\rhon_1}{\psi_0}}},  
+    + c_1 \bar{c}_2
+      \frac{\rhon_1 \bm{P}_0 \rhon_2}
+           {\sqrt{\expval{\rhon_1\bm{P}_0\rhon_2}{\psi_0}}}
+    + \bar{c}_1 c_2 
+      \frac{\rhon_2 \bm{P}_0 \rhon_1}
+           {\sqrt{\expval{\rhon_2\bm{P}_0\rhon_1}{\psi_0}}},  
 \end{align}
-donde $\rhon_0$ es un proyector dado por $\rhon_0 = \op{\psi_0}$. Ahora, ya que 
+donde $\bm{P}_0$ es un proyector dado por $\bm{P}_0 = \op{\psi_0}$. Ahora, ya que 
 
 \begin{align}
-    \Tr(\rhon_i\rhon_0\rhon_j\rhon_0)&=
+    \Tr(\rhon_i\bm{P}_0\rhon_j\bm{P}_0)&=
     \Tr(\ket{\psi_i}\ip{\psi_i}{\psi_0}\ip{\psi_0}{\psi_j}\ip{\psi_j}{\psi_0}\bra{\psi_0})\notag\\
-    &=\ip{\psi_i}{\psi_0}\ip{\psi_0}{\psi_j}\ip{\psi_j}{\psi_0}\ip{\psi_j}{\psi_0}\notag\\
-    &=\expval{\rhon_i\rhon_0\rhon_j}{\psi_0},
+    &=\ip{\psi_i}{\psi_0}\ip{\psi_0}{\psi_j}\ip{\psi_j}{\psi_0}\ip{\psi_0}{\psi_i}\notag\\
+    &=\ip{\psi_0}{\psi_i}\ip{\psi_i}{\psi_0}\ip{\psi_0}{\psi_j}\ip{\psi_j}{\psi_0}\notag\\
+    &=\expval{\rhon_i\bm{P}_0\rhon_j}{\psi_0},
 \end{align}
 con $i,j\in\qty{1,2}$, se obtiene la expresión final.
 
 \begin{equation}
     \rhon = |c_1|^2\rhon_1+|c_2|^2\rhon_2
-    +\qty(c_1\overline{c_2}\;\rhon_1\rhon_0\rhon_2+\overline{c_1}c_2\;\rhon_2\rhon_0\rhon_1)\qty[\Tr(\rhon_1\rhon_0o\rhon_2\rhon_0)]^{-1/2},
+    +\qty(c_1\bar{c}_2\;\rhon_1\bm{P}_0\rhon_2+\bar{c}_1c_2\;\rhon_2\bm{P}_0\rhon_1)\qty[\Tr(\rhon_1\bm{P}_0\rhon_2\bm{P}_0)]^{-1/2},
     \label{def:Ley_de_composicion}
 \end{equation}
-que es la expresión buscada. Por tanto, por medio del estado fiducial $\ket{\psi_0}$ pudimos expresar la fase relativa entre los estados $\ket{\psi_1}$ y $\ket{\psi_2}$ dado a
+que es la expresión buscada. Por tanto, por medio del estado fiducial $\ket{\psi_0}$ pudimos expresar la fase relativa entre los estados $\ket{\psi_1}$ y $\ket{\psi_2}$ dado por
 \begin{equation}
-    \e^{i(\theta_1-\theta_2)}=\frac{\ip{\psi_1}{\psi_0}\ip{\psi_0}{\psi_1}}{\abs{\ip{\psi_1}{\psi_0}\ip{\psi_0}{\psi_1}}}
+    \e^{i(\theta_1-\theta_2)}=\frac{\ip{\psi_1}{\psi_0}\ip{\psi_0}{\psi_1}}{\abs{\ip{\psi_1}{\psi_0}\ip{\psi_0}{\psi_1}}}.
 \end{equation}
 Además, este resultado nos permite introducir un principio de superposición no-lineal de operadores de estado, lo cual nos permite estudiar los fenómenos de interferencia en términos de operadores de estado.
 
 
 La expresión \eqref{def:Ley_de_composicion} se puede reescribir de la siguiente manera,
 \begin{equation}
-    \rhon=\sum_{i,j=1}^2c_i\overline{c_j}\frac{\rhon_i\rhon_0\rhon_j}{\qty[\Tr(\rhon_i\rhon_0\rhon_j\rhon_0)]^{1/2}},
+    \rhon=\sum_{i,j=1}^2c_i\bar{c}_j\frac{\rhon_i\bm{P}_0\rhon_j}{\qty[\Tr(\rhon_i\bm{P}_0\rhon_j\bm{P}_0)]^{1/2}},
 \end{equation}
 que puede ser generalizada inmediatamente para $n$ estados de la siguiente manera:
 \begin{equation}
-    \rhon = \sum_{i,j=1}^nc_i\overline{c_j}\frac{\rhon_i\rhon_0\rhon_j}{\qty[\Tr(\rhon_i\rhon_0\rhon_j\rhon_0)]^{1/2}}.
+    \rhon = \sum_{i,j=1}^nc_i\bar{c}_j\frac{\rhon_i\bm{P}_0\rhon_j}{\qty[\Tr(\rhon_i\bm{P}_0\rhon_j\bm{P}_0)]^{1/2}}.
     \label{def:Ley_de_composicion_final}
 \end{equation}
 
@@ -540,25 +382,25 @@ De el estado \eqref{eq:estado_puro_superposicion} calculamos su operador de dens
 \begin{align}
     \rhon &= \op{\psi} \notag\\
     &= \bigl(c_1\ket{\psi'_1}+c_2\ket{\psi'_2}\bigr)
-       \bigl(\overline{c_1}\bra{\psi'_1}+\overline{c_2}\bra{\psi'_2}\bigr)\notag\\
+       \bigl(\bar{c}_1\bra{\psi'_1}+\bar{c}_2\bra{\psi'_2}\bigr)\notag\\
     &= |c_1|^2\op{\psi'_1}
-    + c_1\overline{c_2}\op{\psi'_1}{\psi'_2}
-    + c_2\overline{c_1}\op{\psi'_2}{\psi'_1}
+    + c_1\bar{c}_2\op{\psi'_1}{\psi'_2}
+    + c_2\bar{c}_1\op{\psi'_2}{\psi'_1}
     + |c_2|^2\op{\psi'_2} \notag\\
     &= |c_1|^2\rhon_1
     + |c_2|^2\rhon_2
-    + c_1\overline{c_2}\frac{\ip{\psi_1}{\psi_0}\ip{\psi_0}{\psi_2}}{\abs{\ip{\psi_1}{\psi_0}\ip{\psi_2}{\psi_0}}}\op{\psi_1}{\psi_2}
-    + c_2\overline{c_1}\frac{\ip{\psi_2}{\psi_0}\ip{\psi_0}{\psi_1}}{\abs{\ip{\psi_2}{\psi_0}\ip{\psi_1}{\psi_0}}}\op{\psi_2}{\psi_1}
+    + c_1\bar{c}_2\frac{\ip{\psi_1}{\psi_0}\ip{\psi_0}{\psi_2}}{\abs{\ip{\psi_1}{\psi_0}\ip{\psi_2}{\psi_0}}}\op{\psi_1}{\psi_2}
+    + c_2\bar{c}_1\frac{\ip{\psi_2}{\psi_0}\ip{\psi_0}{\psi_1}}{\abs{\ip{\psi_2}{\psi_0}\ip{\psi_1}{\psi_0}}}\op{\psi_2}{\psi_1}
     \label{eq:rho_super_sin_despejar}
 \end{align}
-Ahora definamos un estado fiducial $\ket{\psi_0}$ con operador de estado $\rhon_0=\op{\psi_0}$. Note que podemos con este estado, podemos escribir los estados $\ket{\psi'_1},\ket{\psi'_2}$ bajo las siguientes transformaciones 
+Ahora definamos un estado fiducial $\ket{\psi_0}$ con operador de estado $\bm{P}_0=\op{\psi_0}$. Note que podemos con este estado, podemos escribir los estados $\ket{\psi'_1},\ket{\psi'_2}$ bajo las siguientes transformaciones 
 \begin{equation}
     \ket{\psi'_j}= \frac{\rhon_j\ket{\psi_0}}{\sqrt{\ev{\rhon_j}{\psi_0}}} ;\hspace{0.5cm} j\in\{1,2\}.    
 \end{equation}
 
 Con estas transformaciones obtenemos el siguiente resultado que utilizaremos más adelante,
 \begin{align}
-   \qty[\Tr(\rhon_i\rhon_0\rhon_j\rhon_0)]^{1/2}&=
+   \qty[\Tr(\rhon_i\bm{P}_0\rhon_j\bm{P}_0)]^{1/2}&=
    \qty[\ip{\psi_i'}{\psi_0}\ip{\psi_0}{\psi_j'}\ip{\psi_0}{\psi_j'}\Tr(\op{\psi_i'}{\psi_0})]^{1/2}\notag\\
    &=\qty[\ip{\psi_i'}{\psi_0}\ip{\psi_0}{\psi_j'}\ip{\psi_0}{\psi_j'}\ip{\psi_0}{\psi_i'}]^{1/2}\notag\\
    &=
@@ -570,25 +412,25 @@ Con estas transformaciones obtenemos el siguiente resultado que utilizaremos má
 \end{align}
 donde tenemos que
 \begin{align}
-    \rhon_i\rhon_0\rhon_j &=
+    \rhon_i\bm{P}_0\rhon_j &=
     \ket{\psi'_i}\ip{\psi'_i}{\psi_0}\ip{\psi_0}{\psi'_j}\bra{\psi'_j}\notag\\
     &= \ip{\psi'_i}{\psi_0}\ip{\psi_0}{\psi'_j}\op{\psi'_i}{\psi'_j}\notag\\
     &=(\ip{\psi_i}{\psi_0}\ip{\psi_0}{\psi_j})\op{\psi_i}{\psi_j},
 \end{align}
 y al despejar $\op{\psi_i}{\psi_j}$ de esta ultima ecuación, obtenemos
 \begin{equation}
-    \op{\psi_i}{\psi_j}=\frac{\rhon_i\rhon_0\rhon_j}{\ip{\psi_0}{\psi_j}\ip{\psi_i}{\psi_0}},
+    \op{\psi_i}{\psi_j}=\frac{\rhon_i\bm{P}_0\rhon_j}{\ip{\psi_0}{\psi_j}\ip{\psi_i}{\psi_0}},
 \end{equation}
 sustituyéndolo en \eqref{eq:rho_super_sin_despejar}:
 \begin{align}
   \rhon &=
     |c_1|^2 \rhon_1
     + |c_2|^2 \rhon_2
-    + c_1 \overline{c_2}
-      \frac{\rhon_1 \rhon_0 \rhon_2}
+    + c_1 \bar{c}_2
+      \frac{\rhon_1 \bm{P}_0 \rhon_2}
            {\abs{\ip{\psi_2}{\psi_0}\ip{\psi_1}{\psi_0}}}
-    + c_2 \overline{c_1}
-      \frac{\rhon_2 \rhon_0 \rhon_1}
+    + c_2 \bar{c}_1
+      \frac{\rhon_2 \bm{P}_0 \rhon_1}
            {\abs{\ip{\psi_2}{\psi_0}\ip{\psi_1}{\psi_0}}}.    
 \end{align}
 Finalmente aplicando \eqref{eq:Traza_multiplicacion}, obtenemos la ley de composición para estados de superposición como sigue:
@@ -597,41 +439,40 @@ note de esta última expresión; el rol del estado fiducial $\ket{\psi_0}$, es e
 \end{comment}
 
 \section{Observables}
-El concepto de medición es una parte fundamental de la física, es la herramienta necesaria para obtener información de un sistema, mediante la manipulación del mismo por medio de una operación, llamemos $\bm{A}$.
-De esta manera, al aplicar la operación $\bm{A}$ al sistema, obtendremos un valor de medición $a$. Esta es la idea general de medir en física.\\ Sin embargo, en mecanica cuántica la medición conlleva una característica adicional. \textit{Realizar una medición altera el estado del sistema} \cite{Sakurai2011}. Es decir, si $\psi$ es  el estado inicial, al realizar una medición $\bm{A}$ el estado colapsa a otro estado $\psi'$.
-\begin{equation}
-   \ket{\psi} \xrightarrow{\text{medición de } \bm{A}}\ket{\psi'}
-   \label{diag: medicion}
-\end{equation}
+El concepto de medición es una parte fundamental de la física, es la herramienta necesaria para obtener información de un sistema, mediante la manipulación del mismo por medio de una operación, llamemos $\bm{A}$. De esta manera, al aplicar la operación $\bm{A}$ al sistema, obtendremos un valor de medición $a$. Esta es la idea general de medir en física.\\ 
 
-La operación $\bm{A}$ es en mecanica cuántica un operador lineal, que es una correspondencia lineal entre dos estados:
-\begin{equation}
-    \ket{\psi'}=\mathbf{A}\ket{\psi}.
-\end{equation}
+En la mecánica cuántica existen dos formalismos principales en los cuales se puede caracterizar de forma distinta un estado y un observable. Estos dos formalismos bases son el \textit{formalismo de Schrödinger} y el \textit{formalismo de Heisenberg}
+
+\subsection{Formalismo de Schrödinger}
+En este formalismo, los elementos base son los \textit{estados puros}, como vimos en la sección de Espacio de Estados, donde un estado es un elemento del espacio de Hilbert $\H$. \\
+En este sentido, los \textit{observables} son una estructura dual derivada, y son representados por medio de operadores sobre $\H$. 
+
+Sin embargo, no todos los operadores tienen una interpretación física con la cual asociar una medición. Al tipo de operadores que tienen una interpretación física se les conoce como \textit{observables} que son operadores Hermíticos. A esto se le conoce habitualmente como el segundo postulado de la mecánica cuántica.
 
 
-De igual forma como en la correspondencia uno a uno entre kets y bras, existe una relación anti-lineal entre operadores.\\
-Sea $\ket{v}$ el ket conjugado del bra "$\bra{u}\bm{A}$", es decir, $\ket{v}$ depende anti linealmente del bra $\ket{u}$; por lo tanto, existe una función lineal de $\ket{u}$. Esta correspondencia lineal define un operador lineal por el nombre de \textit{conjugado de} $\bm{A}$, denotado por $\bm{A}^\dagger$.
-\begin{equation}
-    \ket{v}=\bm{A}^\dagger\ket{u}.
-    \label{def: operador_conjugado}
-\end{equation}
-
-
-
-Sin embargo, no todos los operadores lineales tienen una interpretación física con la cual asociar una medición. Al tipo de operadores que tienen una interpretación física se les conoce como \textit{observables} que son operadores Hermíticos. A esto se le conoce habitualmente como el segundo postulado de la mecanica cuántica.\\
-
-\textit{Toda cantidad medible se describe por un operador} $\bm{A}:\H \to \H$ que es \textbf{Hermítico}; \textit{a esto se le llama un observable} \cite{Cohen}.\\
-
-Un operador Hermítico $\bm{A}$ es aquel operador que es su mismo auto adjunto, denotado por "$\dagger$".
+\textit{Toda cantidad medible se describe por un operador lineal} $\bm{A}:\H \to \H$ que es Hermítico; \textit{a esto se le llama un observable} \cite{Cohen}, donde un operador $\bm{A}$ es Hermítico si es su mismo auto-adjunto; es decir, si cumple con
 
 \begin{equation}
     \bm{A}^\dagger = \bm{A}.
 \end{equation}
 
-Esta definición conduce inmediatamente al postulado central de la medición, usualmente nombrado como el tercero, que afirma lo siguiente:\\
+En otras palabras, este axioma indica que los observables viven en el álgebra $\B(\H)$, que es el álgebra de todos los operadores lineales acotados sobre un espacio de Hilbert $\H$.
 
-\textit{El único posible resultado de la medición de un observable $\bm{A}$ es uno de los eigenvalores de $\bm{A}$} \cite{Cohen}.\\
+Y de esta manera, el valor esperado de la medida de los observables esta representado por el producto interno de $\ket{\psi}$ con $\bm{A}\ket{\psi}$, como sigue
+\begin{equation}
+    \expval{\bm{A}}=\expval{\bm{A}}{\psi}.
+\end{equation}
+
+Una característica adicional de la mecánica cuántica, es que al realizar una medición; además de obtener un valor numérico, el propio estado se ve afectado, ocasionando que colapse. Es decir \textit{realizar una medición altera el estado del sistema}
+
+\begin{equation}
+   \ket{\psi} \xrightarrow{\text{medición de } \bm{A}}\ket{\psi'}.
+   \label{diag: medicion}
+\end{equation}
+
+El colapso del estado cuántico al realizar una medición es usualmente nombrado como el tercer axioma mencionado a continuación.
+
+\textit{El único posible resultado de la medición de un observable $\bm{A}$ es uno de los eigenvalores de $\bm{A}$} \cite{Cohen}.
 
 
 Consideremos un estado cuántico discreto general $\ket{\psi}$, expresado en la base formada por los autovectores de un operador observable $\bm A$ con espectro discreto, tal que
@@ -660,9 +501,67 @@ Finalmente, para describir la naturaleza del proceso de medición, el estado pos
 \end{equation}
 el cual corresponde, tras la normalización, al autovector de $\bm A$ asociado al autovalor obtenido en la medición.\\
 
-Puede haber notado que este desarrollo se realizo usando el esquema de vectores del espacio de Hilbert, y no en el espacio de operadores de densidad. Sin embargo note, que en la definición \eqref{def:Operador_densidad}
-del operador densidad yace en el concepto de medición. Lo unico nuevo es como ya vimos, la restricción de operadores que son medibles, los \textit{observables}.\\
-Falta por conocer la forma del colapso de estado mencionada en la ecuación \ref{eq: colapso_estado} para operadores de densidad.\\
+Y en el caso de estados mixtos, el valor esperado esta dado por la ecuación \eqref{def:Operador_densidad} y el colapso del operador después de realizar la medición viene dado por la siguiente expresión:
+
+\begin{align}
+    \rhon &= 
+    \sum_i P_i \rhon_i \notag\\
+    &= \sum_iP_i\frac{\bm{A}\rhon_i\bm{A}^\dagger}{\abs{\expval{\bm{A}}{\psi_i}}^2}\notag\\
+    &= \sum_i P_i \frac{\bm{A}\rhon_i\bm{A}^\dagger}{\expval{\bm{A}\rhon_i\bm{A}^\dagger}}\notag\\
+    &=\sum_i P_i \,\frac{\bm{A}\rhon_i\bm{A}^\dagger}{\Tr(\rhon_i\bm{A}^\dagger\rhon_i\bm{A})}.
+\end{align}
+
+
+En esta representación, la dinámica del sistema es descrita por la ecuación de Schrödinger del \textit{operador de evolución temporal} $\bm{U}(t,t_0)$, dada en la ecuación \eqref{eq:Schrondiger_operador_temporal}.
+
+\begin{equation}
+    i\hbar\pdv{t}\bm{U}(t,t_0)=\bm{H}\bm{U}(t,t_0).
+    \label{eq:Schrondiger_operador_temporal}
+\end{equation}
+
+Es decir, la evolución de un estado viene completamente dado por el hamiltoniano del sistema. De esta manera el estado del sistema en para tiempo $t$ se encuentra aplicando el operador $\bm{U}$ al vector de estado al en un tiempo inicial $t_0$.
+\begin{equation}
+    \ket{\psi(t)}=\bm{U}(t,t_0)\ket{\psi(t_0)}.
+    \label{def:evolucion_ket}
+\end{equation}
+
+A continuación deduciremos la ecuación de evolución temporal para el espacio de operadores de estado.\\ De la ecuación \eqref{eq:Schrondiger_operador_temporal} y \eqref{def:evolucion_ket} podemos obtener la ecuación auto-adjunta: 
+\begin{equation}
+    -i\hbar\pdv{t}\bra{\psi(t)}=\bra{\psi(t)}\bm{H};
+    \label{eq:evolucion_temporal_auto-adjunta}
+\end{equation}
+además, de la definición de operador de estado \eqref{def:operador_estado_pesos} y la evolución temporal de un ket \eqref{def:ket_temporal} obtenemos:
+\begin{align}
+    \rhon(t)&=\sum_i P_i \bm{U}(t,t_0)\op{\psi_i(t_0)}\bm{U}^\dagger(t,t_0)\notag\\
+    &= \sum_i P_i \op{\psi_i(t)},
+\end{align}
+derivando parcialmente sobre el tiempo y aplicando \eqref{eq:Schrondiger_operador_temporal} y \eqref{eq:evolucion_temporal_auto-adjunta}
+\begin{align}
+    \pdv{t}\rhon(t)&= \sum_i P_i\qty[\pdv{t}\ket{\psi_i(t)}\bra{\psi_i(t)}+\ket{\psi_i(t)}\pdv{t}\bra{\psi_i(t)}]\notag\\
+    &=\sum_i P_i \qty[-i\hbar^{-1}\bm{H}\op{\psi_i(t)}+i\hbar^{-1}\ket{\psi_i(t)}\bra{\psi_i(t)}\bm{H}].
+\end{align}
+Por lo tanto, re acomodando obtenemos la siguiente ecuación:
+\begin{align}
+    i\hbar \pdv{t}\rhon(t)&=\sum_i P_i \qty[\bm{H}\op{\psi_i(t)}-\op{\psi_i(t)}\bm{H}]\notag\\
+    &= -\qty[\rhon,\bm{H}].
+\end{align}
+Lo que se acaba de derivar es la ecuación de evolución temporal para un operador de estado, que reescribimos en la ecuación \eqref{eq:evolucion_temporal_operador},
+\begin{equation}
+    i\hbar \pdv{\rhon(t)}{t}=-\qty[\rhon(t),\bm{H}].
+    \label{eq:evolucion_temporal_operador}
+\end{equation}
+
+
+
+\subsection{Formalismo de Heisenberg}
+En este formalismo, los elementos primitivos ya no son los estados puros, sino, los \textit{observables}, representados por matrices hermíticas infinitas; donde los estados viven en el dual de $\B(\H)$; es decir, están caracterizados por el valor esperado que resulta de los observables de en ecuación \eqref{def:dualidad_operador-estado} y son justamente los \textit{operadores de estados} $\rhon$ ó matrices de densidad.
+\begin{equation}
+    \rhon, \bm{A} \to \Tr(\rhon\bm{A})
+    \label{def:dualidad_operador-estado}
+\end{equation}
+
+\begin{comment}
+    Falta por conocer la forma del colapso de estado mencionada en la ecuación \ref{eq: colapso_estado} para operadores de densidad.\\
 
 \begin{equation}
    \rho' \xrightarrow{\text{medición de } \bm{A}}\rho
@@ -679,18 +578,15 @@ De esta manera, cada operador de algún estado puro $\rhon_i$ colapsa a un opera
 \end{equation}
 al realizar una medición $\bm{A}$.
 Generalizando para una operador de estado mixto:
-\begin{align}
-    \rhon &= 
-    \sum_i P_i \rhon_i \notag\\
-    &= \sum_iP_i\frac{\bm{A}\rhon_i\bm{A}^\dagger}{\abs{\expval{\bm{A}}{\psi_i}}^2}\notag\\
-    &= \sum_i P_i \frac{\bm{A}\rhon_i\bm{A}^\dagger}{\expval{\bm{A}\rhon_i\bm{A}^\dagger}}\notag\\
-    &=\sum_i P_i \,\frac{\bm{A}\rhon_i\bm{A}^\dagger}{\Tr(\rhon_i\bm{A^\dagger}\rhon_i\bm{A})}
-\end{align}
+
+\end{comment}
 
 
 
 
-\section{Evolución Temporal}
+
+\begin{comment}
+    \section{Evolución Temporal}
 Ya sabemos que en sistemas cuánticos el acto de medir tiene una consecuencia directa en el estado del sistema; el estado siempre se ve afectado al realizar una medición. La pregunta natural es, si tenemos un ensamble libre de mediciones, ¿el estado cambia o se mantiene estático con el paso del tiempo? En general los estados no se mantienen estáticos. Un ejemplo sencillo es una partícula de espín 1/2 con estado inicial conocido $S_x$ expuesto a un campo magnético $z$; una vez expuesto al campo magnético, este hace oscilar al estado en $S_x$ y $S_y$ provocando que al volver a medir, exista una probabilidad de estar en $S_x+$ ó $S_x-$ \cite{Sakurai2011}. Esto nos muestra que los estados no necesariamente permanecen estáticos en el tiempo.\\ Otra característica de los sistemas cuánticos es que \textit{la superposición lineal de estados es preservada en ausencia de mediciones} \cite{Messiah}.\\
 La manera en la cuál se maneja la evolución temporal de sistemas cuánticos entre dos tiempos $t_o$ y $t$, es mediante el \textbf{operador de evolución} $\bm{U}(t,t_0)$, que conecta ambos operadores de la siguiente forma
 \begin{equation}
@@ -722,7 +618,7 @@ Proponemos como operador $\bm{U}$:
 \begin{equation}
     \bm{U}(t_0+\dd{t},t_0)=\Id-\frac{i\bm{H}\dd{t}}{\hbar},
 \end{equation}
-con $\bm{H}$ el operador HamiltonianO, guiándonos del hecho de ser este operador el generador de evolución en mecanica clásica.  Note que este operador cumple la propiedad de composición temporal \eqref{eq:composicion_evolcuion_temporal} y el ser unitario,
+con $\bm{H}$ el operador HamiltonianO, guiándonos del hecho de ser este operador el generador de evolución en mecánica clásica.  Note que este operador cumple la propiedad de composición temporal \eqref{eq:composicion_evolcuion_temporal} y el ser unitario,
 \begin{align}
     \bm{U}^\dagger(t_0+\dd{t},t_0)\bm{U}(t_0+\dd{t},t_0)&=
     \qty(\Id+\frac{i\bm{H}\dd{t}}{\hbar})\qty(\Id-\frac{i\bm{H}\dd{t}}{\hbar});\notag\\
@@ -749,33 +645,10 @@ multiplicando esta ecuación por el estado $\ket{\psi_0}$, se obtiene la \textbf
 i\hbar\pdv{t}\ket{\psi(t)}=\bm{H}\ket{\psi(t)},
 \label{eq:Schrondiger_estado}
 \end{equation}
-esto debido a como definimos $\ket{\psi(t)}$ en la ecuación \eqref{def:ket_temporal}.\\ La ecuación \eqref{eq:Schrondiger_estado} indica como evoluciona un estado en el tiempo, que depende unicamente en el Hamiltoniano del sistema; es decir, a las fuerzas a las que está expuesto el ensamble. Note, sin embargo que para conocer la evolución temporal de un sistema para cualquier tiempo no es necesario resolver la ecuación \eqref{eq:Schrondiger_estado}, basta con conocer la forma del estado inicial $\ket{\psi_0}$ y resolver la ecuación de Schrödinger unicamente para el operador de evolución temporal, dado por la ecuación \eqref{eq:Schrondiger_operador_temporal} y aplicar \eqref{def:ket_temporal}.\\ 
+esto debido a como definimos $\ket{\psi(t)}$ en la ecuación \eqref{def:ket_temporal}.\\ La ecuación \eqref{eq:Schrondiger_estado} indica como evoluciona un estado en el tiempo, que depende unicamente en el Hamiltoniano del sistema; es decir, a las fuerzas a las que está expuesto el ensamble. Note, sin embargo que para conocer la evolución temporal de un sistema para cualquier tiempo no es necesario resolver la ecuación \eqref{eq:Schrondiger_estado}, basta con conocer la forma del estado inicial $\ket{\psi_0}$ y resolver la ecuación de Schrödinger unicamente para el operador de evolución temporal, dado por la ecuación \eqref{eq:Schrondiger_operador_temporal} y aplicar \eqref{def:ket_temporal}.
 
-Ya obtuvimos la ecuación de evolución temporal para sistemas descritos en el espacio de Hilbert; a continuación deduciremos la ecuación correspondiente para el espacio de operadores de densidad.\\ De la ecuación \eqref{eq:Schrondiger_estado} podemos obtener la ecuación auto-adjunta simplemente aplicando el auto-adjunto en cada lado, 
-\begin{equation}
-    -i\hbar\pdv{t}\bra{\psi(t)}=\bra{\psi(t)}\bm{H};
-    \label{eq:evolucion_temporal_auto-adjunta}
-\end{equation}
-además, de la definición de operador de estado \eqref{def:operador_estado_pesos} y la evolución temporal de un ket \eqref{def:ket_temporal} obtenemos:
-\begin{align}
-    \rhon(t)&=\sum_i P_i \bm{U}(t,t_0)\op{\psi_i(t_0)}\bm{U}^\dagger(t,t_0)\notag\\
-    &= \sum_i P_i \op{\psi_i(t)},
-\end{align}
-derivando parcialmente sobre el tiempo y aplicando \eqref{eq:Schrondiger_estado} y \eqref{eq:evolucion_temporal_auto-adjunta}
-\begin{align}
-    \pdv{t}\rhon(t)&= \sum_i P_i\qty[\pdv{t}\ket{\psi_i(t)}\bra{\psi_i(t)}+\ket{\psi_i(t)}\pdv{t}\bra{\psi_i(t)}]\notag\\
-    &=\sum_i P_i \qty[-i\hbar^{-1}\bm{H}\op{\psi_i(t)}+i\hbar^{-1}\ket{\psi_i(t)}\bra{\psi_i(t)}\bm{H}].
-\end{align}
-Por lo tanto, re acomodando obtenemos la siguiente ecuación:
-\begin{align}
-    i\hbar \pdv{t}\rhon(t)&=\sum_i P_i \qty[\bm{H}\op{\psi_i(t)}-\op{\psi_i(t)}\bm{H}]\notag\\
-    &= -\qty[\rhon,\bm{H}].
-\end{align}
-Lo que se acaba de derivar es la ecuación de evolución temporal para un operador de estado, que reescribimos en la ecuación \eqref{eq:evolucion_temporal_operador},
-\begin{equation}
-    i\hbar \pdv{\rhon}{t}=-\qty[\rhon,\bm{H}].
-    \label{eq:evolucion_temporal_operador}
-\end{equation}
 
+
+\end{comment}
 
 \end{document}

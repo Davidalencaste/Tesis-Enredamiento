@@ -1,0 +1,168 @@
+\documentclass[../Main.tex]{subfiles}
+
+\begin{document}
+
+La pureza $\mu$ dada en la definición \eqref{def:pureza} es una medida es sencilla de calcular conociendo la forma exacta del operador de estado; sin embargo, nos gustaría una medida que dependa de alguna cantidad física medible. Con esta motivación en mente, consideremos un ensamble de partículas de espín $\frac{1}{2}$ y espín promedio definido (cantidad física medible); es decir, vamos a considerar un ensamble con dos niveles de energía.\\ Hacemos esta consideración, pues el desarrollo de esta tesis se basa en qubits que es un sistema de dos niveles de energía.
+
+Dado a \eqref{def:Operador_densidad} definimos el espín promedio del ensamble como sigue:
+
+
+\begin{equation}
+    \bm{S}=\Tr(\rho \bm{\sigma}).
+\end{equation}
+
+
+Donde $\bm{\sigma}=(\sigma_x,\sigma_y,\sigma_z)$ son las matrices de Pauli.\\ 
+
+Definimos una cantidad que mida de manera cuantitativa el desorden del sistema, la cual dependa del tipo de ensamble. Exigimos que dicha cantidad sea mínima (cero) para un ensamble puro y máxima para un ensamble completamente aleatorio.  
+
+En termodinámica, la magnitud que cumple con estas propiedades es la \textit{entropía}. Motivados por esto, definimos la \textit{entropía en mecánica cuántica estadística} como \cite{Sakurai2011}
+\begin{equation}
+    S_{entropia} = -k_B \Tr(\rho \ln \rho),
+    \label{def:entropia}
+\end{equation}
+donde $k_B$ es la constante de Boltzmann y $\rho$ es el operador densidad del sistema.\\
+A continuación, buscaremos el operador densidad $\rho$ que describe el equilibrio térmico de un sistema con espín definido.
+
+Consideremos la acción $F$:
+\begin{align}
+    F
+    &=\Tr(S_{entropia}+\alpha_x S_x+\alpha_y S_y+\alpha_z S_z+\lambda \rho)\\
+    &=\Tr(-\rho\ln{\rho}+\bm{\alpha}\cdot\Bar{S}+\lambda\rho).
+\end{align}
+Donde $S_i$ es el valor promedio de la i-esima componente del espín, es decir, $S_i=\Tr(\rho \sigma_i)$.\\
+Sabemos que la entropía debe maximizarse en un estado de equilibrio, y dado que la entropía es cóncava en $\rho$ basta con obtener el punto donde $\delta F = 0$ para encontrar el estado $\rho$ que maximiza la entropía.
+\begin{align}
+0=\delta F
+&= \Tr(\ln{\rho}+\Id+\bm{\alpha}\cdot \bm{\sigma}+\lambda\Id)\delta\rho.
+\label{eq:multiplicadores}
+\end{align}
+entonces al ser para cualquier variación, necesariamente se requiere que:
+\begin{equation}
+    \rho = \frac{\e^{-\bm{\alpha}\cdot \bm{\sigma}}}{\e^{(1+\lambda)\Id}}.
+    \label{eq:rho_wo_norm}
+\end{equation}
+Usando la restricción $\Tr(\rho)=1$, se obtiene
+\begin{equation}
+    \e^{(1+\lambda)\Id}=\Tr(\e^{-\bm{\alpha}\cdot\bm{\sigma}}).
+    \label{eq:rho's_normaliz}
+\end{equation}
+Sustituyendo ~\eqref{eq:rho's_normaliz} en ~\eqref{eq:rho_wo_norm} se obtiene el operador densidad de un sistema con espín $\bm{S}$ y en equilibrio térmico.
+\begin{equation}
+    \rho = \frac{\e^{-\bm{\alpha}\cdot\bm{\sigma}}}{\Tr(\e^{-\bm{\alpha}\cdot\bm{\sigma}})}.
+    \label{eq:rho_semifinal}
+\end{equation}
+Solo es necesario ahora incluir la restricción de espín para despejar los valores $\alpha_i$. Primero, recordando que:
+\begin{equation}
+(\bm{\sigma}\cdot\bm{\alpha})^{m}
+=
+\begin{cases}
+|\bm{\alpha}|^{m} \;\Id,
+& m \ \text{par}, \\[4pt]
+|\bm{\alpha}|^{m}\,
+\bm{\sigma}\cdot\hat{\bm{n}},
+& m \ \text{impar},
+\end{cases}
+\end{equation}
+Con ello, expandimos en serie de Taylor la exponencial:
+\begin{align}
+\e^{-\bm{\alpha}\cdot\bm{\sigma}}
+&=
+\sum_{m=0}^{\infty}
+\frac{(-1)^m}{m!}
+(\bm{\alpha}\cdot\bm{\sigma})^{m}
+\notag \\
+&=
+\sum_{k=0}^{\infty}
+\frac{|\bm{\alpha}|^{2k}}{(2k)!}\,\Id
+-
+\sum_{k=0}^{\infty}
+\frac{|\bm{\alpha}|^{2k+1}}{(2k+1)!}
+(\bm{\sigma}\cdot\hat{\bm{n}})
+\notag \\
+&=
+\cosh|\bm{\alpha}|\,\Id
+-
+\frac{\sinh|\bm{\alpha}|}{|\bm{\alpha}|}
+(\bm{\alpha}\cdot\bm{\sigma}).
+\label{eq:expansion_exponencial}
+\end{align}
+Con este resultado, aplicamos la traza a la exponencial:
+\begin{align}
+\Tr\!\qty(\e^{-\bm{\alpha}\cdot\bm{\sigma}})
+&=
+\Tr\!\qty(
+\cosh|\bm{\alpha}|\,\Id
+-
+\frac{\sinh|\bm{\alpha}|}{|\bm{\alpha}|}
+(\bm{\alpha}\cdot\bm{\sigma})
+)
+\notag \\
+&=
+\cosh|\bm{\alpha}|\,\Tr(\Id)
+-
+\frac{\sinh|\bm{\alpha}|}{|\bm{\alpha}|}
+\Tr(\bm{\alpha}\cdot\bm{\sigma})
+\notag \\
+&=
+2\cosh|\bm{\alpha}|
+-
+\frac{\sinh|\bm{\alpha}|}{|\bm{\alpha}|}
+\sum_i \alpha_i\; \cancelto{0}{\Tr(\sigma_i)}
+\notag \\
+&=
+2\cosh|\bm{\alpha}|.
+\label{eq:normalizacion_traza}
+\end{align}
+Sustituyendo ~\eqref{eq:normalizacion_traza} en ~\eqref{eq:rho_semifinal} y reacomodando:
+\begin{equation}
+    \rho = \frac{1}{2}\qty(\Id - \frac{\tanh{|\bm{\alpha}|}}{|\bm{\alpha}|})\bm{\alpha}\cdot\bm{\sigma}
+    \label{eq:rho_semi_semifinal}
+\end{equation}
+Ahora, observando que
+\begin{align}
+    S_k 
+    &= \Tr(\rho\,\sigma_k)
+    = \Tr\!\qty[\frac{1}{2}\qty(\Id - \frac{\tanh |\bm{\alpha}|}{|\bm{\alpha}|}\sum_i \alpha_i\,\sigma_i )\sigma_k]
+    \notag \\
+    &= \frac{1}{2}\qty(\cancelto{0}{\Tr(\sigma_k)}
+    - \frac{\tanh |\bm{\alpha}|}{|\bm{\alpha}|}
+    \sum_i \alpha_i \Tr(\cancelto{2\delta_{ik}}{\sigma_i\sigma_k}\hspace{.9cm}))
+    &= -\frac{\tanh |\bm{\alpha}|}{|\bm{\alpha}|}\,\alpha_k ,
+\end{align}
+y sustituyendo este resultado en la ecuación ~\eqref{eq:rho_semi_semifinal}, se obtiene finalmente
+\begin{equation}
+\rho = \frac{1}{2}\qty(\Id + \bm{S}\cdot \bm{\sigma}).
+\label{eq:rho_final}
+\end{equation}
+Ahora, calculemos $\rho^2$ para hallar una relación con $\bm{S}$.
+\begin{align*}
+    \rho^2&=
+    \frac{1}{4}\qty(\Id + \bm{S}\cdot \bm{\sigma})^2
+    \notag \\
+    &=\frac{1}{4}\qty(\Id+2\bm{S}\cdot\bm{\sigma}+|\bm{S}|^2\,\Id).
+\end{align*}
+Calculando la traza de $\rho^2$:
+\begin{align}
+    \Tr(\rho^2)&=
+    \Tr[\frac{1}{4}\qty(\Id+2\,\bm{S}\cdot\bm{\sigma}+\bm{|S|}^2\,\Id)]
+    \notag \\
+    &= \frac{1}{4}\qty[\cancelto{2}{\Tr(\Id)}+2\sum_iS_i\;\cancelto{0}{\Tr(\sigma_i)}\;+2|\bm{S}|^2]
+    \notag \\
+    &=\frac{1}{2}\qty(1+|\bm{S}|^2).
+\end{align}
+
+De la última expresión se concluye que:
+
+\begin{enumerate}
+    \item Un estado puro corresponde a un vector de Bloch localizado en la superficie de la esfera de Bloch, es decir, $|\bm{S}|=1$.
+    \item Un estado mixto corresponde a un vector de Bloch ubicado en el interior de la esfera, con $|\bm{S}|<1$.
+    \item El estado completamente mezclado corresponde al caso $|\bm{S}|=0$, es decir, al origen de la esfera de Bloch.
+\end{enumerate}
+
+De esta manera, el espacio de operadores densidad es el conjunto de todas las $\rho$ de la forma de \eqref{eq:rho_final} y cada estado es identificado por su espín promedio $\bm{S}$ del sistema.
+\begin{equation}
+    \rho_{space}\equiv\qty{\rho=\frac{1}{2}\qty(\Id + \bm{S}\cdot \bm{\sigma})\;|\;\bm{S}\in \R^3 }
+\end{equation}
+
+\end{document}
