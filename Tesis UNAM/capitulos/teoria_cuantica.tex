@@ -12,7 +12,7 @@ La descripción de cualquier sistema físico requiere, al menos, la identificaci
     \item Regla de composición entre sistemas
 \end{enumerate}
 
-Por ejemplo, en la \textit{mecánica clásica}, el estado de un sistema está determinado por un punto en el espacio fase, mientras que las observables se definen como funciones sobre dicho espacio. Por otra parte, si el sistema está formado por un número grande de partículas, el estado se describe mediante una densidad de probabilidad, esto es, una función normalizada en el espacio fase.
+Por ejemplo, en la \emph{mecánica clásica}, el estado de un sistema está determinado por un punto en el espacio fase, mientras que las observables se definen como funciones sobre dicho espacio. Por otra parte, si el sistema está formado por un número grande de partículas, el estado se describe mediante una densidad de probabilidad, esto es, una función normalizada en el espacio fase.
 
 La evolución de los estados se realiza mediante la dinámica Hamiltoniana, la cual preserva no solo la energía, sino también los volúmenes en el espacio fase (Teorema de Liouville), esto garantiza la conservación de la normalización de las funciones de probabilidad. Por último, el sistema compuesto de dos subsistemas tiene como espacio fase el producto cartesiano de los espacios fase de los sistemas individuales.
 
@@ -26,7 +26,7 @@ El objetivo de esta sección es mostrar que estos elementos también están pres
 \section{Espacio de Estados}
 
 Tradicionalmente, el primer postulado de la mecánica cuántica define a los estados de la siguiente manera.\\
-\textit{El estado de un sistema físico esta definido por un vector de estado, que es un elemento de un espacio de Hilbert} $\mathcal{H}$ \cite{Cohen}.
+\emph{El estado de un sistema físico esta definido por un vector de estado, que es un elemento de un espacio de Hilbert} $\mathcal{H}$ \cite{Cohen}.
 Donde cada un vector de estado (el vector asociado al estado $\psi$) se asocia a un ket $\ket{\;}$
 \begin{equation}
     \textbf{Estado cuántico} \equiv \ket{\psi}.
@@ -38,7 +38,7 @@ De aquí en adelante nos enfocaremos en el caso de sistemas cuánticos con dimen
 Mediante esta definición, se dice que los kets de un ensamble son linealmente independientes si ninguno de ellos puede ser expresado como una combinación lineal de otros \cite{Messiah}.\\
 
 
-Es bien sabido, que cada espacio vectorial tiene asociado un espacio vectorial dual, por tanto es posible definir un \textit{espacio vectorial dual al espacio de kets}.
+Es bien sabido, que cada espacio vectorial tiene asociado un espacio vectorial dual, por tanto es posible definir un \emph{espacio vectorial dual al espacio de kets}.
 
 
 Consideremos un función lineal $\chi(\ket{\psi})$ que asocia un número complejo con cada ket $\ket{\psi}$, es decir, la función $\chi(\ket{\psi})$ define el bra $\bra{\chi}$ \cite{Cohen}, tal que
@@ -47,7 +47,7 @@ Consideremos un función lineal $\chi(\ket{\psi})$ que asocia un número complej
 \]
 
 
-El conjunto de funciones lineales definido sobre los kets constituye también a un espacio vectorial, el cual es llamado \textit{espacio dual} de $\mathcal{H}$ y es denotado por $\mathcal{H}^*$ \cite{Cohen}.
+El conjunto de funciones lineales definido sobre los kets constituye también a un espacio vectorial, el cual es llamado \emph{espacio dual} de $\mathcal{H}$ y es denotado por $\mathcal{H}^*$ \cite{Cohen}.
   
 
 Con la idea de introducir el producto escalar en $\mathcal{H}$, se puede observar que es posible asociar a cada ket un bra. De esta manera, la acción lineal $\chi:\mathcal{H}\to \mathbb{C}$ se puede expresar como
@@ -67,7 +67,7 @@ el cual, satisface las siguientes condiciones:
 \end{itemize}
 
 
-En el caso de espacios de dimensión infinita, además de cumplir las propiedades del producto interno, es necesario que toda sucesión de Cauchy converja a un elemento del propio espacio; es decir, el espacio debe ser \textit{completo}. Asimismo, se requiere que el espacio admita una base ortonormal numerable. A los espacios que satisfacen estas propiedades se les denomina \textit{espacios separables} \cite{Messiah}.
+En el caso de espacios de dimensión infinita, además de cumplir las propiedades del producto interno, es necesario que toda sucesión de Cauchy converja a un elemento del propio espacio; es decir, el espacio debe ser \emph{completo}. Asimismo, se requiere que el espacio admita una base ortonormal numerable. A los espacios que satisfacen estas propiedades se les denomina \emph{espacios separables} \cite{Messiah}.
 
 
 
@@ -80,7 +80,7 @@ A continuación se muestran dos ejemplos fundamentales en la mecánica cuántica
     Son funciones cuadrático integrables con producto interno definido como \[\qty(\psi,\phi)=\int \bar{\psi}(q_1,\dots,q_n)\phi(q_1,\dots,q_n)d\tau\]
     Este espacio posee, la propiedad de ser completo, cumpliendo así las propiedades de espacio de Hilbert\cite{Messiah}.
     \item \textbf{Espacio del Qubit}\\
-    Un qubit se describe mediante sistemas compuestos formados por estados individuales de dos niveles\cite{Kaye}. Se tiene un espacio discreto 2-dimensional. Generalmente se le asocia a este espacio la \textit{base computacional}:
+    Un qubit se describe mediante sistemas compuestos formados por estados individuales de dos niveles\cite{Kaye}. Se tiene un espacio discreto 2-dimensional. Generalmente se le asocia a este espacio la \emph{base computacional}:
     \begin{equation}
         \{\ket{0},\ket{1}\}.
     \end{equation}
@@ -89,7 +89,7 @@ A continuación se muestran dos ejemplos fundamentales en la mecánica cuántica
     Nótese la analogía con la computación clásica, donde tenemos dos posibles valores para los bits $0$ ó $1$. Los qubits diferenciándose, como se verá mas adelante, en la superposición de ambos estados. 
     Algunos sistemas que se usan para modelar qubits, y por tanto, siendo sistemas con dos niveles de energía se muestran a continuación.
     \begin{itemize}
-        \item Estado de espín de partículas con espín $1/2$. Siendo la base computacional: $\{\textit{Spin-down}$, $\textit{Spin-up}\}$
+        \item Estado de espín de partículas con espín $1/2$. Siendo la base computacional: $\{\emph{Spin-down}$, $\emph{Spin-up}\}$
         \item Electrón orbitando núcleos con una separación energética grande entre el segundo nivel energético y el tercero para confinar al electrón unicamente a los dos primero niveles energéticos del átomo \cite{Kaye}. Con base computacional: $\{E_0, E_1\}$, los niveles energéticos donde se encuentra la partícula.
         \item Polarización de un fotón, con base computacional: $\{\Bar{V}, \Bar{H}\}$ la polarización vertical y horizontal.
     \end{itemize}
@@ -124,7 +124,7 @@ estados normalizados
     },
 \end{equation}
 donde $\mathcal{H}_0=\mathcal{H}-\{0\}$.\\ Por otra parte, al identificar estados que difieren únicamente por una fase
-global, $\ket{\psi} \sim \e^{i\theta}\ket{\psi}$, siendo estas, orbitas de acción del grupo $U(1)$ sobre la esfera de estados normalizados $S^{2n-1}$, se obtiene el \textit{espacio
+global, $\ket{\psi} \sim \e^{i\theta}\ket{\psi}$, siendo estas, orbitas de acción del grupo $U(1)$ sobre la esfera de estados normalizados $S^{2n-1}$, se obtiene el \emph{espacio
 proyectivo de Hilbert}, definido como el conjunto de todos los rayos del espacio
 de Hilbert,
 \begin{equation}
@@ -162,9 +162,9 @@ Es importante mencionar que no es usual trabajar directamente con sistemas cuán
 
 \subsection{Espacio de Operadores de Densidad}
 Es común que se estudie la mecánica cuántica en el espacio de Hilbert, donde describimos al estado con un ket $\ket{\psi}$, pero como se mostrará a continuación, esta manera de representar los estados limita en gran medida el tipo de sistemas con los que podemos trabajar.\\
-Al representar un sistema mediante un ket, se esta diciendo indirectamente que el sistema esta completamente descrito por único estado $\ket{\psi}$ a estos estados se les conoce como \textit{estados puros}. Un ejemplo de ello es cualquier experimento tipo \textit{filtro}, en los cuales algún filtro arroja un resultado completamente predecible con $100\%$ de probabilidad de ocurrir y colapsando siempre a un único estado; un haz de luz filtrado a través de un de un prisma de Nicol es un ejemplo de ello \cite{Fano}. Con este tipo de sistemas, realizar una medición $\bm{A}$ es esencialmente sencillo, pues el resultado obtenido es seguro que proviene de un mismo tipo de estado con la misma naturaleza. En otras palabras, un estado puro de un sistema es el resultado de un proceso de purificación.
+Al representar un sistema mediante un ket, se esta diciendo indirectamente que el sistema esta completamente descrito por único estado $\ket{\psi}$ a estos estados se les conoce como \emph{estados puros}. Un ejemplo de ello es cualquier experimento tipo \emph{filtro}, en los cuales algún filtro arroja un resultado completamente predecible con $100\%$ de probabilidad de ocurrir y colapsando siempre a un único estado; un haz de luz filtrado a través de un de un prisma de Nicol es un ejemplo de ello \cite{Fano}. Con este tipo de sistemas, realizar una medición $\bm{A}$ es esencialmente sencillo, pues el resultado obtenido es seguro que proviene de un mismo tipo de estado con la misma naturaleza. En otras palabras, un estado puro de un sistema es el resultado de un proceso de purificación.
 
-Como vimos en secciones anteriores, tenemos una manera matemática de describir este tipo de sistemas, pero, retomando el ejemplo anterior, ¿Qué ocurre con el haz de luz antes de pasar por el polarizador? en otras palabras, ¿Cómo describir luz no polarizada?. La luz no polarizada puede describirse como una mezcla de polarizadores; es decir, una mezcla ponderada de estados puros, donde el haz de luz está completamente caracterizado por los i-ésimos filtros. A este tipo de sistemas se les conoce como \textit{estados mixtos}. En ellos, realizar una medición al sistema implica una mezcla ponderada de las mediciones individuales en cada filtro. De este modo, se define el \textit{ensamble promedio de} $\bm{A}$ como:
+Como vimos en secciones anteriores, tenemos una manera matemática de describir este tipo de sistemas, pero, retomando el ejemplo anterior, ¿Qué ocurre con el haz de luz antes de pasar por el polarizador? en otras palabras, ¿Cómo describir luz no polarizada?. La luz no polarizada puede describirse como una mezcla de polarizadores; es decir, una mezcla ponderada de estados puros, donde el haz de luz está completamente caracterizado por los i-ésimos filtros. A este tipo de sistemas se les conoce como \emph{estados mixtos}. En ellos, realizar una medición al sistema implica una mezcla ponderada de las mediciones individuales en cada filtro. De este modo, se define el \emph{ensamble promedio de} $\bm{A}$ como:
 \begin{equation}
     \qty[\bm{A}]=\sum_i P_i \expval{\bm{A}}=\sum_iP_i\expval{\bm{A}}{\psi_i},
     \label{def:ensamble_promedio}
@@ -176,7 +176,7 @@ donde $P_i$ representa el peso estadístico del i-ésimo filtro, y son tales que
     \label{def:propiedad_normalizacion}
 \end{equation}
 
-Es importante hacer notar que \textit{no es lo mismo ensamble promedio y valor esperado}; sin embargo, ambos conceptos están relacionados, ya que en la ecuación \eqref{def:ensamble_promedio} notamos que $\qty[\bm{A}]$ depende del valor esperado $\expval{\bm{A}}$.
+Es importante hacer notar que \emph{no es lo mismo ensamble promedio y valor esperado}; sin embargo, ambos conceptos están relacionados, ya que en la ecuación \eqref{def:ensamble_promedio} notamos que $\qty[\bm{A}]$ depende del valor esperado $\expval{\bm{A}}$.
 
 Ahora de la expresión del ensamble promedio \eqref{def:ensamble_promedio} podemos considerar las bases ortonormales $\{\ket{\phi_{k}}\}$ y $\{\ket{\phi_{k'}}\}$. Y reescribir esta expresión como
 \begin{align}
@@ -188,7 +188,7 @@ donde el término en paréntesis
 \begin{equation}
     \rho_{k'k}=\sum_iP_i\ip{\phi_{k}}{\psi_i}\ip{\psi_i}{\phi_{k'}},
 \end{equation}
-es la representación matricial del \textbf{operador densidad} (u \textit{operador de estado})
+es la representación matricial del \textbf{operador densidad} (u \emph{operador de estado})
  definido por \begin{equation} 
     \rhon\equiv\sum_iP_i\op{\psi_i}.
     \label{def:operador_estado_pesos}
@@ -247,18 +247,17 @@ calculando la traza de la expresión anterior
 \begin{align}
     \Tr(\rhon^2)&=
     \sum_{i,j}P_iP_j\ip{\psi_i}{\psi_j}\ip{\psi_j}{\psi_i}\notag\\
-    &=\sum_{i,j}P_iP_j\abs{\ip{\psi_i}{\psi_j}}^2 \label{eq:Traza_cuadrada_general}\\
     &<\sum_{i,j}P_iP_j=\sum_iP_i\sum_jP_j=1.
     \label{eq:calculo_traza}
 \end{align}
-Por lo que llegamos a la siguiente propiedad para \textit{estados no-puros}:
+Por lo que llegamos a la siguiente propiedad para \emph{estados no-puros}:
 \begin{equation}
     0\le\Tr(\rho^2)<1.
     \label{eq:traza_no_puro}
 \end{equation}
 
 
-De esta manera, la traza de $\rhon^2$ es una medida que cuantifica que tan puro es un ensamble, lo que motiva a definirla con el nombre de \textit{pureza}
+De esta manera, la traza de $\rhon^2$ es una medida que cuantifica que tan puro es un ensamble, lo que motiva a definirla con el nombre de \emph{pureza}
 \begin{equation}
     \mu = \Tr(\rhon^2).
     \label{def:pureza}
@@ -266,12 +265,18 @@ De esta manera, la traza de $\rhon^2$ es una medida que cuantifica que tan puro 
 
 Ahora estamos en circunstancias de mencionar el postulado de los estados en mecánica cuántica:\\ Los estados puros como ya mencionamos anteriormente, son elementos del espacio proyectivo de Hilbert; sin embargo, también podemos definirlos por medio de operadores de estado. Y usando el espacio de operadores de densidad podemos notar que un estado puro es representado por un operador de proyección uno dimensional.
 \begin{equation}
-    \ket{\psi}\longleftrightarrow \rhon = \bm{P}_{\psi}=\op{\psi}
+    \ket{\psi}\longleftrightarrow \rhon = \bm{P}_{\psi}=\op{\psi}.
 \end{equation}
+
+En conclusión, la forma mas general del \emph{axioma 1} de la mecánica cuántica se enuncia de la siguiente manera:
+
+Axioma 1. (Estados Puros)
+
+Un estado puro esta representado por un vector unitario en un espacio de Hilbert separable. Vectores que difieren por una fase representan el mismo estado. La colección de todos los vectores de norma uno que difieren por una fase se llaman rayo; por lo tanto, un estado puro esta representado por un rayo. De manera equivalente un estado puro esta representado por un proyector unidimensional \cite{DellAntonio}.
 
 \subsubsection{Principio de superposición no-lineal de operadores de estado}
 
-Un resultado que hemos usado sin mencionar, es el hecho que el conjunto de operadores densidad es un subconjunto convexo del espacio de operadores. Es decir, cualquier combinación convexa de operadores de estado da como resultado un nuevo operador de estado. De hecho, la superposición convexa de dos estados puros es ejemplificada en la definición \eqref{def:operador_estado_pesos}, tal que la densidad de probabilidad definida en \eqref{def:operador_estado_pesos} se dice que es la mezcla estadística de estados puros.\\ En general, la combinación convexa de dos o mas estados puros no es un estado puro, como se mostró en la ecuación \eqref{eq:traza_no_puro}; por lo tanto, es natural preguntarse ¿Cómo el principio de superposición de vectores de estados se describe en el formalismo de operadores de estado?
+Un resultado que hemos usado sin mencionar, es el hecho que el \emph{conjunto de operadores densidad es un subconjunto convexo del espacio de operadores}; es decir, cualquier combinación convexa de operadores de estado da como resultado un nuevo operador de estado. De hecho, la superposición convexa de dos estados puros es ejemplificada en la definición \eqref{def:operador_estado_pesos}, tal que la densidad de probabilidad definida en \eqref{def:operador_estado_pesos} se dice que es la mezcla estadística de estados puros.\\ En general, la combinación convexa de dos o mas estados puros no es un estado puro, como se mostró en la ecuación \eqref{eq:calculo_traza}; por lo tanto, es natural preguntarse ¿Cómo el principio de superposición de vectores de estados se describe en el formalismo de operadores de estado?
 
 Para resolver esta pregunta, nos guiaremos del desarrollo descrito por V.I.Man'ko et al. \cite{MankoComposition}. 
 
@@ -286,10 +291,10 @@ con $c_1$ y $c_2\in\C$ arbitrarios, tales que $\abs{c_1}^2+\abs{c_2}^2=1$. Enton
     \rhon &= \op{\psi} \notag\\
     &= \qty(c_1\ket{\psi_1}+c_2\ket{\psi_2})
        \qty(\bar{c}_1\bra{\psi_1}+\bar{c}_2\bra{\psi_2})\notag\\
-    &= |c_1|^2\op{\psi_1}
+    &= |c_1|^2\rhon_1
     + c_1\bar{c}_2\op{\psi_1}{\psi_2}
     + c_2\bar{c}_1\op{\psi_2}{\psi_1}
-    + |c_2|^2\op{\psi_2},
+    + |c_2|^2\rhon_2,
     \label{eq:superposicion_operadores2}
 \end{align}
 donde $\rhon_1=\op{\psi_1}$ y $\rhon_2=\op{\psi_2}$. Sin embargo, esta expresión no esta dada solamente en términos de operadores de estado. Para lograr la expresión deseada, recordamos que el estado de un sistema esta dado por una clase de equivalencia, es decir,
@@ -313,7 +318,7 @@ y por tanto
     \rhon = \abs{c_1}^2\rhon_1+\abs{c_2}^2\rhon_2+c_1\bar{c}_2\e^{i(\theta_1-\theta_2)}\op{\psi_1}{\psi_2}+\bar{c}_1c_2\e^{-i(\theta_1-\theta_2)}\op{\psi_2}{\psi_1}.
 \end{equation}
 
-Esta expresión podemos notar que la fase relativa se vuelve relevante en el principio de superposición de estados. Estas fases relativas nos permiten expresar a $\rhon$ solo en términos de operadores de estados usando que
+Notemos que en esta expresión podemos notar que la fase relativa se vuelve relevante en el principio de superposición de estados. Estas fases relativas nos permiten expresar a $\rhon$ solo en términos de operadores de estados usando que
 \begin{equation}
     \ket{\psi_1}\thicksim \e^{i\theta_1}\ket{\psi_1}=\frac{\ip{\psi_1}{\psi_0}}{\sqrt{\expval{\rhon_1}{\psi_0}}}\ket{\psi_1}=\frac{\rhon_1}{\sqrt{\expval{\rhon_1}{\psi_0}}}\ket{\psi_0},
     \label{rel_equiv:psi_1}
@@ -344,7 +349,7 @@ donde $\bm{P}_0$ es un proyector dado por $\bm{P}_0 = \op{\psi_0}$. Ahora, ya qu
     &=\ip{\psi_0}{\psi_i}\ip{\psi_i}{\psi_0}\ip{\psi_0}{\psi_j}\ip{\psi_j}{\psi_0}\notag\\
     &=\expval{\rhon_i\bm{P}_0\rhon_j}{\psi_0},
 \end{align}
-con $i,j\in\qty{1,2}$, se obtiene la expresión final.
+con $i,j\in\qty{1,2}$, se obtiene la expresión final
 
 \begin{equation}
     \rhon = |c_1|^2\rhon_1+|c_2|^2\rhon_2
@@ -355,10 +360,10 @@ que es la expresión buscada. Por tanto, por medio del estado fiducial $\ket{\ps
 \begin{equation}
     \e^{i(\theta_1-\theta_2)}=\frac{\ip{\psi_1}{\psi_0}\ip{\psi_0}{\psi_1}}{\abs{\ip{\psi_1}{\psi_0}\ip{\psi_0}{\psi_1}}}.
 \end{equation}
-Además, este resultado nos permite introducir un principio de superposición no-lineal de operadores de estado, lo cual nos permite estudiar los fenómenos de interferencia en términos de operadores de estado.
+Además, este resultado introduce un principio de superposición no-lineal de operadores de estado, lo cual nos permite estudiar los fenómenos de interferencia en términos de operadores de estado.
 
 
-La expresión \eqref{def:Ley_de_composicion} se puede reescribir de la siguiente manera,
+Finalmente, la expresión \eqref{def:Ley_de_composicion} se puede reescribir de la siguiente manera,
 \begin{equation}
     \rhon=\sum_{i,j=1}^2c_i\bar{c}_j\frac{\rhon_i\bm{P}_0\rhon_j}{\qty[\Tr(\rhon_i\bm{P}_0\rhon_j\bm{P}_0)]^{1/2}},
 \end{equation}
@@ -442,16 +447,16 @@ note de esta última expresión; el rol del estado fiducial $\ket{\psi_0}$, es e
 \section{Observables}
 El concepto de medición es una parte fundamental de la física, es la herramienta necesaria para obtener información de un sistema, mediante la manipulación del mismo por medio de una operación, llamemos $\bm{A}$. De esta manera, al aplicar la operación $\bm{A}$ al sistema, obtendremos un valor de medición $a$. Esta es la idea general de medir en física.\\ 
 
-En la mecánica cuántica existen dos formalismos principales en los cuales se puede caracterizar de forma distinta un estado y un observable. Estos dos formalismos bases son el \textit{formalismo de Schrödinger} y el \textit{formalismo de Heisenberg}
+En la mecánica cuántica existen dos formalismos principales en los cuales se puede caracterizar de forma distinta un estado y un observable. Estos dos formalismos bases son el \emph{esquema de Schrödinger} y el \emph{esquema de Heisenberg}
 
 \subsection{Formalismo de Schrödinger}
-En este formalismo, los elementos base son los \textit{estados puros}, como vimos en la sección de Espacio de Estados, donde un estado es un elemento del espacio de Hilbert $\H$. \\
-En este sentido, los \textit{observables} son una estructura dual derivada, y son representados por medio de operadores sobre $\H$. 
+En este formalismo, los elementos base son los \emph{estados puros}, como vimos en la sección de Espacio de Estados, donde un estado es un elemento del espacio de Hilbert $\H$. \\
+En este sentido, los \emph{observables} son una estructura dual derivada, y son representados por medio de operadores sobre $\H$. 
 
-Sin embargo, no todos los operadores tienen una interpretación física con la cual asociar una medición. Al tipo de operadores que tienen una interpretación física se les conoce como \textit{observables} que son operadores Hermíticos. A esto se le conoce habitualmente como el segundo postulado de la mecánica cuántica.
+Sin embargo, no todos los operadores tienen una interpretación física con la cual asociar una medición. Al tipo de operadores que tienen una interpretación física se les conoce como \emph{observables} que son operadores Hermíticos. A esto se le conoce habitualmente como el segundo postulado de la mecánica cuántica.
 
 
-\textit{Toda cantidad medible se describe por un operador lineal} $\bm{A}:\H \to \H$ que es Hermítico; \textit{a esto se le llama un observable} \cite{Cohen}, donde un operador $\bm{A}$ es Hermítico si es su mismo auto-adjunto; es decir, si cumple con
+\emph{Toda cantidad medible se describe por un operador lineal} $\bm{A}:\H \to \H$ que es Hermítico; \emph{a esto se le llama un observable} \cite{Cohen}, donde un operador $\bm{A}$ es Hermítico si es su mismo auto-adjunto; es decir, si cumple con
 
 \begin{equation}
     \bm{A}^\dagger = \bm{A}.
@@ -464,7 +469,7 @@ Y de esta manera, el valor esperado de la medida de los observables esta represe
     \expval{\bm{A}}=\expval{\bm{A}}{\psi}.
 \end{equation}
 
-Una característica adicional de la mecánica cuántica, es que al realizar una medición; además de obtener un valor numérico, el propio estado se ve afectado, ocasionando que colapse. Es decir \textit{realizar una medición altera el estado del sistema}
+Una característica adicional de la mecánica cuántica, es que al realizar una medición; además de obtener un valor numérico, el propio estado se ve afectado, ocasionando que colapse. Es decir \emph{realizar una medición altera el estado del sistema}
 
 \begin{equation}
    \ket{\psi} \xrightarrow{\text{medición de } \bm{A}}\ket{\psi'}.
@@ -473,7 +478,7 @@ Una característica adicional de la mecánica cuántica, es que al realizar una 
 
 El colapso del estado cuántico al realizar una medición es usualmente nombrado como el tercer axioma mencionado a continuación.
 
-\textit{El único posible resultado de la medición de un observable $\bm{A}$ es uno de los eigenvalores de $\bm{A}$} \cite{Cohen}.
+\emph{El único posible resultado de la medición de un observable $\bm{A}$ es uno de los eigenvalores de $\bm{A}$} \cite{Cohen}.
 
 
 Consideremos un estado cuántico discreto general $\ket{\psi}$, expresado en la base formada por los autovectores de un operador observable $\bm A$ con espectro discreto, tal que
@@ -513,7 +518,7 @@ Y en el caso de estados mixtos, el valor esperado esta dado por la ecuación \eq
 \end{align}
 
 
-En esta representación, la dinámica del sistema es descrita por la ecuación de Schrödinger del \textit{operador de evolución temporal} $\bm{U}(t,t_0)$, dada en la ecuación \eqref{eq:Schrondiger_operador_temporal}.
+En esta representación, la dinámica del sistema es descrita por la ecuación de Schrödinger del \emph{operador de evolución temporal} $\bm{U}(t,t_0)$, dada en la ecuación \eqref{eq:Schrondiger_operador_temporal}.
 
 \begin{equation}
     i\hbar\pdv{t}\bm{U}(t,t_0)=\bm{H}\bm{U}(t,t_0).
@@ -555,12 +560,12 @@ Lo que se acaba de derivar es la ecuación de evolución temporal para un operad
 
 
 \subsection{Formalismo de Heisenberg}
-En este formalismo, los elementos primitivos ya no son los estados puros, sino, los \textit{observables}, representados por matrices hermíticas infinitas; donde los estados viven en el dual de $\B(\H)$; es decir, están caracterizados por el valor esperado que resulta de los observables de en ecuación \eqref{def:dualidad_operador-estado} y son justamente los \textit{operadores de estados} $\bm{\sigma}$ ó matrices de densidad.
+En este formalismo, los elementos primitivos ya no son los estados puros, sino, los \emph{observables}, representados por matrices hermíticas infinitas; donde los estados viven en el dual de $\B(\H)$; es decir, están caracterizados por el valor esperado que resulta de los observables de en ecuación \eqref{def:dualidad_operador-estado} y son justamente los \emph{operadores de estados} $\bm{\sigma}$ ó matrices de densidad.
 \begin{equation}
     \bm{\sigma}, \bm{A} \to \Tr(\bm{\sigma}\bm{A})
     \label{def:dualidad_operador-estado}
 \end{equation}
-En esta dualidad, los \textit{estados puros} son una correspondencia uno a uno con los operadores de proyección sobre las matrices de densidad de rango uno.
+En esta dualidad, los \emph{estados puros} son una correspondencia uno a uno con los operadores de proyección sobre las matrices de densidad de rango uno.
 
 \begin{comment}
     Falta por conocer la forma del colapso de estado mencionada en la ecuación \ref{eq: colapso_estado} para operadores de densidad.\\
@@ -589,13 +594,13 @@ Generalizando para una operador de estado mixto:
 
 \begin{comment}
     \section{Evolución Temporal}
-Ya sabemos que en sistemas cuánticos el acto de medir tiene una consecuencia directa en el estado del sistema; el estado siempre se ve afectado al realizar una medición. La pregunta natural es, si tenemos un ensamble libre de mediciones, ¿el estado cambia o se mantiene estático con el paso del tiempo? En general los estados no se mantienen estáticos. Un ejemplo sencillo es una partícula de espín 1/2 con estado inicial conocido $S_x$ expuesto a un campo magnético $z$; una vez expuesto al campo magnético, este hace oscilar al estado en $S_x$ y $S_y$ provocando que al volver a medir, exista una probabilidad de estar en $S_x+$ ó $S_x-$ \cite{Sakurai2011}. Esto nos muestra que los estados no necesariamente permanecen estáticos en el tiempo.\\ Otra característica de los sistemas cuánticos es que \textit{la superposición lineal de estados es preservada en ausencia de mediciones} \cite{Messiah}.\\
+Ya sabemos que en sistemas cuánticos el acto de medir tiene una consecuencia directa en el estado del sistema; el estado siempre se ve afectado al realizar una medición. La pregunta natural es, si tenemos un ensamble libre de mediciones, ¿el estado cambia o se mantiene estático con el paso del tiempo? En general los estados no se mantienen estáticos. Un ejemplo sencillo es una partícula de espín 1/2 con estado inicial conocido $S_x$ expuesto a un campo magnético $z$; una vez expuesto al campo magnético, este hace oscilar al estado en $S_x$ y $S_y$ provocando que al volver a medir, exista una probabilidad de estar en $S_x+$ ó $S_x-$ \cite{Sakurai2011}. Esto nos muestra que los estados no necesariamente permanecen estáticos en el tiempo.\\ Otra característica de los sistemas cuánticos es que \emph{la superposición lineal de estados es preservada en ausencia de mediciones} \cite{Messiah}.\\
 La manera en la cuál se maneja la evolución temporal de sistemas cuánticos entre dos tiempos $t_o$ y $t$, es mediante el \textbf{operador de evolución} $\bm{U}(t,t_0)$, que conecta ambos operadores de la siguiente forma
 \begin{equation}
     \ket{\psi(t)}=\bm{U}(t,t_0)\ket{\psi_0}.
     \label{def:ket_temporal}
 \end{equation}
-Debido a la conservación de superposiciones lineales este operador debe ser \textit{lineal}, además la conservación de probabilidad necesariamente requiere que
+Debido a la conservación de superposiciones lineales este operador debe ser \emph{lineal}, además la conservación de probabilidad necesariamente requiere que
 \begin{equation}
     \ip{\psi_0}=1,
 \end{equation}
@@ -607,7 +612,7 @@ implicando necesariamente que
 \begin{equation}
     \bm{U}^\dagger(t,t_0)\bm{U}(t,t_0) = \Id;
 \end{equation}
-es decir, que el \textit{operador de evolución temporal es unitario}. Además, este operador requiere que la evolución temporal sea la misma sin importar como se dividan los intervalos de tiempos,
+es decir, que el \emph{operador de evolución temporal es unitario}. Además, este operador requiere que la evolución temporal sea la misma sin importar como se dividan los intervalos de tiempos,
 \begin{equation}
     \bm{U}(t,t_n)=\bm{U}(t_n,t_{n-1})\cdots\bm{U}(t_1,t_o).
     \label{eq:composicion_evolcuion_temporal}
@@ -637,7 +642,7 @@ despejando la diferencia infinitesimal del operdador como sigue:
 \begin{align}
     \bm{U}(t_0+\dd{t},t_0)-\bm{U}(t,t_0) =\qty(-i\frac{\bm{H}\dd{t}}{\hbar})\bm{U}(t,t_0),
 \end{align}
-reescribiendo en su forma diferencial obtenemos \textit{la ecuación de Schrödinger para el operador de evolución temporal} \cite{Sakurai2011},
+reescribiendo en su forma diferencial obtenemos \emph{la ecuación de Schrödinger para el operador de evolución temporal} \cite{Sakurai2011},
 \begin{equation}
     i\hbar\pdv{t}\bm{U}(t,t_0)=\bm{H}\bm{U}(t,t_0),
     \label{eq:Schrondiger_operador_temporal}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.30)  21 FEB 2026 17:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.30)  28 FEB 2026 14:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1252,30 +1252,30 @@ Package babel Info: 'spanish' activates 'spanish' shorthands.
 )
 \openout1 = `Main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 173.
-LaTeX Font Info:    ... okay on input line 173.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 173.
-LaTeX Font Info:    ... okay on input line 173.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 173.
-LaTeX Font Info:    ... okay on input line 173.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 173.
-LaTeX Font Info:    ... okay on input line 173.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 173.
-LaTeX Font Info:    ... okay on input line 173.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 173.
-LaTeX Font Info:    ... okay on input line 173.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 173.
-LaTeX Font Info:    ... okay on input line 173.
-LaTeX Font Info:    Checking defaults for LGR/cmr/m/n on input line 173.
-LaTeX Font Info:    Trying to load font information for LGR+cmr on input line 173.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 177.
+LaTeX Font Info:    ... okay on input line 177.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 177.
+LaTeX Font Info:    ... okay on input line 177.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 177.
+LaTeX Font Info:    ... okay on input line 177.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 177.
+LaTeX Font Info:    ... okay on input line 177.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 177.
+LaTeX Font Info:    ... okay on input line 177.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 177.
+LaTeX Font Info:    ... okay on input line 177.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 177.
+LaTeX Font Info:    ... okay on input line 177.
+LaTeX Font Info:    Checking defaults for LGR/cmr/m/n on input line 177.
+LaTeX Font Info:    Trying to load font information for LGR+cmr on input line 177.
  (C:\Users\david\AppData\Local\Programs\MiKTeX\tex/latex/cbfonts-fd\lgrcmr.fd
 File: lgrcmr.fd 2017/07/29 v1.2 Greek European Computer Regular
 )
-LaTeX Font Info:    ... okay on input line 173.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 173.
-LaTeX Font Info:    ... okay on input line 173.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 173.
-LaTeX Font Info:    ... okay on input line 173.
+LaTeX Font Info:    ... okay on input line 177.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 177.
+LaTeX Font Info:    ... okay on input line 177.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 177.
+LaTeX Font Info:    ... okay on input line 177.
  (C:\Users\david\AppData\Local\Programs\MiKTeX\tex/latex/upquote\upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbatim
 )
@@ -1332,14 +1332,14 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (C:\Users\david\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-LaTeX Info: Redefining \. on input line 173.
-LaTeX Info: Redefining \% on input line 173.
+LaTeX Info: Redefining \. on input line 177.
+LaTeX Info: Redefining \% on input line 177.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count447
-Package hyperref Info: Link coloring OFF on input line 173.
+Package hyperref Info: Link coloring OFF on input line 177.
 
 
 Package siunitx Warning: Detected the "physics" package:
@@ -1355,7 +1355,7 @@ Package siunitx Warning: Detected the "physics" package:
 (C:\Users\david\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\translations-basic-dictionary-spanish.trsl
 File: translations-basic-dictionary-spanish.trsl (spanish translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `spanish'. on input line 173.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `spanish'. on input line 177.
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: letterpaper
@@ -1391,32 +1391,22 @@ Package translations Info: loading dictionary `translations-basic-dictionary' fo
 <Escudo-UNAM-v15.pdf, id=6, 1027.84pt x 1155.31625pt>
 File: Escudo-UNAM-v15.pdf Graphic file (type pdf)
 <use Escudo-UNAM-v15.pdf>
-Package pdftex.def Info: Escudo-UNAM-v15.pdf  used on input line 177.
+Package pdftex.def Info: Escudo-UNAM-v15.pdf  used on input line 181.
 (pdftex.def)             Requested size: 68.78807pt x 77.33466pt.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 177.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 181.
  (C:\Users\david\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 177.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 181.
  (C:\Users\david\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 <Escudo-FCIENCIAS-v15.pdf, id=7, 1027.84pt x 1155.31625pt>
 File: Escudo-FCIENCIAS-v15.pdf Graphic file (type pdf)
 <use Escudo-FCIENCIAS-v15.pdf>
-Package pdftex.def Info: Escudo-FCIENCIAS-v15.pdf  used on input line 177.
+Package pdftex.def Info: Escudo-FCIENCIAS-v15.pdf  used on input line 181.
 (pdftex.def)             Requested size: 68.78807pt x 77.33466pt.
-
-Underfull \hbox (badness 10000) detected at line 177
-\T1/cmr/bx/n/17.28 T E S I S
- []
-
-
-Underfull \hbox (badness 10000) detected at line 177
-\T1/cmr/m/n/12 P R E S E N T A :
- []
-
-[1
+ [1
 
 
 
@@ -1424,17 +1414,17 @@ Underfull \hbox (badness 10000) detected at line 177
 {C:/Users/david/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./Escudo-UNAM-v15.pdf> <./Escudo-FCIENCIAS-v15.pdf>] [2
 
 ]
-LaTeX Font Info:    Trying to load font information for T1+ppl on input line 186.
+LaTeX Font Info:    Trying to load font information for T1+ppl on input line 190.
  (C:\Users\david\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1ppl.fd
 File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
 ) [3{C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}] [4
 
 ] [5]
-LaTeX Info: Redefining \. on input line 206.
-LaTeX Info: Redefining \% on input line 206.
+LaTeX Info: Redefining \. on input line 210.
+LaTeX Info: Redefining \% on input line 210.
 Package babel Info: 'spanish' activates 'spanish' shorthands.
-(babel)             Reported on input line 206.
-Package cleveref Info: loaded `spanish' language definitions on input line 206.
+(babel)             Reported on input line 210.
+Package cleveref Info: loaded `spanish' language definitions on input line 210.
  [6
 
 ] (c:\Users\david\OneDrive\Escritorio\Tesis\Tesis-Enredamiento\Tesis UNAM\build\Main.toc
@@ -1446,19 +1436,14 @@ Package cleveref Info: loaded `spanish' language definitions on input line 1.
 \openout6 = `Main.toc'.
 
  [7]
-LaTeX Info: Redefining \. on input line 207.
-LaTeX Info: Redefining \% on input line 207.
-Package cleveref Info: loaded `spanish' language definitions on input line 207.
+LaTeX Info: Redefining \. on input line 211.
+LaTeX Info: Redefining \% on input line 211.
+Package cleveref Info: loaded `spanish' language definitions on input line 211.
  [8
 
 ]
 Cap\'{\i }tulo 1.
-(capitulos/teoria_cuantica.tex
-Underfull \hbox (badness 10000) in paragraph at lines 36--39
-
- []
-
-[1
+(capitulos/teoria_cuantica.tex [1
 
 ] Excluding 'comment' comment.
 LaTeX Info: Redefining \. on input line 112.
@@ -1473,58 +1458,45 @@ LaTeX Info: Redefining \. on input line 197.
 LaTeX Info: Redefining \% on input line 197.
 Package cleveref Info: loaded `spanish' language definitions on input line 197.
  [4]
-LaTeX Info: Redefining \. on input line 253.
-LaTeX Info: Redefining \% on input line 253.
-Package cleveref Info: loaded `spanish' language definitions on input line 253.
+LaTeX Info: Redefining \. on input line 252.
+LaTeX Info: Redefining \% on input line 252.
+Package cleveref Info: loaded `spanish' language definitions on input line 252.
  [5]
-LaTeX Info: Redefining \. on input line 294.
-LaTeX Info: Redefining \% on input line 294.
-Package cleveref Info: loaded `spanish' language definitions on input line 294.
+LaTeX Info: Redefining \. on input line 286.
+LaTeX Info: Redefining \% on input line 286.
+Package cleveref Info: loaded `spanish' language definitions on input line 286.
  [6] Excluding 'comment' comment.
-LaTeX Info: Redefining \. on input line 359.
-LaTeX Info: Redefining \% on input line 359.
-Package cleveref Info: loaded `spanish' language definitions on input line 359.
+LaTeX Info: Redefining \. on input line 358.
+LaTeX Info: Redefining \% on input line 358.
+Package cleveref Info: loaded `spanish' language definitions on input line 358.
  [7] Excluding 'comment' comment.
-Underfull \hbox (badness 10000) in paragraph at lines 443--444
+LaTeX Info: Redefining \. on input line 453.
+LaTeX Info: Redefining \% on input line 453.
+Package cleveref Info: loaded `spanish' language definitions on input line 453.
+ [8]
+LaTeX Info: Redefining \. on input line 500.
+LaTeX Info: Redefining \% on input line 500.
+Package cleveref Info: loaded `spanish' language definitions on input line 500.
+ [9]
 
- []
+LaTeX Warning: Reference `def:ket_temporal' on page 10 undefined on input line 537.
 
-LaTeX Info: Redefining \. on input line 452.
-LaTeX Info: Redefining \% on input line 452.
-Package cleveref Info: loaded `spanish' language definitions on input line 452.
-[8]
-Underfull \hbox (badness 10000) in paragraph at lines 502--504
-
- []
-
-LaTeX Info: Redefining \. on input line 504.
-LaTeX Info: Redefining \% on input line 504.
-Package cleveref Info: loaded `spanish' language definitions on input line 504.
-[9]
-
-LaTeX Warning: Reference `def:ket_temporal' on page 10 undefined on input line 534.
-
-LaTeX Info: Redefining \. on input line 543.
-LaTeX Info: Redefining \% on input line 543.
-Package cleveref Info: loaded `spanish' language definitions on input line 543.
+LaTeX Info: Redefining \. on input line 541.
+LaTeX Info: Redefining \% on input line 541.
+Package cleveref Info: loaded `spanish' language definitions on input line 541.
 [10] Excluding 'comment' comment. Excluding 'comment' comment.)
-LaTeX Info: Redefining \. on input line 217.
-LaTeX Info: Redefining \% on input line 217.
-Package cleveref Info: loaded `spanish' language definitions on input line 217.
+LaTeX Info: Redefining \. on input line 221.
+LaTeX Info: Redefining \% on input line 221.
+Package cleveref Info: loaded `spanish' language definitions on input line 221.
  [11]
-LaTeX Info: Redefining \. on input line 217.
-LaTeX Info: Redefining \% on input line 217.
-Package cleveref Info: loaded `spanish' language definitions on input line 217.
+LaTeX Info: Redefining \. on input line 221.
+LaTeX Info: Redefining \% on input line 221.
+Package cleveref Info: loaded `spanish' language definitions on input line 221.
  [12
 
 ]
 Cap\'{\i }tulo 2.
-(capitulos/teoria_cuantica_info.tex
-Underfull \hbox (badness 10000) in paragraph at lines 15--16
-
- []
-
-[13]
+(capitulos/teoria_cuantica_info.tex [13]
 LaTeX Info: Redefining \. on input line 137.
 LaTeX Info: Redefining \% on input line 137.
 Package cleveref Info: loaded `spanish' language definitions on input line 137.
@@ -1535,9 +1507,9 @@ Package cleveref Info: loaded `spanish' language definitions on input line 1.
  [16
 
 ]) [17]
-LaTeX Info: Redefining \. on input line 246.
-LaTeX Info: Redefining \% on input line 246.
-Package cleveref Info: loaded `spanish' language definitions on input line 246.
+LaTeX Info: Redefining \. on input line 250.
+LaTeX Info: Redefining \% on input line 250.
+Package cleveref Info: loaded `spanish' language definitions on input line 250.
  [18
 
 ] (c:\Users\david\OneDrive\Escritorio\Tesis\Tesis-Enredamiento\Tesis UNAM\build\Main.aux
@@ -1555,17 +1527,17 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 44089 strings out of 467871
- 927390 string characters out of 5418376
- 2250955 words of memory out of 5000000
- 72197 multiletter control sequences out of 15000+600000
+ 44088 strings out of 467871
+ 927347 string characters out of 5418376
+ 2249955 words of memory out of 5000000
+ 72196 multiletter control sequences out of 15000+600000
  650666 words of font info for 88 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,23n,161p,18310b,1208s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,23n,161p,18310b,1213s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\david\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\david\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\david\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\david\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\david\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecxc1200.pk> <C:\Users\david\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\david\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsl1200.pk> <C:\Users\david\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\david\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1200.pk> <C:\Users\david\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\david\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\david\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1440.pk><C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb><C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/latxfont/line10.pfb><C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on "c:\Users\david\OneDrive\Escritorio\Tesis\Tesis-Enredamiento\Tesis UNAM\build\Main.pdf" (26 pages, 530966 bytes).
+Output written on "c:\Users\david\OneDrive\Escritorio\Tesis\Tesis-Enredamiento\Tesis UNAM\build\Main.pdf" (26 pages, 532476 bytes).
 PDF statistics:
- 806 PDF objects out of 1000 (max. 8388607)
+ 809 PDF objects out of 1000 (max. 8388607)
  123 named destinations out of 1000 (max. 500000)
  111 words of extra memory for PDF output out of 10000 (max. 10000000)
 
