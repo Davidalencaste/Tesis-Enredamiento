@@ -206,7 +206,7 @@ Finalmente, tomando en cuenta esta definición, podemos expresar el ensamble pro
 Es importante notar que el operador de estado no depende de la base con la que se trabaje, y esto resulta evidente en el ejemplo de luz no polarizada donde el haz de luz puede ser visto como mezcla de polarizadores, pero bien pueden ser tanto polarizadores lineales, como circulares \cite{Fano}. Es por ello que aparece de forma natural la traza, la cual es una operación independiente de la base en la que se trabaje.
 
 
-A partir de la definción \eqref{def:operador_estado_pesos} es directo mostrar que los operadores de estado satisfacen las siguientes propiedades:
+A partir de la definición \eqref{def:operador_estado_pesos} es directo mostrar que los operadores de estado satisfacen las siguientes propiedades:
 \begin{enumerate}
     \item $\rhon$ es un operador Hermítico,
         \begin{equation}
@@ -247,7 +247,8 @@ calculando la traza de la expresión anterior
 \begin{align}
     \Tr(\rhon^2)&=
     \sum_{i,j}P_iP_j\ip{\psi_i}{\psi_j}\ip{\psi_j}{\psi_i}\notag\\
-    &<\sum_{i,j}P_iP_j=\sum_iP_i\sum_jP_j=1.
+    &<\sum_{i,j}P_iP_j=\sum_iP_i\sum_jP_j\notag\\
+    &=1.
     \label{eq:calculo_traza}
 \end{align}
 Por lo que llegamos a la siguiente propiedad para \emph{estados no-puros}:
@@ -300,7 +301,7 @@ con $c_1$ y $c_2\in\C$ arbitrarios, tales que $\abs{c_1}^2+\abs{c_2}^2=1$. Enton
 donde $\rhon_1=\op{\psi_1}$ y $\rhon_2=\op{\psi_2}$. Sin embargo, esta expresión no esta dada solamente en términos de operadores de estado. Para lograr la expresión deseada, recordamos que el estado de un sistema esta dado por una clase de equivalencia, es decir,
 
 \begin{equation}
-    \ket{\psi_1} \thicksim\e^{i\theta_1}\ket{\psi_1} \qq{y} \ket{\psi_1}\thicksim\e^{i\theta_2}\ket{\psi_2},
+    \ket{\psi_1} \thicksim\e^{i\theta_1}\ket{\psi_1} \qq{y} \ket{\psi_2}\thicksim\e^{i\theta_2}\ket{\psi_2},
 \end{equation}
 
 \begin{comment}
@@ -445,56 +446,47 @@ note de esta última expresión; el rol del estado fiducial $\ket{\psi_0}$, es e
 \end{comment}
 
 \section{Observables}
-El concepto de medición es una parte fundamental de la física, es la herramienta necesaria para obtener información de un sistema, mediante la manipulación del mismo por medio de una operación, llamemos $\bm{A}$. De esta manera, al aplicar la operación $\bm{A}$ al sistema, obtendremos un valor de medición $a$. Esta es la idea general de medir en física.\\ 
+El concepto de medición es una parte fundamental de la física, es la herramienta necesaria para obtener información de un sistema, mediante la manipulación del mismo por medio de una operación.
 
 En la mecánica cuántica existen dos formalismos principales en los cuales se puede caracterizar de forma distinta un estado y un observable. Estos dos formalismos bases son el \emph{esquema de Schrödinger} y el \emph{esquema de Heisenberg}
 
-\subsection{Formalismo de Schrödinger}
-En este formalismo, los elementos base son los \emph{estados puros}, como vimos en la sección de Espacio de Estados, donde un estado es un elemento del espacio de Hilbert $\H$. \\
-En este sentido, los \emph{observables} son una estructura dual derivada, y son representados por medio de operadores sobre $\H$. 
+Los esquemas en mecánica cuántica son formas de manipular ya sea los estados cuánticos, las observables o ambos por medio de condiciones que se asignan sobre éstos según convenga, sin modificar sus propiedades físicas.
 
-Sin embargo, no todos los operadores tienen una interpretación física con la cual asociar una medición. Al tipo de operadores que tienen una interpretación física se les conoce como \emph{observables} que son operadores Hermíticos. A esto se le conoce habitualmente como el segundo postulado de la mecánica cuántica.
+\subsection*{$\S$~Esquema de Schrödinger}
 
+El esquema más usado en los cursos tradicionales de mecánica cuántica es el esquema de Schrödinger, en el cuales los elementos base son los estados puros, representados por elementos de un espacio de Hilbert separable $\H$. Por lo que, el estudio del sistema radica en el análisis del vector de estado del sistema.
 
-\emph{Toda cantidad medible se describe por un operador lineal} $\bm{A}:\H \to \H$ que es Hermítico; \emph{a esto se le llama un observable} \cite{Cohen}, donde un operador $\bm{A}$ es Hermítico si es su mismo auto-adjunto; es decir, si cumple con
-
-\begin{equation}
-    \bm{A}^\dagger = \bm{A}.
-\end{equation}
-
-En otras palabras, este axioma indica que los observables viven en el álgebra $\B(\H)$, que es el álgebra de todos los operadores lineales acotados sobre un espacio de Hilbert $\H$.
-
-Y de esta manera, el valor esperado de la medida de los observables esta representado por el producto interno de $\ket{\psi}$ con $\bm{A}\ket{\psi}$, como sigue
-\begin{equation}
-    \expval{\bm{A}}=\expval{\bm{A}}{\psi}.
-\end{equation}
-
-Una característica adicional de la mecánica cuántica, es que al realizar una medición; además de obtener un valor numérico, el propio estado se ve afectado, ocasionando que colapse. Es decir \emph{realizar una medición altera el estado del sistema}
+En esta formulación, los observables son una estructura dual derivada a los estados puros, y por tanto \emph{los observables están representados por operadores diferenciales que actúan sobre $\H$}, es decir, un observable es una cantidad medible y se describe mediante un operador lineal,
 
 \begin{equation}
-   \ket{\psi} \xrightarrow{\text{medición de } \bm{A}}\ket{\psi'}.
-   \label{diag: medicion}
+    \bm{A}:\H\to\H\qq{:}\ket{\psi}\longmapsto\ket{\psi'}=\bm{A}\ket{\psi},
+\end{equation}
+y Hermítico:
+
+\begin{equation}
+    \bm{A}=\bm{A}^\dagger
 \end{equation}
 
-El colapso del estado cuántico al realizar una medición es usualmente nombrado como el tercer axioma mencionado a continuación.
+La propiedad de Hermíticidad tiene como consecuencia, que todo observable es un operador acotado y cerrado.\\ De lo anterior, podemos introducir el $3^{er}$ axioma de la mecánica cuántica:
 
-\emph{El único posible resultado de la medición de un observable $\bm{A}$ es uno de los eigenvalores de $\bm{A}$} \cite{Cohen}.
+\emph{El valor medio de la medición de un observable, representado por un operador Hermítico $\bm{A}$, en el estado $\ket{\psi}$ está dado por:}
+\begin{equation}
+    \expval{\bm{A}}\equiv\expval{\bm{A}}{\psi}\equiv\Tr(\bm{A}\rho_\psi)
+\end{equation}
 
 
 Consideremos un estado cuántico discreto general $\ket{\psi}$, expresado en la base formada por los autovectores de un operador observable $\bm A$ con espectro discreto, tal que
-\[
-\bm A \ket{e_i} = a_i \ket{e_i}.
-\]
-En esta base, el estado puede escribirse como
 \begin{equation}
-    \ket{\psi}=\sum_i c_i \ket{e_i},
+    \bm A \ket{a_i} = a_i \ket{a_i},
+\end{equation}
+donde $\qty{\ket{a_i}}$ forma una base ortonormal, en la cual, el estado puede escribirse como:
+\begin{equation}
+    \ket{\psi}=\sum_i c_i \ket{a_i},
     \label{eq: estado_general}
 \end{equation}
-donde los coeficientes $c_i$ representan las amplitudes de probabilidad asociadas a cada autovector.
-
-La probabilidad de obtener el resultado $a_i$ al realizar una medición del observable $\bm A$ sobre el estado $\ket{\psi}$ está dada por \cite{Cohen}
+donde los coeficientes $c_i$ representan las amplitudes de probabilidad asociadas a cada autovector, esto es, la probabilidad de obtener el resultado $a_i$ al realizar una medición del observable $\bm A$ sobre el estado $\ket{\psi}$ se define como se muestra en la ecuación de abajo, \cite{Cohen}
 \begin{equation}
-    P(a_i)=\abs{\ip{e_i}{\psi}}^2=\abs{c_i}^2.
+    P(a_i)=\abs{\ip{a_i}{\psi}}^2=\abs{c_i}^2.
     \label{def: probabilidad_estado}
 \end{equation}
 
@@ -507,7 +499,7 @@ Finalmente, para describir la naturaleza del proceso de medición, el estado pos
 \end{equation}
 el cual corresponde, tras la normalización, al autovector de $\bm A$ asociado al autovalor obtenido en la medición.\\
 
-Y en el caso de estados mixtos, el valor esperado esta dado por la ecuación \eqref{def:Operador_densidad} y el colapso del operador después de realizar la medición viene dado por la siguiente expresión:
+Y en el caso de estados mixtos, el valor esperado esta dado por la ecuación \eqref{def:Operador_densidad} y el operador de estado después de realizar la medición viene dado por la siguiente expresión:
 
 \begin{align}
     \rhon &= 
@@ -517,26 +509,41 @@ Y en el caso de estados mixtos, el valor esperado esta dado por la ecuación \eq
     &=\sum_i P_i \,\frac{\bm{A}\rhon_i\bm{A}^\dagger}{\Tr(\rhon_i\bm{A}^\dagger\rhon_i\bm{A})}.
 \end{align}
 
-
-En esta representación, la dinámica del sistema es descrita por la ecuación de Schrödinger del \emph{operador de evolución temporal} $\bm{U}(t,t_0)$, dada en la ecuación \eqref{eq:Schrondiger_operador_temporal}.
-
+Como mencionamos anteriormente, el estudio de los sistemas en este esquema radica en el análisis de los vectores de estado, entonces, toda la información de la evolución temporal de los sistemas está completamente contenida en estos mismos vectores. Por lo tanto, la evolución temporal del estado $\ket{\psi(t_0)}$ para un tiempo $t$ distinto, está dada por
 \begin{equation}
-    i\hbar\pdv{t}\bm{U}(t,t_0)=\bm{H}\bm{U}(t,t_0).
-    \label{eq:Schrondiger_operador_temporal}
-\end{equation}
-
-Es decir, la evolución de un estado viene completamente dado por el hamiltoniano del sistema. De esta manera el estado del sistema en para tiempo $t$ se encuentra aplicando el operador $\bm{U}$ al vector de estado al en un tiempo inicial $t_0$.
-\begin{equation}
-    \ket{\psi(t)}=\bm{U}(t,t_0)\ket{\psi(t_0)}.
+    \ket{\psi(t)}=\bm{U}(t,t_0)\ket{\psi(t_0)},
     \label{def:evolucion_ket}
 \end{equation}
 
-A continuación deduciremos la ecuación de evolución temporal para el espacio de operadores de estado.\\ De la ecuación \eqref{eq:Schrondiger_operador_temporal} y \eqref{def:evolucion_ket} podemos obtener la ecuación auto-adjunta: 
+donde a $\bm{U}(t,t_0)$ se le conoce como el \emph{operador de evolución temporal}, con las siguientes propiedades:
+\begin{enumerate}
+    \item Es un operador unitario.
+        \begin{equation}
+            \bm{U}(t,t_0)\bm{U}(t,t_0)^\dagger=\Id,
+        \end{equation}
+        donde $\bm{\Id}$ es el operador identidad.
+    \item Condición inicial: 
+        \begin{equation}
+            \bm{U}(t_0,t_0)=\bm{\Id}
+        \end{equation}
+    \item El operador de evolución temporal está determinado por la ecuación de Schrödinger.
+            \begin{equation}
+                i\hbar\pdv{t}\bm{U}(t,t_0)=\bm{H}\bm{U}(t,t_0).
+                \label{eq:Schrondiger_operador_temporal}
+            \end{equation}
+    \item El operador de evolución temporal puede expresarse como:
+            \begin{equation}
+                \bm{U}(t_n,t_0)=\bm{U}(t_n,t_{n-1})\cdots\bm{U}(t_2,t_1)\bm{U}(t_1,t_0)
+            \end{equation}
+\end{enumerate}
+
+
+A continuación deduciremos la ecuación de evolución temporal para estados mixtos.\\ De la ecuación \eqref{eq:Schrondiger_operador_temporal} y \eqref{def:evolucion_ket} podemos obtener la ecuación auto-adjunta: 
 \begin{equation}
     -i\hbar\pdv{t}\bra{\psi(t)}=\bra{\psi(t)}\bm{H};
     \label{eq:evolucion_temporal_auto-adjunta}
 \end{equation}
-además, de la definición de operador de estado \eqref{def:operador_estado_pesos} y la evolución temporal de un ket \eqref{def:ket_temporal} obtenemos:
+además, de la definición de operador de estado \eqref{def:operador_estado_pesos} y la evolución temporal de un ket \eqref{def:evolucion_ket} obtenemos:
 \begin{align}
     \rhon(t)&=\sum_i P_i \bm{U}(t,t_0)\op{\psi_i(t_0)}\bm{U}^\dagger(t,t_0)\notag\\
     &= \sum_i P_i \op{\psi_i(t)},
@@ -551,7 +558,7 @@ Por lo tanto, re acomodando obtenemos la siguiente ecuación:
     i\hbar \pdv{t}\rhon(t)&=\sum_i P_i \qty[\bm{H}\op{\psi_i(t)}-\op{\psi_i(t)}\bm{H}]\notag\\
     &= -\qty[\rhon,\bm{H}].
 \end{align}
-Lo que se acaba de derivar es la ecuación de evolución temporal para un operador de estado, que reescribimos en la ecuación \eqref{eq:evolucion_temporal_operador},
+Lo que se acaba de derivar es la ecuación de evolución temporal para un operador de estado, que reescribimos en la ecuación siguiente,
 \begin{equation}
     i\hbar \pdv{\rhon(t)}{t}=-\qty[\rhon(t),\bm{H}].
     \label{eq:evolucion_temporal_operador}
@@ -559,13 +566,8 @@ Lo que se acaba de derivar es la ecuación de evolución temporal para un operad
 
 
 
-\subsection{Formalismo de Heisenberg}
-En este formalismo, los elementos primitivos ya no son los estados puros, sino, los \emph{observables}, representados por matrices hermíticas infinitas; donde los estados viven en el dual de $\B(\H)$; es decir, están caracterizados por el valor esperado que resulta de los observables de en ecuación \eqref{def:dualidad_operador-estado} y son justamente los \emph{operadores de estados} $\bm{\sigma}$ ó matrices de densidad.
-\begin{equation}
-    \bm{\sigma}, \bm{A} \to \Tr(\bm{\sigma}\bm{A})
-    \label{def:dualidad_operador-estado}
-\end{equation}
-En esta dualidad, los \emph{estados puros} son una correspondencia uno a uno con los operadores de proyección sobre las matrices de densidad de rango uno.
+\subsection*{$\S$~Esquema de Heisenberg}
+
 
 \begin{comment}
     Falta por conocer la forma del colapso de estado mencionada en la ecuación \ref{eq: colapso_estado} para operadores de densidad.\\

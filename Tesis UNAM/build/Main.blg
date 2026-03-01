@@ -5,33 +5,32 @@ Reallocating 'name_of_file' (item size: 1) to 7 items.
 The style file: ieeetr.bst
 Reallocating 'name_of_file' (item size: 1) to 11 items.
 Database file #1: biblio.bib
-Warning--empty publisher in DellAntonio
 You've used 6 entries,
             1876 wiz_defined-function locations,
-            525 strings with 4530 characters,
-and the built_in function-call counts, 1308 in all, are:
-= -- 136
+            526 strings with 4538 characters,
+and the built_in function-call counts, 1310 in all, are:
+= -- 137
 > -- 45
 < -- 0
 + -- 18
 - -- 12
-* -- 82
-:= -- 196
+* -- 81
+:= -- 197
 add.period$ -- 14
 call.type$ -- 6
 change.case$ -- 4
 chr.to.int$ -- 0
-cite$ -- 7
+cite$ -- 6
 duplicate$ -- 66
-empty$ -- 134
+empty$ -- 135
 format.name$ -- 12
-if$ -- 321
+if$ -- 323
 int.to.chr$ -- 0
 int.to.str$ -- 6
 missing$ -- 10
 newline$ -- 29
 num.names$ -- 6
-pop$ -- 21
+pop$ -- 20
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
@@ -43,8 +42,7 @@ text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 1
+warning$ -- 0
 while$ -- 12
 width$ -- 7
-write$ -- 69
-(There was 1 warning)
+write$ -- 70
