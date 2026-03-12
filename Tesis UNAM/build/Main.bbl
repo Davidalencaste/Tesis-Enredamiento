@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{Cohen}
 C.~Cohen-Tannoudji, B.~Diu, and F.~Lalo{\"e}, {\em Quantum Mechanics, Volume I:
@@ -26,6 +26,23 @@ G.~Dell'Antonio, {\em Lectures on the Mathematics of Quantum Mechanics}.
 V.~I. Man'ko, G.~Marmo, E.~C.~G. Sudarshan, and F.~Zaccaria, ``Inner
   composition law of pure states as a purification of impure states,'' {\em
   Physics Letters A}, vol.~273, no.~1--2, pp.~31--36, 2000.
+
+\bibitem{Gleason1957}
+A.~M. Gleason, ``Measures on the closed subspaces of a hilbert space,'' {\em
+  Journal of Mathematics and Mechanics}, vol.~6, no.~6, pp.~885--893, 1957.
+
+\bibitem{PhysRevLett.91.120403}
+P.~Busch, ``Quantum states and generalized observables: A simple proof of
+  gleason's theorem,'' {\em Phys. Rev. Lett.}, vol.~91, p.~120403, Sep 2003.
+
+\bibitem{acharya2021informationallycomplete}
+A.~Acharya, S.~Saha, and A.~M. Sengupta, ``Informationally complete povm-based
+  shadow tomography,'' 2021.
+
+\bibitem{Esposito2015}
+G.~Esposito, G.~Marmo, G.~Miele, and E.~C.~G. Sudarshan, {\em Advanced Concepts
+  in Quantum Mechanics}.
+\newblock Cambridge University Press, 2015.
 
 \bibitem{Sakurai2011}
 J.~J. Sakurai and J.~Napolitano, {\em Modern Quantum Mechanics}.

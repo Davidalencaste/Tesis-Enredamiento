@@ -464,14 +464,14 @@ En esta formulación, los observables son una estructura dual derivada a los est
 y Hermítico:
 
 \begin{equation}
-    \bm{A}=\bm{A}^\dagger
+    \bm{A}=\bm{A}^\dagger,
 \end{equation}
 
 La propiedad de Hermíticidad tiene como consecuencia, que todo observable es un operador acotado y cerrado.\\ De lo anterior, podemos introducir el $3^{er}$ axioma de la mecánica cuántica:
 
 \emph{El valor medio de la medición de un observable, representado por un operador Hermítico $\bm{A}$, en el estado $\ket{\psi}$ está dado por:}
 \begin{equation}
-    \expval{\bm{A}}\equiv\expval{\bm{A}}{\psi}\equiv\Tr(\bm{A}\rho_\psi)
+    \expval{\bm{A}}\equiv\expval{\bm{A}}{\psi}\equiv\Tr(\bm{A}\rho_\psi).
 \end{equation}
 
 
@@ -568,7 +568,93 @@ Lo que se acaba de derivar es la ecuación de evolución temporal para un operad
 
 \subsection*{$\S$~Esquema de Heisenberg}
 
+En la literatura se suele confundir la interpretación de este esquema, en muchos textos la manera de diferenciar los esquemas de Schrödinger y Heisenberg es en el objeto que evoluciona en el tiempo; en Schrödinger los estados evolucionan '$\ket{\psi(t)}$'y en Heisenberg las observables son las que evolucionan '$\bm{A}(t)$'. Sin embargo, esto no es del todo cierto, falta aclarar la naturaleza de los estados y las observables.
 
+El esquema de Heisenberg es aquel donde los elementos bases son las observables, representadas por matrices Hermíticas, que pueden ser de dimensión finita o infinita, es decir, operadores simétricos lineales sobre un espacio de Hilbert separable. Y es en este sentido, que la evolución de sistemas cuánticos se realiza a través de una ecuación de movimiento que involucra de manera directa cantidades observables.
+
+\begin{comment}
+    
+En Schrödinger se introdujeron los estados mixtos $\rhon=\sum_i P_i\op{\psi_i}$ como consecuencia de la imposibilidad experimental de siempre trabajar con estados puros, ya sea por naturaleza del experimento o por ruido experimental. Con esta motivación, se definen las \emph{medidas POVM} por sus siglas en ingles \emph{Positive operator valued measure} en el esquema de Heisenberg; denotadas por $\qty{E_m}$ que cumplen con las siguientes propiedades:
+\begin{enumerate}
+    \item Son Hermíticos
+        \begin{equation}
+            E_m^\dagger = E_m
+        \end{equation}
+    \item Son no negativos
+        \begin{equation}
+            \Tr(E_m^\dagger E_m)\ge0
+        \end{equation}
+    \item Cumplen con la relación de completitud
+        \begin{equation}
+            \sum_m E_m =\Id
+        \end{equation}
+\end{enumerate}
+\end{comment}
+
+Consideremos un operador $\bm{A}$, con espectro discreto $\qty{a_i}$ al cual es posible asociar una base ortonormal $\qty{\ket{a_i}}$, tal que en esta base se puede expresar al operador como sigue,
+\begin{equation}
+    \bm{A}=\sum_i a_i \op{a_i}.
+\end{equation}
+Repitiendo los mismos pasos considerados para obtener la evolución temporal de un estado mixto $\rhon$ en \eqref{eq:evolucion_temporal_operador}, obtenemos la \emph{ecuación de movimiento del esquema de Heisenberg},
+\begin{equation}
+    i\hbar \dv{\bm{A}}{t}=\qty[\bm{H},\bm{A}],
+    \label{eq:evolucion_temporal_Heisenberg}
+\end{equation}
+esta ecuación es valida para operadores Hermíticos tanto para no Hermíticos.
+
+En particular si $\bm{A}$ y $\bm{H}$ representan observables, entonces la ecuación \eqref{eq:evolucion_temporal_Heisenberg} está dada por:
+\begin{equation}
+    i\hbar \dv{A_{jk}}{t}=H_{jl}A_{lk}-A_{jl}H_{lk},
+\end{equation}
+donde está ecuación vive en el espacio de matrices, las cuales pueden ser infinito dimensionales, que en terminos de la base ortonormal $\qty{\ket{e_i}}$ se expresa los elementos de matriz como sigue,
+\begin{equation}
+    A_{jk}=\mel{e_j}{A}{e_k},
+\end{equation}
+tal que los valores esperados son los elementos diagonales de la matriz $A_{ik}$ y toman valores reales.
+
+Como mencionamos anteriormente, en el esquema de Heisenberg los operadores son los elementos principales y los estados son objetos derivados de estos, es decir, los estados son elementos del espacio vectorial dual del espacio de las observables; lo que quiere decir que \emph{los estados, en el esquema de Heisenberg, son funcionales lineales} $\rho$,
+
+\begin{equation}
+    \rho : \mathcal{P}(\H) \mapsto \R,
+    \label{def:rho_is_in_reals}
+\end{equation}
+con $\mathcal{P}(\H)$ el espacio de observables como proyectores, tambien llamadas PVMs (por sus siglas en inglés Projection Valued Measures).
+
+Además, estas funcionales deben cumplir con los requerimientos de positividad y normalización.
+\begin{equation}
+    \rho(\bm{A}^\dagger\bm{A})\ge0\qq{y}\rho(\Id)=1,
+\end{equation}
+repectivamente.
+
+En realidad, cualquier estado puede ser representado mediante un operador Hermítico con ayuda de la traza como se muestra en la ecuación \eqref{def:Gleason_theorem}; siendo este resultado el teorema de Gleason, ver Ref \cite{Gleason1957}. 
+
+\begin{equation}
+    \rho\qty(\bm{A})=\Tr(\rhon \bm{A}).
+    \label{def:Gleason_theorem}
+\end{equation}
+
+El resultado mencionado anteriormente y demostrado por Gleason hace referencia unicamente a observables como proyectores $P_A=\op{a_i}$, es decir, PVMs; sin embargo, fue generalizado posteriormente por P. Busch \cite{PhysRevLett.91.120403}, para medidas como operadores positivos (POVMs por sus siglas en ingles "Positive operator-valued measure"), las cuales son medidas que tienen en cuenta la interacción del sistema con el entorno. Al conjunto de POVMs se le conoce como \emph{effects} y es denotado mediante $\mathcal{E}(\H)$. \\ Una característica importante es que las PVMs están contenidas en las POVMs \cite{acharya2021informationallycomplete}.
+\begin{equation}
+    \mathcal{P}(\H)\subset\mathcal{E}(\H),
+\end{equation}
+realmente los PVMs son ejemplos de POVMs que son informacionalmente incompletos.
+
+Regresando a las observables como proyectores, notemos, el producto escalar en el espacio de operadores puede estar dado por:
+\begin{equation}
+    \ip{\bm{A}}{\bm{B}}=\Tr(\bm{A}^\dagger\bm{B}),
+\end{equation}
+lo que puede ser interpretado como definir la traza mediante el producto escalar de operadores, o viceversa dependiendo de la información que se tenga.
+Por lo tanto, tenemos una asociación entre $\rho\mapsto \rhon$ que depende del producto escalar que se use.
+
+De la definición \eqref{def:Gleason_theorem}, el producto escalar y la ecuación \eqref{def:rho_is_in_reals}, es directo que $\rhon$ es Hermítico respecto al producto definido; ademas, es directa la condición de normalización $\rho\qty(\Id)=\Tr(\rhon)=1$.
+
+De lo anterior podemos introducir el 3er axioma de la Mecánica Cuántica:
+\emph{El valor medio de la medición de una observable, representada por un operador Hermítico $\bm{A}$, en el estado representado por $\ket{\psi}$ esta dado por:}
+\begin{equation}
+    \expval{\bm{A}}\equiv \expval{\bm{A}}{\psi}\equiv\Tr(\bm{AP}_\psi).
+\end{equation}
+
+El libro de Esposito \emph{et al.} fue en gran medida una guía para la sección de observables, para más detalles consultar el capítulo 4 \cite{Esposito2015}.
 \begin{comment}
     Falta por conocer la forma del colapso de estado mencionada en la ecuación \ref{eq: colapso_estado} para operadores de densidad.\\
 

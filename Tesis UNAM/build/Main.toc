@@ -6,6 +6,5 @@
 \contentsline {subsection}{\numberline {1.1.2}Espacio de Operadores de Densidad}{3}{subsection.1.1.2}%
 \contentsline {subsubsection}{\numberline {1.1.2.1}Principio de superposición no-lineal de operadores de estado}{6}{subsubsection.1.1.2.1}%
 \contentsline {section}{\numberline {1.2}Observables}{8}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}$\S $~Esquema de Heisenberg}{11}{subsection.1.2.1}%
-\contentsline {chapter}{\numberline {2}Teoría cuántica en la teoría de la información}{13}{chapter.2}%
-\contentsline {chapter}{Bibliografía}{15}{equation.2.16}%
+\contentsline {chapter}{\numberline {2}Teoría cuántica en la teoría de la información}{15}{chapter.2}%
+\contentsline {chapter}{Bibliografía}{17}{equation.2.16}%
