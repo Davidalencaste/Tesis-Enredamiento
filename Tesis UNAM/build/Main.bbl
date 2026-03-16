@@ -27,6 +27,12 @@ V.~I. Man'ko, G.~Marmo, E.~C.~G. Sudarshan, and F.~Zaccaria, ``Inner
   composition law of pure states as a purification of impure states,'' {\em
   Physics Letters A}, vol.~273, no.~1--2, pp.~31--36, 2000.
 
+\bibitem{Sakurai2011}
+J.~J. Sakurai and J.~Napolitano, {\em Modern Quantum Mechanics}.
+\newblock San Francisco, CA, USA: Pearson Education, Inc., Addison-Wesley,
+  2nd~ed., 2011.
+\newblock Copyright © 1994, 2011.
+
 \bibitem{Gleason1957}
 A.~M. Gleason, ``Measures on the closed subspaces of a hilbert space,'' {\em
   Journal of Mathematics and Mechanics}, vol.~6, no.~6, pp.~885--893, 1957.
@@ -44,10 +50,9 @@ G.~Esposito, G.~Marmo, G.~Miele, and E.~C.~G. Sudarshan, {\em Advanced Concepts
   in Quantum Mechanics}.
 \newblock Cambridge University Press, 2015.
 
-\bibitem{Sakurai2011}
-J.~J. Sakurai and J.~Napolitano, {\em Modern Quantum Mechanics}.
-\newblock San Francisco, CA, USA: Pearson Education, Inc., Addison-Wesley,
-  2nd~ed., 2011.
-\newblock Copyright © 1994, 2011.
+\bibitem{nielsen2010quantum}
+M.~A. Nielsen and I.~L. Chuang, {\em Quantum Computation and Quantum
+  Information: 10th Anniversary Edition}.
+\newblock Cambridge University Press, 2010.
 
 \end{thebibliography}

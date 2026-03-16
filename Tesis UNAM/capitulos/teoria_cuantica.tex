@@ -106,7 +106,7 @@ espacio de Hilbert existe una acción natural del grupo abeliano
 $\C_0 := \C - \{0\}$ dada por
 \begin{equation}
     \ket{\psi} \mapsto \lambda \ket{\psi}
-    = \varrho \e^{i \theta} \ket{\psi},
+    = \varrho  e^{i \theta} \ket{\psi},
     \qquad
     \varrho \in \R^{+}, \ \theta \in [0,2\pi).
 \end{equation}
@@ -122,14 +122,16 @@ estados normalizados
         \,\middle|\,
         \ip{\psi} = 1
     },
+    \label{def:esfera_estados_normalizados}
 \end{equation}
 donde $\mathcal{H}_0=\mathcal{H}-\{0\}$.\\ Por otra parte, al identificar estados que difieren únicamente por una fase
-global, $\ket{\psi} \sim \e^{i\theta}\ket{\psi}$, siendo estas, orbitas de acción del grupo $U(1)$ sobre la esfera de estados normalizados $S^{2n-1}$, se obtiene el \emph{espacio
+global, $\ket{\psi} \sim  e^{i\theta}\ket{\psi}$, siendo estas, orbitas de acción del grupo $U(1)$ sobre la esfera de estados normalizados $S^{2n-1}$, se obtiene el \emph{espacio
 proyectivo de Hilbert}, definido como el conjunto de todos los rayos del espacio
 de Hilbert,
 \begin{equation}
     \Proj(\H_0)
     := \{\lambda\ket{\psi}\;|\; \lambda\in \C_0\}.
+    \label{def:espacio_proyectivo_hilbert}
 \end{equation}
 
 
@@ -187,6 +189,7 @@ Ahora de la expresión del ensamble promedio \eqref{def:ensamble_promedio} podem
 donde el término en paréntesis
 \begin{equation}
     \rho_{k'k}=\sum_iP_i\ip{\phi_{k}}{\psi_i}\ip{\psi_i}{\phi_{k'}},
+    \label{def:elementos_matriz_rho}
 \end{equation}
 es la representación matricial del \textbf{operador densidad} (u \emph{operador de estado})
  definido por \begin{equation} 
@@ -301,7 +304,7 @@ con $c_1$ y $c_2\in\C$ arbitrarios, tales que $\abs{c_1}^2+\abs{c_2}^2=1$. Enton
 donde $\rhon_1=\op{\psi_1}$ y $\rhon_2=\op{\psi_2}$. Sin embargo, esta expresión no esta dada solamente en términos de operadores de estado. Para lograr la expresión deseada, recordamos que el estado de un sistema esta dado por una clase de equivalencia, es decir,
 
 \begin{equation}
-    \ket{\psi_1} \thicksim\e^{i\theta_1}\ket{\psi_1} \qq{y} \ket{\psi_2}\thicksim\e^{i\theta_2}\ket{\psi_2},
+    \ket{\psi_1} \thicksim e^{i\theta_1}\ket{\psi_1} \qq{y} \ket{\psi_2}\thicksim e^{i\theta_2}\ket{\psi_2},
 \end{equation}
 
 \begin{comment}
@@ -316,16 +319,16 @@ donde $\abs{\ip{\psi_1}{\psi_2}}\neq1$, pues necesariamente son estados distinto
 
 y por tanto 
 \begin{equation}
-    \rhon = \abs{c_1}^2\rhon_1+\abs{c_2}^2\rhon_2+c_1\bar{c}_2\e^{i(\theta_1-\theta_2)}\op{\psi_1}{\psi_2}+\bar{c}_1c_2\e^{-i(\theta_1-\theta_2)}\op{\psi_2}{\psi_1}.
+    \rhon = \abs{c_1}^2\rhon_1+\abs{c_2}^2\rhon_2+c_1\bar{c}_2 e^{i(\theta_1-\theta_2)}\op{\psi_1}{\psi_2}+\bar{c}_1c_2 e^{-i(\theta_1-\theta_2)}\op{\psi_2}{\psi_1}.
 \end{equation}
 
 Notemos que en esta expresión podemos notar que la fase relativa se vuelve relevante en el principio de superposición de estados. Estas fases relativas nos permiten expresar a $\rhon$ solo en términos de operadores de estados usando que
 \begin{equation}
-    \ket{\psi_1}\thicksim \e^{i\theta_1}\ket{\psi_1}=\frac{\ip{\psi_1}{\psi_0}}{\sqrt{\expval{\rhon_1}{\psi_0}}}\ket{\psi_1}=\frac{\rhon_1}{\sqrt{\expval{\rhon_1}{\psi_0}}}\ket{\psi_0},
+    \ket{\psi_1}\thicksim  e^{i\theta_1}\ket{\psi_1}=\frac{\ip{\psi_1}{\psi_0}}{\sqrt{\expval{\rhon_1}{\psi_0}}}\ket{\psi_1}=\frac{\rhon_1}{\sqrt{\expval{\rhon_1}{\psi_0}}}\ket{\psi_0},
     \label{rel_equiv:psi_1}
 \end{equation}
 \begin{equation}
-    \ket{\psi_2}\thicksim \e^{i\theta_2}\ket{\psi_2}=\frac{\ip{\psi_2}{\psi_0}}{\sqrt{\expval{\rhon_2}{\psi_0}}}\ket{\psi_2}=\frac{\rhon_2}{\sqrt{\expval{\rhon_2}{\psi_0}}}\ket{\psi_0},
+    \ket{\psi_2}\thicksim  e^{i\theta_2}\ket{\psi_2}=\frac{\ip{\psi_2}{\psi_0}}{\sqrt{\expval{\rhon_2}{\psi_0}}}\ket{\psi_2}=\frac{\rhon_2}{\sqrt{\expval{\rhon_2}{\psi_0}}}\ket{\psi_0},
     \label{rel_equiv:psi_2}
 \end{equation}
 donde $\ket{\psi_0}$ es un estado fiducial no ortogonal a $\ket{\psi_1} \qq{y} \ket{\psi_2}$.\\Así tomando en cuenta la definición \eqref{rel_equiv:psi_1} y \eqref{rel_equiv:psi_2} tenemos que
@@ -359,7 +362,7 @@ con $i,j\in\qty{1,2}$, se obtiene la expresión final
 \end{equation}
 que es la expresión buscada. Por tanto, por medio del estado fiducial $\ket{\psi_0}$ pudimos expresar la fase relativa entre los estados $\ket{\psi_1}$ y $\ket{\psi_2}$ dado por
 \begin{equation}
-    \e^{i(\theta_1-\theta_2)}=\frac{\ip{\psi_1}{\psi_0}\ip{\psi_0}{\psi_1}}{\abs{\ip{\psi_1}{\psi_0}\ip{\psi_0}{\psi_1}}}.
+     e^{i(\theta_1-\theta_2)}=\frac{\ip{\psi_1}{\psi_0}\ip{\psi_0}{\psi_1}}{\abs{\ip{\psi_1}{\psi_0}\ip{\psi_0}{\psi_1}}}.
 \end{equation}
 Además, este resultado introduce un principio de superposición no-lineal de operadores de estado, lo cual nos permite estudiar los fenómenos de interferencia en términos de operadores de estado.
 
@@ -509,7 +512,7 @@ Y en el caso de estados mixtos, el valor esperado esta dado por la ecuación \eq
     &=\sum_i P_i \,\frac{\bm{A}\rhon_i\bm{A}^\dagger}{\Tr(\rhon_i\bm{A}^\dagger\rhon_i\bm{A})}.
 \end{align}
 
-Como mencionamos anteriormente, el estudio de los sistemas en este esquema radica en el análisis de los vectores de estado, entonces, toda la información de la evolución temporal de los sistemas está completamente contenida en estos mismos vectores. Por lo tanto, la evolución temporal del estado $\ket{\psi(t_0)}$ para un tiempo $t$ distinto, está dada por
+Como mencionamos anteriormente, el estudio de los sistemas en este esquema radica en el análisis de los vectores de estado, entonces, toda la información de la evolución temporal de los sistemas está completamente contenida en estos mismos vectores \cite{Sakurai2011}. Por lo tanto, la evolución temporal del estado $\ket{\psi(t_0)}$ para un tiempo $t$ distinto, está dada por
 \begin{equation}
     \ket{\psi(t)}=\bm{U}(t,t_0)\ket{\psi(t_0)},
     \label{def:evolucion_ket}
@@ -654,96 +657,292 @@ De lo anterior podemos introducir el 3er axioma de la Mecánica Cuántica:
     \expval{\bm{A}}\equiv \expval{\bm{A}}{\psi}\equiv\Tr(\bm{AP}_\psi).
 \end{equation}
 
-El libro de Esposito \emph{et al.} fue en gran medida una guía para la sección de observables, para más detalles consultar el capítulo 4 \cite{Esposito2015}.
-\begin{comment}
-    Falta por conocer la forma del colapso de estado mencionada en la ecuación \ref{eq: colapso_estado} para operadores de densidad.\\
+El libro de Esposito \emph{et al.}\cite{Esposito2015} fue en gran medida una guía para la sección de Esquema de Schrödinger, para más detalles consultar el capítulo 4 .
 
+En la siguiente sección se desarrollaran los resultados obtenidos hasta este momento para el sistema de dos niveles, mejor conocido como \emph{qubit}.
+
+\section{Ejemplo: Qubit}
+El qubit es uno de los sistemas cuánticos con mayor relevancia en los ultimos años, esto debido a sus aplicaciones en la hoy esperanzadora teoría de la computación cuántica, donde  \emph{un qubit es la codificación de un sistema cuántico de dos niveles} \cite{nielsen2010quantum}, ejemplos de este tipo de sistemas son muchos, de los mas conocidos en la literatura es el estado de \emph{espín-1/2} en partículas fermionícas, o el de la polarización de un fotón, entre otros.
+
+A continuación, procederemos a encontrar la descripción matemática de este tipo de estados con la herramienta descrita en este capítulo.
+
+Al ser un sistema de dos niveles, el espacio de Hilbert $\H$ es de dimension $n=2$ con una base de la forma siguiente, 
 \begin{equation}
-   \rho' \xrightarrow{\text{medición de } \bm{A}}\rho
+    \text{Base}_\H=\qty{\ket{e_i}\,|\,\ip{e_i}{\e_j}=\delta_{ij}},
 \end{equation}
+con $i,j=1,2$. Los estados $\ket{e_i}$ de esta base se\dots
 
-Tenemos de la ecuación \eqref{eq: colapso_estado} la forma general del colpaso de un estado dada una medición $\bm{A}$. De esta, se puede obtener su conjugado, dado \eqref{def: operador_conjugado} como sigue,
+Con esto, el espacio de Hilbert $\H$ para el qubit viene dado por el conjunto de combinaciones lineales de su base, con coeficientes $\psi_i$, es decir de la siguiente forma:
 \begin{equation}
-    \bra{\psi'}=\frac{\bra{\psi}\bm{A}^\dagger}{\abs{\expval{\bm{A}}{\psi}}}.
+    \H = \qty{\ket{\psi}= \psi_1 \ket{e_1}+\psi_2 \ket{e_2}\mid\psi_i\in\C},
+    \label{def:hilbert_space_qubit}
 \end{equation}
-De esta manera, cada operador de algún estado puro $\rhon_i$ colapsa a un operador $\rhon'_i$ de la forma 
-\begin{equation}
-    \rhon'_i=\frac{\bm{A}\rhon_i\bm{A}^\dagger}{\abs{\expval{\bm{A}}{\psi_i}}^2},
-    \label{eq:colapso_operador_estado}
-\end{equation}
-al realizar una medición $\bm{A}$.
-Generalizando para una operador de estado mixto:
-
-\end{comment}
+este espacio incluye estados con norma distinta de uno. 
 
 
-
-
-
-\begin{comment}
-    \section{Evolución Temporal}
-Ya sabemos que en sistemas cuánticos el acto de medir tiene una consecuencia directa en el estado del sistema; el estado siempre se ve afectado al realizar una medición. La pregunta natural es, si tenemos un ensamble libre de mediciones, ¿el estado cambia o se mantiene estático con el paso del tiempo? En general los estados no se mantienen estáticos. Un ejemplo sencillo es una partícula de espín 1/2 con estado inicial conocido $S_x$ expuesto a un campo magnético $z$; una vez expuesto al campo magnético, este hace oscilar al estado en $S_x$ y $S_y$ provocando que al volver a medir, exista una probabilidad de estar en $S_x+$ ó $S_x-$ \cite{Sakurai2011}. Esto nos muestra que los estados no necesariamente permanecen estáticos en el tiempo.\\ Otra característica de los sistemas cuánticos es que \emph{la superposición lineal de estados es preservada en ausencia de mediciones} \cite{Messiah}.\\
-La manera en la cuál se maneja la evolución temporal de sistemas cuánticos entre dos tiempos $t_o$ y $t$, es mediante el \textbf{operador de evolución} $\bm{U}(t,t_0)$, que conecta ambos operadores de la siguiente forma
-\begin{equation}
-    \ket{\psi(t)}=\bm{U}(t,t_0)\ket{\psi_0}.
-    \label{def:ket_temporal}
-\end{equation}
-Debido a la conservación de superposiciones lineales este operador debe ser \emph{lineal}, además la conservación de probabilidad necesariamente requiere que
-\begin{equation}
-    \ip{\psi_0}=1,
-\end{equation}
-entonces aplicando evolución temporal, esta probabilidad no debería ser diferente a la unidad,
+Continuamos obteniendo la esfera de estados normalizados $S^{2n-1}=S^3$ al imponer la ecuación \eqref{def:esfera_estados_normalizados}, 
 \begin{align}
-    \expval{\bm{U}^\dagger(t,t_0)\bm{U}(t,t_0)}{\psi_0}=1,
+    \qty{\ket{\psi}\mid\ip{\psi}=1}
+    &\simeq\qty{\abs{\psi_1}^2+\abs{\psi_2}^2=1\mid\psi_i\in\C}\notag\\
+    &=\qty{\abs{x_1+ix_2}^2+\abs{y_1+iy_2}^2=1\mid x_j,y_j\in\R}\notag\\
+    &=\qty{x_1^2+x_2^2+y_1^2+y_2^2=1\mid x_j,y_j\in\R}\notag\\
+    &=S^{3},
 \end{align}
-implicando necesariamente que
+donde $\psi_1=x_1+ix_2\qq{y}\psi_2=y_1+iy_2$ son la representación cartesiana de los coeficientes. De esta manera, los estados $\ket{\psi}$ en $S^{3}$ son de la siguiente forma:
 \begin{equation}
-    \bm{U}^\dagger(t,t_0)\bm{U}(t,t_0) = \Id;
+   S^{3}\simeq \qty{\ket{\psi}=\frac{\psi_1\ket{e_1}+\psi_2\ket{e_2}}{\sqrt{\abs{\psi_1}^2+\abs{\psi_2}^2}}\mid \psi_i\in\C}.
+    \label{def:esfera_estados_normalizados_qubit}
 \end{equation}
-es decir, que el \emph{operador de evolución temporal es unitario}. Además, este operador requiere que la evolución temporal sea la misma sin importar como se dividan los intervalos de tiempos,
+
+Finalmente, para  encontrar el espacio de rayo del qubit primero pasamos las componentes de los elementos de $\H$ a la forma polar $\psi_j=\rho_je^{i\theta_j}$
 \begin{equation}
-    \bm{U}(t,t_n)=\bm{U}(t_n,t_{n-1})\cdots\bm{U}(t_1,t_o).
-    \label{eq:composicion_evolcuion_temporal}
+   \ket{\psi}= \rho e^{i\theta_1}\ket{e_1}+\rho e^{i\theta_2}\ket{e_2},
 \end{equation}
-Considerando el tiempo como una variable continua en \eqref{eq:composicion_evolcuion_temporal}; podemos escribir la misma propiedad como sigue,
-\begin{equation}
-    \ket{\psi(t+\dd{t})}= \bm{U}(t_0+\dd{t},t_0)\ket{\psi_0}.
-\end{equation}
-Proponemos como operador $\bm{U}$:
-\begin{equation}
-    \bm{U}(t_0+\dd{t},t_0)=\Id-\frac{i\bm{H}\dd{t}}{\hbar},
-\end{equation}
-con $\bm{H}$ el operador HamiltonianO, guiándonos del hecho de ser este operador el generador de evolución en mecánica clásica.  Note que este operador cumple la propiedad de composición temporal \eqref{eq:composicion_evolcuion_temporal} y el ser unitario,
+con $\rho_j\in\R^+\qq{y}\theta_j\in[0,2\pi)$.
+Consideremos como un mismo elemento al conjunto de estados que difieren unicamente por una fase global,
 \begin{align}
-    \bm{U}^\dagger(t_0+\dd{t},t_0)\bm{U}(t_0+\dd{t},t_0)&=
-    \qty(\Id+\frac{i\bm{H}\dd{t}}{\hbar})\qty(\Id-\frac{i\bm{H}\dd{t}}{\hbar});\notag\\
-    &=\Id +\frac{\bm{H}^2}{\hbar^2} \dd{t}^2;\notag\\
-    &\approx \Id,
+    \ket{\psi}
+    &\sim  e^{-i\theta_1}\qty(\rho_1e^{i\theta_1}\ket{e_1}+\rho_2e^{i\theta_2}\ket{e_2})\notag\\
+    &=\rho_1\ket{e_1}+\rho_2e^{i(\theta_2-\theta_1)}\ket{e_2}\notag\\
+    &=\rho_1\ket{e_1}+\rho_2e^{i\phi}\ket{e_2},
 \end{align}
-donde de igual forma asumimos que $\bm{H}$ es Hermítico.\\ Ahora usando la propiedad de composición temporal \eqref{eq:composicion_evolcuion_temporal} podemos expresar el operador $\bm{U}$ como sigue:
+pasando los coeficientes a su representación cartesiana $\rho_1\to x_1\qq{y}\rho_2e^{i\phi}\to y_1+iy_2$, y además restringiendo a estados con norma uno obtenemos, por definición, el \emph{espacio proyectivo} del qubit. 
 \begin{align}
-    \bm{U}(t_0+\dd{t},t_0)&=
-    \bm{U}(t+\dd{t},t)\bm{U}(t,t_0)\\
-    &=\qty(\Id-i\frac{\bm{H}\dd{t}}{\hbar})\bm{U}(t,t_0),
+    \C\Proj(\H)&=
+    \qty{\ket{\psi}=\rho_1\ket{e_1}+\rho_2e^{i\phi}\ket{e_2}\mid\ip{\psi}=1}\notag\\
+    &\simeq\qty{x_1^2+y_1^2+y_2^2=1\mid x_i,y_i\in\R}\notag\\
+    &=S^2.
 \end{align}
-despejando la diferencia infinitesimal del operdador como sigue:
+Lo que acabamos de mostrar es que todo \emph{estado puro} del qubit puede ser caracterizado por un punto en una esfera de dimensión 2.
+
+Una vez encontrada la forma de todo estado puro, resta encontrar la expresión para estados mixtos del qubit, o en otras palabras encontrar la matriz del operador de estado $\rhon$.
+
+Sea un ensamble con $N$ subestados de qubit distintos, $\qty{\ket{\psi_i}}$, cada uno con una peso $P_i$; entonces por la ecuación \eqref{def:elementos_matriz_rho} tenemos que el $k'k$-elemento de matriz de $\rhon$ es el siguiente
 \begin{align}
-    \bm{U}(t_0+\dd{t},t_0)-\bm{U}(t,t_0) =\qty(-i\frac{\bm{H}\dd{t}}{\hbar})\bm{U}(t,t_0),
+    \rho_{k'k}
+    &=\sum_i^N P_i\mel{e_k}{\qty(\op{\psi_i})}{e_{k'}}\notag\\
+    &=\sum_i^N P_i\mel{e_k}{\qty(\sum_j^2\psi_{ij}\ket{e_j})\qty(\sum_j^2\bar{\psi}_{ij}\bra{e_j})}{e_{k'}}\notag\\
+    &=\sum_i^N P_i\mel{e_k}{\psi_{ik}\bar{\psi}_{ik'}}{e_{k'}},
 \end{align}
-reescribiendo en su forma diferencial obtenemos \emph{la ecuación de Schrödinger para el operador de evolución temporal} \cite{Sakurai2011},
+por lo tanto el operador de estado en su forma matricial es
 \begin{equation}
-    i\hbar\pdv{t}\bm{U}(t,t_0)=\bm{H}\bm{U}(t,t_0),
-    \label{eq:Schrondiger_operador_temporal}
+    \rhon = \sum_i^N P_i \mqty(\abs{\psi_{i1}}^2&\psi_{i2}\bar{\psi}_{i1}\\\psi_{i1}\bar{\psi}_{i2}&\abs{\psi_{i2}}^2).
+    \label{eq:rho_qubit_matriz}
 \end{equation}
-multiplicando esta ecuación por el estado $\ket{\psi_0}$, se obtiene la \textbf{ecuación de evolución temporal} de cualquier estado.
+Por otro lado, usando la definición de ensamble promedio de la expresión \eqref{def:Operador_densidad}, definimos las tres componentes de espín del ensamble como:
 \begin{equation}
-i\hbar\pdv{t}\ket{\psi(t)}=\bm{H}\ket{\psi(t)},
-\label{eq:Schrondiger_estado}
+    x^j=\Tr(\rhon\bm{\sigma}_j)
 \end{equation}
-esto debido a como definimos $\ket{\psi(t)}$ en la ecuación \eqref{def:ket_temporal}.\\ La ecuación \eqref{eq:Schrondiger_estado} indica como evoluciona un estado en el tiempo, que depende unicamente en el Hamiltoniano del sistema; es decir, a las fuerzas a las que está expuesto el ensamble. Note, sin embargo que para conocer la evolución temporal de un sistema para cualquier tiempo no es necesario resolver la ecuación \eqref{eq:Schrondiger_estado}, basta con conocer la forma del estado inicial $\ket{\psi_0}$ y resolver la ecuación de Schrödinger unicamente para el operador de evolución temporal, dado por la ecuación \eqref{eq:Schrondiger_operador_temporal} y aplicar \eqref{def:ket_temporal}.
+con $\qty{\bm{\sigma}_j}$ las matrices de Pauli, sustituyendo \eqref{eq:rho_qubit_matriz} en esta última expresión
+\begin{equation}
+    x^j=\Tr[\sum_i P_i \mqty(\abs{\psi_{i1}}^2&\psi_{i2}\bar{\psi}_{i1}\\\psi_{i1}\bar{\psi}_{i2}&\abs{\psi_{i2}}^2)\bm{\sigma}_j].
+\end{equation}
+Calculando el producto matricial para cada matriz de Pauli y aplicando la traza, obtenemos los siguientes resultados para cada matriz de Pauli:
+\begin{equation}
+    x^1=\sum_i P_i(\psi_{i2}\bar{\psi_{i1}}+\psi_{i1}\bar{\psi}_{i2}),
+\end{equation}
+\begin{equation}
+    x^2=\sum_i P_i(\psi_{i2}\bar{\psi_{i1}}-\psi_{i1}\bar{\psi}_{i2}),
+\end{equation}
+\begin{equation}
+    x^3=\sum_i P_i(\abs{\psi_{i1}}^2-\abs{\psi_{2i}}^2).
+\end{equation}
+Una vez obtenidas las tres componentes de espín, calculamos la componente por su respectiva matriz de Pauli, es decir, $x^j\bm{\sigma}_j$ obteniendo lo siguiente:
+\begin{equation}
+    x^1\bm{\sigma}_1=\sum_i P_i\mqty(0&\psi_{i2}\bar{\psi}_{i1}+\psi_{i1}\bar{\psi}_{i2}\\\psi_{i2}\bar{\psi}_{i1}+\psi_{i1}\bar{\psi}_{i2}&0),
+\end{equation}
+\begin{equation}
+    x^2\bm{\sigma}_2=\sum_i P_i\mqty(0&\psi_{i2}\bar{\psi}_{i1}-\psi_{i1}\bar{\psi}_{i2}\\\psi_{i1}\bar{\psi}_{i2}-\psi_{2i}\bar{\psi}_{i1}&0),
+\end{equation}
+\begin{equation}
+    x^3\bm{\sigma}_3=\sum_i P_i\mqty(\abs{\psi_{i1}}^2-\abs{\psi_{i2}}^2&0\\0&\abs{\psi_{i2}}^2-\abs{\psi_{i1}}^2).
+\end{equation}
+De esta manera, 
+\begin{equation}
+    \vec{x}\cdot\vec{\bm{\sigma}}=\sum_i P_i\mqty(\abs{\psi_{i1}}^2-\abs{\psi_{i2}}^2&2\psi_{i2}\bar{\psi}_{i1}\\\psi_{i1}\bar{\psi}_{i2}&\abs{\psi_{i2}}^2-\abs{\psi_{i1}}^2),
+\end{equation}
+además, por condición de normalidad \eqref{def:condicion_normalizacion} podemos notar que en \eqref{eq:rho_qubit_matriz} se deriva lo siguiente
+\begin{equation}
+    \Id=\sum_i P_i \mqty(\abs{\psi_{i1}}^2+\abs{\psi_{i2}^2}&0\\0&\abs{\psi_{i1}}^2+\abs{\psi_{i2}}^2).
+\end{equation}
+Por consiguiente, al sumar las dos últimas expresiones obtenemos:
+\begin{align}
+    \Id+\vec{x}\cdot\vec{\bm{\sigma}}
+    &=\mqty(2\abs{\psi_{i1}}^2&2\psi_{i2}\bar{\psi}_{i1}\\2\psi_{i1}\bar{\psi}_{i2}&2\abs{\psi_{i2}}^2)\notag\\
+    &=2\rhon,
+\end{align}
+donde finalmente al despejar obtenemos la expresión objetivo,
+\begin{equation}
+    \rhon = \frac{1}{2}\qty(\Id+\vec{x}\cdot\vec{\bm{\sigma}}).
+\end{equation}
+Ahora, calculemos la purificación $\mu$ para hallar su relación con $\vec{x}$.
+\begin{align*}
+    \rhon^2&=
+    \frac{1}{4}\qty(\Id + \vec{x}\cdot \vec{\bm{\sigma}})^2
+    \notag \\
+    &=\frac{1}{4}\qty(\Id+2\vec{x}\cdot\vec{\bm{\sigma}}+|\vec{x}|^2\,\Id).
+\end{align*}
+Calculando la traza de $\rhon^2$:
+\begin{align}
+    \Tr(\rhon^2)&=
+    \Tr[\frac{1}{4}\qty(\Id+2\,\vec{x}\cdot\vec{\bm{\sigma}}+\bm{|S|}^2\,\Id)]
+    \notag \\
+    &= \frac{1}{4}\qty[\cancelto{2}{\Tr(\Id)}+2\sum_iS_i\;\cancelto{0}{\Tr(\sigma_i)}\;+2|\vec{x}|^2]
+    \notag \\
+    &=\frac{1}{2}\qty(1+|\vec{x}|^2).
+\end{align}
+
+De la última expresión se concluye que:
+
+\begin{enumerate}
+    \item Un estado puro corresponde a un vector de Bloch localizado en la superficie de la esfera de Bloch, es decir, $|\vec{x}|=1$.
+    \item Un estado mixto corresponde a un vector de Bloch ubicado en el interior de la esfera, con $|\vec{x}|<1$.
+    \item El estado completamente mezclado corresponde al caso $|\vec{x}|=0$, es decir, al origen de la esfera de Bloch.
+\end{enumerate}
+
+De esta manera, el espacio de operadores densidad del qubit es identificado por su espín promedio $\vec{x}$ del ensamble.
+\begin{equation}
+    \rho_{space}\equiv\qty{\rhon=\frac{1}{2}\qty(\Id + \vec{x}\cdot \vec{\bm{\sigma}})\;|\;\vec{x}\in \R^3 }.
+\end{equation}
+
+En la siguiente sección, mostraremos un metodo distinto para llegar al mismo resultado del operador de estado del qubit, ahora por medio de la teoría de información.
+
+\section{Teoría cuántica en la teoría de la información}
+La pureza $\mu$ dada en la definición \eqref{def:pureza} es una medida es sencilla de calcular conociendo la forma exacta del operador de estado; sin embargo, nos gustaría una medida que dependa de alguna cantidad física medible. Con esta motivación en mente, consideremos un ensamble de partículas de espín $\frac{1}{2}$ y espín promedio definido (cantidad física medible); es decir, vamos a considerar un ensamble con dos niveles de energía.\\ Hacemos esta consideración, pues el desarrollo de esta tesis se basa en qubits que es un sistema de dos niveles de energía.
+
+Dado a \eqref{def:Operador_densidad} definimos el espín promedio del ensamble como sigue:
+
+
+\begin{equation}
+    \bm{S}=\Tr(\rho \bm{\sigma}).
+\end{equation}
+
+
+Donde $\bm{\sigma}=(\sigma_x,\sigma_y,\sigma_z)$ son las matrices de Pauli.\\ 
+
+Definimos una cantidad que mida de manera cuantitativa el desorden del sistema, la cual dependa del tipo de ensamble. Exigimos que dicha cantidad sea mínima (cero) para un ensamble puro y máxima para un ensamble completamente aleatorio.  
+
+En termodinámica, la magnitud que cumple con estas propiedades es la \textit{entropía}. Motivados por esto, definimos la \textit{entropía en mecánica cuántica estadística} como \cite{Sakurai2011}
+\begin{equation}
+    S_{entropia} = -k_B \Tr(\rho \ln \rho),
+    \label{def:entropia}
+\end{equation}
+donde $k_B$ es la constante de Boltzmann y $\rho$ es el operador densidad del sistema.\\
+A continuación, buscaremos el operador densidad $\rho$ que describe el equilibrio térmico de un sistema con espín definido.
+
+Consideremos la acción $F$:
+\begin{align}
+    F
+    &=\Tr(S_{entropia}+\alpha_x S_x+\alpha_y S_y+\alpha_z S_z+\lambda \rho)\\
+    &=\Tr(-\rho\ln{\rho}+\bm{\alpha}\cdot\Bar{S}+\lambda\rho).
+\end{align}
+Donde $S_i$ es el valor promedio de la i-esima componente del espín, es decir, $S_i=\Tr(\rho \sigma_i)$.\\
+Sabemos que la entropía debe maximizarse en un estado de equilibrio, y dado que la entropía es cóncava en $\rho$ basta con obtener el punto donde $\delta F = 0$ para encontrar el estado $\rho$ que maximiza la entropía.
+\begin{align}
+0=\delta F
+&= \Tr(\ln{\rho}+\Id+\bm{\alpha}\cdot \bm{\sigma}+\lambda\Id)\delta\rho.
+\label{eq:multiplicadores}
+\end{align}
+entonces al ser para cualquier variación, necesariamente se requiere que:
+\begin{equation}
+    \rho = \frac{\e^{-\bm{\alpha}\cdot \bm{\sigma}}}{\e^{(1+\lambda)\Id}}.
+    \label{eq:rho_wo_norm}
+\end{equation}
+Usando la restricción $\Tr(\rho)=1$, se obtiene
+\begin{equation}
+    \e^{(1+\lambda)\Id}=\Tr(\e^{-\bm{\alpha}\cdot\bm{\sigma}}).
+    \label{eq:rho's_normaliz}
+\end{equation}
+Sustituyendo ~\eqref{eq:rho's_normaliz} en ~\eqref{eq:rho_wo_norm} se obtiene el operador densidad de un sistema con espín $\bm{S}$ y en equilibrio térmico.
+\begin{equation}
+    \rho = \frac{\e^{-\bm{\alpha}\cdot\bm{\sigma}}}{\Tr(\e^{-\bm{\alpha}\cdot\bm{\sigma}})}.
+    \label{eq:rho_semifinal}
+\end{equation}
+Solo es necesario ahora incluir la restricción de espín para despejar los valores $\alpha_i$. Primero, recordando que:
+\begin{equation}
+(\bm{\sigma}\cdot\bm{\alpha})^{m}
+=
+\begin{cases}
+|\bm{\alpha}|^{m} \;\Id,
+& m \ \text{par}, \\[4pt]
+|\bm{\alpha}|^{m}\,
+\bm{\sigma}\cdot\hat{\bm{n}},
+& m \ \text{impar},
+\end{cases}
+\end{equation}
+Con ello, expandimos en serie de Taylor la exponencial:
+\begin{align}
+\e^{-\bm{\alpha}\cdot\bm{\sigma}}
+&=
+\sum_{m=0}^{\infty}
+\frac{(-1)^m}{m!}
+(\bm{\alpha}\cdot\bm{\sigma})^{m}
+\notag \\
+&=
+\sum_{k=0}^{\infty}
+\frac{|\bm{\alpha}|^{2k}}{(2k)!}\,\Id
+-
+\sum_{k=0}^{\infty}
+\frac{|\bm{\alpha}|^{2k+1}}{(2k+1)!}
+(\bm{\sigma}\cdot\hat{\bm{n}})
+\notag \\
+&=
+\cosh|\bm{\alpha}|\,\Id
+-
+\frac{\sinh|\bm{\alpha}|}{|\bm{\alpha}|}
+(\bm{\alpha}\cdot\bm{\sigma}).
+\label{eq:expansion_exponencial}
+\end{align}
+Con este resultado, aplicamos la traza a la exponencial:
+\begin{align}
+\Tr\!\qty(\e^{-\bm{\alpha}\cdot\bm{\sigma}})
+&=
+\Tr\!\qty(
+\cosh|\bm{\alpha}|\,\Id
+-
+\frac{\sinh|\bm{\alpha}|}{|\bm{\alpha}|}
+(\bm{\alpha}\cdot\bm{\sigma})
+)
+\notag \\
+&=
+\cosh|\bm{\alpha}|\,\Tr(\Id)
+-
+\frac{\sinh|\bm{\alpha}|}{|\bm{\alpha}|}
+\Tr(\bm{\alpha}\cdot\bm{\sigma})
+\notag \\
+&=
+2\cosh|\bm{\alpha}|
+-
+\frac{\sinh|\bm{\alpha}|}{|\bm{\alpha}|}
+\sum_i \alpha_i\; \cancelto{0}{\Tr(\sigma_i)}
+\notag \\
+&=
+2\cosh|\bm{\alpha}|.
+\label{eq:normalizacion_traza}
+\end{align}
+Sustituyendo ~\eqref{eq:normalizacion_traza} en ~\eqref{eq:rho_semifinal} y reacomodando:
+\begin{equation}
+    \rho = \frac{1}{2}\qty(\Id - \frac{\tanh{|\bm{\alpha}|}}{|\bm{\alpha}|})\bm{\alpha}\cdot\bm{\sigma}
+    \label{eq:rho_semi_semifinal}
+\end{equation}
+Ahora, observando que
+\begin{align}
+    S_k 
+    &= \Tr(\rho\,\sigma_k)
+    = \Tr\!\qty[\frac{1}{2}\qty(\Id - \frac{\tanh |\bm{\alpha}|}{|\bm{\alpha}|}\sum_i \alpha_i\,\sigma_i )\sigma_k]
+    \notag \\
+    &= \frac{1}{2}\qty(\cancelto{0}{\Tr(\sigma_k)}
+    - \frac{\tanh |\bm{\alpha}|}{|\bm{\alpha}|}
+    \sum_i \alpha_i \Tr(\cancelto{2\delta_{ik}}{\sigma_i\sigma_k}\hspace{.9cm}))
+    &= -\frac{\tanh |\bm{\alpha}|}{|\bm{\alpha}|}\,\alpha_k ,
+\end{align}
+y sustituyendo este resultado en la ecuación ~\eqref{eq:rho_semi_semifinal}, se obtiene finalmente
+\begin{equation}
+\rho = \frac{1}{2}\qty(\Id + \bm{S}\cdot \bm{\sigma}).
+\label{eq:rho_final}
+\end{equation}
 
 
 
-\end{comment}
 
 \end{document}
