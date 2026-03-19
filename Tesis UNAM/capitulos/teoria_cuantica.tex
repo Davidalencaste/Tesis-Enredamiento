@@ -505,8 +505,8 @@ el cual corresponde, tras la normalización, al autovector de $\bm A$ asociado a
 Y en el caso de estados mixtos, el valor esperado esta dado por la ecuación \eqref{def:Operador_densidad} y el operador de estado después de realizar la medición viene dado por la siguiente expresión:
 
 \begin{align}
-    \rhon &= 
-    \sum_i P_i \rhon_i \notag\\
+    \rhon ' &= 
+    \sum_i P_i \rhon_i ' \notag\\
     &= \sum_iP_i\frac{\bm{A}\rhon_i\bm{A}^\dagger}{\abs{\expval{\bm{A}}{\psi_i}}^2}\notag\\
     &= \sum_i P_i \frac{\bm{A}\rhon_i\bm{A}^\dagger}{\expval{\bm{A}\rhon_i\bm{A}^\dagger}}\notag\\
     &=\sum_i P_i \,\frac{\bm{A}\rhon_i\bm{A}^\dagger}{\Tr(\rhon_i\bm{A}^\dagger\rhon_i\bm{A})}.
@@ -594,9 +594,10 @@ En Schrödinger se introdujeron los estados mixtos $\rhon=\sum_i P_i\op{\psi_i}$
 \end{enumerate}
 \end{comment}
 
-Consideremos un operador $\bm{A}$, con espectro discreto $\qty{a_i}$ al cual es posible asociar una base ortonormal $\qty{\ket{a_i}}$, tal que en esta base se puede expresar al operador como sigue,
+Consideremos un operador $\bm{A}$, con espectro discreto $\qty{a_i}$ al cual es posible asociar una base ortonormal $\qty{\ket{a_i}}$, tal que en esta base se puede expresar al operador como sigue
 \begin{equation}
     \bm{A}=\sum_i a_i \op{a_i}.
+    \label{def:operador_eigne_vectores}
 \end{equation}
 Repitiendo los mismos pasos considerados para obtener la evolución temporal de un estado mixto $\rhon$ en \eqref{eq:evolucion_temporal_operador}, obtenemos la \emph{ecuación de movimiento del esquema de Heisenberg},
 \begin{equation}
@@ -609,7 +610,7 @@ En particular si $\bm{A}$ y $\bm{H}$ representan observables, entonces la ecuaci
 \begin{equation}
     i\hbar \dv{A_{jk}}{t}=H_{jl}A_{lk}-A_{jl}H_{lk},
 \end{equation}
-donde está ecuación vive en el espacio de matrices, las cuales pueden ser infinito dimensionales, que en terminos de la base ortonormal $\qty{\ket{e_i}}$ se expresa los elementos de matriz como sigue,
+donde está ecuación vive en el espacio de matrices, las cuales pueden ser infinito dimensionales, que en terminos de la base ortonormal $\qty{\ket{e_i}}$ se expresa los elementos de matriz como sigue
 \begin{equation}
     A_{jk}=\mel{e_j}{A}{e_k},
 \end{equation}
@@ -662,7 +663,7 @@ El libro de Esposito \emph{et al.}\cite{Esposito2015} fue en gran medida una gu�
 En la siguiente sección se desarrollaran los resultados obtenidos hasta este momento para el sistema de dos niveles, mejor conocido como \emph{qubit}.
 
 \section{Ejemplo: Qubit}
-El qubit es uno de los sistemas cuánticos con mayor relevancia en los ultimos años, esto debido a sus aplicaciones en la hoy esperanzadora teoría de la computación cuántica, donde  \emph{un qubit es la codificación de un sistema cuántico de dos niveles} \cite{nielsen2010quantum}, ejemplos de este tipo de sistemas son muchos, de los mas conocidos en la literatura es el estado de \emph{espín-1/2} en partículas fermionícas, o el de la polarización de un fotón, entre otros.
+El qubit es uno de los estados cuánticos con mayor relevancia de los últimos años debido a sus aplicaciones en la teoría de información cuántica, en la cuál se trabaja con estos como objetos base; donde,  \emph{Un qubit es la codificación de un sistema cuántico de dos niveles} \cite{nielsen2010quantum}. Ejemplos de este tipo de sistemas son muchos, los mas conocidos son: Estado de partículas de \emph{espín-1/2}, la polarización de un fotón, niveles energeticos de átomos con sus dos primeros niveles muy cercanos ,entre otros.
 
 A continuación, procederemos a encontrar la descripción matemática de este tipo de estados con la herramienta descrita en este capítulo.
 
@@ -670,7 +671,7 @@ Al ser un sistema de dos niveles, el espacio de Hilbert $\H$ es de dimension $n=
 \begin{equation}
     \text{Base}_\H=\qty{\ket{e_i}\,|\,\ip{e_i}{\e_j}=\delta_{ij}},
 \end{equation}
-con $i,j=1,2$. Los estados $\ket{e_i}$ de esta base se\dots
+con $i,j=1,2$. Los estados $\ket{e_i}$ pueden ser cualquier par de estados ortonormales; sin embargo, existen 3 duplas de estados relevantes que se usan usualmente como base de $\H$, que son los eigne-estados de las matrices de Pauli en las cuales profundizaremos más adelante en este mismo ejemplo.
 
 Con esto, el espacio de Hilbert $\H$ para el qubit viene dado por el conjunto de combinaciones lineales de su base, con coeficientes $\psi_i$, es decir de la siguiente forma:
 \begin{equation}
@@ -715,7 +716,48 @@ pasando los coeficientes a su representación cartesiana $\rho_1\to x_1\qq{y}\rh
 \end{align}
 Lo que acabamos de mostrar es que todo \emph{estado puro} del qubit puede ser caracterizado por un punto en una esfera de dimensión 2.
 
-Una vez encontrada la forma de todo estado puro, resta encontrar la expresión para estados mixtos del qubit, o en otras palabras encontrar la matriz del operador de estado $\rhon$.
+\subsection{Observables del qubit}
+
+Antes de obtener el operador estado para estados mixtos, hablaremos de las observables usuales con las se trabaja cuando se tienen sistemas de dos niveles, en particular en qubits.
+
+El objetivo principal de las mediciones en este tipo de sistemas es obtener información acerca de la orientación del espín, esto debido a que cualquier estado de qubit queda completamente caracterizado por su espín promedio. Es por ello, que es necesario encontrar las observables correspondientes a las componentes de espín $\qty(S_x,S_y,S_z)$ y en general para cualquier dirección $\hat{n}$. Estás cantidades fueron demostradas en ser observables cuánticas en el experimento de Stern-Gerlach \cite{Cohen}.
+
+Como vimos en la ecuación \eqref{def:operador_eigne_vectores} podemos escribir cualquier operador como combinación lineal de sus eigne-estados, siendo los coeficientes el espectro del mismo operador. Lo que se encontró en el experimento de Stern-Gerlach fue un operador $\bm{S}_z$ el cuál tenía dos eigne-estados, definidos como $\ket{+}$ y $\ket{-}$, los cuales cumplian con lo siguiente: 
+
+\begin{equation}
+    \bm{S}_z\ket{\pm}=\pm\frac{\hbar}{2}\ket{\pm}.
+\end{equation}
+
+Este operación resultó ser el operador asociado a la componente z de espín $S_z$; de ahí la notación. Teniendo como representación matricial la siguiente
+\begin{equation}
+    \bm{S}_z=\frac{\hbar}{2}\mqty(1&0\\0&-1).
+\end{equation}
+
+Si el artefacto de medición del experimento fuese rotado a distintas direcciones de la $z$ igual encontraremos un espectro asociado a ese medición con sus respectivos eigne-estados, los cuales tambien se podrían definir con otros nombres $\qty{\ket{\uparrow},\ket{\downarrow}},\qty{\ket{0},\ket{1}},\dots$ y así tener infinitos operadores diagonales (cada uno asociado a una cierta dirección) de la forma de \eqref{def:operador_eigne_vectores}. Sin embargo esto resulta impractico, pues implicaría realizar frecuentemente cambios de coordenadas. Es por ello que se toma una base común, en general, los eigne-estados de $\bm{S}_z$, y se describen todos los operadores en esta base.
+De esta forma definimos, las direcciones correspondientes a las direcciones $x$ y $y$ en terminos de $\ket{\pm}_z$:
+\begin{equation}
+    \ket{\pm}_x=\frac{1}{\sqrt{2}}\qty(\ket{+}\pm\ket{-}),
+\end{equation}
+\begin{equation}
+    \ket{\pm}_y=\frac{1}{\sqrt{2}}\qty(\ket{+}\pm i\ket{-}),
+\end{equation}
+dando como representaciones las siguientes matrices:
+\begin{equation}
+    \bm{S}_x=\frac{\hbar}{2}\mqty(0&1\\1&0),
+\end{equation}
+\begin{equation}
+    \bm{S}_y=\frac{\hbar}{2}\mqty(0&-i\\i&0).
+\end{equation}
+Las matrices anteriores, ignorando el factor $\hbar/2$, son conocidas como \emph{matrices de Pauli} $\bm{\sigma}_k$, que son observables con los mismos eigne-estados que $\bm{S}_k$ pero con espectro $\pm1$. Se suelen escribir las matrices de Pauli como componentes de un vector de dimensión 3 como sigue:
+\begin{equation}
+    \vec{\bm{\sigma}}\equiv\qty(\bm{\sigma}_x,\bm{\sigma}_y,\bm{\sigma}_z).
+\end{equation}
+
+
+
+\subsection{Operador de estado del qubit}
+
+Una vez encontrada la forma de todo estado puro y definidas las matrices de Pauli, resta encontrar la expresión para estados mixtos del qubit, o en otras palabras encontrar la matriz del operador de estado $\rhon$.
 
 Sea un ensamble con $N$ subestados de qubit distintos, $\qty{\ket{\psi_i}}$, cada uno con una peso $P_i$; entonces por la ecuación \eqref{def:elementos_matriz_rho} tenemos que el $k'k$-elemento de matriz de $\rhon$ es el siguiente
 \begin{align}
@@ -800,12 +842,15 @@ De la última expresión se concluye que:
     \item El estado completamente mezclado corresponde al caso $|\vec{x}|=0$, es decir, al origen de la esfera de Bloch.
 \end{enumerate}
 
-De esta manera, el espacio de operadores densidad del qubit es identificado por su espín promedio $\vec{x}$ del ensamble.
+Por lo que, el espacio de operadores densidad del qubit es caracterizado por el espín promedio $\vec{x}$ del sistema.
 \begin{equation}
-    \rho_{space}\equiv\qty{\rhon=\frac{1}{2}\qty(\Id + \vec{x}\cdot \vec{\bm{\sigma}})\;|\;\vec{x}\in \R^3 }.
+    \rhon_{space}\equiv\qty{\rhon=\frac{1}{2}\qty(\Id + \vec{x}\cdot \vec{\bm{\sigma}})\;|\;\vec{x}\in \R^3 }.
+    \label{eq:espacio_de_qubits}
 \end{equation}
 
-En la siguiente sección, mostraremos un metodo distinto para llegar al mismo resultado del operador de estado del qubit, ahora por medio de la teoría de información.
+En la siguiente sección, mostraremos un método distinto para llegar al mismo resultado del operador de estado del qubit, ahora por medio de la teoría de información.
+
+
 
 \section{Teoría cuántica en la teoría de la información}
 La pureza $\mu$ dada en la definición \eqref{def:pureza} es una medida es sencilla de calcular conociendo la forma exacta del operador de estado; sin embargo, nos gustaría una medida que dependa de alguna cantidad física medible. Con esta motivación en mente, consideremos un ensamble de partículas de espín $\frac{1}{2}$ y espín promedio definido (cantidad física medible); es decir, vamos a considerar un ensamble con dos niveles de energía.\\ Hacemos esta consideración, pues el desarrollo de esta tesis se basa en qubits que es un sistema de dos niveles de energía.
@@ -814,131 +859,131 @@ Dado a \eqref{def:Operador_densidad} definimos el espín promedio del ensamble c
 
 
 \begin{equation}
-    \bm{S}=\Tr(\rho \bm{\sigma}).
+    \vec{S}=\Tr(\rhon \vec{\bm{\sigma}}).
 \end{equation}
 
 
-Donde $\bm{\sigma}=(\sigma_x,\sigma_y,\sigma_z)$ son las matrices de Pauli.\\ 
+Donde $\vec{\bm{\sigma}}=(\sigma_x,\sigma_y,\sigma_z)$ son las matrices de Pauli.\\ 
 
 Definimos una cantidad que mida de manera cuantitativa el desorden del sistema, la cual dependa del tipo de ensamble. Exigimos que dicha cantidad sea mínima (cero) para un ensamble puro y máxima para un ensamble completamente aleatorio.  
 
 En termodinámica, la magnitud que cumple con estas propiedades es la \textit{entropía}. Motivados por esto, definimos la \textit{entropía en mecánica cuántica estadística} como \cite{Sakurai2011}
 \begin{equation}
-    S_{entropia} = -k_B \Tr(\rho \ln \rho),
+    S_{entropia} = -k_B \Tr(\rhon \ln \rhon),
     \label{def:entropia}
 \end{equation}
-donde $k_B$ es la constante de Boltzmann y $\rho$ es el operador densidad del sistema.\\
-A continuación, buscaremos el operador densidad $\rho$ que describe el equilibrio térmico de un sistema con espín definido.
+donde $k_B$ es la constante de Boltzmann y $\rhon$ es el operador densidad del sistema.\\
+A continuación, buscaremos el operador densidad $\rhon$ que describe el equilibrio térmico de un sistema con espín definido.
 
 Consideremos la acción $F$:
 \begin{align}
     F
-    &=\Tr(S_{entropia}+\alpha_x S_x+\alpha_y S_y+\alpha_z S_z+\lambda \rho)\\
-    &=\Tr(-\rho\ln{\rho}+\bm{\alpha}\cdot\Bar{S}+\lambda\rho).
+    &=\Tr(S_{entropia}+\alpha_x S_x+\alpha_y S_y+\alpha_z S_z+\lambda \rhon)\\
+    &=\Tr(-\rhon\ln{\rhon}+\vec{\alpha}\cdot\Bar{S}+\lambda\rhon).
 \end{align}
-Donde $S_i$ es el valor promedio de la i-esima componente del espín, es decir, $S_i=\Tr(\rho \sigma_i)$.\\
-Sabemos que la entropía debe maximizarse en un estado de equilibrio, y dado que la entropía es cóncava en $\rho$ basta con obtener el punto donde $\delta F = 0$ para encontrar el estado $\rho$ que maximiza la entropía.
+Donde $S_i$ es el valor promedio de la i-esima componente del espín, es decir, $S_i=\Tr(\rhon \bm{\sigma}_i)$.\\
+Sabemos que la entropía debe maximizarse en un estado de equilibrio, y dado que la entropía es cóncava en $\rhon$ basta con obtener el punto donde $\delta F = 0$ para encontrar el estado $\rhon$ que maximiza la entropía.
 \begin{align}
 0=\delta F
-&= \Tr(\ln{\rho}+\Id+\bm{\alpha}\cdot \bm{\sigma}+\lambda\Id)\delta\rho.
+&= \Tr(\ln{\rhon}+\Id+\vec{\alpha}\cdot \vec{\bm{\sigma}}+\lambda\Id)\delta\rhon.
 \label{eq:multiplicadores}
 \end{align}
 entonces al ser para cualquier variación, necesariamente se requiere que:
 \begin{equation}
-    \rho = \frac{\e^{-\bm{\alpha}\cdot \bm{\sigma}}}{\e^{(1+\lambda)\Id}}.
+    \rhon = \frac{\e^{-\vec{\alpha}\cdot \vec{\bm{\sigma}}}}{\e^{(1+\lambda)\Id}}.
     \label{eq:rho_wo_norm}
 \end{equation}
-Usando la restricción $\Tr(\rho)=1$, se obtiene
+Usando la restricción $\Tr(\rhon)=1$, se obtiene
 \begin{equation}
-    \e^{(1+\lambda)\Id}=\Tr(\e^{-\bm{\alpha}\cdot\bm{\sigma}}).
+    \e^{(1+\lambda)\Id}=\Tr(\e^{-\vec{\alpha}\cdot\vec{\bm{\sigma}}}).
     \label{eq:rho's_normaliz}
 \end{equation}
-Sustituyendo ~\eqref{eq:rho's_normaliz} en ~\eqref{eq:rho_wo_norm} se obtiene el operador densidad de un sistema con espín $\bm{S}$ y en equilibrio térmico.
+Sustituyendo ~\eqref{eq:rho's_normaliz} en ~\eqref{eq:rho_wo_norm} se obtiene el operador densidad de un sistema con espín $\vec{S}$ y en equilibrio térmico.
 \begin{equation}
-    \rho = \frac{\e^{-\bm{\alpha}\cdot\bm{\sigma}}}{\Tr(\e^{-\bm{\alpha}\cdot\bm{\sigma}})}.
+    \rhon = \frac{\e^{-\vec{\alpha}\cdot\vec{\bm{\sigma}}}}{\Tr(\e^{-\vec{\alpha}\cdot\vec{\bm{\sigma}}})}.
     \label{eq:rho_semifinal}
 \end{equation}
 Solo es necesario ahora incluir la restricción de espín para despejar los valores $\alpha_i$. Primero, recordando que:
 \begin{equation}
-(\bm{\sigma}\cdot\bm{\alpha})^{m}
+(\vec{\bm{\sigma}}\cdot\vec{\alpha})^{m}
 =
 \begin{cases}
-|\bm{\alpha}|^{m} \;\Id,
+|\vec{\alpha}|^{m} \;\Id,
 & m \ \text{par}, \\[4pt]
-|\bm{\alpha}|^{m}\,
-\bm{\sigma}\cdot\hat{\bm{n}},
+|\vec{\alpha}|^{m}\,
+\vec{\bm{\sigma}}\cdot\hat{n},
 & m \ \text{impar},
 \end{cases}
 \end{equation}
 Con ello, expandimos en serie de Taylor la exponencial:
 \begin{align}
-\e^{-\bm{\alpha}\cdot\bm{\sigma}}
+\e^{-\vec{\alpha}\cdot\vec{\bm{\sigma}}}
 &=
 \sum_{m=0}^{\infty}
 \frac{(-1)^m}{m!}
-(\bm{\alpha}\cdot\bm{\sigma})^{m}
+(\vec{\alpha}\cdot\vec{\bm{\sigma}})^{m}
 \notag \\
 &=
 \sum_{k=0}^{\infty}
-\frac{|\bm{\alpha}|^{2k}}{(2k)!}\,\Id
+\frac{|\vec{\alpha}|^{2k}}{(2k)!}\,\Id
 -
 \sum_{k=0}^{\infty}
-\frac{|\bm{\alpha}|^{2k+1}}{(2k+1)!}
-(\bm{\sigma}\cdot\hat{\bm{n}})
+\frac{|\vec{\alpha}|^{2k+1}}{(2k+1)!}
+(\vec{\bm{\sigma}}\cdot\hat{n})
 \notag \\
 &=
-\cosh|\bm{\alpha}|\,\Id
+\cosh|\vec{\alpha}|\,\Id
 -
-\frac{\sinh|\bm{\alpha}|}{|\bm{\alpha}|}
-(\bm{\alpha}\cdot\bm{\sigma}).
+\frac{\sinh|\vec{\alpha}|}{|\vec{\alpha}|}
+(\vec{\alpha}\cdot\vec{\bm{\sigma}}).
 \label{eq:expansion_exponencial}
 \end{align}
 Con este resultado, aplicamos la traza a la exponencial:
 \begin{align}
-\Tr\!\qty(\e^{-\bm{\alpha}\cdot\bm{\sigma}})
+\Tr\!\qty(\e^{-\vec{\alpha}\cdot\vec{\bm{\sigma}}})
 &=
 \Tr\!\qty(
-\cosh|\bm{\alpha}|\,\Id
+\cosh|\vec{\alpha}|\,\Id
 -
-\frac{\sinh|\bm{\alpha}|}{|\bm{\alpha}|}
-(\bm{\alpha}\cdot\bm{\sigma})
+\frac{\sinh|\vec{\alpha}|}{|\vec{\alpha}|}
+(\vec{\alpha}\cdot\vec{\bm{\sigma}})
 )
 \notag \\
 &=
-\cosh|\bm{\alpha}|\,\Tr(\Id)
+\cosh|\vec{\alpha}|\,\Tr(\Id)
 -
-\frac{\sinh|\bm{\alpha}|}{|\bm{\alpha}|}
-\Tr(\bm{\alpha}\cdot\bm{\sigma})
+\frac{\sinh|\vec{\alpha}|}{|\vec{\alpha}|}
+\Tr(\vec{\alpha}\cdot\vec{\bm{\sigma}})
 \notag \\
 &=
-2\cosh|\bm{\alpha}|
+2\cosh|\vec{\alpha}|
 -
-\frac{\sinh|\bm{\alpha}|}{|\bm{\alpha}|}
-\sum_i \alpha_i\; \cancelto{0}{\Tr(\sigma_i)}
+\frac{\sinh|\vec{\alpha}|}{|\vec{\alpha}|}
+\sum_i \alpha_i\; \cancelto{0}{\Tr(\bm{\sigma}_i)}
 \notag \\
 &=
-2\cosh|\bm{\alpha}|.
+2\cosh|\vec{\alpha}|.
 \label{eq:normalizacion_traza}
 \end{align}
 Sustituyendo ~\eqref{eq:normalizacion_traza} en ~\eqref{eq:rho_semifinal} y reacomodando:
 \begin{equation}
-    \rho = \frac{1}{2}\qty(\Id - \frac{\tanh{|\bm{\alpha}|}}{|\bm{\alpha}|})\bm{\alpha}\cdot\bm{\sigma}
+    \rhon = \frac{1}{2}\qty(\Id - \frac{\tanh{|\vec{\alpha}|}}{|\vec{\alpha}|})\vec{\alpha}\cdot\vec{\bm{\sigma}}
     \label{eq:rho_semi_semifinal}
 \end{equation}
 Ahora, observando que
 \begin{align}
     S_k 
-    &= \Tr(\rho\,\sigma_k)
-    = \Tr\!\qty[\frac{1}{2}\qty(\Id - \frac{\tanh |\bm{\alpha}|}{|\bm{\alpha}|}\sum_i \alpha_i\,\sigma_i )\sigma_k]
+    &= \Tr(\rhon\,\bm{\sigma}_k)
+    = \Tr\!\qty[\frac{1}{2}\qty(\Id - \frac{\tanh |\vec{\alpha}|}{|\vec{\alpha}|}\sum_i \alpha_i\,\bm{\sigma}_i )\bm{\sigma}_k]
     \notag \\
-    &= \frac{1}{2}\qty(\cancelto{0}{\Tr(\sigma_k)}
-    - \frac{\tanh |\bm{\alpha}|}{|\bm{\alpha}|}
-    \sum_i \alpha_i \Tr(\cancelto{2\delta_{ik}}{\sigma_i\sigma_k}\hspace{.9cm}))
-    &= -\frac{\tanh |\bm{\alpha}|}{|\bm{\alpha}|}\,\alpha_k ,
+    &= \frac{1}{2}\qty(\cancelto{0}{\Tr(\bm{\sigma}_k)}
+    - \frac{\tanh |\vec{\alpha}|}{|\vec{\alpha}|}
+    \sum_i \alpha_i \Tr(\cancelto{2\delta_{ik}}{\bm{\sigma}_i\bm{\sigma}_k}\hspace{.9cm}))
+    &= -\frac{\tanh |\vec{\alpha}|}{|\vec{\alpha}|}\,\alpha_k ,
 \end{align}
 y sustituyendo este resultado en la ecuación ~\eqref{eq:rho_semi_semifinal}, se obtiene finalmente
 \begin{equation}
-\rho = \frac{1}{2}\qty(\Id + \bm{S}\cdot \bm{\sigma}).
+\rhon = \frac{1}{2}\qty(\Id + \vec{S}\cdot \vec{\bm{\sigma}}).
 \label{eq:rho_final}
 \end{equation}
 

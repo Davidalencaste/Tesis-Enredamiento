@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.30)  16 MAR 2026 13:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.30)  18 MAR 2026 22:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1244,12 +1244,7 @@ File: pgflibraryarrows.meta.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgfarrowlinewidth=\dimen330
 ))) (C:\Users\david\AppData\Local\Programs\MiKTeX\tex/latex/cancel\cancel.sty
 Package: cancel 2013/04/12 v2.2 Cancel math terms
-) (coffee4.sty) (c:\Users\david\OneDrive\Escritorio\Tesis\Tesis-Enredamiento\Tesis UNAM\build\Main.aux
-LaTeX Info: Redefining \. on input line 12.
-LaTeX Info: Redefining \% on input line 12.
-Package babel Info: 'spanish' activates 'spanish' shorthands.
-(babel)             Reported on input line 12.
-)
+) (coffee4.sty) (Main.aux)
 \openout1 = `Main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 178.
@@ -1334,6 +1329,8 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 LaTeX Info: Redefining \. on input line 178.
 LaTeX Info: Redefining \% on input line 178.
+Package babel Info: 'spanish' activates 'spanish' shorthands.
+(babel)             Reported on input line 178.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
@@ -1341,208 +1338,23 @@ Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count447
 Package hyperref Info: Link coloring OFF on input line 178.
 
+c:/Users/david/OneDrive/Escritorio/Tesis/Tesis-Enredamiento/Tesis UNAM/Main.tex:178: I can't write on file `Main.pdf'.
+(Press Enter to retry, or Control-C to exit; default file extension is `.pdf')
+Please type another file name for output
+c:/Users/david/OneDrive/Escritorio/Tesis/Tesis-Enredamiento/Tesis UNAM/Main.tex:178: Emergency stop.
+<to be read again> 
+                   \edef 
+l.178 \begin{document}
+                       % Inicia el documento
+*** (job aborted, file error in nonstop mode)
 
-Package siunitx Warning: Detected the "physics" package:
-(siunitx)                omitting definition of \qty.
-(siunitx)                
-(siunitx)                If you want to use \qty with the siunitx definition,
-(siunitx)                add 
-(siunitx)                
-(siunitx)                    \AtBeginDocument{\RenewCommandCopy\qty\SI}
-(siunitx)                
-(siunitx)                to your preamble.
-
-(C:\Users\david\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\translations-basic-dictionary-spanish.trsl
-File: translations-basic-dictionary-spanish.trsl (spanish translation file `translations-basic-dictionary')
-)
-Package translations Info: loading dictionary `translations-basic-dictionary' for `spanish'. on input line 178.
-*geometry* verbose mode - [ newgeometry ] result:
-* driver: pdftex
-* paper: letterpaper
-* layout: <same size as paper>
-* layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: twoside 
-* h-part:(L,W,R)=(90.3375pt, 433.62001pt, 90.3375pt)
-* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
-* \paperwidth=614.295pt
-* \paperheight=794.96999pt
-* \textwidth=433.62001pt
-* \textheight=650.43001pt
-* \oddsidemargin=18.0675pt
-* \evensidemargin=18.0675pt
-* \topmargin=-31.8738pt
-* \headheight=12.0pt
-* \headsep=19.8738pt
-* \topskip=12.0pt
-* \footskip=30.0pt
-* \marginparwidth=98.0pt
-* \marginparsep=7.0pt
-* \columnsep=10.0pt
-* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
-* \hoffset=0.0pt
-* \voffset=0.0pt
-* \mag=1000
-* \@twocolumnfalse
-* \@twosidetrue
-* \@mparswitchtrue
-* \@reversemarginfalse
-* (1in=72.27pt=25.4mm, 1cm=28.453pt)
-
-<Escudo-UNAM-v15.pdf, id=6, 1027.84pt x 1155.31625pt>
-File: Escudo-UNAM-v15.pdf Graphic file (type pdf)
-<use Escudo-UNAM-v15.pdf>
-Package pdftex.def Info: Escudo-UNAM-v15.pdf  used on input line 182.
-(pdftex.def)             Requested size: 68.78807pt x 77.33466pt.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 182.
- (C:\Users\david\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 182.
- (C:\Users\david\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-<Escudo-FCIENCIAS-v15.pdf, id=7, 1027.84pt x 1155.31625pt>
-File: Escudo-FCIENCIAS-v15.pdf Graphic file (type pdf)
-<use Escudo-FCIENCIAS-v15.pdf>
-Package pdftex.def Info: Escudo-FCIENCIAS-v15.pdf  used on input line 182.
-(pdftex.def)             Requested size: 68.78807pt x 77.33466pt.
- [1
-
-
-
-
-{C:/Users/david/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./Escudo-UNAM-v15.pdf> <./Escudo-FCIENCIAS-v15.pdf>] [2
-
-]
-LaTeX Font Info:    Trying to load font information for T1+ppl on input line 191.
- (C:\Users\david\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1ppl.fd
-File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
-) [3{C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}] [4
-
-] [5]
-LaTeX Info: Redefining \. on input line 211.
-LaTeX Info: Redefining \% on input line 211.
-Package babel Info: 'spanish' activates 'spanish' shorthands.
-(babel)             Reported on input line 211.
-Package cleveref Info: loaded `spanish' language definitions on input line 211.
- [6
-
-] (c:\Users\david\OneDrive\Escritorio\Tesis\Tesis-Enredamiento\Tesis UNAM\build\Main.toc
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
-Package cleveref Info: loaded `spanish' language definitions on input line 1.
-)
-\tf@toc=\write6
-\openout6 = `Main.toc'.
-
- [7]
-LaTeX Info: Redefining \. on input line 212.
-LaTeX Info: Redefining \% on input line 212.
-Package cleveref Info: loaded `spanish' language definitions on input line 212.
- [8
-
-]
-Cap\'{\i }tulo 1.
-(capitulos/teoria_cuantica.tex [1
-
-] Excluding 'comment' comment.
-LaTeX Info: Redefining \. on input line 112.
-LaTeX Info: Redefining \% on input line 112.
-Package cleveref Info: loaded `spanish' language definitions on input line 112.
- [2]
-LaTeX Info: Redefining \. on input line 168.
-LaTeX Info: Redefining \% on input line 168.
-Package cleveref Info: loaded `spanish' language definitions on input line 168.
- [3]
-LaTeX Info: Redefining \. on input line 200.
-LaTeX Info: Redefining \% on input line 200.
-Package cleveref Info: loaded `spanish' language definitions on input line 200.
- [4]
-LaTeX Info: Redefining \. on input line 256.
-LaTeX Info: Redefining \% on input line 256.
-Package cleveref Info: loaded `spanish' language definitions on input line 256.
- [5]
-LaTeX Info: Redefining \. on input line 292.
-LaTeX Info: Redefining \% on input line 292.
-Package cleveref Info: loaded `spanish' language definitions on input line 292.
- [6] Excluding 'comment' comment.
-LaTeX Info: Redefining \. on input line 364.
-LaTeX Info: Redefining \% on input line 364.
-Package cleveref Info: loaded `spanish' language definitions on input line 364.
- [7] Excluding 'comment' comment.
-LaTeX Info: Redefining \. on input line 461.
-LaTeX Info: Redefining \% on input line 461.
-Package cleveref Info: loaded `spanish' language definitions on input line 461.
- [8]
-LaTeX Info: Redefining \. on input line 507.
-LaTeX Info: Redefining \% on input line 507.
-Package cleveref Info: loaded `spanish' language definitions on input line 507.
- [9]
-LaTeX Info: Redefining \. on input line 553.
-LaTeX Info: Redefining \% on input line 553.
-Package cleveref Info: loaded `spanish' language definitions on input line 553.
- [10] Excluding 'comment' comment.
-LaTeX Info: Redefining \. on input line 608.
-LaTeX Info: Redefining \% on input line 608.
-Package cleveref Info: loaded `spanish' language definitions on input line 608.
- [11]
-LaTeX Info: Redefining \. on input line 651.
-LaTeX Info: Redefining \% on input line 651.
-Package cleveref Info: loaded `spanish' language definitions on input line 651.
- [12]
-LaTeX Info: Redefining \. on input line 695.
-LaTeX Info: Redefining \% on input line 695.
-Package cleveref Info: loaded `spanish' language definitions on input line 695.
- [13]
-LaTeX Info: Redefining \. on input line 735.
-LaTeX Info: Redefining \% on input line 735.
-Package cleveref Info: loaded `spanish' language definitions on input line 735.
- [14]
-LaTeX Info: Redefining \. on input line 777.
-LaTeX Info: Redefining \% on input line 777.
-Package cleveref Info: loaded `spanish' language definitions on input line 777.
- [15]
-LaTeX Info: Redefining \. on input line 812.
-LaTeX Info: Redefining \% on input line 812.
-Package cleveref Info: loaded `spanish' language definitions on input line 812.
- [16]
-LaTeX Info: Redefining \. on input line 862.
-LaTeX Info: Redefining \% on input line 862.
-Package cleveref Info: loaded `spanish' language definitions on input line 862.
- [17]) (c:\Users\david\OneDrive\Escritorio\Tesis\Tesis-Enredamiento\Tesis UNAM\build\Main.bbl
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
-Package cleveref Info: loaded `spanish' language definitions on input line 1.
- [18]) [19
-
-]
-LaTeX Info: Redefining \. on input line 251.
-LaTeX Info: Redefining \% on input line 251.
-Package cleveref Info: loaded `spanish' language definitions on input line 251.
- [20
-
-] (c:\Users\david\OneDrive\Escritorio\Tesis\Tesis-Enredamiento\Tesis UNAM\build\Main.aux
-LaTeX Info: Redefining \. on input line 12.
-LaTeX Info: Redefining \% on input line 12.
-Package cleveref Info: loaded `spanish' language definitions on input line 12.
-)
- ***********
-LaTeX2e <2025-11-01>
-L3 programming layer <2025-12-24>
- ***********
- ) 
+ 
 Here is how much of TeX's memory you used:
- 44182 strings out of 467871
- 928688 string characters out of 5418376
- 2249955 words of memory out of 5000000
- 72245 multiletter control sequences out of 15000+600000
- 656026 words of font info for 108 fonts, out of 8000000 for 9000
+ 41974 strings out of 467871
+ 868062 string characters out of 5418376
+ 2225955 words of memory out of 5000000
+ 70283 multiletter control sequences out of 15000+600000
+ 628783 words of font info for 42 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,23n,161p,18310b,1233s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\david\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\david\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\david\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\david\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecxc1200.pk> <C:\Users\david\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\david\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsl1200.pk> <C:\Users\david\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\david\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1200.pk> <C:\Users\david\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\david\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\david\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1440.pk><C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb><C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/latxfont/line10.pfb><C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on "c:\Users\david\OneDrive\Escritorio\Tesis\Tesis-Enredamiento\Tesis UNAM\build\Main.pdf" (28 pages, 563997 bytes).
-PDF statistics:
- 885 PDF objects out of 1000 (max. 8388607)
- 167 named destinations out of 1000 (max. 500000)
- 103 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+ 99i,1n,161p,18310b,365s stack positions out of 10000i,1000n,20000p,200000b,200000s
+c:/Users/david/OneDrive/Escritorio/Tesis/Tesis-Enredamiento/Tesis UNAM/Main.tex:178:  ==> Fatal error occurred, no output PDF file produced!
