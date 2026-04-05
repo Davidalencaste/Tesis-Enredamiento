@@ -79,15 +79,15 @@ A continuación se muestran dos ejemplos fundamentales en la mecánica cuántica
     \[\int \abs{\psi(q_1\dots q_n)}^2d\tau < \infty\]
     Son funciones cuadrático integrables con producto interno definido como \[\qty(\psi,\phi)=\int \bar{\psi}(q_1,\dots,q_n)\phi(q_1,\dots,q_n)d\tau\]
     Este espacio posee, la propiedad de ser completo, cumpliendo así las propiedades de espacio de Hilbert\cite{Messiah}.
-    \item \textbf{Espacio del Qubit}\\
-    Un qubit se describe mediante sistemas compuestos formados por estados individuales de dos niveles\cite{Kaye}. Se tiene un espacio discreto 2-dimensional. Generalmente se le asocia a este espacio la \emph{base computacional}:
+    \item \textbf{Espacio del Qbit}\\
+    Un qbit se describe mediante sistemas compuestos formados por estados individuales de dos niveles\cite{Kaye}. Se tiene un espacio discreto 2-dimensional. Generalmente se le asocia a este espacio la \emph{base computacional}:
     \begin{equation}
         \{\ket{0},\ket{1}\}.
     \end{equation}
 \end{enumerate}
 
-    Nótese la analogía con la computación clásica, donde tenemos dos posibles valores para los bits $0$ ó $1$. Los qubits diferenciándose, como se verá mas adelante, en la superposición de ambos estados. 
-    Algunos sistemas que se usan para modelar qubits, y por tanto, siendo sistemas con dos niveles de energía se muestran a continuación.
+    Nótese la analogía con la computación clásica, donde tenemos dos posibles valores para los bits $0$ ó $1$. Los qbits diferenciándose, como se verá mas adelante, en la superposición de ambos estados. 
+    Algunos sistemas que se usan para modelar qbits, y por tanto, siendo sistemas con dos niveles de energía se muestran a continuación.
     \begin{itemize}
         \item Estado de espín de partículas con espín $1/2$. Siendo la base computacional: $\{\emph{Spin-down}$, $\emph{Spin-up}\}$
         \item Electrón orbitando núcleos con una separación energética grande entre el segundo nivel energético y el tercero para confinar al electrón unicamente a los dos primero niveles energéticos del átomo \cite{Kaye}. Con base computacional: $\{E_0, E_1\}$, los niveles energéticos donde se encuentra la partícula.
@@ -103,7 +103,7 @@ en mecánica cuántica no da como resultado un vector específico del espacio de
 Hilbert, sino una clase de equivalencia de vectores relacionada mediante la
 multiplicación por un número complejo no nulo. En otras palabras, sobre el
 espacio de Hilbert existe una acción natural del grupo abeliano
-$\C_0 := \C - \{0\}$ dada por
+$\C_0  \coloneqq  \C - \{0\}$ dada por
 \begin{equation}
     \ket{\psi} \mapsto \lambda \ket{\psi}
     = \varrho  e^{i \theta} \ket{\psi},
@@ -116,7 +116,7 @@ libertad asociada a la reescalación real y se obtiene la llamada esfera de
 estados normalizados
 \begin{equation}
     S^{2n-1}
-    :=
+     \coloneqq 
     \qty{
         \ket{\psi} \in \H_0
         \,\middle|\,
@@ -130,7 +130,7 @@ proyectivo de Hilbert}, definido como el conjunto de todos los rayos del espacio
 de Hilbert,
 \begin{equation}
     \Proj(\H_0)
-    := \{\lambda\ket{\psi}\;|\; \lambda\in \C_0\}.
+     \coloneqq  \{\lambda\ket{\psi}\;|\; \lambda\in \C_0\}.
     \label{def:espacio_proyectivo_hilbert}
 \end{equation}
 
@@ -459,7 +459,7 @@ Los esquemas en mecánica cuántica son formas de manipular ya sea los estados c
 
 El esquema más usado en los cursos tradicionales de mecánica cuántica es el esquema de Schrödinger, en el cuales los elementos base son los estados puros, representados por elementos de un espacio de Hilbert separable $\H$. Por lo que, el estudio del sistema radica en el análisis del vector de estado del sistema.
 
-En esta formulación, los observables son una estructura dual derivada a los estados puros, y por tanto \emph{los observables están representados por operadores diferenciales que actúan sobre $\H$}, es decir, un observable es una cantidad medible y se describe mediante un operador lineal,
+En esta formulación, los observables son una estructura derivada a los estados puros, y por tanto \emph{los observables están representados por operadores diferenciales que actúan sobre $\H$}, es decir, un observable es una cantidad medible y se describe mediante un operador lineal,
 
 \begin{equation}
     \bm{A}:\H\to\H\qq{:}\ket{\psi}\longmapsto\ket{\psi'}=\bm{A}\ket{\psi},
@@ -470,7 +470,7 @@ y Hermítico:
     \bm{A}=\bm{A}^\dagger,
 \end{equation}
 
-La propiedad de Hermíticidad tiene como consecuencia, que todo observable es un operador acotado y cerrado.\\ De lo anterior, podemos introducir el $3^{er}$ axioma de la mecánica cuántica:
+La propiedad de Hermiticidad tiene como consecuencia, que todo observable es un operador acotado y cerrado \cite{DellAntonio}.\\ De lo anterior, podemos introducir el $3^{er}$ axioma de la mecánica cuántica:
 
 \emph{El valor medio de la medición de un observable, representado por un operador Hermítico $\bm{A}$, en el estado $\ket{\psi}$ está dado por:}
 \begin{equation}
@@ -478,7 +478,7 @@ La propiedad de Hermíticidad tiene como consecuencia, que todo observable es un
 \end{equation}
 
 
-Consideremos un estado cuántico discreto general $\ket{\psi}$, expresado en la base formada por los autovectores de un operador observable $\bm A$ con espectro discreto, tal que
+Consideremos un estado cuántico discreto general $\ket{\psi}$, expresado en la base formada por los estados propios de un operador observable $\bm A$ con espectro discreto, tal que
 \begin{equation}
     \bm A \ket{a_i} = a_i \ket{a_i},
 \end{equation}
@@ -487,7 +487,7 @@ donde $\qty{\ket{a_i}}$ forma una base ortonormal, en la cual, el estado puede e
     \ket{\psi}=\sum_i c_i \ket{a_i},
     \label{eq: estado_general}
 \end{equation}
-donde los coeficientes $c_i$ representan las amplitudes de probabilidad asociadas a cada autovector, esto es, la probabilidad de obtener el resultado $a_i$ al realizar una medición del observable $\bm A$ sobre el estado $\ket{\psi}$ se define como se muestra en la ecuación de abajo, \cite{Cohen}
+donde los coeficientes $c_i$ representan las amplitudes de probabilidad asociadas a cada estado propio, esto es, la probabilidad de obtener el resultado $a_i$ al realizar una medición del observable $\bm A$ sobre el estado $\ket{\psi}$ se define como se muestra en la ecuación de abajo, \cite{Cohen}
 \begin{equation}
     P(a_i)=\abs{\ip{a_i}{\psi}}^2=\abs{c_i}^2.
     \label{def: probabilidad_estado}
@@ -500,7 +500,7 @@ Finalmente, para describir la naturaleza del proceso de medición, el estado pos
      {\sqrt{P(a_i)}}=\frac{\bm{A}\ket{\psi}}{\abs{\expval{\bm{A}}{\psi}}},
     \label{eq: colapso_estado}
 \end{equation}
-el cual corresponde, tras la normalización, al autovector de $\bm A$ asociado al autovalor obtenido en la medición.\\
+el cual corresponde, tras la normalización, al estado propio de $\bm A$ asociado al valor propio obtenido en la medición.\\
 
 Y en el caso de estados mixtos, el valor esperado esta dado por la ecuación \eqref{def:Operador_densidad} y el operador de estado después de realizar la medición viene dado por la siguiente expresión:
 
@@ -509,7 +509,7 @@ Y en el caso de estados mixtos, el valor esperado esta dado por la ecuación \eq
     \sum_i P_i \rhon_i ' \notag\\
     &= \sum_iP_i\frac{\bm{A}\rhon_i\bm{A}^\dagger}{\abs{\expval{\bm{A}}{\psi_i}}^2}\notag\\
     &= \sum_i P_i \frac{\bm{A}\rhon_i\bm{A}^\dagger}{\expval{\bm{A}\rhon_i\bm{A}^\dagger}}\notag\\
-    &=\sum_i P_i \,\frac{\bm{A}\rhon_i\bm{A}^\dagger}{\Tr(\rhon_i\bm{A}^\dagger\rhon_i\bm{A})}.
+    &=\sum_i P_i \,\frac{\bm{A}\rhon_i\bm{A}^\dagger}{\Tr(\bm{A}\rhon_i\bm{A}^\dagger\rhon_i)}.
 \end{align}
 
 Como mencionamos anteriormente, el estudio de los sistemas en este esquema radica en el análisis de los vectores de estado, entonces, toda la información de la evolución temporal de los sistemas está completamente contenida en estos mismos vectores \cite{Sakurai2011}. Por lo tanto, la evolución temporal del estado $\ket{\psi(t_0)}$ para un tiempo $t$ distinto, está dada por
@@ -554,26 +554,27 @@ además, de la definición de operador de estado \eqref{def:operador_estado_peso
 derivando parcialmente sobre el tiempo y aplicando \eqref{eq:Schrondiger_operador_temporal} y \eqref{eq:evolucion_temporal_auto-adjunta}
 \begin{align}
     \pdv{t}\rhon(t)&= \sum_i P_i\qty[\pdv{t}\ket{\psi_i(t)}\bra{\psi_i(t)}+\ket{\psi_i(t)}\pdv{t}\bra{\psi_i(t)}]\notag\\
-    &=\sum_i P_i \qty[-i\hbar^{-1}\bm{H}\op{\psi_i(t)}+i\hbar^{-1}\ket{\psi_i(t)}\bra{\psi_i(t)}\bm{H}].
+    &=\sum_i P_i \qty[-i\hbar^{-1}\bm{H}\op{\psi_i(t)}+i\hbar^{-1}\op{\psi_i(t)}\bm{H}].
 \end{align}
-Por lo tanto, re acomodando obtenemos la siguiente ecuación:
+Por lo tanto, manipulando obtenemos la siguiente ecuación:
 \begin{align}
     i\hbar \pdv{t}\rhon(t)&=\sum_i P_i \qty[\bm{H}\op{\psi_i(t)}-\op{\psi_i(t)}\bm{H}]\notag\\
     &= -\qty[\rhon,\bm{H}].
 \end{align}
 Lo que se acaba de derivar es la ecuación de evolución temporal para un operador de estado, que reescribimos en la ecuación siguiente,
 \begin{equation}
-    i\hbar \pdv{\rhon(t)}{t}=-\qty[\rhon(t),\bm{H}].
+    i\hbar \pdv{\rhon(t)}{t}=-\qty[\rhon(t),\bm{H}],
     \label{eq:evolucion_temporal_operador}
 \end{equation}
+esta ecuación se conoce en la literatura como \emph{ecuación de Von Neumann}.
 
 
 
 \subsection*{$\S$~Esquema de Heisenberg}
 
-En la literatura se suele confundir la interpretación de este esquema, en muchos textos la manera de diferenciar los esquemas de Schrödinger y Heisenberg es en el objeto que evoluciona en el tiempo; en Schrödinger los estados evolucionan '$\ket{\psi(t)}$'y en Heisenberg las observables son las que evolucionan '$\bm{A}(t)$'. Sin embargo, esto no es del todo cierto, falta aclarar la naturaleza de los estados y las observables.
+En muchos textos la manera de diferenciar los esquemas de Schrödinger y Heisenberg es mediante al objeto que evoluciona en el tiempo; en Schrödinger los estados evolucionan $\ket{\psi(t)}$, mientras que en Heisenberg las observables son las que evolucionan $\bm{A}(t)$ con el tiempo. Sin embargo, la diferencia es mucho mas profunda que esto.
 
-El esquema de Heisenberg es aquel donde los elementos bases son las observables, representadas por matrices Hermíticas, que pueden ser de dimensión finita o infinita, es decir, operadores simétricos lineales sobre un espacio de Hilbert separable. Y es en este sentido, que la evolución de sistemas cuánticos se realiza a través de una ecuación de movimiento que involucra de manera directa cantidades observables.
+El esquema de Heisenberg es aquel en  donde los elementos bases son las observables, representadas por matrices Hermíticas, que pueden ser de dimensión finita o infinita, es decir, operadores simétricos lineales sobre un espacio de Hilbert separable. Y es en este sentido, que la evolución de sistemas cuánticos se realiza a través de una ecuación de movimiento que involucra de manera directa cantidades observables.
 
 \begin{comment}
     
@@ -610,25 +611,25 @@ En particular si $\bm{A}$ y $\bm{H}$ representan observables, entonces la ecuaci
 \begin{equation}
     i\hbar \dv{A_{jk}}{t}=H_{jl}A_{lk}-A_{jl}H_{lk},
 \end{equation}
-donde está ecuación vive en el espacio de matrices, las cuales pueden ser infinito dimensionales, que en terminos de la base ortonormal $\qty{\ket{e_i}}$ se expresa los elementos de matriz como sigue
+donde está ecuación vive en el espacio de matrices, las cuales pueden ser infinito dimensionales, que en términos de la base ortonormal $\qty{\ket{e_i}}$ los elementos de matriz se expresan como sigue
 \begin{equation}
     A_{jk}=\mel{e_j}{A}{e_k},
 \end{equation}
 tal que los valores esperados son los elementos diagonales de la matriz $A_{ik}$ y toman valores reales.
 
-Como mencionamos anteriormente, en el esquema de Heisenberg los operadores son los elementos principales y los estados son objetos derivados de estos, es decir, los estados son elementos del espacio vectorial dual del espacio de las observables; lo que quiere decir que \emph{los estados, en el esquema de Heisenberg, son funcionales lineales} $\rho$,
+Por otra parte, en el esquema de Heisenberg los operadores son los elementos principales y los estados son objetos derivados de estos, es decir, los estados son elementos del espacio vectorial dual del espacio de las observables; lo que quiere decir que \emph{los estados, en el esquema de Heisenberg, son funcionales lineales} $\rho$,
 
 \begin{equation}
     \rho : \mathcal{P}(\H) \mapsto \R,
     \label{def:rho_is_in_reals}
 \end{equation}
-con $\mathcal{P}(\H)$ el espacio de observables como proyectores, tambien llamadas PVMs (por sus siglas en inglés Projection Valued Measures).
+con $\mathcal{P}(\H)$ el espacio de observables como proyectores, también llamadas PVMs (por sus siglas en inglés Projection Valued Measures).
 
 Además, estas funcionales deben cumplir con los requerimientos de positividad y normalización.
 \begin{equation}
     \rho(\bm{A}^\dagger\bm{A})\ge0\qq{y}\rho(\Id)=1,
 \end{equation}
-repectivamente.
+respectivamente.
 
 En realidad, cualquier estado puede ser representado mediante un operador Hermítico con ayuda de la traza como se muestra en la ecuación \eqref{def:Gleason_theorem}; siendo este resultado el teorema de Gleason, ver Ref \cite{Gleason1957}. 
 
@@ -637,11 +638,8 @@ En realidad, cualquier estado puede ser representado mediante un operador Hermí
     \label{def:Gleason_theorem}
 \end{equation}
 
-El resultado mencionado anteriormente y demostrado por Gleason hace referencia unicamente a observables como proyectores $P_A=\op{a_i}$, es decir, PVMs; sin embargo, fue generalizado posteriormente por P. Busch \cite{PhysRevLett.91.120403}, para medidas como operadores positivos (POVMs por sus siglas en ingles "Positive operator-valued measure"), las cuales son medidas que tienen en cuenta la interacción del sistema con el entorno. Al conjunto de POVMs se le conoce como \emph{effects} y es denotado mediante $\mathcal{E}(\H)$. \\ Una característica importante es que las PVMs están contenidas en las POVMs \cite{acharya2021informationallycomplete}.
-\begin{equation}
-    \mathcal{P}(\H)\subset\mathcal{E}(\H),
-\end{equation}
-realmente los PVMs son ejemplos de POVMs que son informacionalmente incompletos.
+El resultado mencionado anteriormente y demostrado por Gleason hace referencia unicamente a observables PVMs $P_A=\op{a_i}$; sin embargo, fue generalizado posteriormente por P. Busch \cite{PhysRevLett.91.120403} para medidas como operadores positivos (POVMs por sus siglas en ingles "Positive operator-valued measure"), las cuales son medidas que tienen en cuenta la interacción del sistema con el entorno. Al conjunto de POVMs se le conoce como \emph{effects} y es denotado mediante $\mathcal{E}(\H)$ \cite{acharya2021informationallycomplete}.
+
 
 Regresando a las observables como proyectores, notemos, el producto escalar en el espacio de operadores puede estar dado por:
 \begin{equation}
@@ -655,28 +653,28 @@ De la definición \eqref{def:Gleason_theorem}, el producto escalar y la ecuació
 De lo anterior podemos introducir el 3er axioma de la Mecánica Cuántica:
 \emph{El valor medio de la medición de una observable, representada por un operador Hermítico $\bm{A}$, en el estado representado por $\ket{\psi}$ esta dado por:}
 \begin{equation}
-    \expval{\bm{A}}\equiv \expval{\bm{A}}{\psi}\equiv\Tr(\bm{AP}_\psi).
+    \expval{\bm{A}}\equiv \expval{\bm{A}}{\psi}\equiv\Tr(\bm{A}\rhon_\psi).
 \end{equation}
 
-El libro de Esposito \emph{et al.}\cite{Esposito2015} fue en gran medida una guía para la sección de Esquema de Schrödinger, para más detalles consultar el capítulo 4 .
+El libro de Esposito \emph{et al.}\cite{Esposito2015} fue en gran medida una guía para la sección de Esquema de Heisenberg, para más detalles consultar el capítulo 4 .
 
-En la siguiente sección se desarrollaran los resultados obtenidos hasta este momento para el sistema de dos niveles, mejor conocido como \emph{qubit}.
+En la siguiente sección se desarrollaran los resultados obtenidos hasta este momento para el sistema de dos niveles, mejor conocido como \emph{qbit}.
 
-\section{Ejemplo: Qubit}
-El qubit es uno de los estados cuánticos con mayor relevancia de los últimos años debido a sus aplicaciones en la teoría de información cuántica, en la cuál se trabaja con estos como objetos base; donde,  \emph{Un qubit es la codificación de un sistema cuántico de dos niveles} \cite{nielsen2010quantum}. Ejemplos de este tipo de sistemas son muchos, los mas conocidos son: Estado de partículas de \emph{espín-1/2}, la polarización de un fotón, niveles energeticos de átomos con sus dos primeros niveles muy cercanos ,entre otros.
+\section{Ejemplo: Qbit}
+El qbit es uno de los estados cuánticos con mayor relevancia de los últimos años debido a sus aplicaciones en la teoría cuántica de la información , en la cuál se trabaja con estos como objetos base; donde,  \emph{Un qbit es la codificación de un sistema cuántico de dos niveles} \cite{nielsen2010quantum}. Ejemplos de este tipo de sistemas son muchos, los mas conocidos son: estado de partículas de \emph{espín-1/2}, la polarización del campo eléctrico de un fotón, niveles energéticos de átomos con sus dos primeros niveles muy cercanos, entre otros.
 
 A continuación, procederemos a encontrar la descripción matemática de este tipo de estados con la herramienta descrita en este capítulo.
 
 Al ser un sistema de dos niveles, el espacio de Hilbert $\H$ es de dimension $n=2$ con una base de la forma siguiente, 
 \begin{equation}
-    \text{Base}_\H=\qty{\ket{e_i}\,|\,\ip{e_i}{\e_j}=\delta_{ij}},
+    \text{Base}(\H)=\qty{\ket{e_i}\,|\,\ip{e_i}{\e_j}=\delta_{ij}},
 \end{equation}
-con $i,j=1,2$. Los estados $\ket{e_i}$ pueden ser cualquier par de estados ortonormales; sin embargo, existen 3 duplas de estados relevantes que se usan usualmente como base de $\H$, que son los eigne-estados de las matrices de Pauli en las cuales profundizaremos más adelante en este mismo ejemplo.
+con $i,j=1,2$. Los estados $\ket{e_i}$ pueden ser cualquier par de estados ortonormales; sin embargo, existen 3 duplas de estados relevantes que se usan usualmente como base de $\H$, que son los valores propios de las matrices de Pauli, las cuales profundizaremos más adelante en este mismo ejemplo.
 
-Con esto, el espacio de Hilbert $\H$ para el qubit viene dado por el conjunto de combinaciones lineales de su base, con coeficientes $\psi_i$, es decir de la siguiente forma:
+Con esto, el espacio de Hilbert $\H$ para el qbit viene dado por el conjunto de combinaciones lineales de su base, con coeficientes $\psi_i$, es decir de la siguiente forma:
 \begin{equation}
     \H = \qty{\ket{\psi}= \psi_1 \ket{e_1}+\psi_2 \ket{e_2}\mid\psi_i\in\C},
-    \label{def:hilbert_space_qubit}
+    \label{def:hilbert_space_qbit}
 \end{equation}
 este espacio incluye estados con norma distinta de uno. 
 
@@ -691,38 +689,39 @@ Continuamos obteniendo la esfera de estados normalizados $S^{2n-1}=S^3$ al impon
 \end{align}
 donde $\psi_1=x_1+ix_2\qq{y}\psi_2=y_1+iy_2$ son la representación cartesiana de los coeficientes. De esta manera, los estados $\ket{\psi}$ en $S^{3}$ son de la siguiente forma:
 \begin{equation}
-   S^{3}\simeq \qty{\ket{\psi}=\frac{\psi_1\ket{e_1}+\psi_2\ket{e_2}}{\sqrt{\abs{\psi_1}^2+\abs{\psi_2}^2}}\mid \psi_i\in\C}.
-    \label{def:esfera_estados_normalizados_qubit}
+   S^{3} \coloneqq \qty{\ket{\psi}=\frac{\psi_1\ket{e_1}+\psi_2\ket{e_2}}{\sqrt{\abs{\psi_1}^2+\abs{\psi_2}^2}}\mid \psi_i\in\C}.
+    \label{def:esfera_estados_normalizados_qbit}
 \end{equation}
 
-Finalmente, para  encontrar el espacio de rayo del qubit primero pasamos las componentes de los elementos de $\H$ a la forma polar $\psi_j=\rho_je^{i\theta_j}$
+Finalmente, para encontrar el espacio de rayo del qbit primero pasamos a las componentes de los elementos de $\H$ a la forma polar $\psi_j=\rho_je^{i\theta_j}$
 \begin{equation}
    \ket{\psi}= \rho e^{i\theta_1}\ket{e_1}+\rho e^{i\theta_2}\ket{e_2},
 \end{equation}
 con $\rho_j\in\R^+\qq{y}\theta_j\in[0,2\pi)$.
-Consideremos como un mismo elemento al conjunto de estados que difieren unicamente por una fase global,
+Consideremos la clase de equivalencia entre estados que difieren unicamente por una fase global, es decir,
 \begin{align}
     \ket{\psi}
     &\sim  e^{-i\theta_1}\qty(\rho_1e^{i\theta_1}\ket{e_1}+\rho_2e^{i\theta_2}\ket{e_2})\notag\\
     &=\rho_1\ket{e_1}+\rho_2e^{i(\theta_2-\theta_1)}\ket{e_2}\notag\\
     &=\rho_1\ket{e_1}+\rho_2e^{i\phi}\ket{e_2},
 \end{align}
-pasando los coeficientes a su representación cartesiana $\rho_1\to x_1\qq{y}\rho_2e^{i\phi}\to y_1+iy_2$, y además restringiendo a estados con norma uno obtenemos, por definición, el \emph{espacio proyectivo} del qubit. 
+pasando los coeficientes a su representación cartesiana $\rho_1\to x_1\qq{y}\rho_2e^{i\phi}\to y_1+iy_2$, y además restringiendo a estados con norma uno obtenemos, por definición, el \emph{espacio proyectivo} del qbit. 
 \begin{align}
     \C\Proj(\H)&=
     \qty{\ket{\psi}=\rho_1\ket{e_1}+\rho_2e^{i\phi}\ket{e_2}\mid\ip{\psi}=1}\notag\\
     &\simeq\qty{x_1^2+y_1^2+y_2^2=1\mid x_i,y_i\in\R}\notag\\
     &=S^2.
+    \label{eq:espacio_proyectivo_qbit}
 \end{align}
-Lo que acabamos de mostrar es que todo \emph{estado puro} del qubit puede ser caracterizado por un punto en una esfera de dimensión 2.
+Lo que acabamos de mostrar es que todo \emph{estado puro} del qbit está asociado a un punto de una esfera de dimensión 2.
 
-\subsection{Observables del qubit}
+\subsection*{$\S$~Observables del qbit}
 
-Antes de obtener el operador estado para estados mixtos, hablaremos de las observables usuales con las se trabaja cuando se tienen sistemas de dos niveles, en particular en qubits.
+Antes de obtener el operador estado para estados mixtos, hablaremos de las observables usuales con las se trabaja cuando se tienen sistemas de dos niveles, en particular en qbits.
 
-El objetivo principal de las mediciones en este tipo de sistemas es obtener información acerca de la orientación del espín, esto debido a que cualquier estado de qubit queda completamente caracterizado por su espín promedio. Es por ello, que es necesario encontrar las observables correspondientes a las componentes de espín $\qty(S_x,S_y,S_z)$ y en general para cualquier dirección $\hat{n}$. Estás cantidades fueron demostradas en ser observables cuánticas en el experimento de Stern-Gerlach \cite{Cohen}.
+El objetivo principal de las mediciones en este tipo de sistemas es obtener información acerca de la orientación del espín, esto debido a que cualquier estado de qbit queda completamente caracterizado por su espín promedio. Es por ello, que es necesario encontrar las observables correspondientes a las componentes de espín $\qty(S_x,S_y,S_z)$ y en general para cualquier dirección $\hat{n}$. Estás cantidades fueron demostradas en ser observables cuánticas en el experimento de Stern-Gerlach \cite{Cohen}.
 
-Como vimos en la ecuación \eqref{def:operador_eigne_vectores} podemos escribir cualquier operador como combinación lineal de sus eigne-estados, siendo los coeficientes el espectro del mismo operador. Lo que se encontró en el experimento de Stern-Gerlach fue un operador $\bm{S}_z$ el cuál tenía dos eigne-estados, definidos como $\ket{+}$ y $\ket{-}$, los cuales cumplian con lo siguiente: 
+Como vimos en la ecuación \eqref{def:operador_eigne_vectores} podemos escribir cualquier operador como combinación lineal de sus valores propios, siendo los coeficientes el espectro del mismo operador. Lo que se encontró en el experimento de Stern-Gerlach fue un operador $\bm{S}_z$ el cuál tenía dos valores propios, definidos como $\ket{+}$ y $\ket{-}$, los cuales cumplían con lo siguiente: 
 
 \begin{equation}
     \bm{S}_z\ket{\pm}=\pm\frac{\hbar}{2}\ket{\pm}.
@@ -733,8 +732,8 @@ Este operación resultó ser el operador asociado a la componente z de espín $S
     \bm{S}_z=\frac{\hbar}{2}\mqty(1&0\\0&-1).
 \end{equation}
 
-Si el artefacto de medición del experimento fuese rotado a distintas direcciones de la $z$ igual encontraremos un espectro asociado a ese medición con sus respectivos eigne-estados, los cuales tambien se podrían definir con otros nombres $\qty{\ket{\uparrow},\ket{\downarrow}},\qty{\ket{0},\ket{1}},\dots$ y así tener infinitos operadores diagonales (cada uno asociado a una cierta dirección) de la forma de \eqref{def:operador_eigne_vectores}. Sin embargo esto resulta impractico, pues implicaría realizar frecuentemente cambios de coordenadas. Es por ello que se toma una base común, en general, los eigne-estados de $\bm{S}_z$, y se describen todos los operadores en esta base.
-De esta forma definimos, las direcciones correspondientes a las direcciones $x$ y $y$ en terminos de $\ket{\pm}_z$:
+Si el artefacto de medición del experimento fuese rotado a distintas direcciones de la $z$ igual encontraremos un espectro asociado a ese medición con sus respectivos valores propios, los cuales también se podrían definir con otros nombres $\qty{\ket{\uparrow},\ket{\downarrow}},\qty{\ket{0},\ket{1}},\dots$ y así tener infinitos operadores diagonales (cada uno asociado a una cierta dirección) de la forma de \eqref{def:operador_eigne_vectores}. Sin embargo esto resulta impráctico, pues implicaría realizar frecuentemente cambios de coordenadas. Es por ello que se toma una base común, en general, los valores propios de $\bm{S}_z$, y se describen todos los operadores en esta base.
+De esta forma definimos, las direcciones correspondientes a las direcciones $x$ y $y$ en términos de $\ket{\pm}_z$:
 \begin{equation}
     \ket{\pm}_x=\frac{1}{\sqrt{2}}\qty(\ket{+}\pm\ket{-}),
 \end{equation}
@@ -748,38 +747,38 @@ dando como representaciones las siguientes matrices:
 \begin{equation}
     \bm{S}_y=\frac{\hbar}{2}\mqty(0&-i\\i&0).
 \end{equation}
-Las matrices anteriores, ignorando el factor $\hbar/2$, son conocidas como \emph{matrices de Pauli} $\bm{\sigma}_k$, que son observables con los mismos eigne-estados que $\bm{S}_k$ pero con espectro $\pm1$. Se suelen escribir las matrices de Pauli como componentes de un vector de dimensión 3 como sigue:
+Las matrices anteriores, ignorando el factor $\hbar/2$, son conocidas como \emph{matrices de Pauli} $\bm{\sigma}_k$, que son observables con los mismos valores propios que $\bm{S}_k$ pero con espectro $\pm1$. Se suelen escribir las matrices de Pauli como componentes de un vector de dimensión 3 como sigue:
 \begin{equation}
     \vec{\bm{\sigma}}\equiv\qty(\bm{\sigma}_x,\bm{\sigma}_y,\bm{\sigma}_z).
 \end{equation}
 
 
 
-\subsection{Operador de estado del qubit}
+\subsection*{$\S$~Operador de estado del qbit}
 
-Una vez encontrada la forma de todo estado puro y definidas las matrices de Pauli, resta encontrar la expresión para estados mixtos del qubit, o en otras palabras encontrar la matriz del operador de estado $\rhon$.
+Una vez encontrada la forma de todo estado puro y definidas las matrices de Pauli, resta encontrar la expresión para estados mixtos del qbit, o en otras palabras, encontrar la matriz del operador de estado $\rhon$.
 
-Sea un ensamble con $N$ subestados de qubit distintos, $\qty{\ket{\psi_i}}$, cada uno con una peso $P_i$; entonces por la ecuación \eqref{def:elementos_matriz_rho} tenemos que el $k'k$-elemento de matriz de $\rhon$ es el siguiente
+Sea un ensamble con $N$ subestados de qbit distintos, $\qty{\ket{\psi_i}}$, cada uno con peso $P_i$; entonces de la ecuación \eqref{def:elementos_matriz_rho} tenemos que el $k'k$-elemento de matriz de $\rhon$ es el siguiente
 \begin{align}
     \rho_{k'k}
     &=\sum_i^N P_i\mel{e_k}{\qty(\op{\psi_i})}{e_{k'}}\notag\\
     &=\sum_i^N P_i\mel{e_k}{\qty(\sum_j^2\psi_{ij}\ket{e_j})\qty(\sum_j^2\bar{\psi}_{ij}\bra{e_j})}{e_{k'}}\notag\\
     &=\sum_i^N P_i\mel{e_k}{\psi_{ik}\bar{\psi}_{ik'}}{e_{k'}},
 \end{align}
-por lo tanto el operador de estado en su forma matricial es
+por lo tanto, el operador de estado en su forma matricial tiene la siguiente forma
 \begin{equation}
     \rhon = \sum_i^N P_i \mqty(\abs{\psi_{i1}}^2&\psi_{i2}\bar{\psi}_{i1}\\\psi_{i1}\bar{\psi}_{i2}&\abs{\psi_{i2}}^2).
-    \label{eq:rho_qubit_matriz}
+    \label{eq:rho_qbit_matriz}
 \end{equation}
-Por otro lado, usando la definición de ensamble promedio de la expresión \eqref{def:Operador_densidad}, definimos las tres componentes de espín del ensamble como:
+A continuación, usando la definición de ensamble promedio de la expresión \eqref{def:Operador_densidad}, definimos las tres componentes de espín del ensamble como:
 \begin{equation}
-    x^j=\Tr(\rhon\bm{\sigma}_j)
+    x^j=\Tr(\rhon\bm{\sigma}_j),
 \end{equation}
-con $\qty{\bm{\sigma}_j}$ las matrices de Pauli, sustituyendo \eqref{eq:rho_qubit_matriz} en esta última expresión
+con $\qty{\bm{\sigma}_j}$ las matrices de Pauli, y sustituyendo \eqref{eq:rho_qbit_matriz} en esta última expresión
 \begin{equation}
     x^j=\Tr[\sum_i P_i \mqty(\abs{\psi_{i1}}^2&\psi_{i2}\bar{\psi}_{i1}\\\psi_{i1}\bar{\psi}_{i2}&\abs{\psi_{i2}}^2)\bm{\sigma}_j].
 \end{equation}
-Calculando el producto matricial para cada matriz de Pauli y aplicando la traza, obtenemos los siguientes resultados para cada matriz de Pauli:
+Calculando el producto matricial para cada matriz de Pauli y aplicando la traza, obtenemos los siguientes resultados para cada matriz:
 \begin{equation}
     x^1=\sum_i P_i(\psi_{i2}\bar{\psi_{i1}}+\psi_{i1}\bar{\psi}_{i2}),
 \end{equation}
@@ -789,7 +788,7 @@ Calculando el producto matricial para cada matriz de Pauli y aplicando la traza,
 \begin{equation}
     x^3=\sum_i P_i(\abs{\psi_{i1}}^2-\abs{\psi_{2i}}^2).
 \end{equation}
-Una vez obtenidas las tres componentes de espín, calculamos la componente por su respectiva matriz de Pauli, es decir, $x^j\bm{\sigma}_j$ obteniendo lo siguiente:
+Una vez obtenidas las tres componentes de espín, calculamos el producto entre la componente con su respectiva matriz de Pauli, es decir, $x^j\bm{\sigma}_j$:
 \begin{equation}
     x^1\bm{\sigma}_1=\sum_i P_i\mqty(0&\psi_{i2}\bar{\psi}_{i1}+\psi_{i1}\bar{\psi}_{i2}\\\psi_{i2}\bar{\psi}_{i1}+\psi_{i1}\bar{\psi}_{i2}&0),
 \end{equation}
@@ -799,61 +798,72 @@ Una vez obtenidas las tres componentes de espín, calculamos la componente por s
 \begin{equation}
     x^3\bm{\sigma}_3=\sum_i P_i\mqty(\abs{\psi_{i1}}^2-\abs{\psi_{i2}}^2&0\\0&\abs{\psi_{i2}}^2-\abs{\psi_{i1}}^2).
 \end{equation}
-De esta manera, 
+De esta manera obtenemos el producto punto entre las componentes de espín con la matriz de Pauli correspondiente, 
 \begin{equation}
-    \vec{x}\cdot\vec{\bm{\sigma}}=\sum_i P_i\mqty(\abs{\psi_{i1}}^2-\abs{\psi_{i2}}^2&2\psi_{i2}\bar{\psi}_{i1}\\\psi_{i1}\bar{\psi}_{i2}&\abs{\psi_{i2}}^2-\abs{\psi_{i1}}^2),
+    \vec{x}\cdot\vec{\bm{\sigma}}=\sum_i P_i\mqty(\abs{\psi_{i1}}^2-\abs{\psi_{i2}}^2&2\,\psi_{i2}\bar{\psi}_{i1}\\2\,\psi_{i1}\bar{\psi}_{i2}&\abs{\psi_{i2}}^2-\abs{\psi_{i1}}^2).
 \end{equation}
-además, por condición de normalidad \eqref{def:condicion_normalizacion} podemos notar que en \eqref{eq:rho_qubit_matriz} se deriva lo siguiente
+Además, por condición de normalidad \eqref{def:condicion_normalizacion} y de la expresión \eqref{eq:rho_qbit_matriz} se deriva la siguiente forma del operador identidad:
 \begin{equation}
-    \Id=\sum_i P_i \mqty(\abs{\psi_{i1}}^2+\abs{\psi_{i2}^2}&0\\0&\abs{\psi_{i1}}^2+\abs{\psi_{i2}}^2).
+    \Id=\sum_i P_i \mqty(\abs{\psi_{i1}}^2+\abs{\psi_{i2}}^2&0\\0&\abs{\psi_{i1}}^2+\abs{\psi_{i2}}^2).
 \end{equation}
-Por consiguiente, al sumar las dos últimas expresiones obtenemos:
+Por consiguiente, al sumar las dos últimas expresiones obtenemos la siguiente relación
 \begin{align}
     \Id+\vec{x}\cdot\vec{\bm{\sigma}}
     &=\mqty(2\abs{\psi_{i1}}^2&2\psi_{i2}\bar{\psi}_{i1}\\2\psi_{i1}\bar{\psi}_{i2}&2\abs{\psi_{i2}}^2)\notag\\
-    &=2\rhon,
+    &=2\rhon.
 \end{align}
-donde finalmente al despejar obtenemos la expresión objetivo,
+Para finalmente obtener la expresión objetivo:
 \begin{equation}
     \rhon = \frac{1}{2}\qty(\Id+\vec{x}\cdot\vec{\bm{\sigma}}).
 \end{equation}
-Ahora, calculemos la purificación $\mu$ para hallar su relación con $\vec{x}$.
+Este operador es justamente el espacio complejo proyectivo que obtuvimos en la ecuación \eqref{eq:espacio_proyectivo_qbit}, implicando que cualquier estado de qbit viva en un esfera $S^2$
+\begin{equation}
+    \CP(\H)=S^2=\qty{\frac{1}{2}\qty(\Id + \vec{x}\cdot \vec{\bm{\sigma}})},
+\end{equation}
+a esta esfera se le conoce en la literatura como \emph{esfera de Bloch} y al espín promedio $\vec{x}$ del sistema como \emph{vector de Bloch}.
+
+A continuación, calcularemos la purificación $\mu$ para hallar su relación con el vector de Bloch $\vec{x}$.
 \begin{align*}
     \rhon^2&=
     \frac{1}{4}\qty(\Id + \vec{x}\cdot \vec{\bm{\sigma}})^2
     \notag \\
-    &=\frac{1}{4}\qty(\Id+2\vec{x}\cdot\vec{\bm{\sigma}}+|\vec{x}|^2\,\Id).
+    &=\frac{1}{4}\qty(\Id+2\vec{x}\cdot\vec{\bm{\sigma}}+|\vec{x}|^2\,\Id),
 \end{align*}
-Calculando la traza de $\rhon^2$:
+obteniendo la relación entre $\mu$ y $\vec{x}$:
 \begin{align}
-    \Tr(\rhon^2)&=
-    \Tr[\frac{1}{4}\qty(\Id+2\,\vec{x}\cdot\vec{\bm{\sigma}}+\bm{|S|}^2\,\Id)]
+    \mu&=
+    \Tr(\rhon^2)
+    \notag\\
+    &=\Tr[\frac{1}{4}\qty(\Id+2\,\vec{x}\cdot\vec{\bm{\sigma}}+\bm{|S|}^2\,\Id)]
     \notag \\
     &= \frac{1}{4}\qty[\cancelto{2}{\Tr(\Id)}+2\sum_iS_i\;\cancelto{0}{\Tr(\sigma_i)}\;+2|\vec{x}|^2]
     \notag \\
     &=\frac{1}{2}\qty(1+|\vec{x}|^2).
 \end{align}
 
-De la última expresión se concluye que:
+De la última expresión concluimos que:
 
 \begin{enumerate}
     \item Un estado puro corresponde a un vector de Bloch localizado en la superficie de la esfera de Bloch, es decir, $|\vec{x}|=1$.
     \item Un estado mixto corresponde a un vector de Bloch ubicado en el interior de la esfera, con $|\vec{x}|<1$.
-    \item El estado completamente mezclado corresponde al caso $|\vec{x}|=0$, es decir, al origen de la esfera de Bloch.
+    \item El estado máximamente mezclado corresponde al caso $|\vec{x}|=0$, es decir, al origen de la esfera de Bloch.
 \end{enumerate}
 
-Por lo que, el espacio de operadores densidad del qubit es caracterizado por el espín promedio $\vec{x}$ del sistema.
+Por lo que, el espacio de operadores densidad del qbit es caracterizado por el espín promedio $\vec{x}$ del sistema.
 \begin{equation}
     \rhon_{space}\equiv\qty{\rhon=\frac{1}{2}\qty(\Id + \vec{x}\cdot \vec{\bm{\sigma}})\;|\;\vec{x}\in \R^3 }.
-    \label{eq:espacio_de_qubits}
+    \label{eq:espacio_de_qbits}
 \end{equation}
 
-En la siguiente sección, mostraremos un método distinto para llegar al mismo resultado del operador de estado del qubit, ahora por medio de la teoría de información.
+
+
+
+En la siguiente sección, mostraremos un método distinto para llegar al mismo resultado del operador de estado del qbit, por medio de la teoría de información.
 
 
 
 \section{Teoría cuántica en la teoría de la información}
-La pureza $\mu$ dada en la definición \eqref{def:pureza} es una medida es sencilla de calcular conociendo la forma exacta del operador de estado; sin embargo, nos gustaría una medida que dependa de alguna cantidad física medible. Con esta motivación en mente, consideremos un ensamble de partículas de espín $\frac{1}{2}$ y espín promedio definido (cantidad física medible); es decir, vamos a considerar un ensamble con dos niveles de energía.\\ Hacemos esta consideración, pues el desarrollo de esta tesis se basa en qubits que es un sistema de dos niveles de energía.
+La pureza $\mu$ dada en la definición \eqref{def:pureza} es una medida es sencilla de calcular conociendo la forma exacta del operador de estado; sin embargo, nos gustaría una medida que dependa de alguna cantidad física medible. Con esta motivación en mente, consideremos un ensamble de partículas de espín $\frac{1}{2}$ y espín promedio definido (cantidad física medible); es decir, vamos a considerar un ensamble con dos niveles de energía.\\ Hacemos esta consideración, pues el desarrollo de esta tesis se basa en qbits que es un sistema de dos niveles de energía.
 
 Dado a \eqref{def:Operador_densidad} definimos el espín promedio del ensamble como sigue:
 

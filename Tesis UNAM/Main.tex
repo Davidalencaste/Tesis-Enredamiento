@@ -78,7 +78,7 @@
 \usepackage{datatool} % Importar y manejar tablas de datos e.g. *.csv
 
 \usepackage{bookmark}% Elimina advertencia Package rerunfilecheck Warning: File `output.out' has changed.
-
+\usepackage{mathtools} %para el \coloneqq
 \usepackage{physics,siunitx} % physics define cosas como \pdv para derivadas parciales, notación de Dirac y demás. siunitx tiene una descripción para "desesperados" en su documentación que es bastante útil.
 \sisetup{ % Config. global de Siunitx
 open-bracket = {},close-bracket = {}, % quita paréntesis de números 
@@ -245,7 +245,8 @@ Agradecimientos en carga...
 % BIBLIOGRAFIA
 %------------------------------------------
 \bibliographystyle{ieeetr}
-\addcontentsline{toc}{chapter}{Bibliografía}
+\renewcommand{\bibname}{Referencias}
+\addcontentsline{toc}{chapter}{Referencias}
 \bibliography{biblio.bib}
 
 \backmatter

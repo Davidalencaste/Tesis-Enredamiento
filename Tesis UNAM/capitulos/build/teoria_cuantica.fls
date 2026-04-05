@@ -236,6 +236,12 @@ INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\tex\latex\bookmark\bookmark.s
 INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\tex\latex\bookmark\bkm-pdftex.def
 INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\tex\latex\bookmark\bkm-pdftex.def
 INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\tex\latex\bookmark\bkm-pdftex.def
+INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\tex\latex\mathtools\mathtools.sty
+INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\tex\latex\mathtools\mathtools.sty
+INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\tex\latex\tools\calc.sty
+INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\tex\latex\tools\calc.sty
+INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\tex\latex\mathtools\mhsetup.sty
+INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\tex\latex\mathtools\mhsetup.sty
 INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\tex\latex\physics\physics.sty
 INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\tex\latex\physics\physics.sty
 INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\tex\latex\siunitx\siunitx.sty
@@ -246,8 +252,6 @@ INPUT .\tikz-3dplot-circleofsphere.sty
 INPUT tikz-3dplot-circleofsphere.sty
 INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\tex\latex\xifthen\xifthen.sty
 INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\tex\latex\xifthen\xifthen.sty
-INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\tex\latex\tools\calc.sty
-INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\tex\latex\tools\calc.sty
 INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\tex\latex\ifmtarg\ifmtarg.sty
 INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\tex\latex\ifmtarg\ifmtarg.sty
 INPUT C:\Users\david\AppData\Local\Programs\MiKTeX\tex\latex\pgf\frontendlayer\tikz.sty
