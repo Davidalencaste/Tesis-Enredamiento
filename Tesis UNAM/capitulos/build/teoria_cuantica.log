@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.30)  5 APR 2026 17:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.30)  8 APR 2026 16:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1458,45 +1458,40 @@ LaTeX Info: Redefining \% on input line 610.
 Package cleveref Info: loaded `spanish' language definitions on input line 610.
  [11]
 
-LaTeX Warning: Citation `Gleason1957' on page 12 undefined on input line 634.
+LaTeX Warning: Citation `Gleason1957' on page 12 undefined on input line 635.
 
 
-LaTeX Warning: Citation `PhysRevLett.91.120403' on page 12 undefined on input line 641.
+LaTeX Warning: Citation `PhysRevLett.91.120403' on page 12 undefined on input line 642.
 
 
-LaTeX Warning: Citation `acharya2021informationallycomplete' on page 12 undefined on input line 641.
+LaTeX Warning: Citation `acharya2021informationallycomplete' on page 12 undefined on input line 642.
 
 [12]
 
-LaTeX Warning: Citation `Esposito2015' on page 13 undefined on input line 659.
+LaTeX Warning: Citation `Esposito2015' on page 13 undefined on input line 660.
 
 
-LaTeX Warning: Citation `nielsen2010quantum' on page 13 undefined on input line 664.
+LaTeX Warning: Citation `nielsen2010quantum' on page 13 undefined on input line 665.
 
-LaTeX Info: Redefining \. on input line 689.
-LaTeX Info: Redefining \% on input line 689.
-Package cleveref Info: loaded `spanish' language definitions on input line 689.
-[13]
-
-LaTeX Warning: Citation `Cohen' on page 14 undefined on input line 722.
-
-[14]
-LaTeX Info: Redefining \. on input line 762.
-LaTeX Info: Redefining \% on input line 762.
-Package cleveref Info: loaded `spanish' language definitions on input line 762.
+LaTeX Info: Redefining \. on input line 690.
+LaTeX Info: Redefining \% on input line 690.
+Package cleveref Info: loaded `spanish' language definitions on input line 690.
+[13] [14]
+LaTeX Info: Redefining \. on input line 778.
+LaTeX Info: Redefining \% on input line 778.
+Package cleveref Info: loaded `spanish' language definitions on input line 778.
  [15] [16]
-LaTeX Info: Redefining \. on input line 842.
-LaTeX Info: Redefining \% on input line 842.
-Package cleveref Info: loaded `spanish' language definitions on input line 842.
- [17]
+LaTeX Info: Redefining \. on input line 871.
+LaTeX Info: Redefining \% on input line 871.
+Package cleveref Info: loaded `spanish' language definitions on input line 871.
+ [17] [18]
 
-LaTeX Warning: Citation `Sakurai2011' on page 18 undefined on input line 880.
+LaTeX Warning: Citation `Sakurai2011' on page 19 undefined on input line 909.
 
-[18]
-LaTeX Info: Redefining \. on input line 977.
-LaTeX Info: Redefining \% on input line 977.
-Package cleveref Info: loaded `spanish' language definitions on input line 977.
- [19] [20] (c:\Users\david\OneDrive\Escritorio\Tesis\Tesis-Enredamiento\Tesis UNAM\capitulos\build\teoria_cuantica.aux
+LaTeX Info: Redefining \. on input line 979.
+LaTeX Info: Redefining \% on input line 979.
+Package cleveref Info: loaded `spanish' language definitions on input line 979.
+[19] [20] (c:\Users\david\OneDrive\Escritorio\Tesis\Tesis-Enredamiento\Tesis UNAM\capitulos\build\teoria_cuantica.aux
 LaTeX Info: Redefining \. on input line 16.
 LaTeX Info: Redefining \% on input line 16.
 Package cleveref Info: loaded `spanish' language definitions on input line 16.
@@ -1511,17 +1506,17 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 44564 strings out of 467871
- 935955 string characters out of 5418376
+ 44583 strings out of 467871
+ 936336 string characters out of 5418376
  2265070 words of memory out of 5000000
- 72657 multiletter control sequences out of 15000+600000
+ 72666 multiletter control sequences out of 15000+600000
  649715 words of font info for 99 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 119i,23n,185p,18355b,1070s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 119i,23n,185p,18355b,1068s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\david\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\david\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\david\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\david\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\david\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\david\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsl1200.pk><C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb><C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/latxfont/line10.pfb><C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "c:\Users\david\OneDrive\Escritorio\Tesis\Tesis-Enredamiento\Tesis UNAM\capitulos\build\teoria_cuantica.pdf" (20 pages, 334769 bytes).
+Output written on "c:\Users\david\OneDrive\Escritorio\Tesis\Tesis-Enredamiento\Tesis UNAM\capitulos\build\teoria_cuantica.pdf" (20 pages, 334788 bytes).
 PDF statistics:
- 655 PDF objects out of 1000 (max. 8388607)
- 150 named destinations out of 1000 (max. 500000)
+ 666 PDF objects out of 1000 (max. 8388607)
+ 160 named destinations out of 1000 (max. 500000)
  69 words of extra memory for PDF output out of 10000 (max. 10000000)
 

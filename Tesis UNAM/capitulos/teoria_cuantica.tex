@@ -183,7 +183,7 @@ Es importante hacer notar que \emph{no es lo mismo ensamble promedio y valor esp
 Ahora de la expresión del ensamble promedio \eqref{def:ensamble_promedio} podemos considerar las bases ortonormales $\{\ket{\phi_{k}}\}$ y $\{\ket{\phi_{k'}}\}$. Y reescribir esta expresión como
 \begin{align}
     \qty[\bm{A}] &=
-    \sum_i P_i \sum_{\phi_{k}\, \phi_{k'}}\ip{\psi_i}{\phi_{k}}\mel{\phi_{k}}{\bm{A}}{\phi_{k'}}\ip{\phi_{k'}}{\psi_i} \notag \\
+    \sum_i P_i \sum_{k\, k'}\ip{\psi_i}{\phi_{k}}\mel{\phi_{k}}{\bm{A}}{\phi_{k'}}\ip{\phi_{k'}}{\psi_i} \notag \\
     &= \sum_{k\,k'}\qty(\sum_iP_i\ip{\phi_{k'}}{\psi_i}\ip{\psi_i}{\phi_{k}})\mel{\phi_{k}}{\bm{A}}{\phi_{k'}},
 \end{align}
 donde el término en paréntesis
@@ -614,6 +614,7 @@ En particular si $\bm{A}$ y $\bm{H}$ representan observables, entonces la ecuaci
 donde está ecuación vive en el espacio de matrices, las cuales pueden ser infinito dimensionales, que en términos de la base ortonormal $\qty{\ket{e_i}}$ los elementos de matriz se expresan como sigue
 \begin{equation}
     A_{jk}=\mel{e_j}{A}{e_k},
+    \label{def:elemto_matriz}
 \end{equation}
 tal que los valores esperados son los elementos diagonales de la matriz $A_{ik}$ y toman valores reales.
 
@@ -717,39 +718,67 @@ Lo que acabamos de mostrar es que todo \emph{estado puro} del qbit está asociad
 
 \subsection*{$\S$~Observables del qbit}
 
-Antes de obtener el operador estado para estados mixtos, hablaremos de las observables usuales con las se trabaja cuando se tienen sistemas de dos niveles, en particular en qbits.
+Tradicionalmente, las observables que caracterizan al espín del electrón son $\bm{S}^2$ y $\bm{S}_3$, con 
+\begin{equation}
+    \bm{S}^2=\bm{S}_1^2+\bm{S}_2^2+\bm{S}_3^2,
+\end{equation}
+donde $(\bm{S}_1,\bm{S}_2,\bm{S}_3)$ son las componentes del espín.
 
-El objetivo principal de las mediciones en este tipo de sistemas es obtener información acerca de la orientación del espín, esto debido a que cualquier estado de qbit queda completamente caracterizado por su espín promedio. Es por ello, que es necesario encontrar las observables correspondientes a las componentes de espín $\qty(S_x,S_y,S_z)$ y en general para cualquier dirección $\hat{n}$. Estás cantidades fueron demostradas en ser observables cuánticas en el experimento de Stern-Gerlach \cite{Cohen}.
+Entonces, el conjunto de las observables $\bm{S}^2$ y $\bm{S}_3$ satisfacen la ecuación de autovalores:
+\begin{subequations}\label{eq:autovalores_espin}
+    \begin{align}
+        \bm{S}^2\ket{\sigma}&=\frac{3}{4}\hbar^2\ket{\sigma},\\
+        \bm{S}_3\ket{\sigma}&=\frac{\hbar}{2}\sigma\ket{\sigma};
+    \end{align}
+\end{subequations}
+con $\sigma= +$ ó $\sigma=-$ como etiqueta, y donde la base de estados $\qty{\ket{\sigma}}$ satisface
+\begin{equation}
+    \ip{\sigma^\prime}{\sigma}=\delta_{\sigma^\prime\sigma}\qq{y}\sum_\sigma \op{\sigma}=\Id
+\end{equation} 
+que constituyen las relaciones de ortonormalidad y cerradura, respectivamente.
 
-Como vimos en la ecuación \eqref{def:operador_eigne_vectores} podemos escribir cualquier operador como combinación lineal de sus valores propios, siendo los coeficientes el espectro del mismo operador. Lo que se encontró en el experimento de Stern-Gerlach fue un operador $\bm{S}_z$ el cuál tenía dos valores propios, definidos como $\ket{+}$ y $\ket{-}$, los cuales cumplían con lo siguiente: 
+Entonces, dada esta base, podemos escribir cualquier estado de qbit como
+\begin{equation}
+    \ket{\psi}=\psi_{+}\ket{+}+\psi_{-}\ket{-}
+\end{equation}
+ó en su forma vectorial 
+\begin{equation}
+    \ket{\psi}=\mqty(\psi_{+}\\\psi_{-}).
+\end{equation}
+Como mencionamos anteriormente, en la ecuación \eqref{def:elemto_matriz} del esquema de Heisenberg, cualquier operador $\bm{A}$ puede ser representado en su forma matricial por medio de una base, en este caso para $\qty{\ket{\sigma}}$, como sigue:
+\begin{equation}
+    A_{\sigma\sigma'}=\mel{\sigma}{\bm{A}}{\sigma'};
+\end{equation}
+es decir, cualquier observable para el qbit tiene la forma de la ecuación anterior.
 
+Para las componentes de espín, estas satisfacen las relaciones de conmutación:
 \begin{equation}
-    \bm{S}_z\ket{\pm}=\pm\frac{\hbar}{2}\ket{\pm}.
+    \qty[\bm{S}_i\bm{S}_j]=i\hbar\epsilon_{ijk}\bm{S}_k,
 \end{equation}
+con $\epsilon_{ijk}$ el símbolo de Levi-Civita; donde es directa la derivación del conjunto de operadores $\bm{S}_i$
 
-Este operación resultó ser el operador asociado a la componente z de espín $S_z$; de ahí la notación. Teniendo como representación matricial la siguiente
+\begin{subequations}\label{eq:operadores_espin}
+    \begin{align}
+        \bm{S}_1=\frac{\hbar}{2}\qty(\op{+}{-}+\op{-}{+}),\\
+        \bm{S}_2=\frac{i\hbar}{2}\qty(\op{-}{+}-\op{+}{-}),\\
+        \bm{S}_3=\frac{\hbar}{2}\qty(\op{+}+\op{-}).
+    \end{align}
+\end{subequations}
+Aplicando de nuevo la ecuación \eqref{def:elemto_matriz} obtenemos la representación de los operadores de momento angular de espín
 \begin{equation}
-    \bm{S}_z=\frac{\hbar}{2}\mqty(1&0\\0&-1).
+    S_i=\frac{\hbar}{2}\sigma_i,
 \end{equation}
-
-Si el artefacto de medición del experimento fuese rotado a distintas direcciones de la $z$ igual encontraremos un espectro asociado a ese medición con sus respectivos valores propios, los cuales también se podrían definir con otros nombres $\qty{\ket{\uparrow},\ket{\downarrow}},\qty{\ket{0},\ket{1}},\dots$ y así tener infinitos operadores diagonales (cada uno asociado a una cierta dirección) de la forma de \eqref{def:operador_eigne_vectores}. Sin embargo esto resulta impráctico, pues implicaría realizar frecuentemente cambios de coordenadas. Es por ello que se toma una base común, en general, los valores propios de $\bm{S}_z$, y se describen todos los operadores en esta base.
-De esta forma definimos, las direcciones correspondientes a las direcciones $x$ y $y$ en términos de $\ket{\pm}_z$:
+donde $\qty{\sigma_i}$ son las matrices de Pauli, dadas por:
 \begin{equation}
-    \ket{\pm}_x=\frac{1}{\sqrt{2}}\qty(\ket{+}\pm\ket{-}),
+    \sigma_1=\mqty(0&1\\1&0)\qq{,}\sigma_2=\frac{\hbar}{2}\mqty(0&-i\\i&0)\qq{,}\sigma_3=\mqty(1&0\\0&-1).
 \end{equation}
+Por otra parte, es rápido notar que $\bm{S}^2_i=\frac{\hbar^2}{2}\qty(\op{+}+\op{-})$ para todo $i=1,2,3$; implicando que
 \begin{equation}
-    \ket{\pm}_y=\frac{1}{\sqrt{2}}\qty(\ket{+}\pm i\ket{-}),
+    \bm{S}^2=\frac{3\hbar^2}{4}\qty(\op{+}+\op{-}),
 \end{equation}
-dando como representaciones las siguientes matrices:
+y su forma matricial, en esta misma base es
 \begin{equation}
-    \bm{S}_x=\frac{\hbar}{2}\mqty(0&1\\1&0),
-\end{equation}
-\begin{equation}
-    \bm{S}_y=\frac{\hbar}{2}\mqty(0&-i\\i&0).
-\end{equation}
-Las matrices anteriores, ignorando el factor $\hbar/2$, son conocidas como \emph{matrices de Pauli} $\bm{\sigma}_k$, que son observables con los mismos valores propios que $\bm{S}_k$ pero con espectro $\pm1$. Se suelen escribir las matrices de Pauli como componentes de un vector de dimensión 3 como sigue:
-\begin{equation}
-    \vec{\bm{\sigma}}\equiv\qty(\bm{\sigma}_x,\bm{\sigma}_y,\bm{\sigma}_z).
+    S^2=\frac{3\hbar^2}{4}\Id.
 \end{equation}
 
 
@@ -816,11 +845,11 @@ Para finalmente obtener la expresión objetivo:
 \begin{equation}
     \rhon = \frac{1}{2}\qty(\Id+\vec{x}\cdot\vec{\bm{\sigma}}).
 \end{equation}
-Este operador es justamente el espacio complejo proyectivo que obtuvimos en la ecuación \eqref{eq:espacio_proyectivo_qbit}, implicando que cualquier estado de qbit viva en un esfera $S^2$
+Este operador es justamente el espacio complejo proyectivo que obtuvimos en la ecuación \eqref{eq:espacio_proyectivo_qbit}, implicando que cualquier estado de qbit viva en un esfera $S^2$.
 \begin{equation}
-    \CP(\H)=S^2=\qty{\frac{1}{2}\qty(\Id + \vec{x}\cdot \vec{\bm{\sigma}})},
+    \CP(\H)=S^2=\qty{\frac{1}{2}\qty(\Id + \vec{x}\cdot \vec{\bm{\sigma}})}.
 \end{equation}
-a esta esfera se le conoce en la literatura como \emph{esfera de Bloch} y al espín promedio $\vec{x}$ del sistema como \emph{vector de Bloch}.
+A esta esfera se le conoce en la literatura como \emph{esfera de Bloch} y al espín promedio $\vec{x}$ del sistema como \emph{vector de Bloch}.
 
 A continuación, calcularemos la purificación $\mu$ para hallar su relación con el vector de Bloch $\vec{x}$.
 \begin{align*}
