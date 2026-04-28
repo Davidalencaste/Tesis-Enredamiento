@@ -662,7 +662,7 @@ El libro de Esposito \emph{et al.}\cite{Esposito2015} fue en gran medida una gu�
 En la siguiente sección se desarrollaran los resultados obtenidos hasta este momento para el sistema de dos niveles, mejor conocido como \emph{qbit}.
 
 \section{Ejemplo: Qbit}
-El qbit es uno de los estados cuánticos con mayor relevancia de los últimos años debido a sus aplicaciones en la teoría cuántica de la información , en la cuál se trabaja con estos como objetos base; donde,  \emph{Un qbit es la codificación de un sistema cuántico de dos niveles} \cite{nielsen2010quantum}. Ejemplos de este tipo de sistemas son muchos, los mas conocidos son: estado de partículas de \emph{espín-1/2}, la polarización del campo eléctrico de un fotón, niveles energéticos de átomos con sus dos primeros niveles muy cercanos, entre otros.
+El qbit es uno de los estados cuánticos con mayor relevancia de los últimos años debido a sus aplicaciones en la teoría cuántica de la información, en la cuál se trabaja con estos como objetos base; donde, \emph{un qbit es la codificación de un sistema cuántico de dos niveles} \cite{nielsen2010quantum}. Ejemplos de este tipo de sistemas son muchos, los mas conocidos son: estado de partículas de \emph{espín-1/2}, la polarización del campo eléctrico de un fotón, niveles energéticos de átomos con sus dos primeros niveles muy cercanos, entre otros.
 
 A continuación, procederemos a encontrar la descripción matemática de este tipo de estados con la herramienta descrita en este capítulo.
 
@@ -670,7 +670,7 @@ Al ser un sistema de dos niveles, el espacio de Hilbert $\H$ es de dimension $n=
 \begin{equation}
     \text{Base}(\H)=\qty{\ket{e_i}\,|\,\ip{e_i}{\e_j}=\delta_{ij}},
 \end{equation}
-con $i,j=1,2$. Los estados $\ket{e_i}$ pueden ser cualquier par de estados ortonormales; sin embargo, existen 3 duplas de estados relevantes que se usan usualmente como base de $\H$, que son los valores propios de las matrices de Pauli, las cuales profundizaremos más adelante en este mismo ejemplo.
+con $i,j=1,2$. Los estados $\ket{e_i}$ pueden ser cualquier par de estados ortonormales; sin embargo, existen 3 duplas de estados relevantes que se usan usualmente como base de $\H$, que son los eigne estados de las matrices de Pauli, las cuales profundizaremos más adelante en este mismo ejemplo.
 
 Con esto, el espacio de Hilbert $\H$ para el qbit viene dado por el conjunto de combinaciones lineales de su base, con coeficientes $\psi_i$, es decir de la siguiente forma:
 \begin{equation}
@@ -696,7 +696,7 @@ donde $\psi_1=x_1+ix_2\qq{y}\psi_2=y_1+iy_2$ son la representación cartesiana d
 
 Finalmente, para encontrar el espacio de rayo del qbit primero pasamos a las componentes de los elementos de $\H$ a la forma polar $\psi_j=\rho_je^{i\theta_j}$
 \begin{equation}
-   \ket{\psi}= \rho e^{i\theta_1}\ket{e_1}+\rho e^{i\theta_2}\ket{e_2},
+   \ket{\psi}= \rho_1 e^{i\theta_1}\ket{e_1}+\rho_2 e^{i\theta_2}\ket{e_2},
 \end{equation}
 con $\rho_j\in\R^+\qq{y}\theta_j\in[0,2\pi)$.
 Consideremos la clase de equivalencia entre estados que difieren unicamente por una fase global, es decir,
@@ -753,7 +753,7 @@ es decir, cualquier observable para el qbit tiene la forma de la ecuación anter
 
 Para las componentes de espín, estas satisfacen las relaciones de conmutación:
 \begin{equation}
-    \qty[\bm{S}_i\bm{S}_j]=i\hbar\epsilon_{ijk}\bm{S}_k,
+    \qty[\bm{S}_i,\bm{S}_j]=i\hbar\epsilon_{ijk}\bm{S}_k,
 \end{equation}
 con $\epsilon_{ijk}$ el símbolo de Levi-Civita; donde es directa la derivación del conjunto de operadores $\bm{S}_i$
 
@@ -787,16 +787,22 @@ y su forma matricial, en esta misma base es
 
 Una vez encontrada la forma de todo estado puro y definidas las matrices de Pauli, resta encontrar la expresión para estados mixtos del qbit, o en otras palabras, encontrar la matriz del operador de estado $\rhon$.
 
-Sea un ensamble con $N$ subestados de qbit distintos, $\qty{\ket{\psi_i}}$, cada uno con peso $P_i$; entonces de la ecuación \eqref{def:elementos_matriz_rho} tenemos que el $k'k$-elemento de matriz de $\rhon$ es el siguiente
+Sea un ensamble con $N$ subestados de qbit $\ket{\psi_i}$ representados mediante
+\begin{equation}
+    \ket{\psi_i}=\psi^j_i\ket{e_j}=\psi^1_i\ket{e_1}+\psi^2_i\ket{e_2},
+    \label{def:operador_hilbert_qbit}
+\end{equation}
+donde $\qty{\ket{e_i}}$ es una base ortonormal. Además cada estado tiene un peso $P^i$, por lo que de la ecuación \eqref{def:elementos_matriz_rho} se obtiene el $k'k$-elemento de matriz de $\rhon$ 
 \begin{align}
     \rho_{k'k}
-    &=\sum_i^N P_i\mel{e_k}{\qty(\op{\psi_i})}{e_{k'}}\notag\\
-    &=\sum_i^N P_i\mel{e_k}{\qty(\sum_j^2\psi_{ij}\ket{e_j})\qty(\sum_j^2\bar{\psi}_{ij}\bra{e_j})}{e_{k'}}\notag\\
-    &=\sum_i^N P_i\mel{e_k}{\psi_{ik}\bar{\psi}_{ik'}}{e_{k'}},
+    &=P^i\mel{e_k}{\qty(\op{\psi_i})}{e_{k'}}\notag\\
+    &=P^i\psi^j_i\bar{\psi^l_i}\ip{e_k}{e_j}\ip{e_l}{e_{k'}}\notag\\
+    &=P^i\psi^j_i\bar{\psi^l_i}\delta_{jk}\delta_{lk'}\notag\\
+    &=P^i\psi^k_i\bar{\psi}^{k'}_i
 \end{align}
 por lo tanto, el operador de estado en su forma matricial tiene la siguiente forma
 \begin{equation}
-    \rhon = \sum_i^N P_i \mqty(\abs{\psi_{i1}}^2&\psi_{i2}\bar{\psi}_{i1}\\\psi_{i1}\bar{\psi}_{i2}&\abs{\psi_{i2}}^2).
+    \rhon = P^i \mqty(\abs{\psi_i^1}^2&\psi_i^2\bar{\psi}_i^1\\\psi_i^1\bar{\psi}_i^2&\abs{\psi_i^2}^2).
     \label{eq:rho_qbit_matriz}
 \end{equation}
 A continuación, usando la definición de ensamble promedio de la expresión \eqref{def:Operador_densidad}, definimos las tres componentes de espín del ensamble como:
@@ -805,49 +811,49 @@ A continuación, usando la definición de ensamble promedio de la expresión \eq
 \end{equation}
 con $\qty{\bm{\sigma}_j}$ las matrices de Pauli, y sustituyendo \eqref{eq:rho_qbit_matriz} en esta última expresión
 \begin{equation}
-    x^j=\Tr[\sum_i P_i \mqty(\abs{\psi_{i1}}^2&\psi_{i2}\bar{\psi}_{i1}\\\psi_{i1}\bar{\psi}_{i2}&\abs{\psi_{i2}}^2)\bm{\sigma}_j].
+    x^j=\Tr[P^i \mqty(\abs{\psi_i^1}^2&\psi_i^2\bar{\psi}_i^1\\\psi_i^1\bar{\psi}_i^2&\abs{\psi_i^2}^2)\bm{\sigma}_j].
 \end{equation}
 Calculando el producto matricial para cada matriz de Pauli y aplicando la traza, obtenemos los siguientes resultados para cada matriz:
 \begin{equation}
-    x^1=\sum_i P_i(\psi_{i2}\bar{\psi_{i1}}+\psi_{i1}\bar{\psi}_{i2}),
+    x^1=P^i(\psi_i^2\bar{\psi_i^1}+\psi_i^1\bar{\psi}_i^2),
 \end{equation}
 \begin{equation}
-    x^2=\sum_i P_i(\psi_{i2}\bar{\psi_{i1}}-\psi_{i1}\bar{\psi}_{i2}),
+    x^2=P^i(\psi_i^2\bar{\psi_i^1}-\psi_i^1\bar{\psi}_i^2),
 \end{equation}
 \begin{equation}
-    x^3=\sum_i P_i(\abs{\psi_{i1}}^2-\abs{\psi_{2i}}^2).
+    x^3=P^i(\abs{\psi_i^1}^2-\abs{\psi_i^2}^2).
 \end{equation}
 Una vez obtenidas las tres componentes de espín, calculamos el producto entre la componente con su respectiva matriz de Pauli, es decir, $x^j\bm{\sigma}_j$:
 \begin{equation}
-    x^1\bm{\sigma}_1=\sum_i P_i\mqty(0&\psi_{i2}\bar{\psi}_{i1}+\psi_{i1}\bar{\psi}_{i2}\\\psi_{i2}\bar{\psi}_{i1}+\psi_{i1}\bar{\psi}_{i2}&0),
+    x^1\bm{\sigma}_1=P^i\mqty(0&\psi_i^2\bar{\psi}_i^1+\psi_i^1\bar{\psi}_i^2\\\psi_i^2\bar{\psi}_i^1+\psi_i^1\bar{\psi}_i^2&0),
 \end{equation}
 \begin{equation}
-    x^2\bm{\sigma}_2=\sum_i P_i\mqty(0&\psi_{i2}\bar{\psi}_{i1}-\psi_{i1}\bar{\psi}_{i2}\\\psi_{i1}\bar{\psi}_{i2}-\psi_{2i}\bar{\psi}_{i1}&0),
+    x^2\bm{\sigma}_2=P^i\mqty(0&\psi_i^2\bar{\psi}_i^1-\psi_i^1\bar{\psi}_i^2\\\psi_i^1\bar{\psi}_i^2-\psi_i^2\bar{\psi}_i^1&0),
 \end{equation}
 \begin{equation}
-    x^3\bm{\sigma}_3=\sum_i P_i\mqty(\abs{\psi_{i1}}^2-\abs{\psi_{i2}}^2&0\\0&\abs{\psi_{i2}}^2-\abs{\psi_{i1}}^2).
+    x^3\bm{\sigma}_3=P^i\mqty(\abs{\psi_i^1}^2-\abs{\psi_i^2}^2&0\\0&\abs{\psi_i^2}^2-\abs{\psi_i^1}^2).
 \end{equation}
 De esta manera obtenemos el producto punto entre las componentes de espín con la matriz de Pauli correspondiente, 
 \begin{equation}
-    \vec{x}\cdot\vec{\bm{\sigma}}=\sum_i P_i\mqty(\abs{\psi_{i1}}^2-\abs{\psi_{i2}}^2&2\,\psi_{i2}\bar{\psi}_{i1}\\2\,\psi_{i1}\bar{\psi}_{i2}&\abs{\psi_{i2}}^2-\abs{\psi_{i1}}^2).
+    \vec{x}\cdot\vec{\bm{\sigma}}=P^i\mqty(\abs{\psi_i^1}^2-\abs{\psi_i^2}^2&2\,\psi_i^2\bar{\psi}_i^1\\2\,\psi_i^1\bar{\psi}_i^2&\abs{\psi_i^2}^2-\abs{\psi_i^1}^2).
 \end{equation}
 Además, por condición de normalidad \eqref{def:condicion_normalizacion} y de la expresión \eqref{eq:rho_qbit_matriz} se deriva la siguiente forma del operador identidad:
 \begin{equation}
-    \Id=\sum_i P_i \mqty(\abs{\psi_{i1}}^2+\abs{\psi_{i2}}^2&0\\0&\abs{\psi_{i1}}^2+\abs{\psi_{i2}}^2).
+    \Id=P^i \mqty(\abs{\psi_i^1}^2+\abs{\psi_i^2}^2&0\\0&\abs{\psi_i^1}^2+\abs{\psi_i^2}^2).
 \end{equation}
 Por consiguiente, al sumar las dos últimas expresiones obtenemos la siguiente relación
 \begin{align}
     \Id+\vec{x}\cdot\vec{\bm{\sigma}}
-    &=\mqty(2\abs{\psi_{i1}}^2&2\psi_{i2}\bar{\psi}_{i1}\\2\psi_{i1}\bar{\psi}_{i2}&2\abs{\psi_{i2}}^2)\notag\\
+    &=\mqty(2\abs{\psi_i^1}^2&2\psi_i^2\bar{\psi}_i^1\\2\psi_i^1\bar{\psi}_i^2&2\abs{\psi_i^2}^2)\notag\\
     &=2\rhon.
 \end{align}
 Para finalmente obtener la expresión objetivo:
 \begin{equation}
     \rhon = \frac{1}{2}\qty(\Id+\vec{x}\cdot\vec{\bm{\sigma}}).
 \end{equation}
-Este operador es justamente el espacio complejo proyectivo que obtuvimos en la ecuación \eqref{eq:espacio_proyectivo_qbit}, implicando que cualquier estado de qbit viva en un esfera $S^2$.
+Es importante mencionar que existe una relación uno a uno entre matrices densidad $\rhon$ y elementos en el espacio proyectivo, ya que a cada matriz densidad $\rhon(\vec{x})$ se le asociada un punto $\vec{x}\in S^2 \simeq  \CP(\H_0)$.
 \begin{equation}
-    \CP(\H)=S^2=\qty{\frac{1}{2}\qty(\Id + \vec{x}\cdot \vec{\bm{\sigma}})}.
+    \CP(\H_0)\simeq     S^2\simeq\qty{\frac{1}{2}\qty(\Id + \vec{x}\cdot \vec{\bm{\sigma}})}.
 \end{equation}
 A esta esfera se le conoce en la literatura como \emph{esfera de Bloch} y al espín promedio $\vec{x}$ del sistema como \emph{vector de Bloch}.
 
@@ -870,7 +876,7 @@ obteniendo la relación entre $\mu$ y $\vec{x}$:
     &=\frac{1}{2}\qty(1+|\vec{x}|^2).
 \end{align}
 
-De la última expresión concluimos que:
+De esta última expresión concluimos que:
 
 \begin{enumerate}
     \item Un estado puro corresponde a un vector de Bloch localizado en la superficie de la esfera de Bloch, es decir, $|\vec{x}|=1$.
@@ -880,8 +886,119 @@ De la última expresión concluimos que:
 
 Por lo que, el espacio de operadores densidad del qbit es caracterizado por el espín promedio $\vec{x}$ del sistema.
 \begin{equation}
-    \rhon_{space}\equiv\qty{\rhon=\frac{1}{2}\qty(\Id + \vec{x}\cdot \vec{\bm{\sigma}})\;|\;\vec{x}\in \R^3 }.
+    \rhon_{space}\equiv\qty{\rhon=\frac{1}{2}\qty(\Id + \vec{x}\cdot \vec{\bm{\sigma}})\;|\;\vec{x}\in \mathbb{B}_1(\,\vec{0}\,) },
     \label{eq:espacio_de_qbits}
+\end{equation}
+donde $\mathbb{B}_1(\,\vec{0}\,)$ es la bola de radio 1 centrada en el origen:
+\begin{equation}
+    \mathbb{B}_1(\,\vec{0}\,)\equiv \qty{\vec{x}\in \R^3 \qq{t.q.}\abs{\vec{x}}\leq1 }.
+\end{equation}
+
+
+Para finalizar este ejemplo, queremos hallar el operador de estado en la forma de la ecuación \eqref{eq:espacio_de_qbits} para un estado superpuesto de $\rhon_1$ y $\rhon_2$:
+\begin{subequations}\label{def:xs_and_its_operadores}
+    \begin{align}
+        \rhon_1=\frac{1}{2}\qty(\Id+\vec{x}_1\cdot\vec{\bm{\sigma}})\\
+        \rhon_2=\frac{1}{2}\qty(\Id+\vec{x}_2\cdot\vec{\bm{\sigma}})\\
+        \bm{P}_0=\frac{1}{2}\qty(\Id+\vec{x}_0\cdot\vec{\bm{\sigma}})
+    \end{align}
+\end{subequations}
+Para encontrar el operador correspondiente, utilizaremos la expresión
+\eqref{def:Ley_de_composicion_final} que requiere unicamente estos dos operadores y un tercero $\vec{x^0}$ fiducial que por el momento dejaremos de forma general. 
+Recordemos la siguiente identidad antes de proseguir:
+\begin{equation}
+    \qty(\vec{a}\cdot\pauli)(\vec{b}\cdot\pauli)=(\vec{a}\cdot\vec{b})\Id+i(\vec{a}\times\vec{b})\cdot\pauli
+    \label{eq:identidad_pauli}
+\end{equation}
+
+Con esto en mente, calculemos, sin perdida de generalidad $\rhon_1 \bm{P}_0 \rhon_2$:
+\begin{align}
+\rhon_1 \bm{P}_0 \rhon_2
+&=
+\frac{1}{2^3}
+\qty(\Id+\vec{x}_1\cdot\vec{\bm{\sigma}})
+\qty(\Id+\vec{x}_0\cdot\vec{\bm{\sigma}})
+\qty(\Id+\vec{x}_2\cdot\vec{\bm{\sigma}})
+\notag\\
+&=
+\frac{1}{2^3}
+(\Id+\vec{x}_1\cdot\pauli)
+\qty[
+\Id + x_2\cdot\pauli + x_0\cdot\pauli
++ (x_0\cdot x_2)\Id
++ i(x_0\times x_2)\cdot\pauli
+]
+\notag\\
+&=
+\frac{1}{2^3}\Big[
+\Id + x_2\cdot\pauli + x_0\cdot\pauli
++ (x_0\cdot x_2)\Id
++ i(x_0\times x_2)\cdot\pauli
+\notag\\
+&\quad + x_1\cdot \pauli
++ (x_1\cdot x_2)\Id
++ i(x_1\times x_2)\cdot\pauli
+\notag\\
+&\quad + (x_1\cdot x_0)\Id
++ i(x_1\times x_0)\cdot\pauli
+\notag\\
+&\quad + (x_0\cdot x_2)\,x_1\cdot\pauli
++ i\, x_1\cdot(x_0\times x_2)\Id
+- (x_1\times(x_0\times x_2))\cdot\pauli
+\Big]
+\notag\\
+&=
+\frac{1}{2^3}\Big[
+\qty(
+x_0 + x_1 + x_2
++ i(x_0\times x_2 + x_1\times x_2 + x_1\times x_0)
++ (x_0\cdot x_2)x_1
+- x_1\times(x_0\times x_2)
+)\cdot\pauli
+\notag\\
+&\quad +
+\qty(
+1 + x_0\cdot x_2 + x_1\cdot x_2 + x_1\cdot x_0
++ i\, x_1\cdot(x_0\times x_2)
+)\Id
+\Big].
+\label{eq:calc_coefs}
+\end{align}
+
+Ahora, notemos que para un estado tenga su operador de densidad de la forma de la ecuación \eqref{eq:espacio_de_qbits} los coeficientes del estado deben corresponder a los de una de una base ortonormal en el espacio de Hilbert, como se menciona en la expresión \eqref{def:operador_hilbert_qbit}. Es decir, los operadores $\rhon_1$ y $\rhon_2$ deben ser la representación de los estados $\ket{e_1}$ y $\ket{e_2}$ de la base respectivamente. Lo que es lo mismo a decir que:
+\begin{subequations}
+    \begin{align}
+            \rhon_1(\vec{x}_1)=\op{e_1}\\
+            \rhon_2(\vec{x}_2)=\op{e_2}.
+    \end{align}
+\end{subequations}
+Por la relación de completez ($\sum_i \op{e_i}=\Id$) tenemos qué:
+\begin{align}
+    \rhon_1+\rhon_2
+    &=
+    \frac{1}{2}\qty(\Id+x_1\cdot\pauli)+\frac{1}{2}\qty(\Id+x_2\cdot\pauli)\notag\\
+    &=\Id,
+\end{align}
+implicando que 
+\begin{equation}
+    \ip{e_i}{e_j}=0\Longleftrightarrow x_i=-x_j,
+\end{equation}
+es decir,\emph{ dos estados de qbit son ortogonales en el espacio de Hilbert, si y solo si, sus vectores de Bloch son antíparelos.}
+
+Esto implica el siguiente cambio en la expresión \eqref{eq:calc_coefs}:
+\begin{align}
+\rhon_1 \bm{P}_0 \rhon_2 
+&=
+\Big[
+x_0
+- 2i(x_0\times x_1)
+- (x_0\cdot x_1)x_1
+\Big]\cdot\pauli,
+\end{align}
+que se generaliza de la siguiente forma
+\begin{equation}
+    \rhon_i \bm{P}_0 \rhon_j
+    &=
 \end{equation}
 
 
@@ -891,7 +1008,7 @@ En la siguiente sección, mostraremos un método distinto para llegar al mismo r
 
 
 
-\section{Teoría cuántica en la teoría de la información}
+\section{Teoría cuántica desde el punto de vista de la teoría de la información}
 La pureza $\mu$ dada en la definición \eqref{def:pureza} es una medida es sencilla de calcular conociendo la forma exacta del operador de estado; sin embargo, nos gustaría una medida que dependa de alguna cantidad física medible. Con esta motivación en mente, consideremos un ensamble de partículas de espín $\frac{1}{2}$ y espín promedio definido (cantidad física medible); es decir, vamos a considerar un ensamble con dos niveles de energía.\\ Hacemos esta consideración, pues el desarrollo de esta tesis se basa en qbits que es un sistema de dos niveles de energía.
 
 Dado a \eqref{def:Operador_densidad} definimos el espín promedio del ensamble como sigue:
