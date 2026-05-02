@@ -895,7 +895,8 @@ donde $\mathbb{B}_1(\,\vec{0}\,)$ es la bola de radio 1 centrada en el origen:
 \end{equation}
 
 
-Para finalizar este ejemplo, queremos hallar el operador de estado en la forma de la ecuación \eqref{eq:espacio_de_qbits} para un estado superpuesto de $\rhon_1$ y $\rhon_2$:
+Para finalizar este ejemplo, hallaremos el operador de estado en la forma de la ecuación \eqref{eq:espacio
+_de_qbits} para un estado superpuesto de $\rhon_1$ y $\rhon_2$:
 \begin{subequations}\label{def:xs_and_its_operadores}
     \begin{align}
         \rhon_1=\frac{1}{2}\qty(\Id+\vec{x}_1\cdot\vec{\bm{\sigma}})\\
@@ -911,95 +912,154 @@ Recordemos la siguiente identidad antes de proseguir:
     \label{eq:identidad_pauli}
 \end{equation}
 
-Con esto en mente, calculemos, sin perdida de generalidad $\rhon_1 \bm{P}_0 \rhon_2$:
+Con esto en mente, calculemos los factores $\rhon_i \bm{P}_0 \rhon_j$, con $i,j=1,2$
 \begin{align}
-\rhon_1 \bm{P}_0 \rhon_2
+\rhon_i \bm{P}_0 \rhon_j
 &=
-\frac{1}{2^3}
-\qty(\Id+\vec{x}_1\cdot\vec{\bm{\sigma}})
+\frac{i}{2^3}
+\qty(\Id+\vec{x}_i\cdot\vec{\bm{\sigma}})
 \qty(\Id+\vec{x}_0\cdot\vec{\bm{\sigma}})
-\qty(\Id+\vec{x}_2\cdot\vec{\bm{\sigma}})
+\qty(\Id+\vec{x}_j\cdot\vec{\bm{\sigma}})
 \notag\\
 &=
-\frac{1}{2^3}
-(\Id+\vec{x}_1\cdot\pauli)
+\frac{i}{2^3}
+(\Id+\vec{x}_i\cdot\pauli)
 \qty[
-\Id + x_2\cdot\pauli + x_0\cdot\pauli
-+ (x_0\cdot x_2)\Id
-+ i(x_0\times x_2)\cdot\pauli
+\Id + \vec{x}_j\cdot\pauli + \vec{x}_0\cdot\pauli
++ (\vec{x}_0\cdot \vec{x}_j)\Id
++ i(\vec{x}_0\times \vec{x}_j)\cdot\pauli
 ]
 \notag\\
 &=
-\frac{1}{2^3}\Big[
-\Id + x_2\cdot\pauli + x_0\cdot\pauli
-+ (x_0\cdot x_2)\Id
-+ i(x_0\times x_2)\cdot\pauli
-\notag\\
-&\quad + x_1\cdot \pauli
-+ (x_1\cdot x_2)\Id
-+ i(x_1\times x_2)\cdot\pauli
-\notag\\
-&\quad + (x_1\cdot x_0)\Id
-+ i(x_1\times x_0)\cdot\pauli
-\notag\\
-&\quad + (x_0\cdot x_2)\,x_1\cdot\pauli
-+ i\, x_1\cdot(x_0\times x_2)\Id
-- (x_1\times(x_0\times x_2))\cdot\pauli
-\Big]
-\notag\\
-&=
-\frac{1}{2^3}\Big[
-\qty(
-x_0 + x_1 + x_2
-+ i(x_0\times x_2 + x_1\times x_2 + x_1\times x_0)
-+ (x_0\cdot x_2)x_1
-- x_1\times(x_0\times x_2)
-)\cdot\pauli
+\frac{i}{2^3}\{
+\qty[
+\vec{x}_0 + \vec{x}_i + \vec{x}_j
++ i(\vec{x}_0\times \vec{x}_j + \vec{x}_i\times \vec{x}_j + \vec{x}_i\times \vec{x}_0)
++ (\vec{x}_0\cdot \vec{x}_j)\vec{x}_i
+- \vec{x}_i\times(\vec{x}_0\times \vec{x}_j)
+]\cdot\pauli
 \notag\\
 &\quad +
 \qty(
-1 + x_0\cdot x_2 + x_1\cdot x_2 + x_1\cdot x_0
-+ i\, x_1\cdot(x_0\times x_2)
+i + \vec{x}_0\cdot \vec{x}_j + \vec{x}_i\cdot \vec{x}_j + \vec{x}_i\cdot \vec{x}_0
++ i\, \vec{x}_i\cdot(\vec{x}_0\times \vec{x}_j)
 )\Id
-\Big].
+\},
 \label{eq:calc_coefs}
 \end{align}
+y utilizando que $(\vec{a}\times\vec{b})\times\vec{c}=\vec{b}\,(\vec{a}\cdot\vec{c})-\vec{a}\,(\vec{b}\cdot\vec{c})$,
+\begin{align}
+\rhon_i \bm{P}_0 \rhon_j
+&=\frac{1}{2^3}\Big\{
+\Big[
+\vec{x}_0 + \vec{x}_i + \vec{x}_j
++ i(\vec{x}_0\times \vec{x}_j + \vec{x}_i\times \vec{x}_j + \vec{x}_i\times \vec{x}_0)
+\notag\\
+&\quad + (\vec{x}_0\cdot \vec{x}_j)\vec{x}_i
+- \vec{x}_0\,(\vec{x}_i\cdot \vec{x}_j)
++ \vec{x}_j\,(\vec{x}_i\cdot \vec{x}_0)
+\Big]\cdot\pauli
+\notag\\
+&\quad +
+\Big(
+1 + \vec{x}_0\cdot \vec{x}_j + \vec{x}_i\cdot \vec{x}_j + \vec{x}_i\cdot \vec{x}_0
++ i\, \vec{x}_i\cdot(\vec{x}_0\times \vec{x}_j)
+\Big)\Id
+\Big\}.
+\label{eq:coef_final_general}
+\end{align}
 
-Ahora, notemos que para un estado tenga su operador de densidad de la forma de la ecuación \eqref{eq:espacio_de_qbits} los coeficientes del estado deben corresponder a los de una de una base ortonormal en el espacio de Hilbert, como se menciona en la expresión \eqref{def:operador_hilbert_qbit}. Es decir, los operadores $\rhon_1$ y $\rhon_2$ deben ser la representación de los estados $\ket{e_1}$ y $\ket{e_2}$ de la base respectivamente. Lo que es lo mismo a decir que:
+Para que un estado tenga un operador de densidad de la forma \eqref{eq:espacio_de_qbits}, los coeficientes del estado deben corresponder a los de una de una base ortonormal en el espacio de Hilbert, como se menciona en la expresión \eqref{def:operador_hilbert_qbit}. Es decir, los operadores $\rhon_1$ y $\rhon_2$ deben cumplir con que
 \begin{subequations}
     \begin{align}
             \rhon_1(\vec{x}_1)=\op{e_1}\\
             \rhon_2(\vec{x}_2)=\op{e_2}.
     \end{align}
 \end{subequations}
-Por la relación de completez ($\sum_i \op{e_i}=\Id$) tenemos qué:
+Además, por la relación de completes ($\sum_i \op{e_i}=\Id$) tenemos qué
 \begin{align}
     \rhon_1+\rhon_2
     &=
-    \frac{1}{2}\qty(\Id+x_1\cdot\pauli)+\frac{1}{2}\qty(\Id+x_2\cdot\pauli)\notag\\
+    \frac{1}{2}\qty(\Id+\vec{x}_1\cdot\pauli)+\frac{1}{2}\qty(\Id+\vec{x}_2\cdot\pauli)\notag\\
     &=\Id,
 \end{align}
-implicando que 
+dando como resultado: 
 \begin{equation}
-    \ip{e_i}{e_j}=0\Longleftrightarrow x_i=-x_j,
+    \ip{e_i}{e_j}=0\Longleftrightarrow \vec{x}_i=-\vec{x}_j,
 \end{equation}
 es decir,\emph{ dos estados de qbit son ortogonales en el espacio de Hilbert, si y solo si, sus vectores de Bloch son antíparelos.}
 
-Esto implica el siguiente cambio en la expresión \eqref{eq:calc_coefs}:
+De esta manera, para la expresión \eqref{eq:coef_final_general} debemos tomar $\vec{x}_i=(2\delta_{ij}-1)\vec{x}_j$ , obteniendo:
 \begin{align}
-\rhon_1 \bm{P}_0 \rhon_2 
+\rhon_i \bm{P}_0 \rhon_j 
 &=
+\frac{1}{2^2}\Big\{
 \Big[
-x_0
-- 2i(x_0\times x_1)
-- (x_0\cdot x_1)x_1
-\Big]\cdot\pauli,
+(1-\delta_{ij})\vec{x}_0 + \qty[\delta_{ij}+(2\delta_{ij}-1)(\vec{x}_0\cdot \vec{x}_j)]\,\vec{x}_j + i(1-\delta_{ij})(\vec{x}_0\times \vec{x}_j)
+\Big]\cdot\pauli
+\notag\\
+&\quad +
+\Big(
+1 + \vec{x}_0\cdot \vec{x}_j 
+\Big)\delta_{ij}\;\Id
+\Big\},
 \end{align}
-que se generaliza de la siguiente forma
+donde, siguiendo los mismos pasos, podemos obtener la traza de $\rhon_i \bm{P}_0 \rhon_j \bm{P}_0$; dando como resultado 
 \begin{equation}
-    \rhon_i \bm{P}_0 \rhon_j
+\Tr(\rhon_i \bm{P}_0 \rhon_j \bm{P}_0)
+=
+\frac{1}{2^2}
+\Big\{
+1 + (\vec{x}_0\cdot \vec{x}_j)\qty[
+2\delta_{ij} + (2\delta_{ij}-1)(\vec{x}_0\cdot \vec{x}_j)
+]
+\Big\}.
 \end{equation}
-
+Finalmente, obtenemos la expresión de cada uno de los coeficientes del estado superpuesto de la expresión \eqref{def:Ley_de_composicion_final}:
+\begin{align}
+\frac{\rhon_i \bm{P}_0 \rhon_j}{\Tr(\rhon_i \bm{P}_0 \rhon_j \bm{P}_0)^{1/2}}
+&=
+\frac{1}{2}
+\Big\{
+\Big[
+(1-\delta_{ij})\vec{x}_0
++ \qty[\delta_{ij}+(2\delta_{ij}-1)(\vec{x}_0\cdot \vec{x}_j)]\,\vec{x}_j
++ i(1-\delta_{ij})(\vec{x}_0\times \vec{x}_j)
+\Big]\cdot\pauli
+\notag\\
+&\quad +
+\Big(
+1 + \vec{x}_0\cdot \vec{x}_j 
+\Big)\delta_{ij}\,\Id
+\Big\}
+\notag\\
+&\quad \times
+\Big\{
+1 + (\vec{x}_0\cdot \vec{x}_j)\qty[
+2\delta_{ij} + (2\delta_{ij}-1)(\vec{x}_0\cdot \vec{x}_j)
+]
+\Big\}^{-1/2}.
+\end{align}
+El resultado de la expresión anterior es cierto para cualquier $\vec{x}_0$ \emph{no colineal} a $\vec{x}_1$ y $\vec{x}_2$; así que, podemos escoger un $\vec{x}_0$ apropiado que ayude a simplificar la expresión anterior. Por lo que escogeremos un $\vec{x}_0$ que sea ortogonal a $\vec{x}_{1,2}$, es decir $\vec{x}_0\cdot \vec{x}_j=0$, lo cuál resulta en nuestra expresión objetivo:
+\begin{equation}
+\frac{\rhon_i \bm{P}_0 \rhon_j}{\Tr(\rhon_i \bm{P}_0 \rhon_j \bm{P}_0)^{1/2}}
+=
+\frac{1}{2}
+\Big\{
+\Big[
+(1-\delta_{ij})(\vec{x}_0+i\,\vec{x}_0\times \vec{x}_j)
++ \delta_{ij}\,\vec{x}_j
+\Big]\cdot\pauli
++ \delta_{ij}\,\Id
+\Big\}.
+\end{equation}
+Realizando la respectiva combinación lineal de los coeficientes $c_1$ y $c_2$ y recordando que $\vec{x}_1=-\vec{x}_2$, encontramos finalmente, el vector de Bloch correspondiente a la superposición de dos estados como 
+\begin{equation}
+\vec{x} = (\abs{c_1}^2-\abs{c_2}^2)\vec{x}_1+2\Re\!\qty{
+c_1\bar{c}_2(\vec{x}_0+i\,\vec{x}_0\times \vec{x}_1)
+};\qq{$\vec{x}_0\perp \vec{x}_1=-\vec{x}_2$.}
+\label{eq:vector_bloch_superposicion}
+\end{equation}
 
 
 
@@ -1008,54 +1068,60 @@ En la siguiente sección, mostraremos un método distinto para llegar al mismo r
 
 
 \section{Teoría cuántica desde el punto de vista de la teoría de la información}
-La pureza $\mu$ dada en la definición \eqref{def:pureza} es una medida es sencilla de calcular conociendo la forma exacta del operador de estado; sin embargo, nos gustaría una medida que dependa de alguna cantidad física medible. Con esta motivación en mente, consideremos un ensamble de partículas de espín $\frac{1}{2}$ y espín promedio definido (cantidad física medible); es decir, vamos a considerar un ensamble con dos niveles de energía.\\ Hacemos esta consideración, pues el desarrollo de esta tesis se basa en qbits que es un sistema de dos niveles de energía.
-
-Dado a \eqref{def:Operador_densidad} definimos el espín promedio del ensamble como sigue:
-
-
+El problema fundamental de la teoría de la información es investigar \emph{bajo que condiciones un canal determinado, sujeto a cierto ruido puede, o no, transmitir un mensaje determinado}. Para lograr esto, se introduce una cantidad de información conocida como \emph{entropía de Shannon}
 \begin{equation}
-    \vec{S}=\Tr(\rhon \vec{\bm{\sigma}}).
+    \H(x)=-\sum_xP(x)\log_2(P(x)),
 \end{equation}
+donde $P(x)$ representa la probabilidad de suceder $x$.
 
+Trasladar el concepto de información a la teoría cuántica no un proceso inmediato pues, por el principio de Landaver [FALTA CITA], la información esta fundamentalmente ligada a procesos estocásticos, y la teoría cuántica de estados puros tiene una evaluación determinista, como ya hemos visto; el único elemento estocástico en la teoría cuántica se presenta al considerar un instrumento externo de medición, siendo de naturaleza macroscópica.
 
-Donde $\vec{\bm{\sigma}}=(\sigma_x,\sigma_y,\sigma_z)$ son las matrices de Pauli.\\ 
+En esta sección analizamos la medición de las propiedades del sistema cuántico visto como un proceso informativo y mostramos que podemos deducir la forma general de estados posibles del sistema. Nos restringiremos a sistemas de $2-$niveles, pero el análisis puede ser generalizado a sistemas de $N-$niveles.
 
-Definimos una cantidad que mida de manera cuantitativa el desorden del sistema, la cual dependa del tipo de ensamble. Exigimos que dicha cantidad sea mínima (cero) para un ensamble puro y máxima para un ensamble completamente aleatorio.  
-
-En termodinámica, la magnitud que cumple con estas propiedades es la \textit{entropía}. Motivados por esto, definimos la \textit{entropía en mecánica cuántica estadística} como \cite{Sakurai2011}
+Consideremos un ensamble de partículas de espín $1/2$, con momento angular promedio definido como
 \begin{equation}
-    S_{entropia} = -k_B \Tr(\rhon \ln \rhon),
-    \label{def:entropia}
+\vec{S}=\frac{\hbar}{2}\Tr(\rhon\pauli)=\frac{\hbar}{2}\vec{x}.
+\label{def:espin_promedio_info}
 \end{equation}
-donde $k_B$ es la constante de Boltzmann y $\rhon$ es el operador densidad del sistema.\\
-A continuación, buscaremos el operador densidad $\rhon$ que describe el equilibrio térmico de un sistema con espín definido.
+Notemos que estos son datos que obtenemos del experimento.
 
-Consideremos la acción $F$:
+Ahora podemos cuantificar la cantidad de información obtenida en la medición mediante la entropía de Von Neumann, definida como:
+\begin{equation}
+    S=-\Tr(\rhon\ln\rhon).
+\end{equation}
+Entonces, podemos aplicar el  principio de máxima entropía [FALTA CITA]:
+
+\emph{La densidad de probabilidad que maximiza $S$ sujeta a las condiciones impuestas por la información disponible es la descripción menos polarizada de lo que se conoce del conjunto de alternativas posibles.}
+
+Para nuestro caso de estudio tenemos que la densidad de probabilidad esta sujeta a las condiciones en \eqref{def:espin_promedio_info} y a la condición de normalización $\Tr(\rhon)=1$.
+
+Entonces buscamos al estado $\rhon$ tal que maximiza a la entropía de Von-Neumann, sujeta a las condiciones antes mencionadas. El procedimiento para obtener estos estados es mediante un método variacional.
+
+Consideremos la funcional
 \begin{align}
     F
-    &=\Tr(S_{entropia}+\alpha_x S_x+\alpha_y S_y+\alpha_z S_z+\lambda \rhon)\\
-    &=\Tr(-\rhon\ln{\rhon}+\vec{\alpha}\cdot\Bar{S}+\lambda\rhon).
+    &=\Tr(-\rhon\ln\rhon+\alpha_xS_x+\alpha_yS_y+\alpha_zS_z+\lambda\rhon)\notag\\
+    &=\Tr(-\rhon\ln\rhon + \vec{\alpha}\cdot\vec{S}+\lambda\rhon),
 \end{align}
-Donde $S_i$ es el valor promedio de la i-esima componente del espín, es decir, $S_i=\Tr(\rhon \bm{\sigma}_i)$.\\
-Sabemos que la entropía debe maximizarse en un estado de equilibrio, y dado que la entropía es cóncava en $\rhon$ basta con obtener el punto donde $\delta F = 0$ para encontrar el estado $\rhon$ que maximiza la entropía.
+donde $\vec{\alpha}$ y $\lambda$ son multiplicadores de Lagrange. Ahora, sabemos que la entropía debe maximizarse en un estado de equilibrio, y dado que la entropía es cóncava en $\rhon$ basta con obtener el punto donde $\delta F = 0$ para encontrar el estado $\rhon$ que maximiza la entropía.
 \begin{align}
-0=\delta F
-&= \Tr(\ln{\rhon}+\Id+\vec{\alpha}\cdot \vec{\bm{\sigma}}+\lambda\Id)\delta\rhon.
+\delta F
+&= \Tr((1+\lambda)\Id+\ln\rhon+\frac{\hbar}{2}\vec{\alpha}\cdot\pauli)\delta\rhon.
 \label{eq:multiplicadores}
 \end{align}
 entonces al ser para cualquier variación, necesariamente se requiere que:
 \begin{equation}
-    \rhon = \frac{\e^{-\vec{\alpha}\cdot \vec{\bm{\sigma}}}}{\e^{(1+\lambda)\Id}}.
+    \rhon = \frac{\e^{-\frac{\hbar}{2}\vec{\alpha}\cdot \vec{\bm{\sigma}}}}{\e^{(1+\lambda)\Id}}.
     \label{eq:rho_wo_norm}
 \end{equation}
 Usando la restricción $\Tr(\rhon)=1$, se obtiene
 \begin{equation}
-    \e^{(1+\lambda)\Id}=\Tr(\e^{-\vec{\alpha}\cdot\vec{\bm{\sigma}}}).
+    \e^{(1+\lambda)\Id}=\Tr(\e^{-\frac{\hbar}{2}\vec{\alpha}\cdot\vec{\bm{\sigma}}}).
     \label{eq:rho's_normaliz}
 \end{equation}
 Sustituyendo ~\eqref{eq:rho's_normaliz} en ~\eqref{eq:rho_wo_norm} se obtiene el operador densidad de un sistema con espín $\vec{S}$ y en equilibrio térmico.
 \begin{equation}
-    \rhon = \frac{\e^{-\vec{\alpha}\cdot\vec{\bm{\sigma}}}}{\Tr(\e^{-\vec{\alpha}\cdot\vec{\bm{\sigma}}})}.
+    \rhon = \frac{\e^{-\frac{\hbar}{2}\vec{\alpha}\cdot\vec{\bm{\sigma}}}}{\Tr(\e^{-\frac{\hbar}{2}\vec{\alpha}\cdot\vec{\bm{\sigma}}})}.
     \label{eq:rho_semifinal}
 \end{equation}
 Solo es necesario ahora incluir la restricción de espín para despejar los valores $\alpha_i$. Primero, recordando que:
@@ -1072,75 +1138,76 @@ Solo es necesario ahora incluir la restricción de espín para despejar los valo
 \end{equation}
 Con ello, expandimos en serie de Taylor la exponencial:
 \begin{align}
-\e^{-\vec{\alpha}\cdot\vec{\bm{\sigma}}}
+\e^{-\frac{\hbar}{2}\vec{\alpha}\cdot\vec{\bm{\sigma}}}
 &=
 \sum_{m=0}^{\infty}
 \frac{(-1)^m}{m!}
-(\vec{\alpha}\cdot\vec{\bm{\sigma}})^{m}
+(\vec{\alpha}\cdot\frac{\hbar}{2}\vec{\bm{\sigma}})^{m}
 \notag \\
 &=
-\sum_{k=0}^{\infty}
+\frac{\hbar}{2}\sum_{k=0}^{\infty}
 \frac{|\vec{\alpha}|^{2k}}{(2k)!}\,\Id
 -
 \sum_{k=0}^{\infty}
 \frac{|\vec{\alpha}|^{2k+1}}{(2k+1)!}
-(\vec{\bm{\sigma}}\cdot\hat{n})
+(\frac{\hbar}{2}\vec{\bm{\sigma}}\cdot\hat{n})
 \notag \\
 &=
-\cosh|\vec{\alpha}|\,\Id
+\frac{\hbar}{2}\cosh|\vec{\alpha}|\,\Id
 -
 \frac{\sinh|\vec{\alpha}|}{|\vec{\alpha}|}
-(\vec{\alpha}\cdot\vec{\bm{\sigma}}).
+(\frac{\hbar}{2}\vec{\alpha}\cdot\vec{\bm{\sigma}}).
 \label{eq:expansion_exponencial}
 \end{align}
 Con este resultado, aplicamos la traza a la exponencial:
 \begin{align}
-\Tr\!\qty(\e^{-\vec{\alpha}\cdot\vec{\bm{\sigma}}})
+\Tr\!\qty(\e^{-\frac{\hbar}{2}\,\vec{\alpha}\cdot\vec{\bm{\sigma}}})
 &=
-\Tr\!\qty(
+\Tr\!\qty(\frac{\hbar}{2}
 \cosh|\vec{\alpha}|\,\Id
 -
 \frac{\sinh|\vec{\alpha}|}{|\vec{\alpha}|}
-(\vec{\alpha}\cdot\vec{\bm{\sigma}})
+(\frac{\hbar}{2}\,\vec{\alpha}\cdot\vec{\bm{\sigma}})
 )
 \notag \\
 &=
-\cosh|\vec{\alpha}|\,\Tr(\Id)
+\frac{\hbar}{2}\cosh|\vec{\alpha}|\,\Tr(\Id)
 -
 \frac{\sinh|\vec{\alpha}|}{|\vec{\alpha}|}
-\Tr(\vec{\alpha}\cdot\vec{\bm{\sigma}})
+\Tr(\frac{\hbar}{2}\,\vec{\alpha}\cdot\vec{\bm{\sigma}})
 \notag \\
 &=
-2\cosh|\vec{\alpha}|
+\hbar\cosh|\vec{\alpha}|
 -
 \frac{\sinh|\vec{\alpha}|}{|\vec{\alpha}|}
-\sum_i \alpha_i\; \cancelto{0}{\Tr(\bm{\sigma}_i)}
+\sum_i \alpha_i\; \cancelto{0}{\Tr(\frac{\hbar}{2}\,\bm{\sigma}_i)}
 \notag \\
 &=
-2\cosh|\vec{\alpha}|.
+\hbar\cosh|\vec{\alpha}|.
 \label{eq:normalizacion_traza}
 \end{align}
-Sustituyendo ~\eqref{eq:normalizacion_traza} en ~\eqref{eq:rho_semifinal} y reacomodando:
+Sustituyendo ~\eqref{eq:normalizacion_traza} en ~\eqref{eq:rho_semifinal} y reacomodando tenemos que
 \begin{equation}
-    \rhon = \frac{1}{2}\qty(\Id - \frac{\tanh{|\vec{\alpha}|}}{|\vec{\alpha}|})\vec{\alpha}\cdot\vec{\bm{\sigma}}
+    \rhon = \frac{1}{2}\qty(\Id - \frac{\tanh{|\vec{\alpha}|}}{|\vec{\alpha}|})\,\vec{\alpha}\cdot\vec{\bm{\sigma}}.
     \label{eq:rho_semi_semifinal}
 \end{equation}
-Ahora, observando que
+Sin embargo, notemos que:
 \begin{align}
-    S_k 
+    x_k 
     &= \Tr(\rhon\,\bm{\sigma}_k)
     = \Tr\!\qty[\frac{1}{2}\qty(\Id - \frac{\tanh |\vec{\alpha}|}{|\vec{\alpha}|}\sum_i \alpha_i\,\bm{\sigma}_i )\bm{\sigma}_k]
     \notag \\
     &= \frac{1}{2}\qty(\cancelto{0}{\Tr(\bm{\sigma}_k)}
     - \frac{\tanh |\vec{\alpha}|}{|\vec{\alpha}|}
-    \sum_i \alpha_i \Tr(\cancelto{2\delta_{ik}}{\bm{\sigma}_i\bm{\sigma}_k}\hspace{.9cm}))
+    \sum_i \alpha_i \,\cancelto{2}{\Tr(\bm{\sigma}_i\bm{\sigma}_k)}\hspace{0.4cm})\notag\\
     &= -\frac{\tanh |\vec{\alpha}|}{|\vec{\alpha}|}\,\alpha_k ,
 \end{align}
 y sustituyendo este resultado en la ecuación ~\eqref{eq:rho_semi_semifinal}, se obtiene finalmente
 \begin{equation}
-\rhon = \frac{1}{2}\qty(\Id + \vec{S}\cdot \vec{\bm{\sigma}}).
+\rhon = \frac{1}{2}\qty(\Id + \vec{x}\cdot \vec{\bm{\sigma}}).
 \label{eq:rho_final}
 \end{equation}
+Por lo tanto,  la máxima información que se puede obtener de las mediciones del sistema están dadas por los los estados $\rhon$ en \eqref{eq:rho_final}, que coinciden con las matrices de densidad obtenidas con la teoría usual de la mecanica cuántica.
 
 
 
